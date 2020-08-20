@@ -1,0 +1,6 @@
+<%= form_with scope: :parent_tasks ,:url => {:action => :create} do |form| %>
+    <%= form.text_field :title, value: @title %>
+    <%= form.text_field :explanation, value: @explanation %>
+    <%= form.text_field :parent_deadline, value: @parent_deadline %>
+    <%= form.button '送信', id: 'customButton', type: 'button', onclick: 'submit()' %>
+<% end %>
