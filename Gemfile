@@ -56,3 +56,5 @@ gem 'devise'
 gem 'bootstrap'
 gem 'carrierwave', '~> 1.0'
 gem "mini_magick"
+
+gem 'pry-byebug', group: :development
