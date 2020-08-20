@@ -1,0 +1,2 @@
+class ParentTask < ApplicationRecord
+end
