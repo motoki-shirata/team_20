@@ -7,5 +7,10 @@ class User < ApplicationRecord
   validates :name, presence: true, length: { maximum: 50 }
 
   belongs_to :team, optional: true
+<<<<<<< HEAD
+  has_many :user_missions
+  has_many :parent, through: :user_missions, source: :parent_task
+=======
+>>>>>>> develop
   has_many :parent_tasks
 end

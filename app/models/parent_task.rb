@@ -1,4 +1,5 @@
 class ParentTask < ApplicationRecord
-    has_many :user_missions
+    belongs_to :user
+    belongs_to :manager
     has_many :child_tasks
 end

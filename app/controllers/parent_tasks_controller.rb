@@ -15,7 +15,7 @@ class ParentTasksController < ApplicationController
         @parent_task = current_user.parent_tasks.build(parent_task_params)
         if @parent_task.save
             flash[:success] = 'タスクを作成しました'
-            redirect_to parent_tasks
+            redirect_to parent_tasks_path
         end
     end
     def delete
@@ -25,7 +25,7 @@ class ParentTasksController < ApplicationController
     private
 
     def parent_task_params
-        params.require(:parent_task).permit(:title, :explanation, :paremt_deadline)
+        params.require(:parent_task).permit(:title, :explanation, :parent_deadline)
     end
     
     
