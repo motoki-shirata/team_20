@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'teams/new' => 'teams#new'
-  post 'teams/create' => 'teams#create'
-  delete 'teams/destroy' => 'teams#destroy'
+  resources :teams, only: [:new, :create, :destroy]
   devise_for :users, controllers: {
     registrations: 'users/registrations',
     sessions: 'users/sessions'
