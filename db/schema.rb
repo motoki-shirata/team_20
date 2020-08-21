@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_20_234941) do
+ActiveRecord::Schema.define(version: 2020_08_21_003016) do
 
   create_table "bosses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -42,6 +42,10 @@ ActiveRecord::Schema.define(version: 2020_08_20_234941) do
   create_table "organizations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "team_id", null: false
+    t.bigint "boss_id", null: false
+    t.index ["boss_id"], name: "index_organizations_on_boss_id"
+    t.index ["team_id"], name: "index_organizations_on_team_id"
   end
 
   create_table "parent_tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -84,6 +88,8 @@ ActiveRecord::Schema.define(version: 2020_08_20_234941) do
   end
 
   add_foreign_key "child_tasks", "parent_tasks"
+  add_foreign_key "organizations", "bosses"
+  add_foreign_key "organizations", "teams"
   add_foreign_key "user_missions", "parent_tasks"
   add_foreign_key "user_missions", "users"
 end
