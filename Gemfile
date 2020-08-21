@@ -56,3 +56,7 @@ gem 'devise'
 gem 'bootstrap'
 gem 'carrierwave', '~> 1.0'
 gem "mini_magick"
+gem 'devise-i18n'
+gem 'jquery-rails'
+
+gem 'pry-byebug', group: :development
