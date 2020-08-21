@@ -1,4 +1,4 @@
-<%= form_with model: @parent_task do |f| %>
+<%= form_with model: @parent_task(task) do |f| %>
     <%= f.label :title, 'タイトル' %>
     <%= f.text_field :title %>
     <%= f.label :explanation, '概要' %>
