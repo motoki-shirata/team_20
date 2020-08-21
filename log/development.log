@@ -623,6 +623,40 @@ Migrating to CreateTeams (20200820075342)
   [1m[35m (0.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
   [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateOrganizations (20200820080709)
+  [1m[35m (22.7ms)[0m  [1m[35mCREATE TABLE `organizations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820080709')[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 172.20.0.1 at 2020-08-21 00:34:52 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 12.3ms | Allocations: 407)
+Completed 200 OK in 52ms (Views: 30.5ms | ActiveRecord: 0.0ms | Allocations: 2344)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 00:35:03 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.3ms | Allocations: 336)
+  Rendered devise/shared/_links.html.erb (Duration: 2.7ms | Allocations: 516)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 482.7ms | Allocations: 94150)
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from _app_views_layouts_application_html_erb__2757734020656207638_72440 at /myapp/app/views/layouts/application.html.erb:10)
 Started GET "/users" for 172.19.0.1 at 2020-08-21 00:38:25 +0000
 Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
   [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
@@ -1662,6 +1696,405 @@ https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from run at /us
 DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
 https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from run at /usr/local/bundle/gems/autoprefixer-rails-9.8.6.1/lib/autoprefixer-rails/sprockets.rb:22)
 [Webpacker] Everything's up-to-date. Nothing to do
+<<<<<<< HEAD
+Completed 200 OK in 3307ms (Views: 3270.1ms | ActiveRecord: 8.6ms | Allocations: 194565)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 01:20:49 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from _app_views_devise_registrations_new_html_erb___4581597615110402143_72800 at /myapp/app/views/devise/registrations/new.html.erb:1)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 5.0ms | Allocations: 191)
+  Rendered devise/shared/_links.html.erb (Duration: 4.2ms | Allocations: 462)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 731.3ms | Allocations: 19750)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 822ms (Views: 820.3ms | ActiveRecord: 0.0ms | Allocations: 28505)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 01:23:05 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from _app_views_devise_registrations_new_html_erb___4581597615110402143_72800 at /myapp/app/views/devise/registrations/new.html.erb:1)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 80)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 604.4ms | Allocations: 10008)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 667ms (Views: 665.8ms | ActiveRecord: 0.0ms | Allocations: 17211)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 01:48:41 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.0ms | Allocations: 191)
+  Rendered devise/shared/_links.html.erb (Duration: 3.7ms | Allocations: 465)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 59.9ms | Allocations: 3625)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 149ms (Views: 147.4ms | ActiveRecord: 0.0ms | Allocations: 12488)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 01:48:42 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 80)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 43.6ms | Allocations: 2408)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 128ms (Views: 126.6ms | ActiveRecord: 0.0ms | Allocations: 9709)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 01:49:37 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.4ms | Allocations: 191)
+  Rendered devise/shared/_links.html.erb (Duration: 3.9ms | Allocations: 462)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 51.5ms | Allocations: 3615)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 139ms (Views: 137.6ms | ActiveRecord: 0.0ms | Allocations: 12478)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 01:57:20 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.6ms | Allocations: 191)
+  Rendered devise/shared/_links.html.erb (Duration: 2.9ms | Allocations: 462)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 59.7ms | Allocations: 3626)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 150ms (Views: 149.0ms | ActiveRecord: 0.0ms | Allocations: 12471)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 01:58:02 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.9ms | Allocations: 191)
+  Rendered devise/shared/_links.html.erb (Duration: 3.3ms | Allocations: 462)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 57.6ms | Allocations: 3626)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 154ms (Views: 152.9ms | ActiveRecord: 0.0ms | Allocations: 12460)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-21 04:25:17 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 201)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 20.3ms | Allocations: 1815)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 109ms (Views: 107.8ms | ActiveRecord: 0.0ms | Allocations: 10134)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 04:27:33 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.0ms | Allocations: 191)
+  Rendered devise/shared/_links.html.erb (Duration: 4.4ms | Allocations: 462)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 60.5ms | Allocations: 3639)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 155ms (Views: 153.7ms | ActiveRecord: 0.0ms | Allocations: 12483)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-21 04:27:37 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1272)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 127ms (Views: 124.9ms | ActiveRecord: 0.0ms | Allocations: 9517)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 04:29:25 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.5ms | Allocations: 191)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 38.3ms | Allocations: 2976)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 115ms (Views: 113.1ms | ActiveRecord: 0.0ms | Allocations: 11831)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 04:30:52 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 33.0ms | Allocations: 2265)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 105ms (Views: 103.3ms | ActiveRecord: 0.0ms | Allocations: 9546)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 04:32:40 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.5ms | Allocations: 191)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 52.2ms | Allocations: 2961)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 168ms (Views: 166.1ms | ActiveRecord: 0.0ms | Allocations: 11823)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 04:32:42 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 30.8ms | Allocations: 2261)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 97ms (Views: 95.9ms | ActiveRecord: 0.0ms | Allocations: 9551)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 04:32:45 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 35.5ms | Allocations: 2255)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 126ms (Views: 123.7ms | ActiveRecord: 0.0ms | Allocations: 9547)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 04:43:14 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.0ms | Allocations: 191)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 41.6ms | Allocations: 2961)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 131ms (Views: 130.1ms | ActiveRecord: 0.0ms | Allocations: 11803)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 04:43:17 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 37.1ms | Allocations: 2261)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 124ms (Views: 122.2ms | ActiveRecord: 0.0ms | Allocations: 9553)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 04:43:32 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.0ms | Allocations: 191)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 40.9ms | Allocations: 2964)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 137ms (Views: 136.1ms | ActiveRecord: 0.0ms | Allocations: 11798)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 04:50:36 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.1ms | Allocations: 191)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 42.0ms | Allocations: 2969)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 141ms (Views: 139.9ms | ActiveRecord: 0.0ms | Allocations: 11821)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 04:50:39 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 32.3ms | Allocations: 2263)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 109ms (Views: 107.3ms | ActiveRecord: 0.0ms | Allocations: 9565)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 04:52:21 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.1ms | Allocations: 191)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 46.8ms | Allocations: 2973)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 135ms (Views: 133.7ms | ActiveRecord: 0.0ms | Allocations: 11844)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 05:10:13 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.5ms | Allocations: 191)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 42.6ms | Allocations: 2965)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 135ms (Views: 132.4ms | ActiveRecord: 0.0ms | Allocations: 11835)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 05:10:47 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.9ms | Allocations: 191)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 48.3ms | Allocations: 2958)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 154ms (Views: 151.6ms | ActiveRecord: 0.0ms | Allocations: 11789)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 06:57:58 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 31.6ms | Allocations: 2261)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 95ms (Views: 93.9ms | ActiveRecord: 0.0ms | Allocations: 9558)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 07:05:24 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.6ms | Allocations: 191)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 40.1ms | Allocations: 2962)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 120ms (Views: 117.9ms | ActiveRecord: 0.0ms | Allocations: 11797)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 07:06:11 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.1ms | Allocations: 191)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 40.9ms | Allocations: 2882)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 134ms (Views: 132.4ms | ActiveRecord: 0.0ms | Allocations: 11723)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 07:07:36 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.7ms | Allocations: 191)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 40.7ms | Allocations: 2887)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 117ms (Views: 116.0ms | ActiveRecord: 0.0ms | Allocations: 11739)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 07:11:05 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.1ms | Allocations: 192)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 29.3ms | Allocations: 2814)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 89.6ms | ActiveRecord: 0.0ms | Allocations: 11684)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 07:16:35 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.2ms | Allocations: 191)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 36.3ms | Allocations: 2548)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 114ms (Views: 113.0ms | ActiveRecord: 0.0ms | Allocations: 11392)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 07:19:10 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.5ms | Allocations: 191)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 37.9ms | Allocations: 2334)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 111ms (Views: 109.9ms | ActiveRecord: 0.0ms | Allocations: 11194)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 07:19:45 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.6ms | Allocations: 1785)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 69.3ms | ActiveRecord: 0.0ms | Allocations: 9065)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-21 07:19:51 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.9ms | Allocations: 514)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.4ms | Allocations: 1796)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 100ms (Views: 98.7ms | ActiveRecord: 0.0ms | Allocations: 10047)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 07:20:02 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 32.3ms | Allocations: 1786)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 102ms (Views: 101.5ms | ActiveRecord: 0.0ms | Allocations: 9060)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 07:24:24 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.3ms | Allocations: 191)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 40.2ms | Allocations: 2329)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 122ms (Views: 121.4ms | ActiveRecord: 0.0ms | Allocations: 11166)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 07:24:56 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 29.9ms | Allocations: 1787)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 88ms (Views: 86.9ms | ActiveRecord: 0.0ms | Allocations: 9080)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 07:26:40 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.3ms | Allocations: 191)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 35.8ms | Allocations: 2337)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 109ms (Views: 107.5ms | ActiveRecord: 0.0ms | Allocations: 11171)
+
+
+Started POST "/users" for 172.20.0.1 at 2020-08-21 07:26:48 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"Apr5BlQk2D6p4gt/ndpGZy4fQOc3IGcxAg33/lEQLGcjzn3eLn7fQpl5Zoa6EESklvUksi7VxFqnIpSH6UJlrg==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 553)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 28.9ms | Allocations: 2330)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 163ms (Views: 99.8ms | ActiveRecord: 0.0ms | Allocations: 16985)
+
+
+Started GET "/users" for 172.20.0.1 at 2020-08-21 07:26:56 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+=======
 Completed 200 OK in 3547ms (Views: 3524.8ms | ActiveRecord: 5.0ms | Allocations: 36323)
 
 
@@ -2393,6 +2826,7 @@ Completed 200 OK in 332ms (Views: 62.5ms | ActiveRecord: 3.2ms | Allocations: 15
 
 Started GET "/users" for 172.19.0.1 at 2020-08-21 07:11:32 +0000
 Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+>>>>>>> develop
   
 ActionController::RoutingError (No route matches [GET] "/users"):
   
@@ -2426,6 +2860,239 @@ puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.5) lib/puma/server.rb:472:in `process_client'
 puma (4.3.5) lib/puma/server.rb:328:in `block in run'
 puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 07:27:01 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 32.9ms | Allocations: 1809)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 105ms (Views: 103.7ms | ActiveRecord: 0.0ms | Allocations: 9130)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-21 07:27:40 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.4ms | Allocations: 516)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.3ms | Allocations: 1815)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 104ms (Views: 103.3ms | ActiveRecord: 0.0ms | Allocations: 10075)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-21 07:28:33 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 981)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 79ms (Views: 78.2ms | ActiveRecord: 0.0ms | Allocations: 8479)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-21 07:30:19 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.9ms | Allocations: 514)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 43.5ms | Allocations: 3274)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 120ms (Views: 119.0ms | ActiveRecord: 0.0ms | Allocations: 12163)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-21 07:30:21 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 34.5ms | Allocations: 2463)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 101ms (Views: 100.0ms | ActiveRecord: 0.0ms | Allocations: 9799)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-21 07:31:20 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 514)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 36.4ms | Allocations: 3292)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 105ms (Views: 103.9ms | ActiveRecord: 0.0ms | Allocations: 12204)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-21 07:45:35 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.6ms | Allocations: 514)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 39.6ms | Allocations: 3282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 111ms (Views: 109.0ms | ActiveRecord: 0.0ms | Allocations: 12167)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-21 07:46:53 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.1ms | Allocations: 514)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 45.8ms | Allocations: 3069)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 121ms (Views: 119.8ms | ActiveRecord: 0.0ms | Allocations: 11960)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-21 07:48:10 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.1ms | Allocations: 514)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 33.4ms | Allocations: 3073)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 99ms (Views: 97.5ms | ActiveRecord: 0.0ms | Allocations: 11963)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-21 07:49:51 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.5ms | Allocations: 514)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 41.1ms | Allocations: 2876)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 141ms (Views: 139.9ms | ActiveRecord: 0.0ms | Allocations: 11771)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 07:50:05 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.1ms | Allocations: 191)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 35.0ms | Allocations: 2332)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 99ms (Views: 98.0ms | ActiveRecord: 0.0ms | Allocations: 10365)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-21 07:50:06 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 36.2ms | Allocations: 2100)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 113ms (Views: 111.3ms | ActiveRecord: 0.0ms | Allocations: 9432)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 07:50:11 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 37.4ms | Allocations: 1786)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 110ms (Views: 108.6ms | ActiveRecord: 0.0ms | Allocations: 9066)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-21 07:50:16 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 32.5ms | Allocations: 2100)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 94ms (Views: 92.1ms | ActiveRecord: 0.0ms | Allocations: 9441)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-21 07:53:37 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 25.3ms | Allocations: 2099)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 78ms (Views: 77.2ms | ActiveRecord: 0.0ms | Allocations: 9433)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 07:53:39 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 32.5ms | Allocations: 1778)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 96ms (Views: 94.5ms | ActiveRecord: 0.0ms | Allocations: 9062)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 07:57:14 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.2ms | Allocations: 191)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 42.5ms | Allocations: 2337)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 129ms (Views: 127.9ms | ActiveRecord: 0.0ms | Allocations: 11186)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 08:01:15 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.7ms | Allocations: 191)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 40.3ms | Allocations: 2332)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 123ms (Views: 122.1ms | ActiveRecord: 0.0ms | Allocations: 11181)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 08:01:27 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 34.4ms | Allocations: 1785)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 108ms (Views: 106.8ms | ActiveRecord: 0.0ms | Allocations: 9076)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 08:01:31 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 28.4ms | Allocations: 1779)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 87ms (Views: 86.1ms | ActiveRecord: 0.0ms | Allocations: 9058)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-21 08:02:14 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.2ms | Allocations: 514)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 39.2ms | Allocations: 2877)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 107ms (Views: 105.7ms | ActiveRecord: 0.0ms | Allocations: 10956)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 08:03:35 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 31.4ms | Allocations: 1786)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 92ms (Views: 91.2ms | ActiveRecord: 0.0ms | Allocations: 9069)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-21 08:04:15 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 29.6ms | Allocations: 1779)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 95ms (Views: 93.5ms | ActiveRecord: 0.0ms | Allocations: 9075)
+
+
+=======
 Started GET "/users/sign_up" for 172.19.0.1 at 2020-08-21 07:11:38 +0000
 Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
 Processing by Devise::RegistrationsController#new as HTML
@@ -2807,6 +3474,9 @@ puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.5) lib/puma/server.rb:472:in `process_client'
 puma (4.3.5) lib/puma/server.rb:328:in `block in run'
 puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
+>>>>>>> develop
+=======
   [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
@@ -2849,3 +3519,4 @@ FOREIGN KEY (`boss_id`)
   [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
   [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+>>>>>>> develop
