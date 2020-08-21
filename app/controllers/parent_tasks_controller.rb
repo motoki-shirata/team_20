@@ -1,14 +1,14 @@
 class ParentTasksController < ApplicationController
 
     def index
-        @parent_tasks = Parent_task.all
+        @parent_tasks = ParentTask.all
     end
     def show
-        @parent_task = Parent_task.find(params[:id])
+        @parent_task = ParentTask.find(params[:id])
     end
     
     def new
-        @parent_task = Parent_task.new
+        @parent_task = ParentTask.new
         
     end
     def create
