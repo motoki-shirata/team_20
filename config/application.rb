@@ -19,4 +19,11 @@ module TeamProject
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
   end
+
+  private
+  # ログイン後のリダイレクト先
+  def after_sign_in_path_for(resource_or_scope)
+    root_path
+  end
+
 end

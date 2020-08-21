@@ -12,7 +12,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super
-    redirect_to teams_new_path
+    # redirect_to teams_new_path
   end
 
   # GET /resource/edit

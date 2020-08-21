@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+
+  get 'toppages/index'
+  root to: 'toppages#index'
   get 'teams/new' => 'teams#new'
   post 'teams/create' => 'teams#create'
   delete 'teams/destroy' => 'teams#destroy'
