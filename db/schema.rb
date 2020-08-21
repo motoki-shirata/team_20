@@ -64,10 +64,10 @@ ActiveRecord::Schema.define(version: 2020_08_20_094239) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name", default: "", null: false
-    t.bigint "teams_id"
+    t.bigint "team_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-    t.index ["teams_id"], name: "index_users_on_teams_id"
+    t.index ["team_id"], name: "index_users_on_team_id"
   end
 
   add_foreign_key "child_tasks", "parent_tasks"
