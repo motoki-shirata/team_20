@@ -623,3 +623,1516 @@ Migrating to CreateTeams (20200820075342)
   [1m[35m (0.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
   [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/users" for 172.19.0.1 at 2020-08-21 00:38:25 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 172.19.0.1 at 2020-08-21 00:38:34 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.6ms | Allocations: 183)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 1093)
+
+
+Started GET "/temas/new" for 172.19.0.1 at 2020-08-21 00:39:22 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/temas/new"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 00:39:28 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 104.7ms | Allocations: 79658)
+Completed 500 Internal Server Error in 133ms (ActiveRecord: 4.4ms | Allocations: 84951)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00007f9c0c029c98>:0x00007f9c0c028370>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(model: @team, local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 00:40:08 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1100)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2440)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(teams_new_path, local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 00:41:33 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 101.8ms | Allocations: 79628)
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 0.0ms | Allocations: 80966)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00005595ec91f5a0>:0x00005595ec906e10>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(model: Team.new, local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 00:41:53 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 97.8ms | Allocations: 79445)
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 0.0ms | Allocations: 79947)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00005595ec91f5a0>:0x00007f9bf040e730>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(model: Team.new, local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 00:44:30 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 94.0ms | Allocations: 79619)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 2.5ms | Allocations: 84371)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00005595edb3e1a0>:0x00005595edb3c378>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(model: @team, local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 00:45:08 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 95.5ms | Allocations: 79606)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 0.0ms | Allocations: 80939)
+
+
+  
+ActionView::Template::Error (undefined method `@team_path' for #<#<Class:0x00005595edca9198>:0x00005595edc9deb0>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(model: :@team, local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 00:45:21 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 99.9ms | Allocations: 79615)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.0ms | Allocations: 80949)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00007f9bf0385728>:0x00007f9bf0380868>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(model: @team, local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 00:45:22 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 97.9ms | Allocations: 79435)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 0.0ms | Allocations: 79936)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00007f9bf0385728>:0x00007f9bd4019f60>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(model: @team, local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 00:45:22 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 104.2ms | Allocations: 79440)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 0.0ms | Allocations: 79947)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00007f9bf0385728>:0x00007f9bf02cc3e0>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(model: @team, local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 00:45:23 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 96.2ms | Allocations: 79432)
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 0.0ms | Allocations: 79932)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00007f9bf0385728>:0x00007f9bf0132b60>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(model: @team, local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 00:46:00 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 2.3ms | Allocations: 107785)
+
+
+  
+NameError (undefined local variable or method `bindng' for #<TeamsController:0x00005595ed832d30>
+Did you mean?  binding):
+  
+app/controllers/teams_controller.rb:6:in `new'
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 00:46:20 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 2.4ms | Allocations: 4657)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007f9bf03c4a68>
+Did you mean?  try):
+  
+app/controllers/teams_controller.rb:6:in `new'
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 00:47:25 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 86.8ms | Allocations: 79440)
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 2.5ms | Allocations: 83493)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00007f9be4013808>:0x00007f9be4011da0>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(model: @team, local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 00:55:50 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 109.5ms | Allocations: 79434)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.0ms | Allocations: 79934)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00007f9be4013808>:0x00005595ed999340>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(model: @team, local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 00:59:25 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1103)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 2437)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Teams#new</h1>
+<p>Find me in app/views/teams/new.html.erb</p>
+
+<% form_with (model: @team, local: true) do |f| %>
+<%= f.label :name, 'チーム名の入力' %>
+<%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+<%= f.submit '送信' %>
+<% end %>
+):
+1:    <h1>Teams#new</h1>
+2:    <p>Find me in app/views/teams/new.html.erb</p>
+3:    
+4:    <% form_with (model: @team, local: true) do |f| %>
+5:    <%= f.label :name, 'チーム名の入力' %>
+6:    <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+7:    <%= f.submit '送信' %>
+8:    <% end %>
+  
+app/views/teams/new.html.erb:4: syntax error, unexpected tLABEL, expecting ')'
+app/views/teams/new.html.erb:10: syntax error, unexpected `end', expecting end-of-input
+app/views/teams/new.html.erb:4: syntax error, unexpected tLABEL, expecting ')'
+app/views/teams/new.html.erb:10: syntax error, unexpected `end', expecting end-of-input
+app/views/teams/new.html.erb:4: syntax error, unexpected tLABEL, expecting ')'
+app/views/teams/new.html.erb:10: syntax error, unexpected `end', expecting end-of-input
+app/views/teams/new.html.erb:4: syntax error, unexpected tLABEL, expecting ')'
+app/views/teams/new.html.erb:10: syntax error, unexpected `end', expecting end-of-input
+app/views/teams/new.html.erb:4: syntax error, unexpected tLABEL, expecting ')'
+app/views/teams/new.html.erb:10: syntax error, unexpected `end', expecting end-of-input
+app/views/teams/new.html.erb:4: syntax error, unexpected tLABEL, expecting ')'
+app/views/teams/new.html.erb:10: syntax error, unexpected `end', expecting end-of-input
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 00:59:37 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 124.1ms | Allocations: 79615)
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 0.0ms | Allocations: 80948)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00007f9c0c01b710>:0x00007f9c0c018ec0>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(model: @team, local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 01:03:50 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 104.9ms | Allocations: 79434)
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 0.0ms | Allocations: 79935)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00007f9c0c01b710>:0x00007f9bf0195a58>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(model: @team, local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 01:04:41 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 110.4ms | Allocations: 79616)
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 0.0ms | Allocations: 80949)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00007f9bf02448f0>:0x00007f9bf023a580>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(model: @team, local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 01:05:35 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 111.1ms | Allocations: 79527)
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 0.0ms | Allocations: 80860)
+
+
+  
+ActionView::Template::Error (undefined method `/teams/new_path' for #<#<Class:0x00007f9c0402d030>:0x00007f9c0c039af8>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(model: teams_new_path, local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 01:05:54 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1088)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 2421)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(teams_new_path, local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 01:08:17 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1110)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 2443)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(teams_new_path(@team), local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 01:08:57 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 205.1ms | Allocations: 156515)
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 0.0ms | Allocations: 157848)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `team' for #<#<Class:0x00005595eda66c28>:0x00005595eda5fa90>
+Did you mean?  @team):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(teams_new_path(team), local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 01:09:05 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1107)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 2440)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(teams_new_path(@team), local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 01:09:07 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 926)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1427)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with(teams_new_path(@team), local: true) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 01:21:29 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 107.1ms | Allocations: 79616)
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 0.0ms | Allocations: 80949)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00005595edab9888>:0x00005595edab7948>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: @team do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 01:21:31 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 105.6ms | Allocations: 79434)
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 0.0ms | Allocations: 79935)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00005595edab9888>:0x00005595edb2ce78>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: @team do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 01:33:57 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 111.8ms | Allocations: 79434)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 0.0ms | Allocations: 79934)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00005595edab9888>:0x00005595edac8fb8>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: @team do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 01:34:38 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 199.6ms | Allocations: 156618)
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 0.0ms | Allocations: 157951)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00005595ed9e0358>:0x00005595ed9cd898>
+Did you mean?  super):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: teams_new_path(user) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 01:34:50 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 124.6ms | Allocations: 79544)
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 0.0ms | Allocations: 80877)
+
+
+  
+ActionView::Template::Error (undefined method `/teams/new_path' for #<#<Class:0x00005595ebd6bd08>:0x00005595ebd68ea0>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: teams_new_path(@team) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 01:35:08 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 117.0ms | Allocations: 79555)
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 0.0ms | Allocations: 80888)
+
+
+  
+ActionView::Template::Error (undefined method `/teams/new_path' for #<#<Class:0x00005595ec9e1b78>:0x00005595ec9cc160>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: teams_new_path(Team.new) do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:14:51 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 148.2ms | Allocations: 79528)
+Completed 500 Internal Server Error in 197ms (ActiveRecord: 0.0ms | Allocations: 80861)
+
+
+  
+ActionView::Template::Error (undefined method `/teams/new_path' for #<#<Class:0x00005595ea9c1a50>:0x00007f9bf04765d8>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: teams_new_path() do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:15:11 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 130.5ms | Allocations: 79341)
+Completed 500 Internal Server Error in 133ms (ActiveRecord: 0.0ms | Allocations: 79842)
+
+
+  
+ActionView::Template::Error (undefined method `/teams/new_path' for #<#<Class:0x00005595ea9c1a50>:0x00005595ece428e8>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: teams_new_path() do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:15:37 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 127.7ms | Allocations: 79341)
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 0.0ms | Allocations: 79841)
+
+
+  
+ActionView::Template::Error (undefined method `/teams/new_path' for #<#<Class:0x00005595ea9c1a50>:0x00005595eda933e0>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: teams_new_path() do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:15:56 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 122.1ms | Allocations: 79525)
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 0.0ms | Allocations: 80858)
+
+
+  
+ActionView::Template::Error (undefined method `/teams/new_path' for #<#<Class:0x00007f9bf027fb30>:0x00007f9bf027d650>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: teams_new_path do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:17:57 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 104.0ms | Allocations: 79301)
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 9.6ms | Allocations: 83664)
+
+
+  
+ActionView::Template::Error (undefined method `/teams/new_path' for #<#<Class:0x00005595edafdfd8>:0x00005595edafc598>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: teams_new_path do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:23:47 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 123.8ms | Allocations: 79341)
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 0.0ms | Allocations: 79841)
+
+
+  
+ActionView::Template::Error (undefined method `/teams/new_path' for #<#<Class:0x00005595edafdfd8>:0x00005595ed5b3410>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: teams_new_path do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:24:09 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 132.9ms | Allocations: 79533)
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 0.0ms | Allocations: 80866)
+
+
+  
+ActionView::Template::Error (undefined method `teams_new_path_path' for #<#<Class:0x00007f9c040572b8>:0x00007f9c04055288>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: :teams_new_path do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:24:20 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 131.2ms | Allocations: 79525)
+Completed 500 Internal Server Error in 154ms (ActiveRecord: 0.0ms | Allocations: 80858)
+
+
+  
+ActionView::Template::Error (undefined method `/teams/new_path' for #<#<Class:0x00005595ecdb6690>:0x00005595ecdaddd8>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: teams_new_path do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:24:23 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 135.2ms | Allocations: 79342)
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 0.0ms | Allocations: 79843)
+
+
+  
+ActionView::Template::Error (undefined method `/teams/new_path' for #<#<Class:0x00005595ecdb6690>:0x00005595ed549880>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: teams_new_path do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:25:02 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 153.9ms | Allocations: 79341)
+Completed 500 Internal Server Error in 159ms (ActiveRecord: 0.0ms | Allocations: 79841)
+
+
+  
+ActionView::Template::Error (undefined method `/teams/new_path' for #<#<Class:0x00005595ecdb6690>:0x00005595ecccb078>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: teams_new_path do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:25:44 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 107.7ms | Allocations: 79301)
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 5.6ms | Allocations: 83663)
+
+
+  
+ActionView::Template::Error (undefined method `/teams/new_path' for #<#<Class:0x00007f9c0c021ca0>:0x00007f9c0c020008>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: teams_new_path do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %>
+    7: <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:26:56 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 117.2ms | Allocations: 79523)
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 0.0ms | Allocations: 80856)
+
+
+  
+ActionView::Template::Error (undefined method `/teams/new_path' for #<#<Class:0x00005595ed987b40>:0x00005595ed985728>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: teams_new_path do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.text_area :name %>
+    7: <%
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:27:02 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 120.8ms | Allocations: 79341)
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 0.0ms | Allocations: 79842)
+
+
+  
+ActionView::Template::Error (undefined method `/teams/new_path' for #<#<Class:0x00005595ed987b40>:0x00005595ecd93a28>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: teams_new_path do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.text_area :name %>
+    7: <%
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:27:03 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 113.7ms | Allocations: 79339)
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 0.0ms | Allocations: 79839)
+
+
+  
+ActionView::Template::Error (undefined method `/teams/new_path' for #<#<Class:0x00005595ed987b40>:0x00005595edafc728>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: teams_new_path do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.text_area :name %>
+    7: <%
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:30:52 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 129.8ms | Allocations: 79528)
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 0.0ms | Allocations: 80861)
+
+
+  
+ActionView::Template::Error (undefined method `/teams/new_path' for #<#<Class:0x00005595eccf4900>:0x00005595ecccb938>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <%= form_with model: teams_new_path do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.text_area :name %>
+    7: <%
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:36:16 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 133.8ms | Allocations: 79663)
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 0.0ms | Allocations: 80996)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00005595ed67dd00>:0x00005595ed673558>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: @team do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.text_field :name %>
+    7: <%
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:36:19 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 112.7ms | Allocations: 79434)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.0ms | Allocations: 79935)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00005595ed67dd00>:0x00007f9c04020e98>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: @team do |f| %>
+    5: <%= f.label :name, 'チーム名の入力' %>
+    6: <%= f.text_field :name %>
+    7: <%
+  
+app/views/teams/new.html.erb:4
+Started GET "/users/sign_up" for 172.19.0.1 at 2020-08-21 04:44:26 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.1ms | Allocations: 199)
+  Rendered devise/shared/_links.html.erb (Duration: 4.4ms | Allocations: 515)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 77.8ms | Allocations: 4797)
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from _app_views_layouts_application_html_erb__2024128032267747608_134540 at /myapp/app/views/layouts/application.html.erb:8)
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from run at /usr/local/bundle/gems/autoprefixer-rails-9.8.6.1/lib/autoprefixer-rails/sprockets.rb:22)
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from run at /usr/local/bundle/gems/autoprefixer-rails-9.8.6.1/lib/autoprefixer-rails/sprockets.rb:22)
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from run at /usr/local/bundle/gems/autoprefixer-rails-9.8.6.1/lib/autoprefixer-rails/sprockets.rb:22)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3547ms (Views: 3524.8ms | ActiveRecord: 5.0ms | Allocations: 36323)
+
+
+Started GET "/users/sign_in" for 172.19.0.1 at 2020-08-21 04:44:39 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 201)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 19.2ms | Allocations: 1646)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 123ms (Views: 121.2ms | ActiveRecord: 0.0ms | Allocations: 6565)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:44:52 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 137.3ms | Allocations: 80634)
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 0.0ms | Allocations: 81788)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00005595eca363d0>:0x00005595eca1d678>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: @team do |f| %>
+    5:     <%= f.label :name, 'チーム名の入力' %>
+    6:     <%= f.text_field :name %>
+    7: <%
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:47:59 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 118.3ms | Allocations: 80450)
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 0.0ms | Allocations: 80951)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00005595eca363d0>:0x00007f9bf04256d8>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: @team do |f| %>
+    5:     <%= f.label :name, 'チーム名の入力' %>
+    6:     <%= f.text_field :name %>
+    7: <%
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:49:25 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 131.6ms | Allocations: 80530)
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 0.0ms | Allocations: 81863)
+
+
+  
+ActionView::Template::Error (undefined method `/teams/new_path' for #<#<Class:0x00005595ed833ca8>:0x00005595ed830e68>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: teams_new_path do |f| %>
+    5:     <%= f.label :name, 'チーム名の入力' %>
+    6:     <%= f.text_field :name %>
+    7: <%
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:49:28 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 123.7ms | Allocations: 80337)
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 0.0ms | Allocations: 80838)
+
+
+  
+ActionView::Template::Error (undefined method `/teams/new_path' for #<#<Class:0x00005595ed833ca8>:0x00007f9bf0465ad0>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: teams_new_path do |f| %>
+    5:     <%= f.label :name, 'チーム名の入力' %>
+    6:     <%= f.text_field :name %>
+    7: <%
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:49:30 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 134.5ms | Allocations: 80337)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 0.0ms | Allocations: 80837)
+
+
+  
+ActionView::Template::Error (undefined method `/teams/new_path' for #<#<Class:0x00005595ed833ca8>:0x00005595ecc82bc0>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: teams_new_path do |f| %>
+    5:     <%= f.label :name, 'チーム名の入力' %>
+    6:     <%= f.text_field :name %>
+    7: <%
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:49:54 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1097)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms | Allocations: 2433)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with teams_new_path do |f| %>
+    5:     <%= f.label :name, 'チーム名の入力' %>
+    6:     <%= f.text_field :name %>
+    7: <%
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:49:56 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 906)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1407)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with teams_new_path do |f| %>
+    5:     <%= f.label :name, 'チーム名の入力' %>
+    6:     <%= f.text_field :name %>
+    7: <%
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:51:48 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1114)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 2448)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Teams#new</h1>
+<p>Find me in app/views/teams/new.html.erb</p>
+
+<% form_with @team url: teams_new_path do |f| %>
+    <%= f.label :name, 'チーム名の入力' %>
+    <%= f.text_field :name %>
+<%
+=begin%>
+ <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %> 
+<%
+=end%>
+    <%= f.submit '送信' %>
+<% end %>
+):
+1:    <h1>Teams#new</h1>
+2:    <p>Find me in app/views/teams/new.html.erb</p>
+3:    
+4:    <% form_with @team url: teams_new_path do |f| %>
+5:        <%= f.label :name, 'チーム名の入力' %>
+6:        <%= f.text_field :name %>
+7:    <%
+8:    =begin%>
+9:     <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %> 
+10:    <%
+11:    =end%>
+12:        <%= f.submit '送信' %>
+13:    <% end %>
+  
+app/views/teams/new.html.erb:4: syntax error, unexpected local variable or method, expecting `end'
+app/views/teams/new.html.erb:4: syntax error, unexpected local variable or method, expecting `end'
+app/views/teams/new.html.erb:4: syntax error, unexpected local variable or method, expecting `end'
+app/views/teams/new.html.erb:4: syntax error, unexpected local variable or method, expecting `end'
+app/views/teams/new.html.erb:4: syntax error, unexpected local variable or method, expecting `end'
+app/views/teams/new.html.erb:4: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:51:50 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1101)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 1602)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Teams#new</h1>
+<p>Find me in app/views/teams/new.html.erb</p>
+
+<% form_with @team url: teams_new_path do |f| %>
+    <%= f.label :name, 'チーム名の入力' %>
+    <%= f.text_field :name %>
+<%
+=begin%>
+ <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %> 
+<%
+=end%>
+    <%= f.submit '送信' %>
+<% end %>
+):
+1:    <h1>Teams#new</h1>
+2:    <p>Find me in app/views/teams/new.html.erb</p>
+3:    
+4:    <% form_with @team url: teams_new_path do |f| %>
+5:        <%= f.label :name, 'チーム名の入力' %>
+6:        <%= f.text_field :name %>
+7:    <%
+8:    =begin%>
+9:     <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %> 
+10:    <%
+11:    =end%>
+12:        <%= f.submit '送信' %>
+13:    <% end %>
+  
+app/views/teams/new.html.erb:4: syntax error, unexpected local variable or method, expecting `end'
+app/views/teams/new.html.erb:4: syntax error, unexpected local variable or method, expecting `end'
+app/views/teams/new.html.erb:4: syntax error, unexpected local variable or method, expecting `end'
+app/views/teams/new.html.erb:4: syntax error, unexpected local variable or method, expecting `end'
+app/views/teams/new.html.erb:4: syntax error, unexpected local variable or method, expecting `end'
+app/views/teams/new.html.erb:4: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:52:03 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1305)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 74.5ms | ActiveRecord: 0.0ms | Allocations: 6154)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:52:03 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1110)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 81ms (Views: 79.7ms | ActiveRecord: 0.0ms | Allocations: 4962)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:52:55 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 26.1ms | Allocations: 3778)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 97ms (Views: 92.9ms | ActiveRecord: 0.0ms | Allocations: 8620)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:52:57 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1694)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 69.0ms | ActiveRecord: 0.0ms | Allocations: 5533)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:53:04 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1689)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 87ms (Views: 85.7ms | ActiveRecord: 0.0ms | Allocations: 5529)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:54:59 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1480)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 87ms (Views: 81.7ms | ActiveRecord: 0.0ms | Allocations: 6309)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:55:00 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1290)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 74.5ms | ActiveRecord: 0.0ms | Allocations: 5141)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:55:52 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 111.3ms | Allocations: 80643)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.0ms | Allocations: 81979)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<#<Class:0x00007f9bf0354998>:0x00007f9bf036a0b8>
+Did you mean?  teams_new_path):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with model: Team.new do |f| %>
+    5:     <%= f.label :name, 'チーム名の入力' %>
+    6:     <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %> 
+    7:     <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:56:10 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1099)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 2433)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    1: <h1>Teams#new</h1>
+    2: <p>Find me in app/views/teams/new.html.erb</p>
+    3: 
+    4: <% form_with teams_new_path do |f| %>
+    5:     <%= f.label :name, 'チーム名の入力' %>
+    6:     <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %> 
+    7:     <%= f.submit '送信' %>
+  
+app/views/teams/new.html.erb:4
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:59:07 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1481)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 103ms (Views: 97.6ms | ActiveRecord: 0.0ms | Allocations: 6330)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:59:07 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1287)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 121ms (Views: 119.3ms | ActiveRecord: 0.0ms | Allocations: 5115)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:59:46 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2022)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 113ms (Views: 106.2ms | ActiveRecord: 0.0ms | Allocations: 6864)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:59:47 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1335)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 87ms (Views: 86.1ms | ActiveRecord: 0.0ms | Allocations: 5165)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:59:48 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1328)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 107ms (Views: 105.7ms | ActiveRecord: 0.0ms | Allocations: 5162)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:59:51 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1530)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 119ms (Views: 112.5ms | ActiveRecord: 0.0ms | Allocations: 6375)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:59:52 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1335)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 77ms (Views: 75.7ms | ActiveRecord: 0.0ms | Allocations: 5171)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 04:59:53 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1327)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 78ms (Views: 77.5ms | ActiveRecord: 0.0ms | Allocations: 5156)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 05:00:31 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1529)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 123ms (Views: 111.3ms | ActiveRecord: 0.0ms | Allocations: 6361)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 05:00:32 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1335)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 81ms (Views: 80.5ms | ActiveRecord: 0.0ms | Allocations: 5183)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 05:00:33 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1327)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 89.9ms | ActiveRecord: 0.0ms | Allocations: 5158)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 05:00:39 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1327)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 82.5ms | ActiveRecord: 0.0ms | Allocations: 5172)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 05:00:46 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1527)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 122ms (Views: 115.9ms | ActiveRecord: 0.0ms | Allocations: 6363)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 05:01:03 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1530)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 120ms (Views: 112.3ms | ActiveRecord: 0.0ms | Allocations: 6378)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-21 05:01:04 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1335)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 96ms (Views: 95.2ms | ActiveRecord: 0.0ms | Allocations: 5180)
+
+
