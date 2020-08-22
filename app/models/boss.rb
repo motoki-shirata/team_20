@@ -5,5 +5,5 @@ class Boss < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :teams, through: :organizations
   has_many :organizations
-  has_many :parent_tasks
+  
 end

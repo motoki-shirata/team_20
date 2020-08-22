@@ -4806,3 +4806,880 @@ No template found for ParentTasksController#create, rendering head :no_content
 Completed 204 No Content in 530ms (ActiveRecord: 10.4ms | Allocations: 111705)
 
 
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-21 23:59:02 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ParentTasksController#new as HTML
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1755)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 4.2ms | Allocations: 11251)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with model: @parent_task(task) do |f| %>
+    <%= f.label :title, 'タイトル' %>
+    <%= f.text_field :title %>
+    <%= f.label :explanation, '概要' %>
+    <%= f.text_field :explanation %>
+    <%= f.label :parent_deadline, '締め切り日時' %>
+    <%= f.datetime_field :parent_deadline %>
+    <%= f.button '送信' %>
+<% end %>
+
+):
+1:    <%= form_with model: @parent_task(task) do |f| %>
+2:        <%= f.label :title, 'タイトル' %>
+3:        <%= f.text_field :title %>
+4:        <%= f.label :explanation, '概要' %>
+5:        <%= f.text_field :explanation %>
+6:        <%= f.label :parent_deadline, '締め切り日時' %>
+7:        <%= f.datetime_field :parent_deadline %>
+8:        <%= f.button '送信' %>
+9:    <% end %>
+  
+app/views/parent_tasks/new.html.erb:1: syntax error, unexpected '(', expecting `end'
+app/views/parent_tasks/new.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/parent_tasks/new.html.erb:1: syntax error, unexpected '(', expecting `end'
+app/views/parent_tasks/new.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/parent_tasks/new.html.erb:1: syntax error, unexpected '(', expecting `end'
+app/views/parent_tasks/new.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/parent_tasks/new.html.erb:1: syntax error, unexpected '(', expecting `end'
+app/views/parent_tasks/new.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/parent_tasks/new.html.erb:1: syntax error, unexpected '(', expecting `end'
+app/views/parent_tasks/new.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/parent_tasks/new.html.erb:1: syntax error, unexpected '(', expecting `end'
+app/views/parent_tasks/new.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+Started GET "/users/sign_up" for 172.19.0.1 at 2020-08-22 00:02:31 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::RegistrationsController#new as HTML
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 154ms (ActiveRecord: 5.9ms | Allocations: 44219)
+
+
+Started GET "/" for 172.19.0.1 at 2020-08-22 00:02:31 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.0ms | Allocations: 186)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 1019)
+
+
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-22 00:02:40 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1176)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms | Allocations: 2790)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with model: @parent_task(task) do |f| %>
+    <%= f.label :title, 'タイトル' %>
+    <%= f.text_field :title %>
+    <%= f.label :explanation, '概要' %>
+    <%= f.text_field :explanation %>
+    <%= f.label :parent_deadline, '締め切り日時' %>
+    <%= f.datetime_field :parent_deadline %>
+    <%= f.button '送信' %>
+<% end %>
+
+):
+1:    <%= form_with model: @parent_task(task) do |f| %>
+2:        <%= f.label :title, 'タイトル' %>
+3:        <%= f.text_field :title %>
+4:        <%= f.label :explanation, '概要' %>
+5:        <%= f.text_field :explanation %>
+6:        <%= f.label :parent_deadline, '締め切り日時' %>
+7:        <%= f.datetime_field :parent_deadline %>
+8:        <%= f.button '送信' %>
+9:    <% end %>
+  
+app/views/parent_tasks/new.html.erb:1: syntax error, unexpected '(', expecting `end'
+app/views/parent_tasks/new.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/parent_tasks/new.html.erb:1: syntax error, unexpected '(', expecting `end'
+app/views/parent_tasks/new.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/parent_tasks/new.html.erb:1: syntax error, unexpected '(', expecting `end'
+app/views/parent_tasks/new.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/parent_tasks/new.html.erb:1: syntax error, unexpected '(', expecting `end'
+app/views/parent_tasks/new.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/parent_tasks/new.html.erb:1: syntax error, unexpected '(', expecting `end'
+app/views/parent_tasks/new.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/parent_tasks/new.html.erb:1: syntax error, unexpected '(', expecting `end'
+app/views/parent_tasks/new.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-22 00:03:27 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1123)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1627)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with model: @parent_task(task) do |f| %>
+    <%= f.label :title, 'タイトル' %>
+    <%= f.text_field :title %>
+    <%= f.label :explanation, '概要' %>
+    <%= f.text_field :explanation %>
+    <%= f.label :parent_deadline, '締め切り日時' %>
+    <%= f.datetime_field :parent_deadline %>
+    <%= f.button '送信' %>
+<% end %>
+
+):
+1:    <%= form_with model: @parent_task(task) do |f| %>
+2:        <%= f.label :title, 'タイトル' %>
+3:        <%= f.text_field :title %>
+4:        <%= f.label :explanation, '概要' %>
+5:        <%= f.text_field :explanation %>
+6:        <%= f.label :parent_deadline, '締め切り日時' %>
+7:        <%= f.datetime_field :parent_deadline %>
+8:        <%= f.button '送信' %>
+9:    <% end %>
+  
+app/views/parent_tasks/new.html.erb:1: syntax error, unexpected '(', expecting `end'
+app/views/parent_tasks/new.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/parent_tasks/new.html.erb:1: syntax error, unexpected '(', expecting `end'
+app/views/parent_tasks/new.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/parent_tasks/new.html.erb:1: syntax error, unexpected '(', expecting `end'
+app/views/parent_tasks/new.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/parent_tasks/new.html.erb:1: syntax error, unexpected '(', expecting `end'
+app/views/parent_tasks/new.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/parent_tasks/new.html.erb:1: syntax error, unexpected '(', expecting `end'
+app/views/parent_tasks/new.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/parent_tasks/new.html.erb:1: syntax error, unexpected '(', expecting `end'
+app/views/parent_tasks/new.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-22 00:04:41 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 39.3ms | Allocations: 3169)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 2.2ms | Allocations: 96)
+Completed 200 OK in 601ms (Views: 595.2ms | ActiveRecord: 0.0ms | Allocations: 20210)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 00:04:50 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"bSGK2F4Znhu9VkWIDYHGSek79UapH6W8h3Gt7NBQFW+sNcFf5GM4rF3Xavfcdq0gf/EyJjECtjtjL6J/hmt2yQ==", "parent_task"=>{"title"=>"ad", "explanation"=>"ad", "parent_deadline"=>"2020-09-03T09:04"}, "button"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:15:in `create'
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 38ms (ActiveRecord: 0.4ms | Allocations: 8961)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 00:07:22 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"bSGK2F4Znhu9VkWIDYHGSek79UapH6W8h3Gt7NBQFW+sNcFf5GM4rF3Xavfcdq0gf/EyJjECtjtjL6J/hmt2yQ==", "parent_task"=>{"title"=>"こんん一は", "explanation"=>"やあっほー", "parent_deadline"=>"2020-09-04T09:04"}, "button"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:15:in `create'
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 8ms (ActiveRecord: 0.5ms | Allocations: 2455)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 00:07:33 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"bSGK2F4Znhu9VkWIDYHGSek79UapH6W8h3Gt7NBQFW+sNcFf5GM4rF3Xavfcdq0gf/EyJjECtjtjL6J/hmt2yQ==", "parent_task"=>{"title"=>"こんん一は", "explanation"=>"やあっほー", "parent_deadline"=>"2020-09-04T09:04"}, "button"=>""}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:15:in `create'
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 8ms (ActiveRecord: 0.7ms | Allocations: 2443)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 00:07:34 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"bSGK2F4Znhu9VkWIDYHGSek79UapH6W8h3Gt7NBQFW+sNcFf5GM4rF3Xavfcdq0gf/EyJjECtjtjL6J/hmt2yQ==", "parent_task"=>{"title"=>"こんん一は", "explanation"=>"やあっほー", "parent_deadline"=>"2020-09-04T09:04"}, "button"=>""}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:15:in `create'
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 0.7ms | Allocations: 2429)
+
+
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-22 00:10:02 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 770)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 2.1ms | Allocations: 93)
+Completed 200 OK in 98ms (Views: 76.7ms | ActiveRecord: 2.6ms | Allocations: 15334)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 00:10:13 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"5nrsdM8ELC+BMSrdMpZZCnNwsQUUXVboSnFl3BZqysgnbqfzdX6KmGGwBaLjYTJj5bp2ZYxARW+uL2pPQFGpbg==", "parent_task"=>{"title"=>"明日", "explanation"=>"アフター", "parent_deadline"=>"2020-09-02T09:10"}, "button"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:15:in `create'
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 30ms (ActiveRecord: 4.1ms | Allocations: 12237)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 00:10:14 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"5nrsdM8ELC+BMSrdMpZZCnNwsQUUXVboSnFl3BZqysgnbqfzdX6KmGGwBaLjYTJj5bp2ZYxARW+uL2pPQFGpbg==", "parent_task"=>{"title"=>"明日", "explanation"=>"アフター", "parent_deadline"=>"2020-09-02T09:10"}, "button"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:15:in `create'
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 0.5ms | Allocations: 2451)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 00:10:15 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"5nrsdM8ELC+BMSrdMpZZCnNwsQUUXVboSnFl3BZqysgnbqfzdX6KmGGwBaLjYTJj5bp2ZYxARW+uL2pPQFGpbg==", "parent_task"=>{"title"=>"明日", "explanation"=>"アフター", "parent_deadline"=>"2020-09-02T09:10"}, "button"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:15:in `create'
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 0.5ms | Allocations: 2453)
+
+
+Started GET "/parent_tasks/users/sign_out" for 172.19.0.1 at 2020-08-22 00:10:32 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/parent_tasks/users/sign_out"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-22 00:10:38 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 469)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 56ms (Views: 55.5ms | ActiveRecord: 0.0ms | Allocations: 7885)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 00:10:48 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"ENaGUjMo3VtFNrT38BM1jatsTRsijhS02wY+tk/cPGHRws3ViVJ77KW3m4gh5F7kPaaKe7qTBzM/WDElGedfxw==", "parent_task"=>{"title"=>"", "explanation"=>"", "parent_deadline"=>""}, "button"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:15:in `create'
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 7ms (ActiveRecord: 0.5ms | Allocations: 2425)
+
+
+Started GET "/users/sign_up" for 172.19.0.1 at 2020-08-22 00:12:55 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms | Allocations: 2042)
+
+
+Started GET "/" for 172.19.0.1 at 2020-08-22 00:12:56 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.9ms | Allocations: 178)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 940)
+
+
+Started GET "/users/sign_up" for 172.19.0.1 at 2020-08-22 00:18:21 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Users::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms | Allocations: 1869)
+
+
+Started GET "/" for 172.19.0.1 at 2020-08-22 00:18:21 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 479)
+
+
+Started GET "/users/sign_up" for 172.19.0.1 at 2020-08-22 00:19:05 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 15ms (ActiveRecord: 3.5ms | Allocations: 7688)
+
+
+Started GET "/" for 172.19.0.1 at 2020-08-22 00:19:05 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 461)
+
+
+Started GET "/users/sign_up" for 172.19.0.1 at 2020-08-22 00:19:13 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 1874)
+
+
+Started GET "/" for 172.19.0.1 at 2020-08-22 00:19:13 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 485)
+
+
+Started GET "/users/sign_up" for 172.19.0.1 at 2020-08-22 00:23:03 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 15ms (ActiveRecord: 2.8ms | Allocations: 7350)
+
+
+Started GET "/" for 172.19.0.1 at 2020-08-22 00:23:03 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 477)
+
+
+Started GET "/users/sign_up" for 172.19.0.1 at 2020-08-22 00:23:28 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms | Allocations: 1881)
+
+
+Started GET "/" for 172.19.0.1 at 2020-08-22 00:23:28 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 7)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 465)
+
+
+Started GET "/" for 172.19.0.1 at 2020-08-22 00:51:59 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 7)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 455)
+
+
+Started GET "/users/sign_up" for 172.19.0.1 at 2020-08-22 00:52:24 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms | Allocations: 1890)
+
+
+Started GET "/" for 172.19.0.1 at 2020-08-22 00:52:24 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 7)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 473)
+
+
+Started GET "/users/sign_up" for 172.19.0.1 at 2020-08-22 00:59:08 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Users::RegistrationsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 1.0ms | Allocations: 1882)
+
+
+Started GET "/" for 172.19.0.1 at 2020-08-22 00:59:08 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 7)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 463)
+
+
+Started GET "/users/sign_up" for 172.19.0.1 at 2020-08-22 00:59:17 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms | Allocations: 1880)
+
+
+Started GET "/" for 172.19.0.1 at 2020-08-22 00:59:17 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 7)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 467)
+
+
+Started GET "/teams/new" for 172.19.0.1 at 2020-08-22 00:59:37 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 83ms (Views: 66.7ms | ActiveRecord: 2.6ms | Allocations: 12895)
+
+
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-22 00:59:57 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 560)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 76ms (Views: 58.0ms | ActiveRecord: 2.4ms | Allocations: 13329)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 01:12:31 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"ukm2UKmUp7VPWePlzqws/eUzsfPSDGeDS9WJBr29ghZ7Xf3XE+4BAq/YzJofW0eUc/l2k0oRdASvi4aV64bhsA==", "parent_task"=>{"title"=>"asdf", "explanation"=>"asdf", "parent_deadline"=>"2020-09-02T10:12"}, "button"=>""}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:15:in `create'
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 9ms (ActiveRecord: 0.8ms | Allocations: 4512)
+
+
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-22 01:18:47 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by ParentTasksController#new as HTML
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 559)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 116ms (Views: 94.1ms | ActiveRecord: 0.0ms | Allocations: 13974)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 01:18:56 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"m8N/KhtQTTo6X3sHSvTGYfUWtP0fdX+YGLHU9enqZaRa1zStoSrrjdreVHibA60IY9xznYdobB/879tmv9EGAg==", "parent_task"=>{"title"=>"asdf", "explanation"=>"adf", "parent_deadline"=>"2020-08-26T10:18"}, "button"=>""}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:15:in `create'
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-22 01:19:48 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ParentTasksController#new as HTML
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 20.0ms | Allocations: 1482)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 2.0ms | Allocations: 96)
+Completed 200 OK in 696ms (Views: 645.5ms | ActiveRecord: 7.0ms | Allocations: 27121)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 01:19:55 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"vagwLGd9FzTCSUt8QUt1F9WIedvskFf1ZEf4KtbQATB8vHur3QexgyLIZAOQvB5+Q0K+u3SNRHKAGfe5gOtilg==", "parent_task"=>{"title"=>"asdf", "explanation"=>"asdf", "parent_deadline"=>"2020-08-27T10:19"}, "button"=>""}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:15:in `create'
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 257ms (ActiveRecord: 8.8ms | Allocations: 51116)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 01:19:59 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"vagwLGd9FzTCSUt8QUt1F9WIedvskFf1ZEf4KtbQATB8vHur3QexgyLIZAOQvB5+Q0K+u3SNRHKAGfe5gOtilg==", "parent_task"=>{"title"=>"asdf", "explanation"=>"asdf", "parent_deadline"=>"2020-08-27T10:19"}, "button"=>""}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:15:in `create'
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 9ms (ActiveRecord: 1.0ms | Allocations: 2467)
+
+
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-22 01:21:00 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 560)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 134ms (Views: 89.6ms | ActiveRecord: 9.0ms | Allocations: 20609)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 01:21:08 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"c+lFU3qRjDmCZWanbuLA+MKKwPy84zwVw1Co81x6THGy/Q7UwOsqjmLkSdi/FauRVEAHnCT+L5InDqdgCkEv1w==", "parent_task"=>{"title"=>"asdf", "explanation"=>"adsf", "parent_deadline"=>"2020-08-25T10:21"}, "button"=>""}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 10ms (ActiveRecord: 0.7ms | Allocations: 5124)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 01:21:10 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"c+lFU3qRjDmCZWanbuLA+MKKwPy84zwVw1Co81x6THGy/Q7UwOsqjmLkSdi/FauRVEAHnCT+L5InDqdgCkEv1w==", "parent_task"=>{"title"=>"asdf", "explanation"=>"adsf", "parent_deadline"=>"2020-08-25T10:21"}, "button"=>""}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 9ms (ActiveRecord: 0.7ms | Allocations: 3047)
+
+
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-22 01:21:12 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 461)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 97ms (Views: 92.4ms | ActiveRecord: 0.9ms | Allocations: 9301)
+
+
+Started GET "/" for 172.19.0.1 at 2020-08-22 01:21:18 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.4ms | Allocations: 188)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 1008)
+
+
+Started GET "/" for 172.19.0.1 at 2020-08-22 01:21:25 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.6ms | Allocations: 200)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 1012)
+
+
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-22 01:21:31 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 680)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 2.3ms | Allocations: 93)
+Completed 200 OK in 125ms (Views: 113.6ms | ActiveRecord: 0.6ms | Allocations: 10845)
+
+
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-22 01:23:02 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 713)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.9ms | Allocations: 94)
+Completed 200 OK in 84ms (Views: 75.8ms | ActiveRecord: 0.6ms | Allocations: 10899)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 01:23:08 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"iFvEEeON3ZIGFPZQOf8n7mA44o76EjoMI9lVaqGhulpJT4+WWfd7JeaV2S/oCEyH9vIl7mIPKYvHh1r595rZ/A==", "parent_task"=>{"title"=>"asdf", "explanation"=>"asdf", "parent_deadline"=>"2020-08-27T10:23"}, "button"=>""}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 18ms (ActiveRecord: 0.8ms | Allocations: 5525)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 01:24:43 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"iFvEEeON3ZIGFPZQOf8n7mA44o76EjoMI9lVaqGhulpJT4+WWfd7JeaV2S/oCEyH9vIl7mIPKYvHh1r595rZ/A==", "parent_task"=>{"title"=>"asdf", "explanation"=>"asdf", "parent_deadline"=>"2020-08-27T10:23"}, "button"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 36ms (ActiveRecord: 6.8ms | Allocations: 16250)
+
+
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-22 01:24:58 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 491)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 93ms (Views: 88.0ms | ActiveRecord: 0.9ms | Allocations: 9473)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 01:25:04 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"Dl+KiWyH8Fu8r0kTLkdy82K3zBn/gVL/PwI+Am5ztxDPS8EO1v1W7FwuZmz/sBma9H0LeWecQXjbXDGROEjUtg==", "parent_task"=>{"title"=>"adf", "explanation"=>"asdf", "parent_deadline"=>"2020-08-26T10:25"}, "button"=>""}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 7ms (ActiveRecord: 0.7ms | Allocations: 3021)
+
+
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-22 01:26:38 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 576)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 125ms (Views: 89.6ms | ActiveRecord: 8.1ms | Allocations: 20606)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 01:26:45 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"LosTLeQ+lmi0Wjl59IN++maEQxqmJh/+SAe37mM+ZHfvn1iqXkQw31TbFgYldBWT8E6Eej47DHmsWbh9NQUH0Q==", "parent_task"=>{"title"=>"asdf", "explanation"=>"asdf", "parent_deadline"=>"2020-09-01T10:26"}, "button"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 25ms (ActiveRecord: 2.6ms | Allocations: 7419)
+
+
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-22 01:27:22 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 576)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 109ms (Views: 72.6ms | ActiveRecord: 7.9ms | Allocations: 20606)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 01:27:28 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"pjyJDHwtvmveLqHyAyB78rXa2FT7l2ri2icVR0IMQKxnKMKLxlcY3D6vjo3S1xCbIxAfNGOKeWU+eRrUFDcjCg==", "parent_task"=>{"title"=>"asdf", "explanation"=>"asdf", "parent_deadline"=>"2020-08-28T10:27"}, "button"=>""}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.7ms | Allocations: 3027)
+
+
+  
+NoMethodError (undefined method `log' for nil:NilClass):
+  
+app/controllers/parent_tasks_controller.rb:18:in `create'
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 01:27:40 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"pjyJDHwtvmveLqHyAyB78rXa2FT7l2ri2icVR0IMQKxnKMKLxlcY3D6vjo3S1xCbIxAfNGOKeWU+eRrUFDcjCg==", "parent_task"=>{"title"=>"asdf", "explanation"=>"asdf", "parent_deadline"=>"2020-08-28T10:27"}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 45ms (ActiveRecord: 8.2ms | Allocations: 18645)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 01:27:41 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"pjyJDHwtvmveLqHyAyB78rXa2FT7l2ri2icVR0IMQKxnKMKLxlcY3D6vjo3S1xCbIxAfNGOKeWU+eRrUFDcjCg==", "parent_task"=>{"title"=>"asdf", "explanation"=>"asdf", "parent_deadline"=>"2020-08-28T10:27"}, "button"=>""}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 16ms (ActiveRecord: 2.6ms | Allocations: 5475)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 01:27:43 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"pjyJDHwtvmveLqHyAyB78rXa2FT7l2ri2icVR0IMQKxnKMKLxlcY3D6vjo3S1xCbIxAfNGOKeWU+eRrUFDcjCg==", "parent_task"=>{"title"=>"asdf", "explanation"=>"asdf", "parent_deadline"=>"2020-08-28T10:27"}, "button"=>""}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 15ms (ActiveRecord: 2.2ms | Allocations: 5445)
+
+
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-22 01:29:07 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 576)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 127ms (Views: 85.9ms | ActiveRecord: 7.9ms | Allocations: 20601)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 01:29:15 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"FKrEs3Ea21pcuEThjyR8Pv2fQraI7hIO0yuWtO0PBkbVvo80y2B97bw5a55e0xdXa1WF1hDzAYk3dZknuzRl4A==", "parent_task"=>{"title"=>"asdf", "explanation"=>"asdf", "parent_deadline"=>"2020-08-27T10:29"}, "button"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-22 01:37:40 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (12.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ParentTasksController#new as HTML
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 21.2ms | Allocations: 1370)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 4.5ms | Allocations: 99)
+Completed 200 OK in 1106ms (Views: 980.1ms | ActiveRecord: 19.3ms | Allocations: 34535)
+
+
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-22 01:37:44 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 485)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 76ms (Views: 71.1ms | ActiveRecord: 0.7ms | Allocations: 9324)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 01:37:50 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"8qJZunT2A/bkKBANgHMQYhJH9BvnAqaiLHM6AX/qUcAzthI9zoylQQSpP3JRhHsLhI0ze38ftSXILTWSKdEyZg==", "parent_task"=>{"title"=>"adsf", "explanation"=>"asdf", "parent_deadline"=>"2020-08-25T10:37"}, "button"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ (pry):3:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ (pry):3:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ (pry):3:in `create'
+No template found for ParentTasksController#create, rendering head :no_content
+Completed 204 No Content in 331991ms (ActiveRecord: 1.7ms | Allocations: 687478)
+
+
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-22 01:43:28 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 577)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 116ms (Views: 67.5ms | ActiveRecord: 8.8ms | Allocations: 20489)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 01:43:33 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"DBf406NZ64GH9b9KP4Gc7TqjSdA6LxBjLxCPcopsE6/NA7NUGSNNNmd0kDXudveErGmOsKIyA+TLToDh3FdwCQ==", "parent_task"=>{"title"=>"asdf", "explanation"=>"asdf", "parent_deadline"=>"2020-08-27T10:43"}, "button"=>""}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ (pry):12:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ (pry):12:in `create'
+  [1m[36mParentTask Create (0.8ms)[0m  [1m[32mINSERT INTO `parent_tasks` (`title`, `parent_deadline`, `explanation`, `created_at`, `updated_at`, `user_id`) VALUES ('asdf', '2020-08-27 10:43:00', 'asdf', '2020-08-22 01:44:34.067031', '2020-08-22 01:44:34.067031', 1)[0m
+  ↳ (pry):12:in `create'
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ (pry):12:in `create'
+Started GET "/parent_tasks/new" for 172.19.0.1 at 2020-08-22 01:44:56 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Redirected to http://localhost:3000/parent_tasks
+Completed 200 OK in 90426ms (ActiveRecord: 5.7ms | Allocations: 546419)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-22 01:45:04 +0000
+Processing by ParentTasksController#new as HTML
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 576)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 103ms (Views: 66.4ms | ActiveRecord: 9.0ms | Allocations: 20503)
+
+
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/index.html.erb within layouts/application
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 83)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 82ms (Views: 55.2ms | ActiveRecord: 4.5ms | Allocations: 15975)
+
+
+Started POST "/parent_tasks" for 172.19.0.1 at 2020-08-22 01:45:12 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"+gOQvwlVMqF/H3272VB+oupRTHIzFGGOo4TfB3TRGYQ7F9s4sy+UFp+eUsQIpxXLfJuLEqsJcglH2tCUIup6Ig==", "parent_task"=>{"title"=>"asdf", "explanation"=>"asdf", "parent_deadline"=>"2020-08-25T10:45"}, "button"=>""}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/parent_tasks_controller.rb:19:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:19:in `create'
+  [1m[36mParentTask Create (0.6ms)[0m  [1m[32mINSERT INTO `parent_tasks` (`title`, `parent_deadline`, `explanation`, `created_at`, `updated_at`, `user_id`) VALUES ('asdf', '2020-08-25 10:45:00', 'asdf', '2020-08-22 01:45:12.938002', '2020-08-22 01:45:12.938002', 1)[0m
+  ↳ app/controllers/parent_tasks_controller.rb:19:in `create'
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/parent_tasks_controller.rb:19:in `create'
+Redirected to http://localhost:3000/parent_tasks
+Completed 200 OK in 38ms (ActiveRecord: 9.4ms | Allocations: 10702)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-22 01:45:12 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/index.html.erb within layouts/application
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 68ms (Views: 62.3ms | ActiveRecord: 1.2ms | Allocations: 8817)
+
+
