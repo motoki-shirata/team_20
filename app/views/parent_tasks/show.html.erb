@@ -1,7 +1,7 @@
 <%= link_to "タスク一覧へ", parent_tasks_path(@parent_task) %>
 <h1>id: <%= @parent_task.id %>　の親タスク詳細ページ</h1>
 
-<p>parent_task_id:<%= @parent_task.id %></p>
+<p>親タスクのid:<%= @parent_task.id %></p>
 <p>タスクタイトル：<%= @parent_task.title %></p>
 <p>deadline:<%= @parent_task.parent_deadline %></p>
 <% if @parent_task.self_evaluate == 0 %>
@@ -15,3 +15,14 @@
 <% end %>
 <p><%= @parent_task.updated_at %></p>
 <p>user_id:<%= @parent_task.user_id %></p>
+
+<h2>コメント一覧</h2>
+<% @task_comments.each do |task_comment| %>
+  <%= task_comment.parent_comment %>
+<% end %>
+
+<%= form_with(model: [@parent_task, @task_comment]) do |f| %>
+  <%= f.text_field :parent_comment %>
+  <br>
+  <%= f.submit 'コメントする' %>
+<% end %>
