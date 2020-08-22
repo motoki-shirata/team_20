@@ -16,12 +16,17 @@
             </a>
 
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">プロフィール編集</a>
               <% if user_signed_in?%>
-                <a class="dropdown-item" href="#">プロフィール編集</a>
+                <%= link_to "Profile", current_user%>
+                <br>
+                <%= link_to "Users", "/users"%>
+                <br>
                 <%= link_to "User logout", destroy_user_session_path, method: :delete %>
               <% elsif boss_signed_in?%>
-                <a class="dropdown-item" href="#">プロフィール編集</a>
+                <%= link_to "Profile", current_boss%>
+                <br>
+                <%= link_to "Bosses", "/bosses"%>
+                <br>
                 <%= link_to "Boss logout", destroy_boss_session_path, method: :delete %>
               <% else%>
                 Please SignUp or Login

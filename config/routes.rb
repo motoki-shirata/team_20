@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/index'
-  get 'users/show'
   root :to => 'toppages#index'
   resources :teams, only: [:new, :create, :destroy]
   devise_for :users, controllers: {
