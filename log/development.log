@@ -3998,3 +3998,52 @@ FOREIGN KEY (`boss_id`)
   [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
 >>>>>>> develop
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'a@a.a' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `name`) VALUES ('a@a.a', '$2a$12$xt0p4WVooISmJQLfExUsMeFsHJBDVNlnMhKTXgRvHOD1uA4owxCF.', '2020-08-21 12:21:37.800761', '2020-08-21 12:21:37.800761', 'taro')[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 172.20.0.1 at 2020-08-22 01:15:04 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.7ms | Allocations: 432)
+Completed 200 OK in 30ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 1916)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-22 01:15:15 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from process at /usr/local/bundle/gems/autoprefixer-rails-9.8.6.2/lib/autoprefixer-rails/processor.rb:23)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.7ms | Allocations: 200)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2832.9ms | Allocations: 22632)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.7ms | Allocations: 94)
+Completed 200 OK in 2967ms (Views: 2942.6ms | ActiveRecord: 10.4ms | Allocations: 39607)
+
+
+Started GET "/toppages/index" for 172.20.0.1 at 2020-08-22 01:23:38 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 80)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.7ms | Allocations: 93)
+Completed 200 OK in 77ms (Views: 71.0ms | ActiveRecord: 0.0ms | Allocations: 9382)
+
+
+Started GET "/toppages/index" for 172.20.0.1 at 2020-08-22 01:24:44 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 78)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.8ms | Allocations: 93)
+Completed 200 OK in 84ms (Views: 79.2ms | ActiveRecord: 0.0ms | Allocations: 8728)
+
+
