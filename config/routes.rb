@@ -10,8 +10,8 @@ Rails.application.routes.draw do
 
   # root to: 'tasks'
 
-  resources :parent_tasks, only: [:index, :show, :edit, :new, :create, :destroy]
-  resources :child_tasks, only: [:index, :show, :edit, :new, :create, :destroy]
-
+  resources :parent_tasks do
+    resources :child_tasks
+  end
 
 end
