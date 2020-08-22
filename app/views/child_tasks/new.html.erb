@@ -1,5 +1,3 @@
-
-
 <%= form_with model: [@parent_task, @child_task] do |f| %>
     <div class= 'form-group'>
         <%= f.label :title, 'タイトル' %>
@@ -17,6 +15,5 @@
         <%= f.label :possibility, '間に合うかどうか' %>
         <%= f.select :possibility, [["自信がある", "0"], ["まあまあ", "1"], ["自信がないです助けて！", "2"]] %>
     </div>
-        
         <%= f.submit 'タスクを保存！'%>
 <% end %>
