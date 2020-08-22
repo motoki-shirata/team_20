@@ -7,10 +7,8 @@ class ParentTasksController < ApplicationController
     def show
         @parent_task = ParentTask.find(params[:id])
     end
-    
     def new
         @parent_task = ParentTask.new
-        
     end
     def create
         @parent_task = ParentTask.new(parent_task_params)
@@ -22,7 +20,6 @@ class ParentTasksController < ApplicationController
         end
     end
     def destroy
-        
     end
 
     private
@@ -30,7 +27,5 @@ class ParentTasksController < ApplicationController
     def parent_task_params
         params.require(:parent_task).permit(:title, :explanation, :parent_deadline, :self_evaluate)
     end
-    
-    
-    
+
 end
