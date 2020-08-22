@@ -11,8 +11,8 @@
   </div>
 <% end %>
 
-<%= form_for [@post, @comment] do |f| %>
-  <%= f.text_field :content %>
+<%= form_for [@parent_task, @task_comment] do |f| %>
+  <%= f.text_field :parent_comment %>
   <br>
   <%= f.submit 'コメントする' %>
 <% end %>
