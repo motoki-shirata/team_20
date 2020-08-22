@@ -4,8 +4,22 @@
   </div>
   
   <% if user_signed_in? && boss_signed_in?%>
+    <% if user_signed_in?%>
+      Signed in as User
+    <% else %>
+      Signed in as Boss
+    <% end %>
   <% else%>
-    <%= link_to "User Login/SignUp", href="users/sign_up"%>
-    <%= link_to "Boss Login/SignUp", href="bosses/sign_up"%>    
+    <div class="container text-center">
+            <%= link_to "User Login / Sign up", new_user_session_path, class: 'btn btn-lg btn-primary btn-block' %>
+    </div>
+    <br>
+    <div class="container text-center">
+            <%= link_to "Boss Login / Sign up", new_boss_session_path, class: 'btn btn-lg btn-secondary btn-block' %>
+    </div>
   <% end %>
+
+
+
+
 </div>

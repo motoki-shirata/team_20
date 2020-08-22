@@ -1,4 +1,4 @@
-class TaskCommentController < ApplicationController
+class TaskCommentsController < ApplicationController
     def create
         @task_comment = Task_comment.new(task_comment_params)
         @task_comment.user_id = current_user.id
