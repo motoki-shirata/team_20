@@ -5,6 +5,10 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
     sessions: 'users/sessions'
   }
+
+  get '/bosses/new_team', to: 'bosses#new_team'
+  post '/bosses/new_team', to: 'bosses#post_team'
+    
   devise_for :bosses, controllers: {
     registrations: 'bosses/registrations',
     sessions: 'bosses/sessions'
@@ -19,5 +23,7 @@ Rails.application.routes.draw do
   resources :parent_tasks do
     resources :child_tasks
   end
+
+
 
 end

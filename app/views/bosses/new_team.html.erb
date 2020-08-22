@@ -1,0 +1,18 @@
+<%= form_with model: @boss, local: true do |f| %>
+    <%= f.collection_check_boxes(:boss, :team_ids, Team.all, :id, :name) do |team| %>
+        <%= team.label do %>
+            <%= team.check_box %>
+        <% end %>
+    <% end %>
+    <%= f.submit %>
+<% end %>
+
+
+
+<div class="check_box" >
+  <%= form_for @teams do |f| %>
+    <%= f.collection_check_boxes(:user_ids, User.all, :id, :name) do |b| %>
+      <%= b.label { b.check_box + b.text } %>
+    <% end %>
+  <% end %>
+</div>
