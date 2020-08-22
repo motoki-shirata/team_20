@@ -1,0 +1,9 @@
+<%= form_with model: @parent_task(task) do |f| %>
+    <%= f.label :title, 'タイトル' %>
+    <%= f.text_field :title %>
+    <%= f.label :explanation, '概要' %>
+    <%= f.text_field :explanation %>
+    <%= f.label :parent_deadline, '締め切り日時' %>
+    <%= f.datetime_field :parent_deadline %>
+    <%= f.button '送信' %>
+<% end %>

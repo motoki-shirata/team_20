@@ -1,0 +1,7 @@
+<%= form_with(model: @child_task, local: true) do |f| %>
+    <%= f.text_area :title %>
+    <%= f.datetime_field :child_deadline %>
+    <%= f.select :possibility, [["自信がある", "0"], ["まあまあ", "1"], ["自信がないです助けて！", "2"]] %>
+    <%= f.text_area :explanation %>
+    <%= f.submit 'タスクを保存！', class: 'btn'%>
+<% end %>
