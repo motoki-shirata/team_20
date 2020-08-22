@@ -16,9 +16,5 @@ Rails.application.routes.draw do
   resources :parent_tasks do
     resources :child_tasks
   end
-  
-  resources :parent_tasks do
-    resources :child_tasks
-  end
 
 end
