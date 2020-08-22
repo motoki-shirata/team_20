@@ -1,4 +1,5 @@
 class ParentTasksController < ApplicationController
+    before_action :authenticate_user!
 
     def index
         @parent_tasks = ParentTask.all
@@ -12,13 +13,15 @@ class ParentTasksController < ApplicationController
         
     end
     def create
-        @parent_task = current_user.parent_tasks.build(parent_task_params)
+        @parent_task = ParentTask.new(parent_task_params)
+        @parent_task.user_id = current_user.id
+        # binding.pry
         if @parent_task.save
             flash[:success] = 'タスクを作成しました'
-            redirect_to new_parent_tasks_path
+            redirect_to parent_tasks_path
         end
     end
-    def delete
+    def destroy
         
     end
 

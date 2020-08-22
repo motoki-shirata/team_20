@@ -21,6 +21,7 @@ services:
       - db
     stdin_open: true
     tty: true
+    stdin_open: true
 volumes:
   mysql-data:
     driver: local
