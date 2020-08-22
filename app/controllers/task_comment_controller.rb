@@ -9,6 +9,12 @@ class TaskCommentController < ApplicationController
         end
     end
 
+    def destory
+        @task_comment.destory
+        flash[:success] = 'コメントを削除しました。'
+        redirect_back(fallback_location: root_path)
+    end
+
     private
     def task_comment_params
         params.require(:task_comment).permit(:parent_coment)

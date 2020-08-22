@@ -75,3 +75,8 @@ Migrating to CreateTaskComments (20200822021044)
   [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 1 LIMIT 1[0m
   [1m[36mTaskComment Create (0.5ms)[0m  [1m[32mINSERT INTO `task_comments` (`parent_comment`, `user_id`, `parent_task_id`, `created_at`, `updated_at`) VALUES ('nice', 1, 1, '2020-08-22 05:35:13.207285', '2020-08-22 05:35:13.207285')[0m
   [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mTaskComment Load (0.4ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` ORDER BY `task_comments`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTaskComment Destroy (0.6ms)[0m  [1m[31mDELETE FROM `task_comments` WHERE `task_comments`.`id` = 1[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m

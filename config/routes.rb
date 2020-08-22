@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # root to: 'tasks'
 
   resources :parent_tasks, only: [:index, :show, :edit, :new, :create, :destroy] do
-    resources :task_comment, only: [:create]
+    resources :task_comment, only: [:create, :destory]
   end
   resources :child_tasks, only: [:index, :show, :edit, :new, :create, :destroy]
 
