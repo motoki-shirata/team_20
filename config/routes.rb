@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'toppages/index'
   resources :teams, only: [:new, :create, :destroy]
   devise_for :users, controllers: {
     registrations: 'users/registrations',
