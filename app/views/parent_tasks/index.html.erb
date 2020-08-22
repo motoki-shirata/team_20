@@ -26,3 +26,20 @@
     </ul>
 </ul>
 <% end %>
+
+<% @parent_tasks.each do |parent_task| %>
+<div class="card border-secondary">
+    <div class="card-header bg-danger ">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="#" checked>
+            <label class="form-check-label" for="#">親タスク：「<%= parent_task.title %>」</label>
+        </div>
+        終了期日:<%= parent_task.parent_deadline %> <%= link_to "子タスク作成画面へ", new_parent_task_child_task_path(parent_task) %>
+    </div>
+    <div class="card-body">
+        <a href="#">子タスク1</a><br />
+        <a href="#">子タスク2</a><br />
+        <a href="#">子タスク3</a><br />
+    </div>
+</div>
+<% end %>
