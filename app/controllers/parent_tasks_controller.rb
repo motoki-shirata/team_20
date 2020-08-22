@@ -28,7 +28,7 @@ class ParentTasksController < ApplicationController
     private
 
     def parent_task_params
-        params.require(:parent_task).permit(:title, :explanation, :parent_deadline)
+        params.require(:parent_task).permit(:title, :explanation, :parent_deadline, :self_evaluate)
     end
     
     
