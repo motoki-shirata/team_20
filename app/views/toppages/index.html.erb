@@ -2,4 +2,10 @@
   <div class="text-center">
     <h1 class="text-danger">Welcome to the FUNFUFUN</h1>
   </div>
+  
+  <% if user_signed_in? && boss_signed_in?%>
+  <% else%>
+    <%= link_to "User Login/SignUp", href="users/sign_up"%>
+    <%= link_to "Boss Login/SignUp", href="bosses/sign_up"%>    
+  <% end %>
 </div>
