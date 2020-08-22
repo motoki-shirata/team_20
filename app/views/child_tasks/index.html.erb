@@ -1,1 +1,5 @@
 <h1>子タスクの一覧</h1>
+<%= @child_tasks.each do |child_task| %>
+<%= link_to "子タスク詳細画面へ", parent_task_child_task_path(parent_task) %>
+<%= child_task %>
+<% end %>

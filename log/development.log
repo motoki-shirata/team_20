@@ -16,3 +16,477 @@ FOREIGN KEY (`user_id`)
   [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
   [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-22 07:31:58 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (3.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:4
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 25.3ms | Allocations: 6262)
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from process at /usr/local/bundle/gems/autoprefixer-rails-9.8.6.2/lib/autoprefixer-rails/processor.rb:23)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 2.6ms | Allocations: 389)
+Completed 200 OK in 1839ms (Views: 1768.1ms | ActiveRecord: 21.1ms | Allocations: 48431)
+
+
+Started GET "/parent_tasks/1/child_tasks/new" for 172.19.0.1 at 2020-08-22 07:32:03 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#new as HTML
+  Parameters: {"parent_task_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:10:in `new'
+  Rendering child_tasks/new.html.erb within layouts/application
+  Rendered child_tasks/new.html.erb within layouts/application (Duration: 18.8ms | Allocations: 1816)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 58)
+Completed 200 OK in 122ms (Views: 87.8ms | ActiveRecord: 3.7ms | Allocations: 18542)
+
+
+Started POST "/parent_tasks/1/child_tasks" for 172.19.0.1 at 2020-08-22 07:32:13 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#create as JS
+  Parameters: {"authenticity_token"=>"A+7rPZIubmaf8QRlr+a7x2UzYLddWB84zoMKzDD8mHvtPXp9aGUrhSrAyxO0/KJZjvBVfkEVXyT53GjhmJRFGw==", "child_task"=>{"title"=>"asdf", "explanation"=>"asdf", "child_deadline"=>"2020-08-25T16:32", "possibility"=>"0"}, "commit"=>"タスクを保存！", "parent_task_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+  [1m[36mChildTask Create (2.2ms)[0m  [1m[32mINSERT INTO `child_tasks` (`title`, `child_deadline`, `possibility`, `explanation`, `parent_task_id`, `created_at`, `updated_at`) VALUES ('asdf', '2020-08-25 16:32:00', 0, 'asdf', 1, '2020-08-22 07:32:13.053203', '2020-08-22 07:32:13.053203')[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 5.5ms | Allocations: 8066)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"child_tasks", :parent_task_id=>"1"}, missing required keys: [:id]):
+  
+app/controllers/child_tasks_controller.rb:18:in `create'
+Started POST "/parent_tasks/1/child_tasks" for 172.19.0.1 at 2020-08-22 07:33:23 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#create as JS
+  Parameters: {"authenticity_token"=>"A+7rPZIubmaf8QRlr+a7x2UzYLddWB84zoMKzDD8mHvtPXp9aGUrhSrAyxO0/KJZjvBVfkEVXyT53GjhmJRFGw==", "child_task"=>{"title"=>"asdf", "explanation"=>"asdf", "child_deadline"=>"2020-08-25T16:32", "possibility"=>"0"}, "commit"=>"タスクを保存！", "parent_task_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+  [1m[36mChildTask Create (0.5ms)[0m  [1m[32mINSERT INTO `child_tasks` (`title`, `child_deadline`, `possibility`, `explanation`, `parent_task_id`, `created_at`, `updated_at`) VALUES ('asdf', '2020-08-25 16:32:00', 0, 'asdf', 1, '2020-08-22 07:33:23.687550', '2020-08-22 07:33:23.687550')[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 267ms (ActiveRecord: 10.8ms | Allocations: 143739)
+
+
+  
+NameError (undefined local variable or method `parent_task' for #<ChildTasksController:0x00005564c3f74680>
+Did you mean?  parent_task_url):
+  
+app/controllers/child_tasks_controller.rb:18:in `create'
+Started POST "/parent_tasks/1/child_tasks" for 172.19.0.1 at 2020-08-22 07:33:50 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#create as JS
+  Parameters: {"authenticity_token"=>"A+7rPZIubmaf8QRlr+a7x2UzYLddWB84zoMKzDD8mHvtPXp9aGUrhSrAyxO0/KJZjvBVfkEVXyT53GjhmJRFGw==", "child_task"=>{"title"=>"asdf", "explanation"=>"asdf", "child_deadline"=>"2020-08-25T16:32", "possibility"=>"0"}, "commit"=>"タスクを保存！", "parent_task_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+  [1m[36mChildTask Create (0.5ms)[0m  [1m[32mINSERT INTO `child_tasks` (`title`, `child_deadline`, `possibility`, `explanation`, `parent_task_id`, `created_at`, `updated_at`) VALUES ('asdf', '2020-08-25 16:32:00', 0, 'asdf', 1, '2020-08-22 07:33:51.216649', '2020-08-22 07:33:51.216649')[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 248ms (ActiveRecord: 11.0ms | Allocations: 143758)
+
+
+  
+NameError (undefined local variable or method `parent_task' for #<ChildTasksController:0x00005564c2d99b68>
+Did you mean?  parent_task_url):
+  
+app/controllers/child_tasks_controller.rb:18:in `create'
+Started POST "/parent_tasks/1/child_tasks" for 172.19.0.1 at 2020-08-22 07:35:16 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#create as JS
+  Parameters: {"authenticity_token"=>"A+7rPZIubmaf8QRlr+a7x2UzYLddWB84zoMKzDD8mHvtPXp9aGUrhSrAyxO0/KJZjvBVfkEVXyT53GjhmJRFGw==", "child_task"=>{"title"=>"asdf", "explanation"=>"asdf", "child_deadline"=>"2020-08-25T16:32", "possibility"=>"0"}, "commit"=>"タスクを保存！", "parent_task_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+  [1m[36mChildTask Create (0.6ms)[0m  [1m[32mINSERT INTO `child_tasks` (`title`, `child_deadline`, `possibility`, `explanation`, `parent_task_id`, `created_at`, `updated_at`) VALUES ('asdf', '2020-08-25 16:32:00', 0, 'asdf', 1, '2020-08-22 07:35:16.434144', '2020-08-22 07:35:16.434144')[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 9.5ms | Allocations: 23779)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"parent_tasks", :parent_task_id=>"1"}, missing required keys: [:id]):
+  
+app/controllers/child_tasks_controller.rb:18:in `create'
+Started POST "/parent_tasks/1/child_tasks" for 172.19.0.1 at 2020-08-22 07:35:42 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#create as JS
+  Parameters: {"authenticity_token"=>"A+7rPZIubmaf8QRlr+a7x2UzYLddWB84zoMKzDD8mHvtPXp9aGUrhSrAyxO0/KJZjvBVfkEVXyT53GjhmJRFGw==", "child_task"=>{"title"=>"asdf", "explanation"=>"asdf", "child_deadline"=>"2020-08-25T16:32", "possibility"=>"0"}, "commit"=>"タスクを保存！", "parent_task_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+  [1m[36mChildTask Create (0.4ms)[0m  [1m[32mINSERT INTO `child_tasks` (`title`, `child_deadline`, `possibility`, `explanation`, `parent_task_id`, `created_at`, `updated_at`) VALUES ('asdf', '2020-08-25 16:32:00', 0, 'asdf', 1, '2020-08-22 07:35:42.262328', '2020-08-22 07:35:42.262328')[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+Redirected to http://localhost:3000/parent_tasks
+Completed 200 OK in 55ms (ActiveRecord: 9.6ms | Allocations: 23598)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-22 07:35:42 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:4
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1247)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 60)
+Completed 200 OK in 71ms (Views: 63.9ms | ActiveRecord: 1.4ms | Allocations: 10369)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-22 07:44:09 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:4
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 21.8ms | Allocations: 3421)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 2.3ms | Allocations: 368)
+Completed 200 OK in 130ms (Views: 100.9ms | ActiveRecord: 1.0ms | Allocations: 24551)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-22 07:45:19 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/index.html.erb within layouts/application
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1225)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.6ms | Allocations: 4103)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>ここはいったんのホーム画面</h1>
+
+<h2>タスクの一覧表示</h2>
+<% @parent_tasks.each do |parent_task| %>
+<%= link_to "子タスク作成画面へ", new_parent_task_child_task_path(parent_task) %>
+<ul>
+<%= parent_task.id %>
+<li>タスクタイトル:<%= parent_task.title %></li>
+<li>deadline:<%= parent_task.parent_deadline %></li>
+<% if parent_task.self_evaluate == 0 %>
+    <li>評価表示:うまく切り分けられた</li>
+<% elsif parent_task.self_evaluate == 1 %>
+    <li>評価表示:普通</li>
+<% elsif parent_task.self_evaluate == 2 %>
+    <li>評価表示:上司助けて</li>
+<% else %>
+    <li>入力されていません</li>
+<% end %>
+<li>update_time:<%= parent_task.updated_at %></li>
+<li>user_id:<%= parent_task.user_id %></li>
+<li>子タスクタイトル:<%= parent_task.child_tasks.each do |child_task| %>
+<%= child_task.title %>>
+</li>
+</ul>
+<% end %>
+
+):
+1:    <h1>ここはいったんのホーム画面</h1>
+2:    
+3:    <h2>タスクの一覧表示</h2>
+4:    <% @parent_tasks.each do |parent_task| %>
+5:    <%= link_to "子タスク作成画面へ", new_parent_task_child_task_path(parent_task) %>
+6:    <ul>
+7:    <%= parent_task.id %>
+8:    <li>タスクタイトル:<%= parent_task.title %></li>
+9:    <li>deadline:<%= parent_task.parent_deadline %></li>
+10:    <% if parent_task.self_evaluate == 0 %>
+11:        <li>評価表示:うまく切り分けられた</li>
+12:    <% elsif parent_task.self_evaluate == 1 %>
+13:        <li>評価表示:普通</li>
+14:    <% elsif parent_task.self_evaluate == 2 %>
+15:        <li>評価表示:上司助けて</li>
+16:    <% else %>
+17:        <li>入力されていません</li>
+18:    <% end %>
+19:    <li>update_time:<%= parent_task.updated_at %></li>
+20:    <li>user_id:<%= parent_task.user_id %></li>
+21:    <li>子タスクタイトル:<%= parent_task.child_tasks.each do |child_task| %>
+22:    <%= child_task.title %>>
+23:    </li>
+24:    </ul>
+25:    <% end %>
+  
+app/views/parent_tasks/index.html.erb:27: syntax error, unexpected end-of-input, expecting `end'
+app/views/parent_tasks/index.html.erb:27: syntax error, unexpected end-of-input, expecting `end'
+app/views/parent_tasks/index.html.erb:27: syntax error, unexpected end-of-input, expecting `end'
+app/views/parent_tasks/index.html.erb:27: syntax error, unexpected end-of-input, expecting `end'
+app/views/parent_tasks/index.html.erb:27: syntax error, unexpected end-of-input, expecting `end'
+app/views/parent_tasks/index.html.erb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-22 07:45:34 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:4
+  [1m[36mChildTask Load (0.6ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.6ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 43.1ms | Allocations: 15737)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 2.0ms | Allocations: 365)
+Completed 200 OK in 127ms (Views: 114.9ms | ActiveRecord: 5.6ms | Allocations: 26110)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-22 07:45:55 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:4
+  [1m[36mChildTask Load (0.6ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 30.7ms | Allocations: 8780)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 2.2ms | Allocations: 365)
+Completed 200 OK in 112ms (Views: 99.9ms | ActiveRecord: 4.5ms | Allocations: 19233)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-22 07:46:09 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:4
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 29.4ms | Allocations: 8779)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.7ms | Allocations: 365)
+Completed 200 OK in 106ms (Views: 93.6ms | ActiveRecord: 5.1ms | Allocations: 19250)
+
+
+Started GET "/parent_tasks/9/child_tasks/new" for 172.19.0.1 at 2020-08-22 07:46:33 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#new as HTML
+  Parameters: {"parent_task_id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:10:in `new'
+  Rendering child_tasks/new.html.erb within layouts/application
+  Rendered child_tasks/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1108)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 58)
+Completed 200 OK in 83ms (Views: 69.2ms | ActiveRecord: 1.0ms | Allocations: 11472)
+
+
+Started POST "/parent_tasks/9/child_tasks" for 172.19.0.1 at 2020-08-22 07:46:44 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#create as JS
+  Parameters: {"authenticity_token"=>"CZ2LgKWpierRUDoy9jPogmZ2oMWY8rfYY26sbIt1k7xiMr48xvBSUEQvqtLtldXh7aokTRs7NaL5e2mzn8xgOA==", "child_task"=>{"title"=>"asdf", "explanation"=>"asdf", "child_deadline"=>"2020-08-28T16:46", "possibility"=>"2"}, "commit"=>"タスクを保存！", "parent_task_id"=>"9"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+  [1m[36mParentTask Load (0.8ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+  [1m[36mChildTask Create (0.8ms)[0m  [1m[32mINSERT INTO `child_tasks` (`title`, `child_deadline`, `possibility`, `explanation`, `parent_task_id`, `created_at`, `updated_at`) VALUES ('asdf', '2020-08-28 16:46:00', 2, 'asdf', 9, '2020-08-22 07:46:44.105027', '2020-08-22 07:46:44.105027')[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/child_tasks_controller.rb:16:in `create'
+Redirected to http://localhost:3000/parent_tasks
+Completed 200 OK in 26ms (ActiveRecord: 7.0ms | Allocations: 5946)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-22 07:46:44 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:4
+  [1m[36mChildTask Load (0.6ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.6ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 28.1ms | Allocations: 8479)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 57)
+Completed 200 OK in 86ms (Views: 77.0ms | ActiveRecord: 5.2ms | Allocations: 17370)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-22 07:47:58 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:4
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.7ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 31.8ms | Allocations: 8855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 2.2ms | Allocations: 365)
+Completed 200 OK in 122ms (Views: 109.3ms | ActiveRecord: 4.9ms | Allocations: 19309)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-22 07:48:29 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:4
+  [1m[36mChildTask Load (0.7ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 30.9ms | Allocations: 8855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 2.1ms | Allocations: 365)
+Completed 200 OK in 112ms (Views: 101.0ms | ActiveRecord: 4.5ms | Allocations: 19323)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-22 07:49:58 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:4
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:21
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 25.9ms | Allocations: 8895)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 2.1ms | Allocations: 365)
+Completed 200 OK in 109ms (Views: 97.8ms | ActiveRecord: 3.7ms | Allocations: 19365)
+
+
