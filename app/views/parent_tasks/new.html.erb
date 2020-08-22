@@ -1,11 +1,22 @@
 <%= current_user.id%>
+<%=  %>
 
 <%= form_with model: @parent_task do |f| %>
-    <%= f.label :title, 'タイトル' %>
-    <%= f.text_field :title %>
-    <%= f.label :explanation, '概要' %>
-    <%= f.text_field :explanation %>
-    <%= f.label :parent_deadline, '締め切り日時' %>
-    <%= f.datetime_field :parent_deadline %>
-    <%= f.button '送信' %>
+    <div class= 'form-group'>
+        <%= f.label :title, 'タイトル' %>
+        <%= f.text_field :title %>
+    </div>
+    <div class= 'form-group'>
+        <%= f.label :explanation, '概要' %>
+        <%= f.text_field :explanation %>
+    </div>
+    <div class= 'form-group'>
+        <%= f.label :self_evaluate, 'うまく切り分けられたかどうか' %>
+        <%= f.select :self_evaluate, [["めちゃ上手くいったこれからできそう", "0"], ["普通", "1"], ["上司助けて", "2"]] %>
+    </div>
+    <div class= 'form-group'>
+        <%= f.label :parent_deadline, '締め切り日時' %>
+        <%= f.datetime_field :parent_deadline %>
+    </div>
+        <%= f.button '送信' %>
 <% end %>
