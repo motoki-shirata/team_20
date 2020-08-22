@@ -4,9 +4,6 @@
     <% @parent_tasks.each do |parent_task| %>
     <%= link_to "子タスク作成画面へ", new_parent_task_child_task_path(parent_task) %></br>
     <%= link_to "親タスクに紐づく子タスク一覧画面へ",  parent_task_child_tasks_path(parent_task) %>
-
-    
-
 <ul>
     <%= parent_task.id %>
         <li>タスクタイトル:<%= parent_task.title %></li>
@@ -23,6 +20,16 @@
         <li>update_time:<%= parent_task.updated_at %></li>
         <li>user_id:<%= parent_task.user_id %></li>
     <ul>子タスクタイトル:<% parent_task.child_tasks.each do |child_task| %>
+    <%= button_to 'タスクの完了', finished_parent_task_child_tasks_path(parent_task) %>
+<%
+=begin%>
+     
+    <%= if child_task.finish_time %>
+        <%= child_task.finish_time %>
+    <% end %> 
+<%
+=end%>
+
         <li><%= child_task.title %></li>
         <li><%= child_task.possibility %></li>
         <% end %>

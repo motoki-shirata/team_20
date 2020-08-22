@@ -3,6 +3,7 @@ class ParentTasksController < ApplicationController
 
     def index
         @parent_tasks = ParentTask.all
+        # binding.pry
     end
     def show
         @parent_task = ParentTask.find(params[:id])
