@@ -17,4 +17,11 @@ Rails.application.routes.draw do
     resources :child_tasks
   end
 
+<<<<<<< HEAD
+=======
+  resources :parent_tasks do
+    resources :child_tasks
+  end
+
+>>>>>>> develop
 end
