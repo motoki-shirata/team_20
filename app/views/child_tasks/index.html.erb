@@ -1,5 +1,16 @@
-<h1>子タスクの一覧</h1>
-<%= @child_tasks.each do |child_task| %>
-<%= link_to "子タスク詳細画面へ", parent_task_child_task_path(parent_task) %>
-<%= child_task %>
+<h1>親タスクと紐づいている子タスクの一覧</h1>
+<%= link_to "親タスク一覧画面へ", parent_tasks_path %>
+<%= params[:parent_task_id] %>
+<% @child_tasks.each do |child_task| %>
+
+ <% if params[:parent_task_id].to_i == child_task.parent_task_id %>
+
+<ul>
+<li><%= child_task.title %></li>
+<li><%= child_task.parent_task_id %></li>
+</ul>
+<% end %>
+
+
+
 <% end %>
