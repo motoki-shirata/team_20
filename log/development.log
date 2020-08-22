@@ -419,3 +419,27 @@ Completed 200 OK in 58ms (Views: 57.0ms | ActiveRecord: 0.0ms | Allocations: 770
   [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
   [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO `teams` (`id`, `name`, `created_at`, `updated_at`) VALUES (7, 'DG', '2020-08-22 06:23:26.742376', '2020-08-22 06:23:26.742376')[0m
   [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+Started GET "/" for 172.19.0.1 at 2020-08-22 06:29:59 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 151)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 66ms (Views: 65.3ms | ActiveRecord: 0.0ms | Allocations: 7689)
+
+
+Started GET "/" for 172.19.0.1 at 2020-08-22 06:30:00 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 151)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 72ms (Views: 71.3ms | ActiveRecord: 0.0ms | Allocations: 7691)
+
+
