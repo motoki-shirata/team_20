@@ -36,21 +36,10 @@
     <input class="form-control" autocomplete="new-password" name="user[password_confirmation]" placeholder="Password confirmation" type="password" id="user_password_confirmation">
   </div>
 
-  <div class="dropdown">
-    <button type="button" class="btn btn-light dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        所属チーム選択
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
-        <a class="dropdown-item" href="#">CXG</a>
-        <a class="dropdown-item" href="#">PDG</a>
-        <a class="dropdown-item" href="#">ENG1</a>
-        <a class="dropdown-item" href="#">ENG2</a>
-        <a class="dropdown-item" href="#">DG</a>
-        <a class="dropdown-item" href="#">TSG</a>
-        <a class="dropdown-item" href="#">U付</a>
-    </div>
-  </div>
 
+  <%= f.label :team_id %>
+  <%= f.collection_select :team_id, Team.all, :id, :name, :prompt => "チームを選択" %>
+  
   <div class="actions btn btn-md btn-rounded btn-block form-control">
     <%= f.submit "Sign up", class: "btn btn-light" %>
   </div>
