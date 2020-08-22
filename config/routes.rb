@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
-  get 'toppages/index'
+  root :to => 'toppages#index'
   resources :teams, only: [:new, :create, :destroy]
   devise_for :users, controllers: {
     registrations: 'users/registrations',
     sessions: 'users/sessions'
   }
-  devise_for :bosses
+  devise_for :bosses, controllers: {
+    registrations: 'bosses/registrations',
+    sessions: 'bosses/sessions'
+  }
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   # root to: 'tasks'
