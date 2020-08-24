@@ -1,0 +1,9 @@
+<h1>id: <%= @task_comment.id %>のコメント編集ページ</h1>
+
+<%= form_with(model: [@parent_task, @task_comment]) do |f| %>
+    <%= f.text_area :parent_comment %>
+    <br>
+    <%= f.submit 'コメントする' %>
+<% end %>
+
+<%#= link_to '親タスク詳細へ戻る', parent_task_path(parent_task)%>

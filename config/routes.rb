@@ -29,6 +29,6 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :task_comments, only: [:create, :destory]
+    resources :task_comments
   end
 end
