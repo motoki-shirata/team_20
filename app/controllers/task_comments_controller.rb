@@ -12,8 +12,10 @@ class TaskCommentsController < ApplicationController
         end
     end
 
-    def destory
-        @task_comment.destory
+    def destroy
+        #binding.pry
+        @task_comment = TaskComment.find(params[:id])
+        @task_comment.destroy
         flash[:success] = 'コメントを削除しました。'
         redirect_back(fallback_location: root_path)
     end
