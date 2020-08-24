@@ -1,5 +1,5 @@
 class ChildTasksController < ApplicationController
-    before_action :authenticate_user!
+    before_action { :authenticate_user! || :authenticate_boss!}
 
     def index
        @child_tasks = ChildTask.all
