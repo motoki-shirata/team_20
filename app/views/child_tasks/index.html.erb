@@ -31,4 +31,9 @@
     <% end %>
     </div>
 </div>
+<%= form_with(model: [@child_task, @task_comment]) do |f| %>
+    <%= f.text_area :parent_comment %>
+    <br>
+    <%= f.submit 'コメントする' %>
+<% end %>
 <% end %>
