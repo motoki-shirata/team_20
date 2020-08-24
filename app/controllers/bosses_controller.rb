@@ -1,5 +1,5 @@
 class BossesController < ApplicationController
-  before_action :authenticate_boss!
+  before_action { :authenticate_user! || :authenticate_boss!}
   def index
     @bosses = Boss.all
   end
