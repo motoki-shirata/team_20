@@ -2641,3 +2641,55 @@ Processing by ChildTasksController#index as HTML
 Completed 200 OK in 114ms (Views: 109.1ms | ActiveRecord: 1.5ms | Allocations: 13434)
 
 
+Started GET "/" for 172.19.0.1 at 2020-08-24 11:43:17 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (7.8ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (13.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/toppages/index.html.erb:7
+  Rendered toppages/index.html.erb within layouts/application (Duration: 729.7ms | Allocations: 21120)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 41.5ms | Allocations: 7248)
+Completed 500 Internal Server Error in 935ms (ActiveRecord: 9.3ms | Allocations: 39574)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     7:     <ul class="navbar-nav mr-auto">
+     8:       <li class="nav-item">
+     9:         <% if user_signed_in?%>
+    10:           <h3 class="nav-link text-primary"><%= current_user.team.name %></h3>
+    11:         <% elsif boss_signed_in?%>
+    12:           <% current_boss.teams.each do |team|%>
+    13:             <a class="nav-link" href="#"><%= team.name  %></a>
+  
+app/views/layouts/_navbar.html.erb:10
+app/views/layouts/application.html.erb:15
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-24 11:43:24 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (2.1ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:3
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 17.5ms | Allocations: 5664)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  Rendered layouts/_navbar.html.erb (Duration: 20.5ms | Allocations: 4558)
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 4.7ms | Allocations: 20474)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     7:     <ul class="navbar-nav mr-auto">
+     8:       <li class="nav-item">
+     9:         <% if user_signed_in?%>
+    10:           <h3 class="nav-link text-primary"><%= current_user.team.name %></h3>
+    11:         <% elsif boss_signed_in?%>
+    12:           <% current_boss.teams.each do |team|%>
+    13:             <a class="nav-link" href="#"><%= team.name  %></a>
+  
+app/views/layouts/_navbar.html.erb:10
+app/views/layouts/application.html.erb:15
