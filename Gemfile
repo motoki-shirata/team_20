@@ -60,3 +60,5 @@ gem 'devise-i18n'
 gem 'jquery-rails'
 
 gem 'pry-byebug', group: :development
+
+gem 'uglifier'
