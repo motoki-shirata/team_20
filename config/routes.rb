@@ -13,7 +13,13 @@ Rails.application.routes.draw do
 
   # root to: 'tasks'
   resources :parent_tasks do
-    resources :child_tasks
+    resources :child_tasks do
+      collection do
+        post :finished
+        post :canceled
+      end
+    end
+
     resources :task_comments, only: [:create, :destory]
   end
 end
