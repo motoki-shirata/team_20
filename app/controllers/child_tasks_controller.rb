@@ -1,11 +1,14 @@
 class ChildTasksController < ApplicationController
-    before_action :authenticate_user!
+    before_action { :authenticate_user! || :authenticate_boss!}
 
     def index
        @child_tasks = ChildTask.all
     end
+
     def show
+       @child_task = ChildTask.find(params[:parent_task_id])
     end
+
     def new
         @parent_task = ParentTask.find(params[:parent_task_id])
         @child_task = ChildTask.new

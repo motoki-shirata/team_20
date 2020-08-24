@@ -1,8 +1,0 @@
-<h1>Teams#new</h1>
-<p>Find me in app/views/teams/new.html.erb</p>
-
-<%= form_with model: @team, url: teams_path do |f| %>
-    <%= f.label :name, 'チーム名の入力' %>
-    <%= f.select :name, [["U付", "U付"], ["CXG","CXG"], ["PMG", "PMG"], ["ENG1", "ENG1"], ["ENG2", "ENG2"], ["PDG", "PDG"], ["TSG", "TSG"], ["DG", "DG"]] %> 
-    <%= f.submit '送信' %>
-<% end %>

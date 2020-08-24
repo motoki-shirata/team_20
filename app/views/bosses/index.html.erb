@@ -1,0 +1,15 @@
+<div class="container border">
+  <div class="row">
+    <div class="col-6 col-offset-3">
+      <h1>Bosses</h1>
+      <% @bosses.each do |boss| %>
+        <h3>
+          Name: <a href="/bosses/<%= boss.id %>"><%= boss.name %></a>
+        </h3>
+        <br>
+        <hr>
+      <% end %>
+      <%= link_to "Return to home", root_path %>
+    </div>
+  </div>
+</div>

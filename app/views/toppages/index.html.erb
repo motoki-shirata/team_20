@@ -1,25 +1,20 @@
-<div class="center jumbotron">
+<%= stylesheet_link_tag "common", :media => "all" %>
+
+<div class="center jumbotron mt-4">
   <div class="text-center">
-    <h1 class="text-danger">Welcome to the FUNFUFUN</h1>
+    <p class="text-white font-weight-lighter title"> Welcome to the  FUN&FUN&FUN</p>
   </div>
-  
-  <% if user_signed_in? && boss_signed_in?%>
-    <% if user_signed_in?%>
-      Signed in as User
-    <% else %>
-      Signed in as Boss
-    <% end %>
-  <% else%>
-    <div class="container text-center">
-            <%= link_to "User Login / Sign up", new_user_session_path, class: 'btn btn-lg btn-primary btn-block' %>
+  <% if user_signed_in?%>
+    Signed in as User
+  <% elsif boss_signed_in? %>
+    Signed in as Boss
+  <%else %>
+    <div class="container text-center col-4 user-login">
+      <%= link_to "User Login / Sign up", new_user_session_path, class: 'btn btn-lg btn-primary btn-block' %>
     </div>
     <br>
-    <div class="container text-center">
-            <%= link_to "Boss Login / Sign up", new_boss_session_path, class: 'btn btn-lg btn-secondary btn-block' %>
+    <div class="container text-center col-4">
+      <%= link_to "Boss Login / Sign up", new_boss_session_path, class: 'btn btn-lg btn-secondary btn-block' %>
     </div>
   <% end %>
-
-
-
-
 </div>
