@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     sessions: 'bosses/sessions'
   }
 
-  resources :bosses, only:[:index, :show, :edit]
+  resources :bosses, only:[:index, :show, :edit, :update]
   resources :users, only:[:index, :show]
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

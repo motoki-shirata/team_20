@@ -1,20 +1,23 @@
-
+<div class="container text-center">
+<%= link_to "タスク一覧へ", parent_tasks_path(@parent_task) %>
+<h3>親タスク作成ページ</h3>
 <%= form_with model: @parent_task do |f| %>
     <div class= 'form-group'>
-        <%= f.label :title, 'タイトル' %>
-        <%= f.text_field :title %>
+        <%= f.label :title, 'タイトル', class: "col-2" %>
+        <%= f.text_field :title, class: "col-4" %>
     </div>
     <div class= 'form-group'>
-        <%= f.label :explanation, '概要' %>
-        <%= f.text_field :explanation %>
+        <%= f.label :explanation, '概要', class: "col-2" %>
+        <%= f.text_field :explanation, class: "col-4" %>
     </div>
     <div class= 'form-group'>
-        <%= f.label :self_evaluate, 'うまく切り分けられたかどうか' %>
-        <%= f.select :self_evaluate, [["めちゃ上手くいったこれからできそう", "0"], ["普通", "1"], ["上司助けて", "2"]] %>
+        <%= f.label :parent_deadline, '締め切り日時', class: "col-2" %>
+        <%= f.datetime_field :parent_deadline, class: "col-4" %>
     </div>
     <div class= 'form-group'>
-        <%= f.label :parent_deadline, '締め切り日時' %>
-        <%= f.datetime_field :parent_deadline %>
+        <%= f.label :self_evaluate, '切り分け具合', class: "col-2" %>
+        <%= f.select :self_evaluate, [["めちゃ上手くいったこれからできそう", "0"], ["普通", "1"], ["上司助けて", "2"]], class: "col-4" %>
     </div>
         <%= f.button '送信' %>
 <% end %>
+</div>

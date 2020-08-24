@@ -1,8 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-12 text-center border">
-      <h3><%= current_user.name %></h3>
-      <h3><%= current_user.team_id %></h3>
-      <h3><%= Team.find(current_user.team_id]).name %></h3>
+      <h3><%= @user.team.name %></h3>
+      <h3><%= @user.name %></h3>
+      
     </div>
   </div>
+  <%= render partial: 'layouts/ParentTaskIndexPartial', parent_tasks: @parent_tasks %>
+</div>

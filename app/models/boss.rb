@@ -4,7 +4,7 @@ class Boss < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
-  has_many :organizations
-  has_many :teams, through: :organizations
+  has_many :organizations, dependent: :destroy
+  has_many :teams, through: :organizations, dependent: :destroy
   # boss.supervise_teamsでチーム引っ張れる
 end
