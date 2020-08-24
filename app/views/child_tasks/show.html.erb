@@ -5,5 +5,12 @@
         <h3>タスクタイトル：<%= @child_task.title %></h3>
         <h5>タスク概要：<%= @child_task.explanation %></h5>
         <p>締め切り:<%= @child_task.child_deadline %></p>
+        <% if @child_task.possibility == 0 %>
+            <p>達成可能性:自信がある</p>
+        <% elsif @child_task.possibility == 1 %>
+            <p>達成可能性:まあまあ</p>
+        <% else %>
+            <p>達成可能性:自信がないです助けて</p>
+        <% end %>
     </div>
 </div>
