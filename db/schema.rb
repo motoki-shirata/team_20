@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2020_08_22_105046) do
     t.bigint "parent_task_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "finish_time"
     t.index ["parent_task_id"], name: "index_child_tasks_on_parent_task_id"
   end
 
