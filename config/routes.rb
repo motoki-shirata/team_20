@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root :to => 'toppages#index'
-  resources :teams, only: [:new, :create, :destroy]
+  # resources :teams, only: [:new, :create, :destroy]
   devise_for :users, controllers: {
     registrations: 'users/registrations',
     sessions: 'users/sessions'
@@ -29,6 +29,6 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :task_comments, only: [:create, :destory]
+    resources :task_comments
   end
 end
