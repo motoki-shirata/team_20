@@ -1,6 +1,8 @@
-<%= link_to "タスク一覧へ", parent_tasks_path(@parent_task) %>
-<h1>id: <%= @parent_task.id %>　の親タスク詳細ページ</h1>
+<div class='container'>
 
+<%= link_to "タスク一覧へ", parent_tasks_path(@parent_task) %>
+<div class="text-center">
+<h1>「<%= @parent_task.title %>」　の親タスク詳細ページ</h1>
 <p>親タスクのid:<%= @parent_task.id %></p>
 <p>タスクタイトル：<%= @parent_task.title %></p>
 <p>deadline:<%= @parent_task.parent_deadline %></p>
@@ -29,3 +31,6 @@
   <br>
   <%= f.submit 'コメントする' %>
 <% end %>
+
+  </div>
+</div>
