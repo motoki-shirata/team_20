@@ -1,4 +1,4 @@
 class Organization < ApplicationRecord
-    belongs_to :teams
-    belongs_to :bosses
+    belongs_to :team
+    belongs_to :boss
 end

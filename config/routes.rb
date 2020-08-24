@@ -5,10 +5,19 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
     sessions: 'users/sessions'
   }
+
+  get '/bosses/new_team', to: 'bosses#new_team'
+  patch '/bosses/new_team', to: 'bosses#post_team'
+    
+
   devise_for :bosses, controllers: {
     registrations: 'bosses/registrations',
     sessions: 'bosses/sessions'
   }
+
+  resources :bosses, only:[:index, :show, :edit]
+  resources :users, only:[:index, :show]
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   # root to: 'tasks'
