@@ -3,6 +3,6 @@
     <div class="col-12 text-center border">
       <h3><%= current_user.name %></h3>
       <h3><%= current_user.team_id %></h3>
-      <h3><%= Team.where(params[id: current_user.team_id]).name %></h3>
+      <h3><%= Team.find(current_user.team_id]).name %></h3>
     </div>
   </div>
