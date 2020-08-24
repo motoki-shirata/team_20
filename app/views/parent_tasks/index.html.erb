@@ -3,6 +3,7 @@
 <h2>タスクの一覧表示</h2>
     <% @parent_tasks.each do |parent_task| %>
     <%= link_to "子タスク作成画面へ", new_parent_task_child_task_path(parent_task) %></br>
+    <%= link_to "親タスク詳細画面へ", parent_task_path(parent_task) %></br>
     <%= link_to "親タスクに紐づく子タスク一覧画面へ",  parent_task_child_tasks_path(parent_task) %>
 <ul>
     <%= parent_task.id %>
