@@ -3,7 +3,6 @@ class ChildTasksController < ApplicationController
 
     def index
        @child_tasks = ChildTask.all
-    #    binding.pry
     end
     def show
     end
@@ -27,9 +26,11 @@ class ChildTasksController < ApplicationController
     def update
     end
     def finished
-        time = Time.current
-        @child_task = ChildTask.find_by(parent_task_id: params[:parent_task_id].to_i)
+        time = Time.now
+        # binding.pry
+        @child_task = ChildTask.find_by(id: params[:format])
         @child_task.finish_time = time
+
         # binding.pry
         # @child_task.parent_task_id = params[:parent_task_id].to_i
         # binding.pry
