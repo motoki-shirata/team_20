@@ -14,9 +14,6 @@
                 <p>Sign Up or Login</p>
               <% end %>
             </a>
-
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">プロフィール編集</a>
               <% if user_signed_in?%>
                 <a class="dropdown-item" href="#">プロフィール編集</a>
                 <%= link_to "User logout", destroy_user_session_path, method: :delete %>
