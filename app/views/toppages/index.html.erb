@@ -4,20 +4,17 @@
   <div class="text-center">
     <h1 class="text-white">Welcome to the FUN&FUN&FUN</h1>
   </div>
-  
-  <% if user_signed_in? && boss_signed_in?%>
-    <% if user_signed_in?%>
-      Signed in as User
-    <% else %>
-      Signed in as Boss
-    <% end %>
-  <% else%>
+  <% if user_signed_in?%>
+    Signed in as User
+  <% elsif boss_signed_in? %>
+    Signed in as Boss
+  <%else %>
     <div class="container text-center">
-            <%= link_to "User Login / Sign up", new_user_session_path, class: 'btn btn-lg btn-primary btn-block' %>
+      <%= link_to "User Login / Sign up", new_user_session_path, class: 'btn btn-lg btn-primary btn-block' %>
     </div>
     <br>
     <div class="container text-center">
-            <%= link_to "Boss Login / Sign up", new_boss_session_path, class: 'btn btn-lg btn-secondary btn-block' %>
+      <%= link_to "Boss Login / Sign up", new_boss_session_path, class: 'btn btn-lg btn-secondary btn-block' %>
     </div>
   <% end %>
 </div>

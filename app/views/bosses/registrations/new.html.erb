@@ -36,7 +36,7 @@
     <input class="form-control" autocomplete="new-password" name="boss[password_confirmation]" placeholder="Password confirmation" type="password" id="boss_password_confirmation">
   </div>
 
-  <div class="dropdown">
+  <%# <div class="dropdown">
     <button type="button" class="btn btn-light dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         所属チーム選択
     </button>
@@ -49,7 +49,9 @@
         <a class="dropdown-item" href="#">TSG</a>
         <a class="dropdown-item" href="#">U付</a>
     </div>
-  </div>
+  </div> %>
+  <%# ボスは複数チームに所属しうるので消しました。他ページで登録させます。 %>
+
 
   <div class="actions btn btn-md btn-rounded btn-block form-control">
     <%= f.submit "Sign up", class: "btn btn-light" %>

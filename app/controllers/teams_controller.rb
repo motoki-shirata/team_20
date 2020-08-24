@@ -1,17 +1,14 @@
 class TeamsController < ApplicationController
 
   def new
-    @team = Team.new
+    # @team = Team.where(team_params)
+    @organization = Organization.new(team_params)
   end
 
   def create
     # binding.pry
-    @team = Team.new(team_params)
-    
-    if @team.save
-      redirect_to new_team_path
-    end
-    
+    # @team = Team.new(team_params)
+    @team = Team.where(team_params)
   end
 
   def destroy
@@ -20,7 +17,7 @@ class TeamsController < ApplicationController
   private
   def team_params
     # binding.pry
-    params.require(:team).permit(:name)
+    params.permit(boss_ids:[])
   end
 
 end
