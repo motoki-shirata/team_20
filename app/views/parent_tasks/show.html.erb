@@ -22,7 +22,6 @@
   <br>
   <%= f.submit 'コメントする' %>
 <% end %>
-
 <div class="bg-white">
 <h4>〜コメント一覧〜</h4>
 <% @task_comments.each do |task_comment| %>
@@ -32,5 +31,40 @@
 <% end %>
 </div>
 
-  </div>
-</div>
+
+ <ul><% @parent_task.child_tasks.each do |child_task| %>
+        <% if child_task.done %>
+          <%= button_to '完了済み', show_canceled_parent_task_child_tasks_path(@parent_task, id: child_task.id) %> 
+        <% else %>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%= child_task.id %>">完了にする</button>
+        <% end %>
+        <li>子タスクタイトル:<%= child_task.title %></li>
+        <li><%= child_task.possibility %></li>
+        <li><%= child_task.id %></li>
+       <!--modal-->
+        <div class="modal fade" id="exampleModal<%= child_task.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">お疲れ様でした</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    あなたはタスクを完了しました</br>
+                    その気持ちの入力をしてください
+                    <%= form_with url: show_result_finish_parent_task_child_tasks_path(parent_task_id: @parent_task.id, id: child_task.id) do |f| %>
+                    <%= f.label :result, '上手にできたかどうか'%>
+                    <%= f.select :result, [['しっかりやり切れた', 0], ['まあまあやり切れた', 1], ['壁にぶつかった', 2]] , class: 'form-control'%>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <%= f.submit '保存' %>
+                    <% end %>
+                </div>
+                </div>
+            </div>
+        </div>
+        <% end %>
+    </ul>

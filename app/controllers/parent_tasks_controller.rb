@@ -3,7 +3,6 @@ class ParentTasksController < ApplicationController
 
     def index
         @parent_tasks = ParentTask.all
-        # binding.pry
     end
     def show
         @parent_task = ParentTask.find(params[:id])
@@ -16,7 +15,6 @@ class ParentTasksController < ApplicationController
     def create
         @parent_task = ParentTask.new(parent_task_params)
         @parent_task.user_id = current_user.id
-        # binding.pry
         if @parent_task.save
             flash[:success] = 'タスクを作成しました'
             redirect_to parent_tasks_path

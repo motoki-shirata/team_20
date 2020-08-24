@@ -25,7 +25,10 @@ Rails.application.routes.draw do
     resources :child_tasks do
       collection do
         post :finished
-        post :canceled
+        post :index_canceled
+        post :show_canceled
+        post :index_result_finish
+        post :show_result_finish
       end
     end
 
