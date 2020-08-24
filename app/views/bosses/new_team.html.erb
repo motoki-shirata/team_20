@@ -1,0 +1,10 @@
+
+
+<div class="check_box" >
+  <%= form_for @boss, :url=> {controller: "bosses", action: "post_team"} do |f| %>
+    <%= f.collection_check_boxes(:team_ids, Team.all, :id, :name) do |b| %>
+      <%= b.label { b.check_box + b.text } %>
+    <% end %>
+    <%= f.submit %>
+  <% end %>
+</div>

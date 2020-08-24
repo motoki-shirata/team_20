@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center border">
+      <h3><%= current_boss.name %></h3>
+      <% current_boss.teams.each do |team|%>
+        <%= team.name %>
+        <%# 上のチーム名はそのうちチームメンバーへのリンクに変更したい%>
+        <br>
+      <%end%>
+      
+    </div>
+  </div>
