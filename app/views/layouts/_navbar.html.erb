@@ -3,11 +3,11 @@
 
 <nav class="navbar navbar-expand-sm bg-dark">
   <!--TOPに戻るボタン-->
-  <a class="navbar-brand" href = "/">FUN&FUN&FUN</a>
+  <a class="navbar-brand text-danger" href = "/">FUN&FUN&FUN</a>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <% if user_signed_in?%>
-          <h3 class="nav-link text-primary"><%= current_user.team.name %></h3>
+          <h2 class="nav-link text-primary text-danger"><%= current_user.team.name %></h3>
         <% elsif boss_signed_in?%>
           <a class="nav-link" href="#">プロジェクト名</a>
         <% else%>
@@ -20,11 +20,11 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <% if user_signed_in?%>
-                <p>User</p>
+                <p class="text-danger">User</p>
               <% elsif boss_signed_in?%>
-                <p>Boss</p>
+                <p class="text-danger">Boss</p>
               <% else%>
-                <p>Sign Up or Login</p>
+                <p class="text-danger">Sign Up or Login</p>
               <% end %>
             </a>
 

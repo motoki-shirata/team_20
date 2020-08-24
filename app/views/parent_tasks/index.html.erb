@@ -1,5 +1,6 @@
-<h2>親タスクの一覧表示</h2>
-<button type="button" class="btn btn-primary" onclick="location.href='/parent_tasks/new'">親タスク新規作成</button><br>
+<%= stylesheet_link_tag "common", :media => "all" %>
+<h2><%= current_user.name%>の親タスク一覧表示</h2>
+<button type="button" class="btn btn-secondary parent-task-new " onclick="location.href='/parent_tasks/new'">親タスク新規作成</button><br>
 
 <% @parent_tasks.each do |parent_task| %>
 <div class="card border-secondary mb-5" style="width: 30rem;">
