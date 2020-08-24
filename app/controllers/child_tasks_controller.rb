@@ -30,14 +30,31 @@ class ChildTasksController < ApplicationController
         # binding.pry
         @child_task = ChildTask.find_by(id: params[:format])
         @child_task.finish_time = time
-
-        # binding.pry
-        # @child_task.parent_task_id = params[:parent_task_id].to_i
+        add_hour = 10800
         # binding.pry
         if @child_task.save
+            if @child_task.finish_time < @child_task.child_deadline
+                @child_task.done = 0
+                @child_task.save
+            elsif @child_task.child_deadline + add_hour > @child_task.finish_time >= @child_task.child_deadline
+                @child_task.done = 1
+                @child_task.save
+            elsif @child_task.finish_time >= @child_task.child_deadline + add_hour
+                @child_task.done = 2
+                @child_task.save
+
+            end
             redirect_to parent_tasks_path
         end
 
+    end
+    def canceled
+        # binding.pry
+        @child_task = ChildTask.find_by(id: params[:format])
+        # binding.pry
+        @child_task.done = nil
+        @child_task.save
+        redirect_to parent_tasks_path
     end
 
     private

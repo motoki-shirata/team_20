@@ -13,9 +13,13 @@
     <% if child_task.finish_time %>
     <h1>完了ボタンが押された</h1>
         <%= child_task.child_deadline.class %><br>
-            <% if child_task.finish_time < child_task.child_deadline %>
-                <h1>deadlineに間に合った</h1>
-            <% end %>
+        <% if child_task.done == 0 %>
+            <h1>間に合った。</h1>
+        <% elsif child_task.done == 1 %>
+            <h2>〆切後3h以内で間に合った</h2>
+        <% elsif child_task.done == 2 %>
+            <h3>〆切に間に合わなかった</h3>
+        <% end %>
     <% end %>
    
     </ul>

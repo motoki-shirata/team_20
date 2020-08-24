@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     resources :child_tasks do
       collection do
         post :finished
+        post :canceled
       end
     end
 
