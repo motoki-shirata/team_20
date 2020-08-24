@@ -9,9 +9,9 @@
         <% if user_signed_in?%>
           <h2 class="nav-link text-primary text-danger"><%= current_user.team.name %></h3>
         <% elsif boss_signed_in?%>
-          <a class="nav-link" href="#">プロジェクト名</a>
-        <% else%>
-          <a class="nav-link" href="#"></a>
+          <% current_boss.teams.each do |team|%>
+            <a class="nav-link" href="#"><%= team.name  %></a>
+          <% end%>
         <% end %>
       </li>
     </ul>  
