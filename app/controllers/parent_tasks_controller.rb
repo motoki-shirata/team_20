@@ -8,7 +8,7 @@ class ParentTasksController < ApplicationController
     def show
         @parent_task = ParentTask.find(params[:id])
         @task_comments = @parent_task.task_comments
-        @task_comment = Task_comment.new
+        @task_comment = TaskComment.new
     end
     def new
         @parent_task = ParentTask.new

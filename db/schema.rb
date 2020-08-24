@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_22_094105) do
+ActiveRecord::Schema.define(version: 2020_08_22_105046) do
 
   create_table "bosses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -60,6 +60,16 @@ ActiveRecord::Schema.define(version: 2020_08_22_094105) do
     t.index ["user_id"], name: "index_parent_tasks_on_user_id"
   end
 
+  create_table "task_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "parent_comment"
+    t.bigint "user_id", null: false
+    t.bigint "parent_task_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["parent_task_id"], name: "index_task_comments_on_parent_task_id"
+    t.index ["user_id"], name: "index_task_comments_on_user_id"
+  end
+
   create_table "teams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
@@ -85,4 +95,6 @@ ActiveRecord::Schema.define(version: 2020_08_22_094105) do
   add_foreign_key "organizations", "bosses"
   add_foreign_key "organizations", "teams"
   add_foreign_key "parent_tasks", "users"
+  add_foreign_key "task_comments", "parent_tasks"
+  add_foreign_key "task_comments", "users"
 end
