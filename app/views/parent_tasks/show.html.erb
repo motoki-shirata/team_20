@@ -21,7 +21,8 @@
 <% @task_comments.each do |task_comment| %>
   <%= simple_format(task_comment.parent_comment) %>
   <br>
-  <%= link_to 'このメッセージを削除する', parent_task_task_comment_path(@parent_task, task_comment), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+  <%= link_to 'このコメントを削除する', parent_task_task_comment_path(@parent_task, task_comment), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+  <%= link_to 'このコメントを編集する', edit_parent_task_task_comment_path(@parent_task, task_comment) %>
 <% end %>
 
 <%= form_with(model: [@parent_task, @task_comment]) do |f| %>
