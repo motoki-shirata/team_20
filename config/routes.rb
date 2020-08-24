@@ -7,14 +7,15 @@ Rails.application.routes.draw do
   }
 
   get '/bosses/new_team', to: 'bosses#new_team'
-  post '/bosses/new_team', to: 'bosses#post_team'
+  patch '/bosses/new_team', to: 'bosses#post_team'
     
+
   devise_for :bosses, controllers: {
     registrations: 'bosses/registrations',
     sessions: 'bosses/sessions'
   }
 
-  resources :bosses, only:[:index, :show]
+  resources :bosses, only:[:index, :show, :edit]
   resources :users, only:[:index, :show]
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -23,7 +24,4 @@ Rails.application.routes.draw do
   resources :parent_tasks do
     resources :child_tasks
   end
-
-
-
 end
