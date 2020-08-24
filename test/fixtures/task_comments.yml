@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  parent_comment: MyString
+  user: one
+  parent_task: one
+
+two:
+  parent_comment: MyString
+  user: two
+  parent_task: two

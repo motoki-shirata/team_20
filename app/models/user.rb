@@ -8,4 +8,5 @@ class User < ApplicationRecord
 
   belongs_to :team, optional: true
   has_many :parent_tasks
+  has_many :task_comments
 end

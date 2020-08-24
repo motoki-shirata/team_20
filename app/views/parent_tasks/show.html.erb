@@ -1,0 +1,31 @@
+<%= link_to "タスク一覧へ", parent_tasks_path(@parent_task) %>
+<h1>id: <%= @parent_task.id %>　の親タスク詳細ページ</h1>
+
+<p>親タスクのid:<%= @parent_task.id %></p>
+<p>タスクタイトル：<%= @parent_task.title %></p>
+<p>deadline:<%= @parent_task.parent_deadline %></p>
+<% if @parent_task.self_evaluate == 0 %>
+    <p>評価表示:うまく切り分けられた</p>
+<% elsif @parent_task.self_evaluate == 1 %>
+    <p>評価表示:普通</p>
+<% elsif @parent_task.self_evaluate == 2 %>
+    <p>評価表示:上司助けて</p>
+<% else %>
+    <p>入力されていません</p>
+<% end %>
+<p><%= @parent_task.updated_at %></p>
+<p>user_id:<%= @parent_task.user_id %></p>
+
+<h2>コメント一覧</h2>
+
+<% @task_comments.each do |task_comment| %>
+  <%= simple_format(task_comment.parent_comment) %>
+  <br>
+  <%= link_to 'このメッセージを削除する', parent_task_task_comment_path(@parent_task, task_comment), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+<% end %>
+
+<%= form_with(model: [@parent_task, @task_comment]) do |f| %>
+  <%= f.text_area :parent_comment %>
+  <br>
+  <%= f.submit 'コメントする' %>
+<% end %>
