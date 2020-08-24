@@ -4,8 +4,11 @@ class ChildTasksController < ApplicationController
     def index
        @child_tasks = ChildTask.all
     end
+
     def show
+       @child_task = ChildTask.find(params[:parent_task_id])
     end
+
     def new
         @parent_task = ParentTask.find(params[:parent_task_id])
         @child_task = ChildTask.new

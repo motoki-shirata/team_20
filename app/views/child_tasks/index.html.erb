@@ -1,30 +1,34 @@
-<h1>親タスクと紐づいている子タスクの一覧</h1>
-<%= link_to "親タスク一覧画面へ", parent_tasks_path %>
-<%= params[:parent_task_id] %>
+<h2>親タスクと紐づいている子タスクの一覧表示</h2>
+    <%= link_to "親タスク一覧画面へ", parent_tasks_path %>
 <% @child_tasks.each do |child_task| %>
-
+<div class="card border-secondary mb-5" style="width: 30rem;">
     <% if params[:parent_task_id].to_i == child_task.parent_task_id %>
-
+    <div class="card-header bg-light ">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="#" checked>
+            <label class="form-check-label" for="#">子タスク名：「<%= child_task.title %>」</label>
+        </div> 
+        <%= link_to "子タスク詳細画面へ", parent_task_child_task_path(parent_task_id: child_task.parent_task_id, id: child_task.id) %></br>
+    </div>
+    <div class="card-body">
+        タスク概要：<%= child_task.explanation %>
     <ul>
-    <li><%= child_task.title %></li>
-    <li><%= child_task.parent_task_id %></li>
-    <li><%= child_task.child_deadline %></li>
-    <li><%= child_task.finish_time %></li>
-    <% if child_task.finish_time %>
-    <h1>完了ボタンが押された</h1>
-        <%= child_task.child_deadline.class %><br>
-        <% if child_task.done == 0 %>
+        <li>締め切り：<%= child_task.child_deadline %></li>
+        <li>達成可能性：<%= child_task.possibility%></li>
+        <li>終了時刻<%= child_task.finish_time %></li>
+        <% if child_task.finish_time %>
+            <h5>完了ボタンが押された</h5>
+            <%= child_task.child_deadline.class %><br>
+            <% if child_task.done == 0 %>
             <h1>間に合った。</h1>
-        <% elsif child_task.done == 1 %>
+            <% elsif child_task.done == 1 %>
             <h2>〆切後3h以内で間に合った</h2>
-        <% elsif child_task.done == 2 %>
+            <% elsif child_task.done == 2 %>
             <h3>〆切に間に合わなかった</h3>
+            <% end %>
         <% end %>
-    <% end %>
-   
     </ul>
     <% end %>
-
-
-
+    </div>
+</div>
 <% end %>
