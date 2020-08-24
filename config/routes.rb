@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root :to => 'toppages#index'
-  resources :teams, only: [:new, :create, :destroy]
+  # resources :teams, only: [:new, :create, :destroy]
   devise_for :users, controllers: {
     registrations: 'users/registrations',
     sessions: 'users/sessions'

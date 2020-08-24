@@ -5,7 +5,7 @@ class BossesController < ApplicationController
   end
 
   def show
-    @teams=cunnrent_boss.teams
+    # @teams=cunnrent_boss.teams
   end
 
   def new_team
