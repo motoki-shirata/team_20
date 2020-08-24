@@ -1,1 +1,9 @@
-<h1>子タスクの詳細画面</h1>
+<div class="container">
+    <%= link_to "子タスク一覧へ", parent_task_child_tasks_path(parent_task_id: @child_task.parent_task_id) %>  
+    <div class="text-center">
+        <h1>「<%= @child_task.title %>」　のタスク詳細ページ</h1>
+        <h3>タスクタイトル：<%= @child_task.title %></h3>
+        <h5>タスク概要：<%= @child_task.explanation %></h5>
+        <p>締め切り:<%= @child_task.child_deadline %></p>
+    </div>
+</div>
