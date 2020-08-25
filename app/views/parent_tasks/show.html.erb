@@ -18,28 +18,30 @@
 
     <%= form_with(model: [@parent_task, @task_comment]) do |f| %>
       <%= f.text_area :parent_comment %><br>
-        <%= f.submit 'コメントする' %>
+        <%= f.submit 'コメントする', class: 'btn btn-primary' %>
       <% end %>
   </div>
 
 <div class="bg-light card-footer">
   <h5>〜コメント一覧〜</h5>
   <% @task_comments.each do |task_comment| %>
+    <div class="border border-black">
     <% if task_comment.parent_task_id && task_comment.parent_comment %>
-      <%= task_comment.parent_comment %><br>
-      <%= button_to 'メッセージを削除する', parent_task_task_comment_path(parent_task_id: @parent_task.id, id: task_comment.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+      <%= task_comment.parent_comment %> 
+      <%= button_to 'Delete', parent_task_task_comment_path(parent_task_id: @parent_task.id, id: task_comment.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %> 
     <% end %>
+    </div>
+    </ul>
   <% end %>
 </div>
 
-
  <ul class="list-group list-group-flush"><% @parent_task.child_tasks.each do |child_task| %>
+         <li class="list-group-item">サブタスク:<%= child_task.title %></li>
         <% if child_task.done %>
-          <%= button_to '完了済み', show_canceled_parent_task_child_tasks_path(@parent_task, id: child_task.id) %> 
+          <li class="list-group-item">サブタスク:<%= child_task.title %>  <%= button_to '完了済み', show_canceled_parent_task_child_tasks_path(@parent_task, id: child_task.id) %> </li>
         <% else %>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%= child_task.id %>">完了にする</button>
+          <li class="list-group-item">サブタスク:<%= child_task.title %>  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%= child_task.id %>">完了にする</button></li>
         <% end %>
-        <li class="list-group-item">サブタスク:<%= child_task.title %></li>
        <!--modal-->
         <div class="modal fade" id="exampleModal<%= child_task.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -59,7 +61,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <%= f.submit '保存' %>
+                    <%= f.submit '保存', class: "btn btn-primary" %>
                     <% end %>
                 </div>
                 </div>
