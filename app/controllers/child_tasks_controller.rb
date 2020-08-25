@@ -5,6 +5,12 @@ class ChildTasksController < ApplicationController
        @child_tasks = ChildTask.where(parent_task_id: params[:parent_task_id]).order(child_deadline: "ASC")
        @parent_task = ParentTask.find_by(id: params[:parent_task_id])
        @task_comment = TaskComment.new
+       @child_tasks.each do |child_task|
+        if child_task.done == nil
+            @parent_task.parent_done = nil
+            @parent_task.save
+        end
+       end
     end
 
     def show
@@ -35,7 +41,7 @@ class ChildTasksController < ApplicationController
         resulted
         if @child_task.save
             finished
-            redirect_to parent_tasks_path
+            redirect_to parent_task_child_tasks_path
         end
     end
     def show_result_finish
@@ -47,7 +53,7 @@ class ChildTasksController < ApplicationController
     end
     def index_canceled
         canceled
-        redirect_to parent_tasks_path
+        redirect_to parent_task_child_tasks_path
     end
     def show_canceled
         canceled

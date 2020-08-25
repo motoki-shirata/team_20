@@ -17,8 +17,16 @@ class ParentTasksController < ApplicationController
         @parent_task = ParentTask.find(params[:id])
         @parent_task.parent_done = 0
         @parent_task.save
-        redirect_to parent_tasks_path
+        @child_tasks = ChildTask.where(parent_task_id: @parent_task.id)
+        @child_tasks.each do |child_task|
+            if child_task.done == nil
 
+                child_task.done = 0
+                child_task.finish_time = Time.now
+                child_task.save
+            end
+        end
+        redirect_to parent_tasks_path
     end
     def cansel
         @parent_task = ParentTask.find(params[:id])

@@ -17,7 +17,7 @@
         </div>
         <div class="col-5">
             <% if child_task.done %>
-                <%= button_to '完了済み', index_canceled_parent_task_child_tasks_path(@parent_task, id: child_task.id) %> 
+                <%= button_to '完了済み', index_canceled_parent_task_child_tasks_path(@parent_task, id: child_task.id), class: 'btn btn-success' %> 
             <% else %>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%= child_task.id %>">完了にする</button>  
             <% end %>
