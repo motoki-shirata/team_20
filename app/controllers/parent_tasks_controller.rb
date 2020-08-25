@@ -2,7 +2,7 @@ class ParentTasksController < ApplicationController
     before_action { :authenticate_user! || :authenticate_boss!}
 
     def index
-        @parent_tasks = ParentTask.all
+        @parent_tasks = current_user.parent_tasks
     end
     def show
         @parent_task = ParentTask.find(params[:id])
