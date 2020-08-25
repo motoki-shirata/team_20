@@ -2,7 +2,7 @@ class ChildTasksController < ApplicationController
     before_action { :authenticate_user! || :authenticate_boss!}
 
     def index
-       @child_tasks = ChildTask.all
+       @child_tasks = ChildTask.where(parent_task_id: params[:parent_task_id]).order(child_deadline: "ASC")
        @parent_task = ParentTask.find_by(id: params[:parent_task_id])
        @task_comment = TaskComment.new
     end
@@ -22,10 +22,10 @@ class ChildTasksController < ApplicationController
         @child_task.parent_task_id = params[:parent_task_id].to_i
         if @child_task.save
             flash[:success] = 'タスクを作成しました'
-            redirect_to parent_tasks_path
+            redirect_to parent_task_child_tasks_path
         end
     end
-    def delete
+    def destroy
     end
     def edit
     end
@@ -35,23 +35,23 @@ class ChildTasksController < ApplicationController
         resulted
         if @child_task.save
             finished
-            redirect_to parent_tasks_path
+            redirect_to parent_task_child_tasks_path
         end
     end
     def show_result_finish
         resulted
         if @child_task.save
             finished
-            redirect_to parent_task_path(id: params[:parent_task_id])
+            redirect_to parent_task_path(id: @child_task.parent_task.id)
         end
     end
     def index_canceled
         canceled
-        redirect_to parent_tasks_path
+        redirect_to parent_task_child_tasks_path
     end
     def show_canceled
         canceled
-        redirect_to parent_task_path(id: params[:parent_task_id])
+        redirect_to parent_task_path(id: @child_task.parent_task.id)
     end
 
     private

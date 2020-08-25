@@ -2,9 +2,45 @@
   <div class="row">
     <div class="col-12 text-center border">
       <h3><%= @user.team.name %></h3>
-      <h3><%= @user.name %></h3>
+      <h3><%= @user.name %>のタスク一覧</h3>
       
     </div>
   </div>
-  <%= render partial: 'layouts/ParentTaskIndexPartial', parent_tasks: @parent_tasks %>
+  <% @parent_tasks.each do |parent_task| %>
+    <div class="card border-secondary mb-5" style="width: 30rem;">
+        <div class="card-header bg-light ">
+        <div class="row">
+          <div class="col-6">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="#" checked>
+                <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+            </div>
+            <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+          </div>
+          </div>
+        </div>
+        <div class="card-body">
+            タスク概要：<%= parent_task.explanation %>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">入力時刻:<%= parent_task.updated_at %></li>
+                <li class="list-group-item">締め切り:<%= parent_task.parent_deadline %></li>
+                <% if parent_task.self_evaluate == 0 %>
+                <li class="list-group-item">自己評価:うまく切り分けられた</li>
+                <% elsif parent_task.self_evaluate == 1 %>
+                <li class="list-group-item">自己評価:普通</li>
+                <% elsif parent_task.self_evaluate == 2 %>
+                <li class="list-group-item">自己評価:上司助けて</li>
+                <% else %>
+                <li class="list-group-item">入力されていません</li>
+                <% end %>
+            </ul>
+            <div class="card-footer">
+            <% if user_signed_in? %>
+              <%= link_to "サブタスク新規作成", new_parent_task_child_task_path(parent_task), class: "btn btn-secondary" %> /
+            <% end %>
+              <%= link_to "サブタスク一覧画面", parent_task_child_tasks_path(parent_task), class: "btn btn-secondary" %>
+            </div>
+        </div>
+    </div>
+  <% end %>
 </div>
