@@ -11,7 +11,7 @@ class ParentTasksController < ApplicationController
         @parent_task = ParentTask.find(params[:id])
         @task_comments = @parent_task.task_comments
         @task_comment = TaskComment.new
-        # binding.pry
+        
     end
     def new
         @parent_task = ParentTask.new
