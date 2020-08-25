@@ -21,6 +21,10 @@ Rails.application.routes.draw do
 
   # root to: 'tasks'
   resources :parent_tasks do
+    member do
+      post :done
+      post :cansel
+    end
     resources :task_comments, only: [:create, :destroy]
     resources :child_tasks do
       collection do
