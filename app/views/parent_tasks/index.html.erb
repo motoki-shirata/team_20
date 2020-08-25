@@ -15,6 +15,7 @@
               「<%= parent_task.title %>」
           </div>
           <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+          <li>子たすくの数<%= parent_task.child_tasks.count %></li>
         </div>
         </div>
       </div>

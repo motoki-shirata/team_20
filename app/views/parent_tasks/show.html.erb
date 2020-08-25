@@ -18,7 +18,7 @@
 
     <%= form_with(model: [@parent_task, @task_comment]) do |f| %>
       <%= f.text_area :parent_comment %><br>
-        <%= f.submit 'コメントする' %>
+        <%= f.submit 'コメントする', class: 'btn btn-primary' %>
       <% end %>
   </div>
 
@@ -35,8 +35,8 @@
   <% end %>
 </div>
 
-
  <ul class="list-group list-group-flush"><% @parent_task.child_tasks.each do |child_task| %>
+         <li class="list-group-item">サブタスク:<%= child_task.title %></li>
         <% if child_task.done %>
           <li class="list-group-item">サブタスク:<%= child_task.title %>  <%= button_to '完了済み', show_canceled_parent_task_child_tasks_path(@parent_task, id: child_task.id) %> </li>
         <% else %>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <%= f.submit '保存' %>
+                    <%= f.submit '保存', class: "btn btn-primary" %>
                     <% end %>
                 </div>
                 </div>
