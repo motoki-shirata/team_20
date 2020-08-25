@@ -1,12 +1,15 @@
 <h2>サブタスク一覧</h2>
 <%= link_to "タスク一覧画面へ", parent_tasks_path %>
 <br>
-<%= link_to "サブタスク新規作成", new_parent_task_child_task_path(@parent_task), class: "btn btn-secondary" %>
+<% if user_signed_in? %>
+    <%= link_to "サブタスク新規作成", new_parent_task_child_task_path(@parent_task), class: "btn btn-secondary" %>
+<% end %>
 <br>
 <% @child_tasks.each do |child_task| %>
+ <% if params[:parent_task_id].to_i == child_task.parent_task_id %>
 <br>
 <div class="card border-secondary mb-5" style="width: 30rem;">
-    <% if params[:parent_task_id].to_i == child_task.parent_task_id %>
+   
     <div class="card-header bg-light ">
     <div class="row">
         <div class="col-7">
@@ -17,10 +20,19 @@
         </div>
         <div class="col-5">
             <% if child_task.done %>
-                <%= button_to '完了済み', index_canceled_parent_task_child_tasks_path(@parent_task, id: child_task.id), class: 'btn btn-success' %> 
-            <% else %>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%= child_task.id %>">完了にする</button>  
-            <% end %>
+                <% if user_signed_in?%>
+                    <%= button_to '完了済み', index_canceled_parent_task_child_tasks_path(@parent_task, id: child_task.id), class: 'btn btn-success' %> 
+                <% else %>
+                    <p>完了済み</p>
+                <% end%>
+             <% else %>
+                <% if user_signed_in?%>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%= child_task.id %>">完了にする</button>  
+                <% else %>
+                    <h3 style="color:red">未完了</h3>
+                <% end %>
+             <% end %>
+        
             <div class="modal fade" id="exampleModal<%= child_task.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">

@@ -20,6 +20,7 @@
             <% else %>
                 <%= button_to '完了にする', done_parent_task_path(id: parent_task.id), class: 'btn btn-primary' %>
             <% end %>
+          <li>子たすくの数<%= parent_task.child_tasks.count %></li>
         </div>
         </div>
       </div>
