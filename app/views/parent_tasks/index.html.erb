@@ -1,10 +1,10 @@
 <%= stylesheet_link_tag "common", :media => "all" %>
 <% if user_signed_in? %>
-    <h2><%= current_user.name%>のタスク一覧表示</h2>
-    <button type="button" class="btn btn-primary parent-task-new " onclick="location.href='/parent_tasks/new'">親タスク新規作成</button><br>
+    <h2><%= current_user.name%>のタスク一覧</h2>
 <% elsif boss_signed_in? %>
     <h2><%= current_boss.name%>のタスク一覧表示</h2>
 <% end %>
+<button type="button" class="btn btn-primary parent-task-new " onclick="location.href='/parent_tasks/new'">タスク新規作成</button><br>
 
 <% @parent_tasks.each do |parent_task| %>
   <div class="card border-secondary mb-5" style="width: 30rem;">
@@ -15,7 +15,7 @@
               <input class="form-check-input" type="checkbox" id="#" checked>
               <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
           </div>
-          <%= link_to "タスク詳細画面へ", parent_task_path(parent_task) %></br>
+          <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
         </div>
         </div>
       </div>
