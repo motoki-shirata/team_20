@@ -16997,3 +16997,2247 @@ ActionView::Template::Error (undefined method `name' for nil:NilClass):
 app/views/layouts/_navbar.html.erb:10
 app/views/layouts/application.html.erb:15
 >>>>>>> develop
+Started GET "/" for 172.20.0.1 at 2020-08-25 05:47:26 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.1ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (7.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from process at /usr/local/bundle/gems/autoprefixer-rails-9.8.6.2/lib/autoprefixer-rails/processor.rb:23)
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/toppages/index.html.erb:7
+  Rendered toppages/index.html.erb within layouts/application (Duration: 4501.4ms | Allocations: 52807)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 58.2ms | Allocations: 8482)
+Completed 500 Internal Server Error in 4720ms (ActiveRecord: 9.9ms | Allocations: 73808)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     7:     <ul class="navbar-nav mr-auto">
+     8:       <li class="nav-item">
+     9:         <% if user_signed_in? %>
+    10:           <h2 class="nav-link text-white"><%= current_user.team.name %></h2>
+    11:         <% elsif boss_signed_in?%>
+    12:           <% current_boss.teams.each do |team|%>
+    13:             <%= link_to team.name, team_path(team), class: "text-white" %>
+  
+app/views/layouts/_navbar.html.erb:10
+app/views/layouts/application.html.erb:15
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[36mTeam Load (7.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` ORDER BY `teams`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE `users` SET `users`.`team_id` = 7, `users`.`updated_at` = '2020-08-25 05:58:33.821093' WHERE `users`.`id` = 9[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 172.20.0.1 at 2020-08-25 05:59:19 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/toppages/index.html.erb:7
+  Rendered toppages/index.html.erb within layouts/application (Duration: 29.4ms | Allocations: 2232)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 53.2ms | Allocations: 8473)
+Completed 200 OK in 152ms (Views: 144.1ms | ActiveRecord: 3.6ms | Allocations: 18653)
+
+
+Started DELETE "/users/sign_out" for 172.20.0.1 at 2020-08-25 06:01:09 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lZf7432rxwkT5Jo3+booi42g4Ll0emx+uiQzW3CZSNHqCNtgitHfYEV6kins2KsSYnqRHOjHuOFcI3strkUmLQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 611ms (ActiveRecord: 0.4ms | Allocations: 93159)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 06:01:10 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 23.3ms | Allocations: 1552)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 11.5ms | Allocations: 2311)
+Completed 200 OK in 111ms (Views: 110.0ms | ActiveRecord: 0.0ms | Allocations: 11765)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-25 06:01:14 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 640)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 78.3ms | Allocations: 4422)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 10.1ms | Allocations: 2262)
+Completed 200 OK in 174ms (Views: 172.0ms | ActiveRecord: 0.0ms | Allocations: 16468)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-25 06:01:17 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 197)
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams`[0m
+  ↳ app/views/users/registrations/new.html.erb:42
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 33.3ms | Allocations: 3934)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 8.8ms | Allocations: 2262)
+Completed 200 OK in 114ms (Views: 113.0ms | ActiveRecord: 0.4ms | Allocations: 15501)
+
+
+Started POST "/users" for 172.20.0.1 at 2020-08-25 06:11:58 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"lm0UApMiEwp8TiOA5wEfPL+tNkvh+iCeGirUj8oytjg6n/G1+PJiSkYgP462dBU9VuEfb2IxymSqsmv4lmr14w==", "user"=>{"name"=>"shioura", "email"=>"shioura@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "team_id"=>"4"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[36mUser Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'shioura@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[36mUser Create (3.6ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `name`, `team_id`) VALUES ('shioura@gmail.com', '$2a$12$NJOImlJQpFxMdnWFMR.tle3jyFihTRefGoJZJEA2DdEEamdxTh5nG', '2020-08-25 06:11:58.681848', '2020-08-25 06:11:58.681848', 'shioura', 4)[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+Redirected to http://localhost:3000/parent_tasks.10
+Completed 302 Found in 289ms (ActiveRecord: 9.0ms | Allocations: 9962)
+
+
+Started GET "/parent_tasks.10" for 172.20.0.1 at 2020-08-25 06:11:58 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as 
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:3
+  [1m[36mParentTask Load (3.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:10
+  [1m[36mChildTask Load (2.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 10[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 11[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 110.7ms | Allocations: 28664)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 15.7ms | Allocations: 2968)
+Completed 200 OK in 220ms (Views: 192.6ms | ActiveRecord: 17.4ms | Allocations: 41813)
+
+
+Started GET "/parent_tasks.10" for 172.20.0.1 at 2020-08-25 06:12:55 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as 
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:3
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:10
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.7ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 10[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 11[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 64.9ms | Allocations: 12908)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 14.0ms | Allocations: 2973)
+Completed 200 OK in 158ms (Views: 150.5ms | ActiveRecord: 6.2ms | Allocations: 23831)
+
+
+Started GET "/parent_tasks.10" for 172.20.0.1 at 2020-08-25 06:13:02 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as 
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:3
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:10
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 10[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 11[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 60.2ms | Allocations: 12908)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 12.3ms | Allocations: 2969)
+Completed 200 OK in 148ms (Views: 142.2ms | ActiveRecord: 5.2ms | Allocations: 23835)
+
+
+Started GET "/parent_tasks/new" for 172.20.0.1 at 2020-08-25 06:14:56 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 62.7ms | Allocations: 3789)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 21.2ms | Allocations: 4081)
+Completed 200 OK in 176ms (Views: 169.8ms | ActiveRecord: 0.7ms | Allocations: 16046)
+
+
+Started POST "/parent_tasks" for 172.20.0.1 at 2020-08-25 06:15:12 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"f5t15TMmpZcfH/ChS5UJTkLEhguFx0t2J7a6H8e/3IlyLDO5zzAvTZ/MAyZEC55eXNuMGSMdFdRK0PKhxRLz9A==", "parent_task"=>{"title"=>"ぽえネッサ", "explanation"=>"fdがg", "parent_deadline"=>"2020-08-25T19:15", "self_evaluate"=>"2"}, "button"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:17:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[36mParentTask Create (0.5ms)[0m  [1m[32mINSERT INTO `parent_tasks` (`title`, `parent_deadline`, `self_evaluate`, `explanation`, `created_at`, `updated_at`, `user_id`) VALUES ('ぽえネッサ', '2020-08-25 19:15:00', 2, 'fdがg', '2020-08-25 06:15:12.475361', '2020-08-25 06:15:12.475361', 10)[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+Redirected to http://localhost:3000/parent_tasks
+Completed 200 OK in 19ms (ActiveRecord: 3.8ms | Allocations: 6045)
+
+
+Started GET "/parent_tasks" for 172.20.0.1 at 2020-08-25 06:15:12 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:3
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:10
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 10[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 11[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 48.9ms | Allocations: 13821)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 11.8ms | Allocations: 2966)
+Completed 200 OK in 139ms (Views: 122.3ms | ActiveRecord: 5.3ms | Allocations: 24840)
+
+
+Started GET "/parent_tasks" for 172.20.0.1 at 2020-08-25 06:15:22 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:3
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:10
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 10[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 11[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 50.9ms | Allocations: 13827)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 10.9ms | Allocations: 2973)
+Completed 200 OK in 134ms (Views: 127.2ms | ActiveRecord: 6.1ms | Allocations: 24750)
+
+
+Started GET "/parent_tasks" for 172.20.0.1 at 2020-08-25 06:15:24 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:3
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:10
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 10[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 11[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 51.1ms | Allocations: 13821)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 11.6ms | Allocations: 2973)
+Completed 200 OK in 129ms (Views: 122.4ms | ActiveRecord: 6.5ms | Allocations: 24742)
+
+
+Started DELETE "/users/sign_out" for 172.20.0.1 at 2020-08-25 06:15:27 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EO3SIo02cgg/CQBY4s6Z1btcB7oVX2ZZwCKwzZszL8odWpR+cSD40r/a89/tUA7FpUMNqLOFOPutRPhzmZ4Atw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms | Allocations: 2212)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 06:15:27 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 23.8ms | Allocations: 1526)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 9.7ms | Allocations: 2307)
+Completed 200 OK in 106ms (Views: 105.3ms | ActiveRecord: 0.0ms | Allocations: 11734)
+
+
+Started GET "/bosses/sign_in" for 172.20.0.1 at 2020-08-25 06:18:07 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::SessionsController#new as HTML
+  Rendering bosses/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 230)
+  Rendered bosses/sessions/new.html.erb within layouts/application (Duration: 19.8ms | Allocations: 2642)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 6.6ms | Allocations: 2262)
+Completed 200 OK in 94ms (Views: 81.7ms | ActiveRecord: 3.9ms | Allocations: 18387)
+
+
+Started POST "/bosses/sign_in" for 172.20.0.1 at 2020-08-25 06:19:33 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"K9qLJ3ByqUFYlXoqKrXCxlUqOrlxalLhSKLhqSsjfQdqer0+zaXBWwr9t4Ve4gUNSQMt1DFumxC+W0TLaoGVbQ==", "boss"=>{"email"=>"motoki.shirata@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mBoss Load (0.9ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`email` = 'motoki.shirata@gmail.com' ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBoss Update (0.6ms)[0m  [1m[33mUPDATE `bosses` SET `bosses`.`remember_created_at` = '2020-08-25 06:19:33', `bosses`.`updated_at` = '2020-08-25 06:19:33.737783' WHERE `bosses`.`id` = 2[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (1.7ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2 ORDER BY `teams`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:17:in `after_sign_in_path_for'
+Redirected to http://localhost:3000/teams/4
+Completed 302 Found in 281ms (ActiveRecord: 6.5ms | Allocations: 16243)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:19:33 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:10
+  Rendered teams/show.html.erb within layouts/application (Duration: 7.8ms | Allocations: 3496)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 20.4ms | Allocations: 4848)
+Completed 200 OK in 116ms (Views: 110.2ms | ActiveRecord: 1.9ms | Allocations: 17931)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:19:41 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:10
+  Rendered teams/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1710)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 18.2ms | Allocations: 4512)
+Completed 200 OK in 104ms (Views: 99.1ms | ActiveRecord: 2.3ms | Allocations: 14952)
+
+
+Started GET "/teams/5" for 172.20.0.1 at 2020-08-25 06:19:43 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 5[0m
+  ↳ app/views/teams/show.html.erb:4
+  Rendered teams/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 785)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 16.0ms | Allocations: 4521)
+Completed 200 OK in 94ms (Views: 89.3ms | ActiveRecord: 1.6ms | Allocations: 14026)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:19:44 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:10
+  Rendered teams/show.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1710)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 13.7ms | Allocations: 4508)
+Completed 200 OK in 97ms (Views: 90.4ms | ActiveRecord: 3.0ms | Allocations: 14940)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:23:39 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:3
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:9
+  Rendered teams/show.html.erb within layouts/application (Duration: 30.6ms | Allocations: 3420)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 22.0ms | Allocations: 4849)
+Completed 200 OK in 151ms (Views: 142.7ms | ActiveRecord: 2.2ms | Allocations: 18060)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:23:42 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:3
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:9
+  Rendered teams/show.html.erb within layouts/application (Duration: 25.1ms | Allocations: 3013)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 14.4ms | Allocations: 4315)
+Completed 200 OK in 107ms (Views: 102.7ms | ActiveRecord: 2.1ms | Allocations: 15851)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:24:04 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:3
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:9
+  Rendered teams/show.html.erb within layouts/application (Duration: 29.6ms | Allocations: 3417)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 17.0ms | Allocations: 4861)
+Completed 200 OK in 141ms (Views: 133.2ms | ActiveRecord: 2.2ms | Allocations: 18079)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:25:01 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:10
+  Rendered teams/show.html.erb within layouts/application (Duration: 25.1ms | Allocations: 3420)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 14.3ms | Allocations: 4857)
+Completed 200 OK in 113ms (Views: 105.0ms | ActiveRecord: 2.1ms | Allocations: 18074)
+
+
+Started GET "/teams/5" for 172.20.0.1 at 2020-08-25 06:27:56 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 5[0m
+  ↳ app/views/teams/show.html.erb:4
+  Rendered teams/show.html.erb within layouts/application (Duration: 25.0ms | Allocations: 2086)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 16.7ms | Allocations: 4332)
+Completed 200 OK in 119ms (Views: 112.7ms | ActiveRecord: 2.6ms | Allocations: 14968)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:30:31 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:10
+  Rendered teams/show.html.erb within layouts/application (Duration: 31.6ms | Allocations: 3421)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 18.7ms | Allocations: 4854)
+Completed 200 OK in 145ms (Views: 135.7ms | ActiveRecord: 2.3ms | Allocations: 18061)
+
+
+Started GET "/teams/5" for 172.20.0.1 at 2020-08-25 06:30:33 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 5[0m
+  ↳ app/views/teams/show.html.erb:4
+  Rendered teams/show.html.erb within layouts/application (Duration: 26.1ms | Allocations: 2086)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 15.4ms | Allocations: 4324)
+Completed 200 OK in 119ms (Views: 114.5ms | ActiveRecord: 1.9ms | Allocations: 14931)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:34:02 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:9
+  Rendered teams/show.html.erb within layouts/application (Duration: 31.1ms | Allocations: 3419)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 26.4ms | Allocations: 4849)
+Completed 200 OK in 158ms (Views: 147.5ms | ActiveRecord: 2.5ms | Allocations: 18055)
+
+
+Started DELETE "/bosses/sign_out" for 172.20.0.1 at 2020-08-25 06:34:58 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KpNqW1Zeix6DjG2agivBqX/F9BPjk1poECr3rJTOl4tGPIO3eS6tfMF/PaZUH0fEQrxl0NFcS8I66JpT/8uTkQ=="}
+  [1m[36mBoss Load (0.5ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bosses/sessions_controller.rb:18:in `destroy'
+  [1m[36mBoss Update (1.0ms)[0m  [1m[33mUPDATE `bosses` SET `bosses`.`remember_created_at` = NULL, `bosses`.`updated_at` = '2020-08-25 06:34:58.596038' WHERE `bosses`.`id` = 2[0m
+  ↳ app/controllers/bosses/sessions_controller.rb:18:in `destroy'
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bosses/sessions_controller.rb:18:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 4.9ms | Allocations: 4832)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 06:34:58 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 19.4ms | Allocations: 1745)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 9.6ms | Allocations: 2307)
+Completed 200 OK in 92ms (Views: 88.6ms | ActiveRecord: 0.0ms | Allocations: 12721)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-25 06:35:00 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 554)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 28.1ms | Allocations: 3064)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 8.1ms | Allocations: 2266)
+Completed 200 OK in 106ms (Views: 104.0ms | ActiveRecord: 0.0ms | Allocations: 15092)
+
+
+Started POST "/users/sign_in" for 172.20.0.1 at 2020-08-25 06:35:11 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"meIe/orlgAxkAsLF5amJabG/c6nBuvQA4s9thwwRaOQE4QTegPxm4iQS96mey4epARXy81l6MCZ+0Nvk4jHzpw==", "user"=>{"email"=>"shioura@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'shioura@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:13:in `create'
+Redirected to http://localhost:3000/parent_tasks.10
+Completed 302 Found in 219ms (ActiveRecord: 0.7ms | Allocations: 4002)
+
+
+Started GET "/parent_tasks.10" for 172.20.0.1 at 2020-08-25 06:35:11 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as 
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:3
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:10
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 10[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 11[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 44.9ms | Allocations: 14365)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 11.6ms | Allocations: 2972)
+Completed 200 OK in 127ms (Views: 117.6ms | ActiveRecord: 4.9ms | Allocations: 26234)
+
+
+Started GET "/parent_tasks/new" for 172.20.0.1 at 2020-08-25 06:35:13 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1052)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 16.6ms | Allocations: 4081)
+Completed 200 OK in 98ms (Views: 94.0ms | ActiveRecord: 0.9ms | Allocations: 13420)
+
+
+Started POST "/parent_tasks" for 172.20.0.1 at 2020-08-25 06:35:24 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"KCw41qQMYCuELW/SM4tdI6e3qj/0Ldtgjw4UBJo5+tV8imGgTU+k30GMdZGJmNGZgf1BXVRY/foMTpNWzG8vQg==", "parent_task"=>{"title"=>"fagads", "explanation"=>"dagaa", "parent_deadline"=>"2020-08-26T15:35", "self_evaluate"=>"0"}, "button"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:17:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[36mParentTask Create (0.4ms)[0m  [1m[32mINSERT INTO `parent_tasks` (`title`, `parent_deadline`, `self_evaluate`, `explanation`, `created_at`, `updated_at`, `user_id`) VALUES ('fagads', '2020-08-26 15:35:00', 0, 'dagaa', '2020-08-25 06:35:24.047040', '2020-08-25 06:35:24.047040', 10)[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+Redirected to http://localhost:3000/parent_tasks
+Completed 200 OK in 13ms (ActiveRecord: 3.2ms | Allocations: 5110)
+
+
+Started GET "/parent_tasks" for 172.20.0.1 at 2020-08-25 06:35:24 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:3
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:10
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 10[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 11[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 56.6ms | Allocations: 14731)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 10.4ms | Allocations: 2975)
+Completed 200 OK in 130ms (Views: 119.5ms | ActiveRecord: 6.8ms | Allocations: 25757)
+
+
+Started GET "/parent_tasks" for 172.20.0.1 at 2020-08-25 06:35:35 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:3
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:10
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 10[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 11[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 62.0ms | Allocations: 14728)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 11.9ms | Allocations: 2973)
+Completed 200 OK in 146ms (Views: 139.5ms | ActiveRecord: 6.2ms | Allocations: 25650)
+
+
+Started DELETE "/users/sign_out" for 172.20.0.1 at 2020-08-25 06:35:43 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nHUrKKj6ifoxkoBpQdMhNl99pIzwveWyIBOuWd+qdAPI03JeQblNDvQzmir7wK2MeTdP7lDIwyijUykLifyhlA=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms | Allocations: 2215)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 06:35:43 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 16.8ms | Allocations: 1530)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 8.2ms | Allocations: 2303)
+Completed 200 OK in 80ms (Views: 79.5ms | ActiveRecord: 0.0ms | Allocations: 11736)
+
+
+Started GET "/bosses/sign_in" for 172.20.0.1 at 2020-08-25 06:35:45 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::SessionsController#new as HTML
+  Rendering bosses/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 170)
+  Rendered bosses/sessions/new.html.erb within layouts/application (Duration: 26.8ms | Allocations: 2471)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 8.5ms | Allocations: 2262)
+Completed 200 OK in 104ms (Views: 102.8ms | ActiveRecord: 0.0ms | Allocations: 13559)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 06:35:58 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 22.8ms | Allocations: 1526)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 8.0ms | Allocations: 2303)
+Completed 200 OK in 92ms (Views: 91.0ms | ActiveRecord: 0.0ms | Allocations: 11734)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-25 06:36:01 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 170)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 23.6ms | Allocations: 2189)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 7.6ms | Allocations: 2270)
+Completed 200 OK in 97ms (Views: 95.6ms | ActiveRecord: 0.0ms | Allocations: 12568)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-25 06:36:04 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 189)
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams`[0m
+  ↳ app/views/users/registrations/new.html.erb:42
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 38.0ms | Allocations: 3690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 10.3ms | Allocations: 2270)
+Completed 200 OK in 127ms (Views: 125.4ms | ActiveRecord: 0.5ms | Allocations: 15209)
+
+
+Started POST "/users" for 172.20.0.1 at 2020-08-25 06:36:34 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"f2U7dcqMzfQNHkl+PVqiRXd/w/DnCy0MVc6bOuaY4XYNjI1+hlI1Bfh5Xe8Gp+c9XCS3r9bpwElJ/j0Qv3mwLQ==", "user"=>{"name"=>"miuraharuma", "email"=>"miuraharuma@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "team_id"=>"4"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'miuraharuma@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `name`, `team_id`) VALUES ('miuraharuma@gmail.com', '$2a$12$9rThScPXzOlI2YtQKMiel.t2pe4.sOGxg7F71JBOE8HYZX2JI3wwS', '2020-08-25 06:36:35.110047', '2020-08-25 06:36:35.110047', 'miuraharuma', 4)[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+Redirected to http://localhost:3000/parent_tasks.11
+Completed 302 Found in 215ms (ActiveRecord: 3.0ms | Allocations: 5956)
+
+
+Started GET "/parent_tasks.11" for 172.20.0.1 at 2020-08-25 06:36:35 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as 
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:3
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:10
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 10[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 11[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 47.2ms | Allocations: 14737)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 16.4ms | Allocations: 2976)
+Completed 200 OK in 137ms (Views: 131.6ms | ActiveRecord: 5.2ms | Allocations: 25656)
+
+
+Started GET "/parent_tasks/new" for 172.20.0.1 at 2020-08-25 06:36:38 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 714)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 19.5ms | Allocations: 4079)
+Completed 200 OK in 96ms (Views: 94.4ms | ActiveRecord: 0.9ms | Allocations: 12955)
+
+
+Started POST "/parent_tasks" for 172.20.0.1 at 2020-08-25 06:37:02 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"Z5Xy2Y4azXStWu4l+7Tu5cujT15WmexuPQz+ORU3+zYWLSTAr2EgIGWIwSWIeFGLyiJlZA7vGgdf8HF/ntAQJw==", "parent_task"=>{"title"=>"死亡", "explanation"=>"ナイトドライブ", "parent_deadline"=>"2020-08-25T15:36", "self_evaluate"=>"2"}, "button"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:17:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[36mParentTask Create (0.5ms)[0m  [1m[32mINSERT INTO `parent_tasks` (`title`, `parent_deadline`, `self_evaluate`, `explanation`, `created_at`, `updated_at`, `user_id`) VALUES ('死亡', '2020-08-25 15:36:00', 2, 'ナイトドライブ', '2020-08-25 06:37:02.516826', '2020-08-25 06:37:02.516826', 11)[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+Redirected to http://localhost:3000/parent_tasks
+Completed 200 OK in 16ms (ActiveRecord: 4.0ms | Allocations: 5102)
+
+
+Started GET "/parent_tasks" for 172.20.0.1 at 2020-08-25 06:37:02 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:3
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:10
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 10[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 11[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 55.5ms | Allocations: 15638)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 11.4ms | Allocations: 2973)
+Completed 200 OK in 129ms (Views: 121.8ms | ActiveRecord: 5.9ms | Allocations: 26573)
+
+
+Started GET "/parent_tasks" for 172.20.0.1 at 2020-08-25 06:37:07 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:3
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:10
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 10[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 11[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 59.5ms | Allocations: 15642)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 12.5ms | Allocations: 2973)
+Completed 200 OK in 143ms (Views: 135.8ms | ActiveRecord: 6.5ms | Allocations: 26553)
+
+
+Started DELETE "/users/sign_out" for 172.20.0.1 at 2020-08-25 06:37:10 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KtmvanhrncmHfXkVS/HiDVP5xSgdGNT6HICbaiTrkMNbYXlzWRBwnU+vVhU4PV1jUnjvEkVuIpN+fBQsrwx70g=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms | Allocations: 2224)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 06:37:10 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 23.0ms | Allocations: 1526)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 10.0ms | Allocations: 2311)
+Completed 200 OK in 105ms (Views: 103.9ms | ActiveRecord: 0.0ms | Allocations: 11736)
+
+
+Started GET "/bosses/sign_in" for 172.20.0.1 at 2020-08-25 06:37:12 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::SessionsController#new as HTML
+  Rendering bosses/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 170)
+  Rendered bosses/sessions/new.html.erb within layouts/application (Duration: 30.9ms | Allocations: 2208)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 10.6ms | Allocations: 2266)
+Completed 200 OK in 119ms (Views: 117.3ms | ActiveRecord: 0.0ms | Allocations: 12579)
+
+
+Started POST "/bosses/sign_in" for 172.20.0.1 at 2020-08-25 06:37:27 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"js8jd162a+TpwnAapERlWPLJiqgv8BqKlhhsL/PhFseqe14egH2oB5xUJT8IJ4GxmkzxTcPSXVnL4st0FKOWPg==", "boss"=>{"email"=>"motoki.shirata@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mBoss Load (0.6ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`email` = 'motoki.shirata@gmail.com' ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2 ORDER BY `teams`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:17:in `after_sign_in_path_for'
+Redirected to http://localhost:3000/teams/4
+Completed 302 Found in 221ms (ActiveRecord: 1.2ms | Allocations: 4327)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:37:28 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:9
+  Rendered teams/show.html.erb within layouts/application (Duration: 24.0ms | Allocations: 4047)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 18.5ms | Allocations: 4331)
+Completed 200 OK in 114ms (Views: 109.9ms | ActiveRecord: 2.1ms | Allocations: 16866)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:38:38 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:9
+  Rendered teams/show.html.erb within layouts/application (Duration: 28.3ms | Allocations: 4453)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 14.7ms | Allocations: 4856)
+Completed 200 OK in 119ms (Views: 111.1ms | ActiveRecord: 2.5ms | Allocations: 19091)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:39:25 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:9
+  Rendered teams/show.html.erb within layouts/application (Duration: 32.1ms | Allocations: 4449)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 16.5ms | Allocations: 4856)
+Completed 200 OK in 139ms (Views: 130.3ms | ActiveRecord: 2.7ms | Allocations: 19091)
+
+
+Started GET "/bosses/2" for 172.20.0.1 at 2020-08-25 06:40:33 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BossesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/bosses_controller.rb:8:in `show'
+  Rendering bosses/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/bosses/show.html.erb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/bosses/show.html.erb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 5[0m
+  ↳ app/views/bosses/show.html.erb:9
+  [1m[36mBoss Load (0.3ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/bosses/show.html.erb:16
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams`[0m
+  ↳ app/views/bosses/show.html.erb:19
+  Rendered bosses/show.html.erb within layouts/application (Duration: 31.0ms | Allocations: 7142)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m  [["boss_id", 2]]
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 15.6ms | Allocations: 3517)
+Completed 200 OK in 123ms (Views: 113.7ms | ActiveRecord: 2.3ms | Allocations: 20276)
+
+
+Started GET "/bosses/2" for 172.20.0.1 at 2020-08-25 06:40:50 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BossesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBoss Load (0.7ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/bosses_controller.rb:8:in `show'
+  Rendering bosses/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/bosses/show.html.erb:7
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/bosses/show.html.erb:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 5[0m
+  ↳ app/views/bosses/show.html.erb:9
+  [1m[36mBoss Load (0.6ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/bosses/show.html.erb:16
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams`[0m
+  ↳ app/views/bosses/show.html.erb:19
+  Rendered bosses/show.html.erb within layouts/application (Duration: 19.5ms | Allocations: 5458)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m  [["boss_id", 2]]
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 16.3ms | Allocations: 3503)
+Completed 200 OK in 124ms (Views: 114.1ms | ActiveRecord: 3.8ms | Allocations: 17670)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:41:41 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.8ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:9
+  Rendered teams/show.html.erb within layouts/application (Duration: 32.3ms | Allocations: 4053)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.5ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 12.5ms | Allocations: 4329)
+Completed 200 OK in 111ms (Views: 103.3ms | ActiveRecord: 3.4ms | Allocations: 16905)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:42:11 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:9
+  Rendered teams/show.html.erb within layouts/application (Duration: 30.2ms | Allocations: 4457)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 15.7ms | Allocations: 4856)
+Completed 200 OK in 124ms (Views: 114.9ms | ActiveRecord: 2.8ms | Allocations: 19104)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:42:30 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:8
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:8
+  Rendered teams/show.html.erb within layouts/application (Duration: 40.8ms | Allocations: 4445)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 22.6ms | Allocations: 4852)
+Completed 200 OK in 153ms (Views: 144.6ms | ActiveRecord: 2.9ms | Allocations: 19064)
+
+
+Started DELETE "/bosses/sign_out" for 172.20.0.1 at 2020-08-25 06:42:51 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vq6h7Qs+tpZZmey+XX6uN8f+YK4eIgEeObkxraC9uo9jjYs1nw18O5aw1v9gOnqojgykPwdpI5Ogstc2tNClQg=="}
+  [1m[36mBoss Load (0.6ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.6ms | Allocations: 2226)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 06:42:51 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 28.4ms | Allocations: 1736)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 14.7ms | Allocations: 2303)
+Completed 200 OK in 138ms (Views: 132.7ms | ActiveRecord: 0.0ms | Allocations: 12690)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-25 06:42:53 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 551)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 39.1ms | Allocations: 3057)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 10.1ms | Allocations: 2267)
+Completed 200 OK in 156ms (Views: 154.4ms | ActiveRecord: 0.0ms | Allocations: 15083)
+
+
+Started POST "/users/sign_in" for 172.20.0.1 at 2020-08-25 06:43:02 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"pRuRd1hZuCdZ29BQ1ICe3euICLAyoMUKXDNz5rXBqNIdKoL2kEfV8zhU2NC6E+vXEZM+uJwPrzB1E6ruBALE/Q==", "user"=>{"email"=>"miuraharuma@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'miuraharuma@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:13:in `create'
+Redirected to http://localhost:3000/parent_tasks.11
+Completed 302 Found in 214ms (ActiveRecord: 0.5ms | Allocations: 3976)
+
+
+Started GET "/parent_tasks.11" for 172.20.0.1 at 2020-08-25 06:43:02 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as 
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:3
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:10
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 10[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 11[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 47.6ms | Allocations: 16189)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 11.5ms | Allocations: 2976)
+Completed 200 OK in 130ms (Views: 121.8ms | ActiveRecord: 5.3ms | Allocations: 28051)
+
+
+Started GET "/parent_tasks/new" for 172.20.0.1 at 2020-08-25 06:43:06 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1051)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 16.4ms | Allocations: 4082)
+Completed 200 OK in 107ms (Views: 102.3ms | ActiveRecord: 0.8ms | Allocations: 13413)
+
+
+Started POST "/parent_tasks" for 172.20.0.1 at 2020-08-25 06:43:26 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"vQv7fkPAiwq4XXepchhQNMfzR1iJsjBkrMNiFJ0tfYAFLK93uc8/o/9fEgnYasuHQKSk5U/XGTHeIb6d3w5D1g==", "parent_task"=>{"title"=>"アイネクライネナハトムジーク", "explanation"=>"dファsが", "parent_deadline"=>"2020-08-26T20:48", "self_evaluate"=>"0"}, "button"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:17:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[36mParentTask Create (0.5ms)[0m  [1m[32mINSERT INTO `parent_tasks` (`title`, `parent_deadline`, `self_evaluate`, `explanation`, `created_at`, `updated_at`, `user_id`) VALUES ('アイネクライネナハトムジーク', '2020-08-26 20:48:00', 0, 'dファsが', '2020-08-25 06:43:26.758242', '2020-08-25 06:43:26.758242', 11)[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+Redirected to http://localhost:3000/parent_tasks
+Completed 200 OK in 17ms (ActiveRecord: 3.9ms | Allocations: 5116)
+
+
+Started GET "/parent_tasks" for 172.20.0.1 at 2020-08-25 06:43:26 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:3
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:10
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 10[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 11[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 15[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 55.2ms | Allocations: 16557)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 12.0ms | Allocations: 2969)
+Completed 200 OK in 142ms (Views: 131.3ms | ActiveRecord: 6.2ms | Allocations: 27576)
+
+
+Started GET "/parent_tasks/new" for 172.20.0.1 at 2020-08-25 06:43:28 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 710)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 21.1ms | Allocations: 4075)
+Completed 200 OK in 120ms (Views: 118.4ms | ActiveRecord: 0.6ms | Allocations: 12937)
+
+
+Started POST "/parent_tasks" for 172.20.0.1 at 2020-08-25 06:43:55 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"zJEyHjQ88H8KgvlHtTnbI6UtmrqJP2dzMDLgTaHV7cZ0tmYXzjNE1k2AnOcfS0CQInp5B09aTiZC0DzE4/bTkA==", "parent_task"=>{"title"=>"タイ", "explanation"=>"一番嫌いな国", "parent_deadline"=>"2020-08-26T19:47", "self_evaluate"=>"1"}, "button"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:17:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[36mParentTask Create (0.4ms)[0m  [1m[32mINSERT INTO `parent_tasks` (`title`, `parent_deadline`, `self_evaluate`, `explanation`, `created_at`, `updated_at`, `user_id`) VALUES ('タイ', '2020-08-26 19:47:00', 1, '一番嫌いな国', '2020-08-25 06:43:55.774348', '2020-08-25 06:43:55.774348', 11)[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/parent_tasks_controller.rb:18:in `create'
+Redirected to http://localhost:3000/parent_tasks
+Completed 200 OK in 21ms (ActiveRecord: 4.7ms | Allocations: 5125)
+
+
+Started GET "/parent_tasks" for 172.20.0.1 at 2020-08-25 06:43:55 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:3
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:10
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 10[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 11[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 15[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 16[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 60.7ms | Allocations: 17465)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 11.5ms | Allocations: 2973)
+Completed 200 OK in 132ms (Views: 124.7ms | ActiveRecord: 6.4ms | Allocations: 28396)
+
+
+Started GET "/parent_tasks" for 172.20.0.1 at 2020-08-25 06:44:00 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:3
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:10
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 10[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 11[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 15[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 16[0m
+  ↳ app/views/parent_tasks/index.html.erb:22
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 70.4ms | Allocations: 17461)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 12.8ms | Allocations: 2973)
+Completed 200 OK in 158ms (Views: 150.0ms | ActiveRecord: 7.6ms | Allocations: 28379)
+
+
+Started DELETE "/users/sign_out" for 172.20.0.1 at 2020-08-25 06:44:03 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HbL4TFyHmCl6uMf1YVOpANsfQOdhswxZ3wFFW9SAjFqllaxFpogsgD26olXLITKzXEijWqfWJQyt45nSlqOyDA=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms | Allocations: 2227)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 06:44:03 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 22.5ms | Allocations: 1531)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 10.2ms | Allocations: 2303)
+Completed 200 OK in 104ms (Views: 103.3ms | ActiveRecord: 0.0ms | Allocations: 11731)
+
+
+Started GET "/bosses/sign_in" for 172.20.0.1 at 2020-08-25 06:44:04 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::SessionsController#new as HTML
+  Rendering bosses/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 170)
+  Rendered bosses/sessions/new.html.erb within layouts/application (Duration: 35.0ms | Allocations: 2467)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 10.4ms | Allocations: 2270)
+Completed 200 OK in 127ms (Views: 125.5ms | ActiveRecord: 0.0ms | Allocations: 13576)
+
+
+Started POST "/bosses/sign_in" for 172.20.0.1 at 2020-08-25 06:44:17 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"gwd7eSQ7AGlB2ARsydQU8suJ6ra/7Bag7+pJdZQmokoIIlOmEB894+AzW4y1eZjk/Nf8UIBL7PN50YV/nxIY+g==", "boss"=>{"email"=>"motoki.shirata@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mBoss Load (1.2ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`email` = 'motoki.shirata@gmail.com' ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2 ORDER BY `teams`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:17:in `after_sign_in_path_for'
+Redirected to http://localhost:3000/teams/4
+Completed 302 Found in 219ms (ActiveRecord: 1.6ms | Allocations: 4337)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:44:17 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:8
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:8
+  Rendered teams/show.html.erb within layouts/application (Duration: 22.4ms | Allocations: 4278)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.3ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 16.2ms | Allocations: 4331)
+Completed 200 OK in 103ms (Views: 98.1ms | ActiveRecord: 2.5ms | Allocations: 17118)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:47:28 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 28.4ms | Allocations: 4678)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 17.4ms | Allocations: 4848)
+Completed 200 OK in 132ms (Views: 124.7ms | ActiveRecord: 2.6ms | Allocations: 19315)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:47:55 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 28.7ms | Allocations: 4681)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 18.1ms | Allocations: 4852)
+Completed 200 OK in 142ms (Views: 134.0ms | ActiveRecord: 2.6ms | Allocations: 19302)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:47:57 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 32.1ms | Allocations: 4274)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.3ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 14.9ms | Allocations: 4323)
+Completed 200 OK in 125ms (Views: 120.2ms | ActiveRecord: 2.3ms | Allocations: 17106)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:48:04 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 34.1ms | Allocations: 4674)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 17.7ms | Allocations: 4848)
+Completed 200 OK in 147ms (Views: 138.0ms | ActiveRecord: 2.3ms | Allocations: 19296)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:48:43 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 28.3ms | Allocations: 4679)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 18.0ms | Allocations: 4861)
+Completed 200 OK in 146ms (Views: 137.1ms | ActiveRecord: 2.6ms | Allocations: 19311)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:48:45 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 33.6ms | Allocations: 4280)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 15.0ms | Allocations: 4320)
+Completed 200 OK in 125ms (Views: 120.3ms | ActiveRecord: 2.5ms | Allocations: 17133)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:49:03 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 29.9ms | Allocations: 4676)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.3ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 15.9ms | Allocations: 4852)
+Completed 200 OK in 135ms (Views: 127.1ms | ActiveRecord: 2.2ms | Allocations: 19314)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:50:20 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 30.7ms | Allocations: 4675)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 14.9ms | Allocations: 4861)
+Completed 200 OK in 130ms (Views: 122.6ms | ActiveRecord: 2.1ms | Allocations: 19306)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:51:12 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 32.5ms | Allocations: 4675)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 16.3ms | Allocations: 4848)
+Completed 200 OK in 134ms (Views: 125.6ms | ActiveRecord: 2.6ms | Allocations: 19296)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:52:54 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 32.6ms | Allocations: 4682)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 16.5ms | Allocations: 4863)
+Completed 200 OK in 140ms (Views: 131.7ms | ActiveRecord: 2.2ms | Allocations: 19323)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:53:14 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 27.3ms | Allocations: 4683)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 13.9ms | Allocations: 4852)
+Completed 200 OK in 109ms (Views: 101.6ms | ActiveRecord: 2.5ms | Allocations: 19320)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:53:35 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 26.3ms | Allocations: 4678)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 12.9ms | Allocations: 4852)
+Completed 200 OK in 106ms (Views: 98.5ms | ActiveRecord: 2.5ms | Allocations: 19312)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:54:23 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 34.6ms | Allocations: 4707)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 18.8ms | Allocations: 4856)
+Completed 200 OK in 155ms (Views: 145.2ms | ActiveRecord: 2.5ms | Allocations: 19345)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:54:50 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 28.3ms | Allocations: 4707)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 14.9ms | Allocations: 4848)
+Completed 200 OK in 118ms (Views: 109.6ms | ActiveRecord: 2.6ms | Allocations: 19327)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:55:54 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 33.8ms | Allocations: 4710)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.5ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 17.0ms | Allocations: 4857)
+Completed 200 OK in 141ms (Views: 131.8ms | ActiveRecord: 2.9ms | Allocations: 19351)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:57:28 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 27.4ms | Allocations: 4718)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 15.7ms | Allocations: 4855)
+Completed 200 OK in 122ms (Views: 113.2ms | ActiveRecord: 2.7ms | Allocations: 19350)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:58:49 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 29.9ms | Allocations: 4794)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 15.6ms | Allocations: 4852)
+Completed 200 OK in 127ms (Views: 119.2ms | ActiveRecord: 2.4ms | Allocations: 19425)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:59:37 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 28.8ms | Allocations: 4610)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 17.9ms | Allocations: 4857)
+Completed 200 OK in 139ms (Views: 130.5ms | ActiveRecord: 2.4ms | Allocations: 19251)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 06:59:38 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 31.7ms | Allocations: 4203)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.3ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 19.5ms | Allocations: 4319)
+Completed 200 OK in 129ms (Views: 123.8ms | ActiveRecord: 2.3ms | Allocations: 17023)
+
+
+Started GET "/parent_tasks/12/child_tasks" for 172.20.0.1 at 2020-08-25 07:02:35 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#index as HTML
+  Parameters: {"parent_task_id"=>"12"}
+  Rendering child_tasks/index.html.erb within layouts/application
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks`[0m
+  ↳ app/views/child_tasks/index.html.erb:3
+  Rendered child_tasks/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2047)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.5ms | Allocations: 3352)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    31:     <% end %>
+    32:     </div>
+    33: </div>
+    34: <%= form_with(model: [@child_task, @task_comment]) do |f| %>
+    35:     <%= f.text_area :parent_comment %>
+    36:     <br>
+    37:     <%= f.submit 'コメントする' %>
+  
+app/views/child_tasks/index.html.erb:34
+app/views/child_tasks/index.html.erb:3
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 07:02:44 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 30.5ms | Allocations: 4213)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 14.8ms | Allocations: 4329)
+Completed 200 OK in 126ms (Views: 120.7ms | ActiveRecord: 2.5ms | Allocations: 17063)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 07:10:58 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (1.9ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.8ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 10[0m
+  ↳ app/views/teams/show.html.erb:7
+  [1m[36mParentTask Load (0.8ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 11[0m
+  ↳ app/views/teams/show.html.erb:7
+  Rendered teams/show.html.erb within layouts/application (Duration: 43.4ms | Allocations: 4201)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.6ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 22.7ms | Allocations: 4314)
+Completed 200 OK in 195ms (Views: 185.3ms | ActiveRecord: 5.5ms | Allocations: 17017)
+
+
+Started DELETE "/bosses/sign_out" for 172.20.0.1 at 2020-08-25 07:14:19 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"V8f+Ne8AUbneN5iVBlprgsvQmRkYjH9Sk8RhE7gMG3sX9YymqqoS7TTmjqCYrp3IJym3rHQwj4pRwX6PDbJZgw=="}
+  [1m[36mBoss Load (0.6ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms | Allocations: 2218)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 07:14:19 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 23.7ms | Allocations: 1738)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 9.8ms | Allocations: 2303)
+Completed 200 OK in 108ms (Views: 102.9ms | ActiveRecord: 0.0ms | Allocations: 12697)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-25 07:14:36 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 554)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 30.6ms | Allocations: 3060)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 10.0ms | Allocations: 2262)
+Completed 200 OK in 124ms (Views: 122.9ms | ActiveRecord: 0.0ms | Allocations: 15077)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-25 07:14:38 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 189)
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams`[0m
+  ↳ app/views/users/registrations/new.html.erb:42
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 37.7ms | Allocations: 3687)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 10.4ms | Allocations: 2262)
+Completed 200 OK in 130ms (Views: 127.9ms | ActiveRecord: 0.5ms | Allocations: 15180)
+
+
