@@ -2,7 +2,7 @@ class ChildTasksController < ApplicationController
     before_action { :authenticate_user! || :authenticate_boss!}
 
     def index
-       @child_tasks = ChildTask.all
+       @child_tasks = ChildTask.where(parent_task_id: params[:parent_task_id]).order(child_deadline: "ASC")
        @parent_task = ParentTask.find_by(id: params[:parent_task_id])
        @task_comment = TaskComment.new
     end
