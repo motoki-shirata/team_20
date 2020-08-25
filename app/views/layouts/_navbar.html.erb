@@ -1,13 +1,13 @@
 # <%= stylesheet_link_tag "background-image", :media => "all" %>
 # <%= stylesheet_link_tag "common", :media => "all" %>
 
-<nav class="navbar navbar-expand-sm bg-dark">
+<nav class="navbar navbar-expand-sm bg-dark fixed-top">
   <!--TOPに戻るボタン-->
-  <a class="navbar-brand text-danger" href = "/">FUN&FUN&FUN</a>
+  <a class="navbar-brand text-white" href = "/">FUN&FUN&FUN</a>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <% if user_signed_in?%>
-          <h2 class="nav-link text-primary text-danger"><%= current_user.team.name %></h3>
+          <h2 class="nav-link text-white"><%= current_user.team.name %></h3>
         <% elsif boss_signed_in?%>
           <% current_boss.teams.each do |team|%>
             <%= link_to team.name, team_path(team) %>
@@ -20,11 +20,11 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <% if user_signed_in?%>
-                <p class="text-danger">User</p>
+                <h5 class="text-white"> <%= current_user.name %></h5>
               <% elsif boss_signed_in?%>
-                <p class="text-danger">Boss</p>
+                <h5 class="text-white"> <%= current_boss.name %></h5>
               <% else%>
-                <p class="text-danger">Sign Up or Login</p>
+                <p class="text-white">Sign Up or Login</p>
               <% end %>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -33,7 +33,6 @@
                 <br>
                 <%= link_to "Profile", current_user%>
                 <br>
-                <%# <a class="dropdown-item js-modal-open" href="">プロフィール編集</a> %>
                 <%= link_to "User logout", destroy_user_session_path, method: :delete %>
               <% elsif boss_signed_in?%>
                 <%= link_to "Profile", current_boss%>
