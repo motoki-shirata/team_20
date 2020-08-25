@@ -1,11 +1,10 @@
-
 <%= stylesheet_link_tag "common", :media => "all" %>
 <% if user_signed_in? %>
     <h2><%= current_user.name%>のタスク一覧表示</h2>
+    <button type="button" class="btn btn-primary parent-task-new " onclick="location.href='/parent_tasks/new'">親タスク新規作成</button><br>
 <% elsif boss_signed_in? %>
     <h2><%= current_boss.name%>のタスク一覧表示</h2>
 <% end %>
-<button type="button" class="btn btn-primary parent-task-new " onclick="location.href='/parent_tasks/new'">親タスク新規作成</button><br>
 
 <% @parent_tasks.each do |parent_task| %>
   <div class="card border-secondary mb-5" style="width: 30rem;">
@@ -17,15 +16,6 @@
               <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
           </div>
           <%= link_to "タスク詳細画面へ", parent_task_path(parent_task) %></br>
-        </div>
-        <div class="col-6">
-          <% parent_task.child_tasks.each do |child_task| %>
-            <% if child_task.done %>
-                <%= button_to '完了済み', index_canceled_parent_task_child_tasks_path(parent_task, id: child_task.id) %> 
-            <% else %>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%= child_task.id %>">完了にする</button>  
-            <% end %>
-          <% end %>
         </div>
         </div>
       </div>
@@ -45,7 +35,9 @@
               <% end %>
           </ul>
           <div class="card-footer">
+          <% if user_signed_in? %>
             <%= link_to "サブタスク新規作成", new_parent_task_child_task_path(parent_task), class: "btn btn-secondary" %> /
+          <% end %>
             <%= link_to "サブタスク一覧画面", parent_task_child_tasks_path(parent_task), class: "btn btn-secondary" %>
           </div>
       </div>

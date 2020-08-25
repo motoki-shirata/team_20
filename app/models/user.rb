@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true, length: { maximum: 50 }
 
-  belongs_to :team, optional: true
+  belongs_to :team
   has_many :parent_tasks
   has_many :task_comments
 end

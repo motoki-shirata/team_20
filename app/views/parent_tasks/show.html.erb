@@ -20,8 +20,6 @@
     <p>入力されていません</p>
 <% end %>
 <p><%= @parent_task.updated_at %></p>
-<p>user_id:<%= @parent_task.user_id %></p>
-
 <%= form_with(model: [@parent_task, @task_comment]) do |f| %>
   <%= f.text_area :parent_comment %>
   <br>
@@ -29,10 +27,21 @@
 <% end %>
 <div class="bg-white">
 <h4>〜コメント一覧〜</h4>
+
 <% @task_comments.each do |task_comment| %>
-  <%= simple_format(task_comment.parent_comment) %>
+<% if task_comment.parent_task_id && task_comment.parent_comment %>
+      <% if task_comment.boss_id %>
+            <%= task_comment.boss.name%>
+      <% elsif task_comment.user_id %>
+            <%= task_comment.user.name%>
+      <% end %>
+  <%= task_comment.parent_comment %>
+  <%= task_comment.id %>
   <br>
-  <%= link_to 'このメッセージを削除する', parent_task_task_comments_path(@parent_task, task_comment), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+  <% if current_user == task_comment.user || current_boss == task_comment.boss %>
+     <%= button_to 'このメッセージを削除する', parent_task_task_comment_path(parent_task_id: @parent_task.id, id: task_comment.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+  <% end %>
+  <% end %>
 <% end %>
 </div>
 

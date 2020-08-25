@@ -1,5 +1,6 @@
 class ParentTasksController < ApplicationController
     before_action { :authenticate_user! || :authenticate_boss!}
+    before_action :authenticate_boss!, only: [:show, :index]
 
     def index
         @parent_tasks = current_user.parent_tasks
