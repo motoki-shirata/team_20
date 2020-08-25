@@ -6,9 +6,8 @@
     <div class="card-header bg-light ">
     <div class="row">
         <div class="col-7">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="#" checked>
-                <label class="form-check-label" for="#">サブタスク名：「<%= child_task.title %>」</label>
+            <div class="font-weight-bold">
+                サブタスク名：「<%= child_task.title %>」
             </div>
             <%= link_to "サブタスク詳細画面", parent_task_child_task_path(parent_task_id: child_task.parent_task_id, id: child_task.id) %></br>
         </div>
@@ -75,18 +74,21 @@
             <br>
             <%= f.submit 'コメントする' %>
         <% end %>
+        
         <% child_task.task_comments.each do |child_task_comment| %>
+            <div class="border-black border">
             <% if child_task_comment.child_task_id && child_task_comment.child_comment %>
                 <% if child_task_comment.boss_id %>
-                    <%= child_task_comment.boss.name %>
+                    投稿者：<%= child_task_comment.boss.name %>
                 <% elsif child_task_comment.user_id %>
-                    <%= child_task_comment.user.name %>
+                    投稿者：<%= child_task_comment.user.name %>
                 <% end %>
                 <%= simple_format(child_task_comment.child_comment) %>
                 <% if current_user == child_task_comment.user || current_boss == child_task_comment.boss %>
                 <%= button_to 'このメッセージを削除する', parent_task_task_comment_path(parent_task_id: @parent_task.id, id: child_task_comment.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
                 <% end %>
             <% end %>
+            </div>
         <% end %>
     <% end %>
     </div>

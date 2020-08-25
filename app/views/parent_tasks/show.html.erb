@@ -22,17 +22,15 @@
       <% end %>
   </div>
 
-<div class="bg-light card-footer mx-auto">
+<div class="bg-light card-footer">
   <h5>〜コメント一覧〜</h5>
   <% @task_comments.each do |task_comment| %>
+    <div class="border border-black">
     <% if task_comment.parent_task_id && task_comment.parent_comment %>
-    <table>
-    <tr>
-      <td><%= task_comment.parent_comment %> </td>
-      <td><%= button_to 'Delete', parent_task_task_comment_path(parent_task_id: @parent_task.id, id: task_comment.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %> </td>
-    <tr>
-    </table>
+      <%= task_comment.parent_comment %> 
+      <%= button_to 'Delete', parent_task_task_comment_path(parent_task_id: @parent_task.id, id: task_comment.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %> 
     <% end %>
+    </div>
     </ul>
   <% end %>
 </div>
