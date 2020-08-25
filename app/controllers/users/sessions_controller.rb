@@ -24,4 +24,15 @@ class Users::SessionsController < Devise::SessionsController
   # def configure_sign_in_params
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
   # end
+
+  # The path used after sign up.
+  # def after_sign_up_path_for(resource)
+  #   parent_tasks_path(resource)
+  # end
+
+  # # The path used after sign up for inactive accounts.
+  # def after_inactive_sign_up_path_for(resource)
+  #   root_path
+  # end
+
 end

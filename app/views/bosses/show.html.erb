@@ -1,10 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-12 text-center border">
-      <h3><%= current_boss.name %></h3>
+      <h3><%= @boss.name %></h3>
     </div>
     <div class="col-12 text-left border">
-      <% current_boss.teams.each do |team|%>
+      <% @boss.teams.each do |team|%>
         <ul><%= team.name %>
           <% User.where(team_id: team.id).each do |user| %>
           <li><%= link_to user.name, user %></li>
@@ -13,13 +13,14 @@
         <br>
       <%end%>
     </div>
-    
-    <div class="col-12 text-center border check_box" >
-      <%= form_for @boss, :url=> {controller: "bosses", action: "update"} do |f| %>
-        <%= f.collection_check_boxes(:team_ids, Team.all, :id, :name) do |b| %>
-          <%= b.label { b.check_box + b.text } %>
+    <% if current_boss.id == params[:id].to_i%>
+      <div class="col-12 text-center border check_box" >
+        <%= form_for @boss, :url=> {controller: "bosses", action: "update"} do |f| %>
+          <%= f.collection_check_boxes(:team_ids, Team.all, :id, :name) do |b| %>
+            <%= b.label { b.check_box + b.text } %>
+          <% end %>
+          <%= f.submit "Update Teams" %>
         <% end %>
-        <%= f.submit "Update Teams" %>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>

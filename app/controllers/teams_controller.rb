@@ -6,11 +6,8 @@ class TeamsController < ApplicationController
   # end
 
   def show
-    current_boss.teams.each do |team|
-      @uses=team.users
-      # team.id
-      # binding.pry
-    end
+    @team=Team.find(params[:id])
+    # binding.pry
   end
 
   # def new

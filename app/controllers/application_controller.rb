@@ -11,6 +11,10 @@ class ApplicationController < ActionController::Base
     end
 
     def after_sign_in_path_for(resource)
-      parent_tasks_path(resource)
+      if user_signed_in?
+        parent_tasks_path(resource)
+      elsif boss_signed_in?
+        @current_boss.teams.first
+      end
     end
 end
