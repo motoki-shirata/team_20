@@ -6,11 +6,11 @@
   <a class="navbar-brand text-white" href = "/">FUN&FUN&FUN</a>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <% if user_signed_in?%>
-          <h2 class="nav-link text-white"><%= current_user.team.name %></h3>
+        <% if user_signed_in? %>
+          <h2 class="nav-link text-white"><%= current_user.team.name %></h2>
         <% elsif boss_signed_in?%>
           <% current_boss.teams.each do |team|%>
-            <%= link_to team.name, team_path(team) %>
+            <%= link_to team.name, team_path(team), class: "text-white" %>
           <% end%>
         <% end %>
       </li>
@@ -23,7 +23,7 @@
                 <h5 class="text-white"> <%= current_user.name %></h5>
               <% elsif boss_signed_in?%>
                 <h5 class="text-white"> <%= current_boss.name %></h5>
-              <% else%>
+              <% else %>
                 <p class="text-white">Sign Up or Login</p>
               <% end %>
             </a>
