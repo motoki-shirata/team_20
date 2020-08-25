@@ -1,0 +1,198 @@
+Started GET "/parent_tasks/14" for 172.19.0.1 at 2020-08-25 23:33:30 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (7.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ParentTasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mParentTask Load (4.8ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 14 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:10:in `show'
+  Rendering parent_tasks/show.html.erb within layouts/application
+  [1m[36mTaskComment Load (2.8ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/show.html.erb:27
+  [1m[36mChildTask Load (1.9ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/show.html.erb:38
+  Rendered parent_tasks/show.html.erb within layouts/application (Duration: 57.4ms | Allocations: 16200)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:4
+  [1m[36mTeam Load (2.1ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  Rendered layouts/_navbar.html.erb (Duration: 60.2ms | Allocations: 14993)
+Completed 200 OK in 1942ms (Views: 1853.9ms | ActiveRecord: 31.7ms | Allocations: 84022)
+
+
+Started POST "/parent_tasks/14/task_comments" for 172.19.0.1 at 2020-08-25 23:33:35 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TaskCommentsController#create as JS
+  Parameters: {"authenticity_token"=>"NCnWUnWxkpU52XEAE7aEjh2bhSRmBf+spymmF9+myVcRxHZH9v6CF38BSglQFKwqG+Y/wVovXGv2ix/KoqXREw==", "task_comment"=>{"parent_comment"=>"asdfa"}, "commit"=>"コメントする", "parent_task_id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/task_comments_controller.rb:3:in `create'
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/task_comments_controller.rb:3:in `create'
+Redirected to http://localhost:3000/parent_tasks/14
+Completed 200 OK in 184ms (ActiveRecord: 0.9ms | Allocations: 39525)
+
+
+Started GET "/parent_tasks/14" for 172.19.0.1 at 2020-08-25 23:33:36 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 14 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:10:in `show'
+  Rendering parent_tasks/show.html.erb within layouts/application
+  [1m[36mTaskComment Load (0.5ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/show.html.erb:27
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/show.html.erb:38
+  Rendered parent_tasks/show.html.erb within layouts/application (Duration: 8.0ms | Allocations: 4456)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:4
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  Rendered layouts/_navbar.html.erb (Duration: 29.5ms | Allocations: 4079)
+Completed 200 OK in 125ms (Views: 119.8ms | ActiveRecord: 2.2ms | Allocations: 17249)
+
+
+Started POST "/parent_tasks/14/task_comments" for 172.19.0.1 at 2020-08-25 23:34:20 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TaskCommentsController#create as JS
+  Parameters: {"authenticity_token"=>"NYnNfJUTtl3DPg0mJiiGAYj7J0MS2/viVnvo6MR0RIWPvEFO1k3bMLJyES2PWeqrLhzfIm7jh1KHRMRqQqmt+A==", "task_comment"=>{"parent_comment"=>"asdfadsf"}, "commit"=>"コメントする", "parent_task_id"=>"14"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/task_comments_controller.rb:3:in `create'
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/task_comments_controller.rb:3:in `create'
+Redirected to http://localhost:3000/parent_tasks/14
+Completed 200 OK in 10ms (ActiveRecord: 1.1ms | Allocations: 2979)
+
+
+Started GET "/parent_tasks/14" for 172.19.0.1 at 2020-08-25 23:34:20 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mParentTask Load (0.8ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 14 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:10:in `show'
+  Rendering parent_tasks/show.html.erb within layouts/application
+  [1m[36mTaskComment Load (0.7ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/show.html.erb:27
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/show.html.erb:38
+  Rendered parent_tasks/show.html.erb within layouts/application (Duration: 14.0ms | Allocations: 5206)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:4
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  Rendered layouts/_navbar.html.erb (Duration: 20.3ms | Allocations: 4657)
+Completed 200 OK in 140ms (Views: 125.9ms | ActiveRecord: 2.7ms | Allocations: 19963)
+
+
+Started POST "/parent_tasks/14/task_comments" for 172.19.0.1 at 2020-08-25 23:34:41 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TaskCommentsController#create as JS
+  Parameters: {"authenticity_token"=>"JjLPefWPjhJwv95FFWWFUj8hGVUod3NcIAwJe6I42/icB0NLttHjfwHzwk68FOn4mcbhNFRPD+zxMyX5JOUyhQ==", "task_comment"=>{"parent_comment"=>"asdfa"}, "commit"=>"コメントする", "parent_task_id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ (pry):2:in `create'
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`id` IS NULL LIMIT 1[0m
+  ↳ (pry):2:in `create'
+  [1m[36mCACHE ChildTask Load (0.0ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`id` IS NULL LIMIT 1[0m
+  ↳ (pry):3:in `create'
+  [1m[36mCACHE ChildTask Load (0.0ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/task_comments_controller.rb:4:in `create'
+Redirected to http://localhost:3000/parent_tasks/14
+Completed 200 OK in 82021ms (ActiveRecord: 8.0ms | Allocations: 302700)
+
+
+Started GET "/parent_tasks/14" for 172.19.0.1 at 2020-08-25 23:36:03 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mParentTask Load (0.2ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 14 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:10:in `show'
+  Rendering parent_tasks/show.html.erb within layouts/application
+  [1m[36mTaskComment Load (0.5ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/show.html.erb:27
+  [1m[36mChildTask Load (0.2ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/show.html.erb:38
+  Rendered parent_tasks/show.html.erb within layouts/application (Duration: 27.3ms | Allocations: 13538)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:4
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  Rendered layouts/_navbar.html.erb (Duration: 42.8ms | Allocations: 13755)
+Completed 200 OK in 190ms (Views: 147.7ms | ActiveRecord: 11.0ms | Allocations: 49057)
+
+
+Started POST "/parent_tasks/14/task_comments" for 172.19.0.1 at 2020-08-25 23:36:07 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TaskCommentsController#create as JS
+  Parameters: {"authenticity_token"=>"72HCvKQC3tBA9nTxXoBzh46Q4gxHhS01SYCPH4D/4BlVVE6O51yzvTG6aPr38R8tKHcabTu9UYWYv6OdBiIJZA==", "task_comment"=>{"parent_comment"=>"asdfasdfasdf"}, "commit"=>"コメントする", "parent_task_id"=>"14"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/task_comments_controller.rb:4:in `create'
+  [1m[36mChildTask Load (0.2ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/task_comments_controller.rb:4:in `create'
+Redirected to http://localhost:3000/parent_tasks/14
+Completed 200 OK in 130391ms (ActiveRecord: 0.7ms | Allocations: 344434)
+
+
+Started GET "/parent_tasks/14" for 172.19.0.1 at 2020-08-25 23:38:18 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mParentTask Load (0.2ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 14 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:10:in `show'
+  Rendering parent_tasks/show.html.erb within layouts/application
+  [1m[36mTaskComment Load (0.4ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/show.html.erb:27
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/show.html.erb:38
+  Rendered parent_tasks/show.html.erb within layouts/application (Duration: 24.9ms | Allocations: 13538)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:4
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  Rendered layouts/_navbar.html.erb (Duration: 37.6ms | Allocations: 13754)
+Completed 200 OK in 164ms (Views: 119.7ms | ActiveRecord: 10.7ms | Allocations: 49012)
+
+
+Started POST "/parent_tasks/14/task_comments" for 172.19.0.1 at 2020-08-25 23:38:59 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TaskCommentsController#create as JS
+  Parameters: {"authenticity_token"=>"GX9nn3EqPZRUP5ieeuZMHqU2No3zCITbvjvJHcr020GjSuutMnRQ+SVzhJXTlyC0A9HO7I8w+GtvBOWfTCkyPA==", "task_comment"=>{"parent_comment"=>"adsfasdf"}, "commit"=>"コメントする", "parent_task_id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/task_comments_controller.rb:3:in `create'
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/task_comments_controller.rb:3:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/task_comments_controller.rb:64:in `task_comment_save'
+  [1m[36mTaskComment Create (1.8ms)[0m  [1m[32mINSERT INTO `task_comments` (`parent_comment`, `created_at`, `updated_at`, `user_id`, `parent_task_id`) VALUES ('adsfasdf', '2020-08-25 23:38:59.841525', '2020-08-25 23:38:59.841525', 2, 14)[0m
+  ↳ app/controllers/task_comments_controller.rb:64:in `task_comment_save'
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/task_comments_controller.rb:64:in `task_comment_save'
+Redirected to http://localhost:3000/parent_tasks/14
+Completed 200 OK in 53ms (ActiveRecord: 10.2ms | Allocations: 17533)
+
+
+Started GET "/parent_tasks/14" for 172.19.0.1 at 2020-08-25 23:38:59 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 14 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:10:in `show'
+  Rendering parent_tasks/show.html.erb within layouts/application
+  [1m[36mTaskComment Load (0.4ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/show.html.erb:27
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/show.html.erb:38
+  Rendered parent_tasks/show.html.erb within layouts/application (Duration: 21.9ms | Allocations: 12402)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:4
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  Rendered layouts/_navbar.html.erb (Duration: 28.5ms | Allocations: 8507)
+Completed 200 OK in 140ms (Views: 108.9ms | ActiveRecord: 7.4ms | Allocations: 36318)
+
+
