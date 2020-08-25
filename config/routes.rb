@@ -30,7 +30,6 @@ Rails.application.routes.draw do
         post :show_result_finish
       end
     end
-
     resources :task_comments
   end
 end
