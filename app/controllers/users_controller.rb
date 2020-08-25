@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @parent_tasks=ParentTask.where(user_id: @user.id)
+    @parent_tasks=ParentTask.where(user_id: @user.id).order(created_at: :asc)
     # binding.pry
   end
 end
