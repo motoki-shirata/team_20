@@ -36,6 +36,7 @@
         <% child_task.task_comments.each do |child_task_comment| %>
             <% if child_task_comment.child_task_id %>
                 <%= simple_format(child_task_comment.child_comment) %>
+                <%= button_to 'このメッセージを削除する', parent_task_task_comment_path(parent_task_id: @parent_task.id, id: child_task_comment.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
             <% end %>
 
         <% end %>

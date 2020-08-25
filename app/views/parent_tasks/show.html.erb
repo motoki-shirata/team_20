@@ -25,9 +25,12 @@
 
 <% @task_comments.each do |task_comment| %>
 <% if task_comment.parent_task_id && task_comment.parent_comment %>
+
   <%= task_comment.parent_comment %>
+  <%= task_comment.id %>
   <br>
-  <%= button_to 'このメッセージを削除する', parent_task_task_comments_path(parent_task_id: @parent_task.id, id: params[:id]), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+  
+  <%= button_to 'このメッセージを削除する', parent_task_task_comment_path(parent_task_id: @parent_task.id, id: task_comment.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
   <% end %>
 <% end %>
 </div>
