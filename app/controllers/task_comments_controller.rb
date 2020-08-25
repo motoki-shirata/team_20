@@ -6,6 +6,12 @@ class TaskCommentsController < ApplicationController
         elsif user_signed_in? && ChildTask.find_by(id: params[:id])
             user_child_task_comments
             child_comment_save
+        elsif boss_signed_in? && (!ChildTask.find_by(id: params[:id]))
+            boss_parent_task_comments
+            task_comment_save
+        elsif boss_signed_in? && ChildTask.find_by(id: params[:id])
+            boss_child_task_comments
+            child_comment_save
         end
     end
     def edit
@@ -42,6 +48,16 @@ class TaskCommentsController < ApplicationController
     def user_child_task_comments
         @child_comment = TaskComment.new(task_comment_params)
         @child_comment.user_id = current_user.id
+        @child_comment.child_task_id = params[:id]
+    end
+    def boss_parent_task_comments
+        @task_comment = TaskComment.new(task_comment_params)
+        @task_comment.boss_id = current_boss.id
+        @task_comment.parent_task_id = params[:parent_task_id]
+    end
+    def boss_child_task_comments
+        @child_comment = TaskComment.new(task_comment_params)
+        @child_comment.boss_id = current_boss.id
         @child_comment.child_task_id = params[:id]
     end
     def task_comment_save
