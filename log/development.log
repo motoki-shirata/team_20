@@ -29843,3 +29843,354 @@ Completed 200 OK in 119ms (Views: 113.4ms | ActiveRecord: 2.8ms | Allocations: 1
 >>>>>>> develop
 
 
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddParentDoneToParentTasks (20200825103559)
+  [1m[35m (37.1ms)[0m  [1m[35mALTER TABLE `parent_tasks` ADD `parent_done` int[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200825103559')[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddParentDone (20200825105212)
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE `parent_tasks` ADD `parent_done` int[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddParentDone (20200825105212)
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE `parent_tasks` ADD `parent_done` int[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (92.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS `myapp_development`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (5.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS `myapp_test`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE DATABASE `myapp_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE DATABASE `myapp_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (17.7ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (16.6ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DeviseCreateUsers (20200820022929)
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (14.0ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820022929')[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToUser (20200820024506)
+  [1m[35m (18.0ms)[0m  [1m[35mALTER TABLE `users` ADD `name` varchar(255) DEFAULT '' NOT NULL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820024506')[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateParentTasks (20200820053515)
+  [1m[35m (19.7ms)[0m  [1m[35mCREATE TABLE `parent_tasks` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `parent_deadline` datetime, `self_evaluate` int, `explanation` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820053515')[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateChildTasks (20200820065400)
+  [1m[35m (24.6ms)[0m  [1m[35mCREATE TABLE `child_tasks` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `child_deadline` datetime, `possibility` int, `done` int, `result` int, `self_motivation` int, `explanation` varchar(255), `parent_task_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_child_tasks_on_parent_task_id`  (`parent_task_id`), CONSTRAINT `fk_rails_6827edfba9`
+FOREIGN KEY (`parent_task_id`)
+  REFERENCES `parent_tasks` (`id`)
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820065400')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTeams (20200820075342)
+  [1m[35m (16.2ms)[0m  [1m[35mCREATE TABLE `teams` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820075342')[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrganizations (20200820080709)
+  [1m[35m (18.9ms)[0m  [1m[35mCREATE TABLE `organizations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820080709')[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddColumnToUser (20200820094239)
+  [1m[35m (17.5ms)[0m  [1m[35mALTER TABLE `users` ADD `team_id` bigint[0m
+  [1m[35m (18.3ms)[0m  [1m[35mCREATE  INDEX `index_users_on_team_id`  ON `users` (`team_id`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820094239')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateBosses (20200820234850)
+  [1m[35m (15.7ms)[0m  [1m[35mCREATE TABLE `bosses` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (16.1ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_bosses_on_email`  ON `bosses` (`email`) [0m
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_bosses_on_reset_password_token`  ON `bosses` (`reset_password_token`) [0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820234850')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToBoss (20200820234941)
+  [1m[35m (16.1ms)[0m  [1m[35mALTER TABLE `bosses` ADD `name` varchar(255)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820234941')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddReferencesToOrganizations (20200821003016)
+  [1m[35m (14.8ms)[0m  [1m[35mALTER TABLE `organizations` ADD `team_id` bigint NOT NULL[0m
+  [1m[35m (11.9ms)[0m  [1m[35mCREATE  INDEX `index_organizations_on_team_id`  ON `organizations` (`team_id`) [0m
+  [1m[35m (35.1ms)[0m  [1m[35mALTER TABLE `organizations` ADD CONSTRAINT `fk_rails_10fd3bd914`
+FOREIGN KEY (`team_id`)
+  REFERENCES `teams` (`id`)
+[0m
+  [1m[35m (12.2ms)[0m  [1m[35mALTER TABLE `organizations` ADD `boss_id` bigint NOT NULL[0m
+  [1m[35m (11.6ms)[0m  [1m[35mCREATE  INDEX `index_organizations_on_boss_id`  ON `organizations` (`boss_id`) [0m
+  [1m[35m (35.9ms)[0m  [1m[35mALTER TABLE `organizations` ADD CONSTRAINT `fk_rails_fc1ee8a595`
+FOREIGN KEY (`boss_id`)
+  REFERENCES `bosses` (`id`)
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200821003016')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddReferencesToParentTask (20200821124201)
+  [1m[35m (16.5ms)[0m  [1m[35mALTER TABLE `parent_tasks` ADD `user_id` bigint[0m
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE  INDEX `index_parent_tasks_on_user_id`  ON `parent_tasks` (`user_id`) [0m
+  [1m[35m (33.6ms)[0m  [1m[35mALTER TABLE `parent_tasks` ADD CONSTRAINT `fk_rails_59a65abd47`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200821124201')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddChildTaskToFinishtime (20200822094105)
+  [1m[35m (14.3ms)[0m  [1m[35mALTER TABLE `child_tasks` ADD `finish_time` datetime[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200822094105')[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTaskComments (20200822105046)
+  [1m[35m (30.3ms)[0m  [1m[35mCREATE TABLE `task_comments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `parent_comment` varchar(255), `user_id` bigint, `parent_task_id` bigint, `child_task_id` bigint, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_task_comments_on_user_id`  (`user_id`),  INDEX `index_task_comments_on_parent_task_id`  (`parent_task_id`),  INDEX `index_task_comments_on_child_task_id`  (`child_task_id`), CONSTRAINT `fk_rails_ee51dc8b8a`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_d08f4a50f5`
+FOREIGN KEY (`parent_task_id`)
+  REFERENCES `parent_tasks` (`id`)
+, CONSTRAINT `fk_rails_95895b6ffb`
+FOREIGN KEY (`child_task_id`)
+  REFERENCES `child_tasks` (`id`)
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200822105046')[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddReferencesToTaskcomments (20200825023115)
+  [1m[35m (16.9ms)[0m  [1m[35mALTER TABLE `task_comments` ADD `boss_id` bigint[0m
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE  INDEX `index_task_comments_on_boss_id`  ON `task_comments` (`boss_id`) [0m
+  [1m[35m (44.2ms)[0m  [1m[35mALTER TABLE `task_comments` ADD CONSTRAINT `fk_rails_65825b92a1`
+FOREIGN KEY (`boss_id`)
+  REFERENCES `bosses` (`id`)
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE `task_comments` ADD `child_task_id` bigint[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2020-08-25 12:34:57.089141', '2020-08-25 12:34:57.089141')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (56.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS `myapp_development`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (6.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS `myapp_test`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE DATABASE `myapp_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE DATABASE `myapp_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (24.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (16.2ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DeviseCreateUsers (20200820022929)
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820022929')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToUser (20200820024506)
+  [1m[35m (16.9ms)[0m  [1m[35mALTER TABLE `users` ADD `name` varchar(255) DEFAULT '' NOT NULL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820024506')[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateParentTasks (20200820053515)
+  [1m[35m (19.2ms)[0m  [1m[35mCREATE TABLE `parent_tasks` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `parent_deadline` datetime, `self_evaluate` int, `explanation` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820053515')[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateChildTasks (20200820065400)
+  [1m[35m (23.0ms)[0m  [1m[35mCREATE TABLE `child_tasks` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `child_deadline` datetime, `possibility` int, `done` int, `result` int, `self_motivation` int, `explanation` varchar(255), `parent_task_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_child_tasks_on_parent_task_id`  (`parent_task_id`), CONSTRAINT `fk_rails_6827edfba9`
+FOREIGN KEY (`parent_task_id`)
+  REFERENCES `parent_tasks` (`id`)
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820065400')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTeams (20200820075342)
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE TABLE `teams` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820075342')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrganizations (20200820080709)
+  [1m[35m (19.4ms)[0m  [1m[35mCREATE TABLE `organizations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820080709')[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddColumnToUser (20200820094239)
+  [1m[35m (14.8ms)[0m  [1m[35mALTER TABLE `users` ADD `team_id` bigint[0m
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE  INDEX `index_users_on_team_id`  ON `users` (`team_id`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820094239')[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateBosses (20200820234850)
+  [1m[35m (14.8ms)[0m  [1m[35mCREATE TABLE `bosses` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_bosses_on_email`  ON `bosses` (`email`) [0m
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_bosses_on_reset_password_token`  ON `bosses` (`reset_password_token`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820234850')[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToBoss (20200820234941)
+  [1m[35m (16.2ms)[0m  [1m[35mALTER TABLE `bosses` ADD `name` varchar(255)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820234941')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddReferencesToOrganizations (20200821003016)
+  [1m[35m (13.9ms)[0m  [1m[35mALTER TABLE `organizations` ADD `team_id` bigint NOT NULL[0m
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE  INDEX `index_organizations_on_team_id`  ON `organizations` (`team_id`) [0m
+  [1m[35m (34.0ms)[0m  [1m[35mALTER TABLE `organizations` ADD CONSTRAINT `fk_rails_10fd3bd914`
+FOREIGN KEY (`team_id`)
+  REFERENCES `teams` (`id`)
+[0m
+  [1m[35m (12.8ms)[0m  [1m[35mALTER TABLE `organizations` ADD `boss_id` bigint NOT NULL[0m
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE  INDEX `index_organizations_on_boss_id`  ON `organizations` (`boss_id`) [0m
+  [1m[35m (34.9ms)[0m  [1m[35mALTER TABLE `organizations` ADD CONSTRAINT `fk_rails_fc1ee8a595`
+FOREIGN KEY (`boss_id`)
+  REFERENCES `bosses` (`id`)
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200821003016')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddReferencesToParentTask (20200821124201)
+  [1m[35m (16.9ms)[0m  [1m[35mALTER TABLE `parent_tasks` ADD `user_id` bigint[0m
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE  INDEX `index_parent_tasks_on_user_id`  ON `parent_tasks` (`user_id`) [0m
+  [1m[35m (37.7ms)[0m  [1m[35mALTER TABLE `parent_tasks` ADD CONSTRAINT `fk_rails_59a65abd47`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200821124201')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddChildTaskToFinishtime (20200822094105)
+  [1m[35m (13.3ms)[0m  [1m[35mALTER TABLE `child_tasks` ADD `finish_time` datetime[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200822094105')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTaskComments (20200822105046)
+  [1m[35m (30.1ms)[0m  [1m[35mCREATE TABLE `task_comments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `parent_comment` varchar(255), `user_id` bigint, `parent_task_id` bigint, `child_task_id` bigint, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_task_comments_on_user_id`  (`user_id`),  INDEX `index_task_comments_on_parent_task_id`  (`parent_task_id`),  INDEX `index_task_comments_on_child_task_id`  (`child_task_id`), CONSTRAINT `fk_rails_ee51dc8b8a`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_d08f4a50f5`
+FOREIGN KEY (`parent_task_id`)
+  REFERENCES `parent_tasks` (`id`)
+, CONSTRAINT `fk_rails_95895b6ffb`
+FOREIGN KEY (`child_task_id`)
+  REFERENCES `child_tasks` (`id`)
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200822105046')[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddReferencesToTaskcomments (20200825023115)
+  [1m[35m (15.1ms)[0m  [1m[35mALTER TABLE `task_comments` ADD `boss_id` bigint[0m
+  [1m[35m (12.5ms)[0m  [1m[35mCREATE  INDEX `index_task_comments_on_boss_id`  ON `task_comments` (`boss_id`) [0m
+  [1m[35m (41.8ms)[0m  [1m[35mALTER TABLE `task_comments` ADD CONSTRAINT `fk_rails_65825b92a1`
+FOREIGN KEY (`boss_id`)
+  REFERENCES `bosses` (`id`)
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE `task_comments` ADD `child_task_id` bigint[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddReferencesToTaskcomments (20200825023115)
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200825023115')[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddColumnUserParentTask (20200825024135)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200825024135')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddChildTaskToTaskComment (20200825025630)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200825025630')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddParentDoneToParentTasks (20200825103559)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200825103559')[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddParentDone (20200825105212)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200825105212')[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2020-08-25 12:36:55.526775', '2020-08-25 12:36:55.526775')[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO `teams` (`id`, `name`, `created_at`, `updated_at`) VALUES (0, 'U付', '2020-08-25 12:39:29.529870', '2020-08-25 12:39:29.529870')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO `teams` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'CXG', '2020-08-25 12:39:29.535529', '2020-08-25 12:39:29.535529')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Create (1.8ms)[0m  [1m[32mINSERT INTO `teams` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'PDG', '2020-08-25 12:39:29.541823', '2020-08-25 12:39:29.541823')[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO `teams` (`id`, `name`, `created_at`, `updated_at`) VALUES (3, 'ENG1', '2020-08-25 12:39:29.548196', '2020-08-25 12:39:29.548196')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO `teams` (`id`, `name`, `created_at`, `updated_at`) VALUES (4, 'ENG2', '2020-08-25 12:39:29.552891', '2020-08-25 12:39:29.552891')[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO `teams` (`id`, `name`, `created_at`, `updated_at`) VALUES (5, 'TSG', '2020-08-25 12:39:29.557799', '2020-08-25 12:39:29.557799')[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO `teams` (`id`, `name`, `created_at`, `updated_at`) VALUES (6, 'PMG', '2020-08-25 12:39:29.563616', '2020-08-25 12:39:29.563616')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO `teams` (`id`, `name`, `created_at`, `updated_at`) VALUES (7, 'DG', '2020-08-25 12:39:29.568575', '2020-08-25 12:39:29.568575')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
