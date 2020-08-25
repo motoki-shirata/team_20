@@ -9,6 +9,7 @@
             <label class="form-check-label" for="#">子タスク名：「<%= child_task.title %>」</label>
         </div> 
         <%= link_to "子タスク詳細画面へ", parent_task_child_task_path(parent_task_id: child_task.parent_task_id, id: child_task.id) %></br>
+        <%= child_task.id %>
     </div>
     <div class="card-body">
         タスク概要：<%= child_task.explanation %>
@@ -19,21 +20,17 @@
         <% if child_task.finish_time %>
             <h5>完了ボタンが押された</h5>
             <%= child_task.child_deadline.class %><br>
-            <% if child_task.done == 0 %>
-            <h1>間に合った。</h1>
-            <% elsif child_task.done == 1 %>
-            <h2>〆切後3h以内で間に合った</h2>
-            <% elsif child_task.done == 2 %>
-            <h3>〆切に間に合わなかった</h3>
-            <% end %>
+                <% if child_task.done == 0 %>
+                <h1>間に合った。</h1>
+                <% elsif child_task.done == 1 %>
+                <h2>〆切後3h以内で間に合った</h2>
+                <% elsif child_task.done == 2 %>
+                <h3>〆切に間に合わなかった</h3>
+                <% end %>
         <% end %>
     </ul>
     <% end %>
     </div>
 </div>
-<%= form_with(model: [@child_task, @task_comment]) do |f| %>
-    <%= f.text_area :parent_comment %>
-    <br>
-    <%= f.submit 'コメントする' %>
-<% end %>
+
 <% end %>

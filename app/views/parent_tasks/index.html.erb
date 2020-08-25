@@ -7,6 +7,9 @@
     <%= link_to "親タスクに紐づく子タスク一覧画面へ",  parent_task_child_tasks_path(parent_task) %>
 <ul>
     <%= parent_task.id %>
+    <% parent_task.task_comments.each do |com| %>
+     <li>親タスクへのコメント<%= com.parent_comment %></li>
+    <% end %>
         <li>タスクタイトル:<%= parent_task.title %></li>
         <li>deadline:<%= parent_task.parent_deadline %></li>
     <% if parent_task.self_evaluate == 0 %>
