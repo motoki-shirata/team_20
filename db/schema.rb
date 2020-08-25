@@ -57,19 +57,17 @@ ActiveRecord::Schema.define(version: 2020_08_25_105212) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
-    t.integer "parent_done"
     t.index ["user_id"], name: "index_parent_tasks_on_user_id"
   end
 
   create_table "task_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "parent_comment"
+    t.bigint "user_id"
+    t.bigint "parent_task_id"
+    t.bigint "child_task_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "boss_id"
-    t.bigint "child_task_id"
-    t.bigint "user_id"
-    t.bigint "parent_task_id"
-    t.string "child_comment"
     t.index ["boss_id"], name: "index_task_comments_on_boss_id"
     t.index ["child_task_id"], name: "index_task_comments_on_child_task_id"
     t.index ["parent_task_id"], name: "index_task_comments_on_parent_task_id"

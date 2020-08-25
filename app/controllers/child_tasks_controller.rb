@@ -5,6 +5,12 @@ class ChildTasksController < ApplicationController
        @child_tasks = ChildTask.where(parent_task_id: params[:parent_task_id]).order(child_deadline: "ASC")
        @parent_task = ParentTask.find_by(id: params[:parent_task_id])
        @task_comment = TaskComment.new
+       @child_tasks.each do |child_task|
+        if child_task.done == nil
+            @parent_task.parent_done = nil
+            @parent_task.save
+        end
+       end
     end
 
     def show
