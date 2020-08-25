@@ -19,7 +19,7 @@
           <%= f.collection_check_boxes(:team_ids, Team.all, :id, :name) do |b| %>
             <%= b.label { b.check_box + b.text } %>
           <% end %>
-          <%= f.submit "Update Teams" %>
+            <%= f.submit "Update Teams" %>
         <% end %>
       </div>
     <% end %>

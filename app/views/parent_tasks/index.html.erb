@@ -1,103 +1,43 @@
-<h1>ここはいったんのホーム画面</h1>
-
-<h2>タスクの一覧表示</h2>
-    <% @parent_tasks.each do |parent_task| %>
-    <%= link_to "子タスク作成画面へ", new_parent_task_child_task_path(parent_task) %></br>
-    <%= link_to "親タスク詳細画面へ", parent_task_path(parent_task) %></br>
-    <%= link_to "親タスクに紐づく子タスク一覧画面へ",  parent_task_child_tasks_path(parent_task) %>
-<ul>
-    <%= parent_task.id %>
-        <li>タスクタイトル:<%= parent_task.title %></li>
-        <li>deadline:<%= parent_task.parent_deadline %></li>
-    <% if parent_task.self_evaluate == 0 %>
-        <li>評価表示:うまく切り分けられた</li>
-    <% elsif parent_task.self_evaluate == 1 %>
-        <li>評価表示:普通</li>
-    <% elsif parent_task.self_evaluate == 2 %>
-        <li>評価表示:上司助けて</li>
-    <% else %>
-        <li>入力されていません</li>
-    <% end %>
-        <li>update_time:<%= parent_task.updated_at %></li>
-        <li>user_id:<%= parent_task.user_id %></li>
-    <ul><% parent_task.child_tasks.each do |child_task| %>
-        <% if child_task.done %>
-        <%= button_to '完了済み', index_canceled_parent_task_child_tasks_path(parent_task, id: child_task.id) %> 
-        <% else %>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%= child_task.id %>">完了にする</button>  
-        <% end %>
-        <li>子タスクタイトル<%= child_task.title %></li>
-        <li><%= child_task.possibility %></li>
-        <li><%= child_task.id %></li>
-
-        <div class="modal fade" id="exampleModal<%= child_task.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">お疲れ様でした</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    あなたはタスクを完了しました
-                    その気持ちの入力をしてください
-                    <li>子タスクid<%= child_task.id %></li>
-                    <%= parent_task.id %>
-                    
-                    <%= form_with url: index_result_finish_parent_task_child_tasks_path(parent_task_id: parent_task.id, id: child_task.id) do |f| %>
-                    <%= f.label :result, '上手にできたかどうか'%>
-                    <%= f.select :result, [['しっかりやり切れた', 0], ['まあまあやり切れた', 1], ['壁にぶつかった', 2]] , class: 'form-control'%>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <%= f.submit '保存' %>
-                    <% end %>
-                </div>
-                </div>
-            </div>
-        </div>
-        <% end %>
-    </ul>
-</ul>
-<% end %>
 <%= stylesheet_link_tag "common", :media => "all" %>
 <% if user_signed_in? %>
-    <h2><%= current_user.name%>の親タスク一覧表示</h2>
+    <h2><%= current_user.name%>のタスク一覧表示</h2>
 <% elsif boss_signed_in? %>
-    <h2><%= current_boss.name%>の親タスク一覧表示</h2>
-<% end%>
-<button type="button" class="btn btn-secondary parent-task-new " onclick="location.href='/parent_tasks/new'">親タスク新規作成</button><br>
-
-
-
+    <h2><%= current_boss.name%>のタスク一覧表示</h2>
+<% end %>
+<button type="button" class="btn btn-primary parent-task-new " onclick="location.href='/parent_tasks/new'">親タスク新規作成</button><br>
 
 <% @parent_tasks.each do |parent_task| %>
   <div class="card border-secondary mb-5" style="width: 30rem;">
       <div class="card-header bg-light ">
+      <div class="row">
+        <div class="col-6">
           <div class="form-check">
               <input class="form-check-input" type="checkbox" id="#" checked>
-              <label class="form-check-label" for="#">親タスク名：「<%= parent_task.title %>」</label>
+              <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
           </div>
-          <%= link_to "親タスク詳細画面へ", parent_task_path(parent_task) %></br>
+          <%= link_to "タスク詳細画面へ", parent_task_path(parent_task) %></br>
+        </div>
+        </div>
       </div>
       <div class="card-body">
           タスク概要：<%= parent_task.explanation %>
-          <ul>
-              <li>締め切り:<%= parent_task.parent_deadline %></li>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">入力時刻:<%= parent_task.updated_at %></li>
+              <li class="list-group-item">締め切り:<%= parent_task.parent_deadline %></li>
               <% if parent_task.self_evaluate == 0 %>
-              <li>評価表示:うまく切り分けられた</li>
+              <li class="list-group-item">自己評価:うまく切り分けられた</li>
               <% elsif parent_task.self_evaluate == 1 %>
-              <li>評価表示:普通</li>
+              <li class="list-group-item">自己評価:普通</li>
               <% elsif parent_task.self_evaluate == 2 %>
-              <li>評価表示:上司助けて</li>
+              <li class="list-group-item">自己評価:上司助けて</li>
               <% else %>
-              <li>入力されていません</li>
+              <li class="list-group-item">入力されていません</li>
               <% end %>
-              <li>update_time:<%= parent_task.updated_at %></li>
           </ul>
-          <%= link_to "子タスク作成画面へ", new_parent_task_child_task_path(parent_task) %> /
-          <%= link_to "親タスクに紐づく子タスク一覧画面へ",  parent_task_child_tasks_path(parent_task) %>
+          <div class="card-footer">
+            <%= link_to "サブタスク新規作成", new_parent_task_child_task_path(parent_task), class: "btn btn-secondary" %> /
+            <%= link_to "サブタスク一覧画面", parent_task_child_tasks_path(parent_task), class: "btn btn-secondary" %>
+          </div>
       </div>
   </div>
 <% end %>
