@@ -62,7 +62,11 @@
 </ul>
 <% end %>
 <%= stylesheet_link_tag "common", :media => "all" %>
-<h2><%= current_user.name%>の親タスク一覧表示</h2>
+<% if user_signed_in? %>
+    <h2><%= current_user.name%>の親タスク一覧表示</h2>
+<% elsif boss_signed_in? %>
+    <h2><%= current_boss.name%>の親タスク一覧表示</h2>
+<% end%>
 <button type="button" class="btn btn-secondary parent-task-new " onclick="location.href='/parent_tasks/new'">親タスク新規作成</button><br>
 
 
