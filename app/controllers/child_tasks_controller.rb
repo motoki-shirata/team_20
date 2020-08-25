@@ -3,10 +3,12 @@ class ChildTasksController < ApplicationController
 
     def index
        @child_tasks = ChildTask.all
+       @parent_task = ParentTask.find_by(id: params[:parent_task_id])
+       @task_comment = TaskComment.new
     end
 
     def show
-       @child_task = ChildTask.find(params[:parent_task_id])
+       @child_task = ChildTask.find(params[:id])
        @task_comments = @child_task.task_comments
        @task_comment = TaskComment.new
     end
@@ -50,13 +52,13 @@ class ChildTasksController < ApplicationController
     def show_canceled
         canceled
         redirect_to parent_task_path(id: params[:parent_task_id])
-
     end
 
     private
     def canceled
         @child_task = ChildTask.find_by(id: params[:id])
         @child_task.done = nil
+        @child_task.finish_time = nil
         @child_task.save
     end
     def resulted

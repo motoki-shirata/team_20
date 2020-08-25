@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 
   # root to: 'tasks'
   resources :parent_tasks do
+    resources :task_comments, only: [:create, :destroy]
     resources :child_tasks do
       collection do
         post :finished
@@ -30,6 +31,5 @@ Rails.application.routes.draw do
         post :show_result_finish
       end
     end
-    resources :task_comments
   end
 end
