@@ -1,9 +1,9 @@
 <div class="container">
     <%= link_to "子タスク一覧へ", parent_task_child_tasks_path(parent_task_id: @child_task.parent_task_id) %>  
-    <div class="text-center">
-        <h1>「<%= @child_task.title %>」　のタスク詳細ページ</h1>
-        <h3>タスクタイトル：<%= @child_task.title %></h3>
-        <h5>タスク概要：<%= @child_task.explanation %></h5>
+<div class="card text-center">
+    <h2 class="card-header">「<%= @child_task.title %>」の詳細ページ</h2>
+    <div class="card-body">
+        <h4>タスク概要：<%= @child_task.explanation %></h4>
         <p>締め切り:<%= @child_task.child_deadline %></p>
         <% if @child_task.possibility == 0 %>
             <p>達成可能性:自信がある</p>
@@ -13,4 +13,5 @@
             <p>達成可能性:自信がないです助けて</p>
         <% end %>
     </div>
+</div>
 </div>
