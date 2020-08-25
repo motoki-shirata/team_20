@@ -1,4 +1,4 @@
-<h2>タスクと紐づいている子タスクの一覧表示</h2>
+<h2>サブタスク一覧</h2>
     <%= link_to "タスク一覧画面へ", parent_tasks_path %>
 <% @child_tasks.each do |child_task| %>
 <div class="card border-secondary mb-5" style="width: 30rem;">
@@ -10,7 +10,7 @@
                 <input class="form-check-input" type="checkbox" id="#" checked>
                 <label class="form-check-label" for="#">サブタスク名：「<%= child_task.title %>」</label>
             </div>
-            <%= link_to "サブタスク詳細画面へ", parent_task_child_task_path(parent_task_id: child_task.parent_task_id, id: child_task.id) %></br>
+            <%= link_to "サブタスク詳細画面", parent_task_child_task_path(parent_task_id: child_task.parent_task_id, id: child_task.id) %></br>
         </div>
         <div class="col-5">
             <% if child_task.done %>
@@ -28,18 +28,14 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            あなたはタスクを完了しました
-                            その気持ちの入力をしてください
-                            <li>子タスクid<%= child_task.id %></li>
-                            <%= @parent_task.id %>
-                    
+                            あなたはタスクを完了しました。今の達成感は？？<br>
                             <%= form_with url: index_result_finish_parent_task_child_tasks_path(parent_task_id: @parent_task.id, id: child_task.id) do |f| %>
-                            <%= f.label :result, '上手にできたかどうか'%>
+                            <%= f.label :result, '達成感'%>：
                             <%= f.select :result, [['しっかりやり切れた', 0], ['まあまあやり切れた', 1], ['壁にぶつかった', 2]] , class: 'form-control'%>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <%= f.submit '保存' %>
+                            <%= f.submit '保存', class: "btn btn-primary" %>
                             <% end %>
                         </div>
                     </div>
@@ -52,17 +48,23 @@
         タスク概要：<%= child_task.explanation %>
     <ul class="list-group list-group-flush">
         <li class="list-group-item">締め切り：<%= child_task.child_deadline %></li>
-        <li class="list-group-item">達成可能性：<%= child_task.possibility%></li>
-        <li class="list-group-item">終了時刻<%= child_task.finish_time %></li>
-        <% if child_task.finish_time %>
-            <p>完了ボタンが押された</p>
-            <%= child_task.child_deadline.class %><br>
+        <% if child_task.possibility %>
                 <% if child_task.done == 0 %>
-                    <li class="list-group-item">間に合った。</li>
+                    <li class="list-group-item">達成可能性：間に合いそう</li>
                 <% elsif child_task.done == 1 %>
-                    <li class="list-group-item">〆切後3h以内で間に合った</li>
+                    <li class="list-group-item">達成可能性：分からない</li>
                 <% elsif child_task.done == 2 %>
-                    <li class="list-group-item">〆切に間に合わなかった</li>
+                    <li class="list-group-item">達成可能性：厳しい</li>
+                <% end %>
+        <% end %>
+        <li class="list-group-item">終了時刻：<%= child_task.finish_time %></li>
+        <% if child_task.finish_time %>
+                <% if child_task.done == 0 %>
+                    <li class="list-group-item">タスク結果：間に合った</li>
+                <% elsif child_task.done == 1 %>
+                    <li class="list-group-item">タスク結果：〆切後3h以内で間に合った</li>
+                <% elsif child_task.done == 2 %>
+                    <li class="list-group-item">タスク結果：〆切に間に合わなかった</li>
                 <% end %>
         <% end %>
     </ul>
@@ -78,7 +80,6 @@
                 <%= simple_format(child_task_comment.child_comment) %>
                 <%= button_to 'このメッセージを削除する', parent_task_task_comment_path(parent_task_id: @parent_task.id, id: child_task_comment.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
             <% end %>
-
         <% end %>
     <% end %>
     </div>
