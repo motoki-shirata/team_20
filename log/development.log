@@ -16997,3 +16997,722 @@ ActionView::Template::Error (undefined method `name' for nil:NilClass):
 app/views/layouts/_navbar.html.erb:10
 app/views/layouts/application.html.erb:15
 >>>>>>> develop
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mBoss Load (0.3ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 1 LIMIT 11[0m
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 1 ORDER BY `teams`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 3 LIMIT 11[0m
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 1 ORDER BY `teams`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 5 LIMIT 11[0m
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 1 ORDER BY `teams`.`id` ASC LIMIT 1[0m
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 1 ORDER BY `teams`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 3 LIMIT 11[0m
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 1 ORDER BY `teams`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 3 ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 1 ORDER BY `teams`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 3 ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 7 LIMIT 11[0m
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 1 ORDER BY `teams`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 3 ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 7 LIMIT 11[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 1 ORDER BY `teams`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 3 ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 7 ORDER BY `parent_tasks`.`id` DESC LIMIT 1[0m
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9 LIMIT 11[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 1 ORDER BY `teams`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 3 ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 7 LIMIT 11[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 1 ORDER BY `teams`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 3 ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 7 LIMIT 11[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 1 ORDER BY `teams`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 3 ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 7 ORDER BY `parent_tasks`.`id` DESC LIMIT 1[0m
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 1 ORDER BY `teams`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 3 ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 7 ORDER BY `parent_tasks`.`id` DESC LIMIT 1[0m
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9 LIMIT 11[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 1 ORDER BY `teams`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 3 ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 7 ORDER BY `parent_tasks`.`id` DESC LIMIT 1[0m
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9 LIMIT 11[0m
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` LIMIT 11[0m
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` ORDER BY `child_tasks`.`id` DESC LIMIT 1[0m
+  Rendering notification_mailer/test.html.erb within layouts/mailer
+  Rendered notification_mailer/test.html.erb within layouts/mailer (Duration: 5.3ms | Allocations: 209)
+NotificationMailer#test: processed outbound mail in 194.5ms
+Delivered mail 5f44b6249b730_16013b079531@07f8db8b430c.mail (32.3ms)
+Date: Tue, 25 Aug 2020 06:56:36 +0000
+From: shirata.motoki@lmi.ne.jp
+To: motoki1211@gmail.com
+Message-ID: <5f44b6249b730_16013b079531@07f8db8b430c.mail>
+Subject: Test
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+    <style>=0D
+      body { background-color: red; }=0D
+    </style>=0D
+  </head>=0D
+  <body>=0D
+    <h1>HTML =E3=83=A1=E3=83=BC=E3=83=AB=E3=83=86=E3=82=B9=E3=83=88</h1>=0D=
+
+    <p>HTML =E3=83=A1=E3=83=BC=E3=83=AB=E3=81=A0=E3=82=88</p>=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+  Rendering notification_mailer/test.html.erb within layouts/mailer
+  Rendered notification_mailer/test.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 4)
+NotificationMailer#test: processed outbound mail in 1.7ms
+Delivered mail 5f44b6e547cbc_16013b079643@07f8db8b430c.mail (1.6ms)
+Date: Tue, 25 Aug 2020 06:59:49 +0000
+From: shirata.motoki@lmi.ne.jp
+To: motoki1211@gmail.com
+Message-ID: <5f44b6e547cbc_16013b079643@07f8db8b430c.mail>
+Subject: Test
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+    <style>=0D
+      body { background-color: red; }=0D
+    </style>=0D
+  </head>=0D
+  <body>=0D
+    <h1>HTML =E3=83=A1=E3=83=BC=E3=83=AB=E3=83=86=E3=82=B9=E3=83=88</h1>=0D=
+
+    <p>HTML =E3=83=A1=E3=83=BC=E3=83=AB=E3=81=A0=E3=82=88</p>=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+  Rendering notification_mailer/test.html.erb within layouts/mailer
+  Rendered notification_mailer/test.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 4)
+NotificationMailer#test: processed outbound mail in 1.7ms
+Delivered mail 5f44b6e6664a6_16013b079738@07f8db8b430c.mail (1.5ms)
+Date: Tue, 25 Aug 2020 06:59:50 +0000
+From: shirata.motoki@lmi.ne.jp
+To: motoki1211@gmail.com
+Message-ID: <5f44b6e6664a6_16013b079738@07f8db8b430c.mail>
+Subject: Test
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+    <style>=0D
+      body { background-color: red; }=0D
+    </style>=0D
+  </head>=0D
+  <body>=0D
+    <h1>HTML =E3=83=A1=E3=83=BC=E3=83=AB=E3=83=86=E3=82=B9=E3=83=88</h1>=0D=
+
+    <p>HTML =E3=83=A1=E3=83=BC=E3=83=AB=E3=81=A0=E3=82=88</p>=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+  Rendering notification_mailer/test.html.erb within layouts/mailer
+  Rendered notification_mailer/test.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 4)
+NotificationMailer#test: processed outbound mail in 1.6ms
+Delivered mail 5f44b6e71aa11_16013b079896@07f8db8b430c.mail (1.3ms)
+Date: Tue, 25 Aug 2020 06:59:51 +0000
+From: shirata.motoki@lmi.ne.jp
+To: motoki1211@gmail.com
+Message-ID: <5f44b6e71aa11_16013b079896@07f8db8b430c.mail>
+Subject: Test
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+    <style>=0D
+      body { background-color: red; }=0D
+    </style>=0D
+  </head>=0D
+  <body>=0D
+    <h1>HTML =E3=83=A1=E3=83=BC=E3=83=AB=E3=83=86=E3=82=B9=E3=83=88</h1>=0D=
+
+    <p>HTML =E3=83=A1=E3=83=BC=E3=83=AB=E3=81=A0=E3=82=88</p>=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+  Rendering notification_mailer/test.html.erb within layouts/mailer
+  Rendered notification_mailer/test.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 4)
+NotificationMailer#test: processed outbound mail in 1.8ms
+Delivered mail 5f44b6eae076f_16013b07994d@07f8db8b430c.mail (1.4ms)
+Date: Tue, 25 Aug 2020 06:59:54 +0000
+From: shirata.motoki@lmi.ne.jp
+To: motoki1211@gmail.com
+Message-ID: <5f44b6eae076f_16013b07994d@07f8db8b430c.mail>
+Subject: Test
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+    <style>=0D
+      body { background-color: red; }=0D
+    </style>=0D
+  </head>=0D
+  <body>=0D
+    <h1>HTML =E3=83=A1=E3=83=BC=E3=83=AB=E3=83=86=E3=82=B9=E3=83=88</h1>=0D=
+
+    <p>HTML =E3=83=A1=E3=83=BC=E3=83=AB=E3=81=A0=E3=82=88</p>=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+  Rendering notification_mailer/test.html.erb within layouts/mailer
+  Rendered notification_mailer/test.html.erb within layouts/mailer (Duration: 5.1ms | Allocations: 209)
+NotificationMailer#test: processed outbound mail in 180.4ms
+Delivered mail 5f44b71698dc3_19313b0873bd@07f8db8b430c.mail (642.0ms)
+Date: Tue, 25 Aug 2020 07:00:38 +0000
+From: shirata.motoki@lmi.ne.jp
+To: motoki1211@gmail.com
+Message-ID: <5f44b71698dc3_19313b0873bd@07f8db8b430c.mail>
+Subject: Test
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+    <style>=0D
+      body { background-color: red; }=0D
+    </style>=0D
+  </head>=0D
+  <body>=0D
+    <h1>HTML =E3=83=A1=E3=83=BC=E3=83=AB=E3=83=86=E3=82=B9=E3=83=88</h1>=0D=
+
+    <p>HTML =E3=83=A1=E3=83=BC=E3=83=AB=E3=81=A0=E3=82=88</p>=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+NotificationMailer#test: processed outbound mail in 105.2ms
+NotificationMailer#test: processed outbound mail in 0.4ms
+  Rendering notification_mailer/test.html.erb within layouts/mailer
+  Rendered notification_mailer/test.html.erb within layouts/mailer (Duration: 7.5ms | Allocations: 321)
+NotificationMailer#test: processed outbound mail in 566.0ms
+Delivered mail 5f44c00b29f4b_3813d871392@a43830d85ab8.mail (54.1ms)
+Date: Tue, 25 Aug 2020 07:38:51 +0000
+From: shirata.motoki@lmi.ne.jp
+To: motoki1211@gmail.com
+Message-ID: <5f44c00b29f4b_3813d871392@a43830d85ab8.mail>
+Subject: Test
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+    <style>=0D
+      body { background-color: red; }=0D
+    </style>=0D
+  </head>=0D
+  <body>=0D
+    <h1>HTML =E3=83=A1=E3=83=BC=E3=83=AB=E3=83=86=E3=82=B9=E3=83=88</h1>=0D=
+
+    <p>HTML =E3=83=A1=E3=83=BC=E3=83=AB=E3=81=A0=E3=82=88</p>=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+Started GET "/letter_openner" for 172.19.0.1 at 2020-08-25 07:39:20 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (7.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/letter_openner"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/letter_opener" for 172.19.0.1 at 2020-08-25 07:39:23 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering /usr/local/bundle/gems/letter_opener_web-1.4.0/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /usr/local/bundle/gems/letter_opener_web-1.4.0/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (Duration: 4.2ms | Allocations: 861)
+  Rendered /usr/local/bundle/gems/letter_opener_web-1.4.0/app/views/layouts/letter_opener_web/_styles.html.erb (Duration: 2.3ms | Allocations: 242)
+  Rendered /usr/local/bundle/gems/letter_opener_web-1.4.0/app/views/layouts/letter_opener_web/_javascripts.html.erb (Duration: 2.7ms | Allocations: 1296)
+Completed 200 OK in 28ms (Views: 18.2ms | ActiveRecord: 0.0ms | Allocations: 5106)
+
+
+Started GET "/letter_opener/1598341131_1938548_cd5f9b9/rich" for 172.19.0.1 at 2020-08-25 07:39:23 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1598341131_1938548_cd5f9b9", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 3)
+Completed 200 OK in 21ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 961)
+
+
+Started GET "/" for 172.19.0.1 at 2020-08-25 07:56:36 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/toppages/index.html.erb:7
+  Rendered toppages/index.html.erb within layouts/application (Duration: 1560.8ms | Allocations: 38539)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (2.6ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 81.5ms | Allocations: 10539)
+Completed 200 OK in 1762ms (Views: 1722.2ms | ActiveRecord: 18.1ms | Allocations: 59951)
+
+
+Started DELETE "/users/sign_out" for 172.19.0.1 at 2020-08-25 07:56:40 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Rwzh2V+FtGZj1Q8kihegvIKQnWHBID22OH3rXvK56L8J13LV5T9OP/4VWmdI+cRtlpw+Z9ZhnOazj8ZrEEQwow=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 160ms (ActiveRecord: 0.5ms | Allocations: 39808)
+
+
+Started GET "/" for 172.19.0.1 at 2020-08-25 07:56:40 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 19.1ms | Allocations: 1546)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 10.6ms | Allocations: 2303)
+Completed 200 OK in 98ms (Views: 97.4ms | ActiveRecord: 0.0ms | Allocations: 11809)
+
+
+Started GET "/bosses/sign_in" for 172.19.0.1 at 2020-08-25 07:56:41 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::SessionsController#new as HTML
+  Rendering bosses/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 643)
+  Rendered bosses/sessions/new.html.erb within layouts/application (Duration: 56.5ms | Allocations: 4567)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 8.8ms | Allocations: 2271)
+Completed 200 OK in 156ms (Views: 144.0ms | ActiveRecord: 2.4ms | Allocations: 21592)
+
+
+Started GET "/bosses/sign_up" for 172.19.0.1 at 2020-08-25 07:56:44 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::RegistrationsController#new as HTML
+  Rendering bosses/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 197)
+  Rendered bosses/registrations/new.html.erb within layouts/application (Duration: 31.6ms | Allocations: 2649)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 12.5ms | Allocations: 2270)
+Completed 200 OK in 124ms (Views: 123.1ms | ActiveRecord: 0.0ms | Allocations: 14452)
+
+
+Started POST "/bosses" for 172.19.0.1 at 2020-08-25 07:57:02 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"AvEBI7ptSsn+DfYPheqMhovMg/2a2TRpsGAnuX4TZEXYOJ3EdPsM1+XL6uTjVAtxYr/aM2EteO88jjwB+OG3KA==", "boss"=>{"name"=>"boss04", "email"=>"boss04@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bosses/registrations_controller.rb:14:in `create'
+  [1m[36mBoss Exists? (2.6ms)[0m  [1m[34mSELECT 1 AS one FROM `bosses` WHERE `bosses`.`email` = BINARY 'boss04@test.com' LIMIT 1[0m
+  ↳ app/controllers/bosses/registrations_controller.rb:14:in `create'
+  [1m[36mBoss Create (0.5ms)[0m  [1m[32mINSERT INTO `bosses` (`email`, `encrypted_password`, `created_at`, `updated_at`, `name`) VALUES ('boss04@test.com', '$2a$12$BaVHQ0y6rNQkLqfHfCZEUez1zvWmWo./ocsm580UpRRZmHHEiN98e', '2020-08-25 07:57:02.565098', '2020-08-25 07:57:02.565098', 'boss04')[0m
+  ↳ app/controllers/bosses/registrations_controller.rb:14:in `create'
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bosses/registrations_controller.rb:14:in `create'
+  [1m[36mTeam Load (2.1ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 3 ORDER BY `teams`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:17:in `after_sign_in_path_for'
+Redirected to http://localhost:3000/bosses/3
+Completed 302 Found in 312ms (ActiveRecord: 9.0ms | Allocations: 15967)
+
+
+Started GET "/bosses/3" for 172.19.0.1 at 2020-08-25 07:57:02 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BossesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBoss Load (0.5ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/bosses_controller.rb:8:in `show'
+  Rendering bosses/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 3[0m
+  ↳ app/views/bosses/show.html.erb:7
+  [1m[36mBoss Load (0.5ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 3 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/bosses/show.html.erb:16
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams`[0m
+  ↳ app/views/bosses/show.html.erb:19
+  Rendered bosses/show.html.erb within layouts/application (Duration: 30.6ms | Allocations: 5969)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 3[0m  [["boss_id", 3]]
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 16.2ms | Allocations: 3430)
+Completed 200 OK in 128ms (Views: 119.7ms | ActiveRecord: 2.0ms | Allocations: 19246)
+
+
+Started PATCH "/bosses/3" for 172.19.0.1 at 2020-08-25 07:57:15 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BossesController#update as HTML
+  Parameters: {"authenticity_token"=>"zOh5BIMqMofqH1LRPUQ0vcUta2Vk/AJDRaxYz9FWFMKhPfWO534AzNUnZ80ZEloHTvAVuAMHfL07oFc08zbVSw==", "boss"=>{"team_ids"=>["", "3"]}, "commit"=>"Update Teams", "id"=>"3"}
+  [1m[36mBoss Load (0.5ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 3 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/bosses_controller.rb:14:in `update'
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT `organizations`.* FROM `organizations` WHERE `organizations`.`boss_id` = 3[0m
+  ↳ app/controllers/bosses_controller.rb:17:in `update'
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT `organizations`.* FROM `organizations` WHERE `organizations`.`boss_id` = 3 AND `organizations`.`team_id` = NULL LIMIT 1[0m
+  ↳ app/controllers/bosses_controller.rb:23:in `block in update'
+  [1m[36mOrganization Load (1.3ms)[0m  [1m[34mSELECT `organizations`.* FROM `organizations` WHERE `organizations`.`boss_id` = 3 AND `organizations`.`team_id` = 3 LIMIT 1[0m
+  ↳ app/controllers/bosses_controller.rb:23:in `block in update'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bosses_controller.rb:26:in `block in update'
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/bosses_controller.rb:26:in `block in update'
+  [1m[36mOrganization Create (0.5ms)[0m  [1m[32mINSERT INTO `organizations` (`created_at`, `updated_at`, `team_id`, `boss_id`) VALUES ('2020-08-25 07:57:15.622470', '2020-08-25 07:57:15.622470', 3, 3)[0m
+  ↳ app/controllers/bosses_controller.rb:26:in `block in update'
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bosses_controller.rb:26:in `block in update'
+Redirected to http://localhost:3000/bosses/3
+Completed 302 Found in 34ms (ActiveRecord: 7.2ms | Allocations: 12863)
+
+
+Started GET "/bosses/3" for 172.19.0.1 at 2020-08-25 07:57:15 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BossesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBoss Load (0.5ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/bosses_controller.rb:8:in `show'
+  Rendering bosses/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 3[0m
+  ↳ app/views/bosses/show.html.erb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 3[0m
+  ↳ app/views/bosses/show.html.erb:9
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 3 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/bosses/show.html.erb:16
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams`[0m
+  ↳ app/views/bosses/show.html.erb:19
+  Rendered bosses/show.html.erb within layouts/application (Duration: 11.9ms | Allocations: 4737)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 3[0m  [["boss_id", 3]]
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 17.0ms | Allocations: 3453)
+Completed 200 OK in 107ms (Views: 102.1ms | ActiveRecord: 2.2ms | Allocations: 16970)
+
+
+Started DELETE "/bosses/sign_out" for 172.19.0.1 at 2020-08-25 07:57:24 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OYi8Adrxi9PtcMlUtYNuVXdwoWLJyrOXqg2HHUJi5UFUXTCLvqW5mNJI/EiR1QDv/K3fv64xzWnUAYjmYAIkyA=="}
+  [1m[36mBoss Load (0.5ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 3 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms | Allocations: 2428)
+
+
+Started GET "/" for 172.19.0.1 at 2020-08-25 07:57:24 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 24.8ms | Allocations: 1528)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 10.1ms | Allocations: 2311)
+Completed 200 OK in 109ms (Views: 108.2ms | ActiveRecord: 0.0ms | Allocations: 11800)
+
+
+Started GET "/users/sign_in" for 172.19.0.1 at 2020-08-25 07:57:26 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 230)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 26.0ms | Allocations: 2560)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 8.4ms | Allocations: 2266)
+Completed 200 OK in 98ms (Views: 96.5ms | ActiveRecord: 0.0ms | Allocations: 13808)
+
+
+Started GET "/users/sign_up" for 172.19.0.1 at 2020-08-25 07:57:27 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams`[0m
+  ↳ app/views/users/registrations/new.html.erb:42
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 38.2ms | Allocations: 3509)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 9.0ms | Allocations: 2262)
+Completed 200 OK in 125ms (Views: 123.2ms | ActiveRecord: 0.4ms | Allocations: 14642)
+
+
+Started POST "/users" for 172.19.0.1 at 2020-08-25 07:57:48 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"MLu0agWM+NgiuGtbO6Q4oim4ixR+63m9s3rkuMDbyL0T7Glvkn90tYD4cJMnDZhNgA7VX+VsHl61FSBnfSRmMA==", "user"=>{"name"=>"user06", "email"=>"user06@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "team_id"=>"6"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'user06@test.com' LIMIT 1[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 198)
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams`[0m
+  ↳ app/views/users/registrations/new.html.erb:42
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 23.3ms | Allocations: 3194)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 10.3ms | Allocations: 2260)
+Completed 200 OK in 313ms (Views: 103.2ms | ActiveRecord: 1.4ms | Allocations: 18576)
+
+
+Started POST "/users" for 172.19.0.1 at 2020-08-25 07:58:30 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"Q3zOrdvCBeyKBs2C+dXKmIZbROjOcye4S/qHA+orE4Lm10ho2sMn6LnxH9Kha1gxU48YUtt08IZvmS6Z+CQweg==", "user"=>{"name"=>"user07", "email"=>"user07@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "team_id"=>"6"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'user07@test.com' LIMIT 1[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `name`, `team_id`) VALUES ('user07@test.com', '$2a$12$TMygMw3gGSM9dJ9BCJaSn.2.ICWlJMoEsjSO1vwqpIJSjNO.E0TC.', '2020-08-25 07:58:30.707880', '2020-08-25 07:58:30.707880', 'user07', 6)[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+Redirected to http://localhost:3000/parent_tasks.8
+Completed 302 Found in 213ms (ActiveRecord: 3.3ms | Allocations: 5187)
+
+
+Started GET "/parent_tasks.8" for 172.19.0.1 at 2020-08-25 07:58:30 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as 
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (1.8ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks`[0m
+  ↳ app/views/parent_tasks/index.html.erb:4
+  [1m[36mChildTask Load (1.8ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:23
+  [1m[36mChildTask Load (0.6ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:23
+  [1m[36mChildTask Load (0.6ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 3[0m
+  ↳ app/views/parent_tasks/index.html.erb:23
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 4[0m
+  ↳ app/views/parent_tasks/index.html.erb:23
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 5[0m
+  ↳ app/views/parent_tasks/index.html.erb:23
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 6[0m
+  ↳ app/views/parent_tasks/index.html.erb:23
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 7[0m
+  ↳ app/views/parent_tasks/index.html.erb:23
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 8[0m
+  ↳ app/views/parent_tasks/index.html.erb:23
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 9[0m
+  ↳ app/views/parent_tasks/index.html.erb:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 8 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/parent_tasks/index.html.erb:65
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 110.4ms | Allocations: 36465)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 6 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 14.3ms | Allocations: 2976)
+Completed 200 OK in 216ms (Views: 193.0ms | ActiveRecord: 12.6ms | Allocations: 49774)
+
+
+  Rendering notification_mailer/test.html.erb within layouts/mailer
+  Rendered notification_mailer/test.html.erb within layouts/mailer (Duration: 7.2ms | Allocations: 691)
+NotificationMailer#test: processed outbound mail in 207.2ms
+Delivered mail 5f44c913aea4b_ec175c-480@a43830d85ab8.mail (19.0ms)
+Date: Tue, 25 Aug 2020 08:17:23 +0000
+From: shirata.motoki@lmi.ne.jp
+To: motoki1211@gmail.com
+Message-ID: <5f44c913aea4b_ec175c-480@a43830d85ab8.mail>
+Subject: Test
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+    <style>=0D
+      body { background-color: red; }=0D
+    </style>=0D
+  </head>=0D
+  <body>=0D
+    <h1>HTML =E3=83=A1=E3=83=BC=E3=83=AB=E3=83=86=E3=82=B9=E3=83=88</h1>=0D=
+
+    <p>HTML =E3=83=A1=E3=83=BC=E3=83=AB=E3=81=A0=E3=82=88</p>=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+Started GET "/letter_opener" for 172.19.0.1 at 2020-08-25 08:17:36 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering /usr/local/bundle/gems/letter_opener_web-1.4.0/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /usr/local/bundle/gems/letter_opener_web-1.4.0/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (Duration: 2.5ms | Allocations: 505)
+  Rendered /usr/local/bundle/gems/letter_opener_web-1.4.0/app/views/layouts/letter_opener_web/_styles.html.erb (Duration: 0.5ms | Allocations: 6)
+  Rendered /usr/local/bundle/gems/letter_opener_web-1.4.0/app/views/layouts/letter_opener_web/_javascripts.html.erb (Duration: 0.3ms | Allocations: 5)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 1231)
+
+
+Started GET "/letter_opener/1598343443_7214816_54d0e42/rich" for 172.19.0.1 at 2020-08-25 08:17:36 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1598343443_7214816_54d0e42", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | Allocations: 2)
+Completed 200 OK in 7ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 765)
+
+
