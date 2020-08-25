@@ -6,15 +6,15 @@
     <h4>タスク概要：<%= @parent_task.explanation%></h4>
     <p>締め切り:<%= @parent_task.parent_deadline %></p>
       <% if @parent_task.self_evaluate == 0 %>
-        <p>自己評価:うまく切り分けられた</p>
+        <p>切り分けの自己評価:うまく切り分けられた</p>
       <% elsif @parent_task.self_evaluate == 1 %>
-        <p>自己評価:普通</p>
+        <p>切り分けの自己評価:普通</p>
       <% elsif @parent_task.self_evaluate == 2 %>
-        <p>自己評価:上司助けて</p>
+        <p>切り分けの自己評価:上司助けて</p>
       <% else %>
         <p>入力されていません</p>
       <% end %>
-    <p><%= @parent_task.updated_at %></p>
+    <p>タスク更新時刻：<%= @parent_task.updated_at %></p>
 
     <%= form_with(model: [@parent_task, @task_comment]) do |f| %>
       <%= f.text_area :parent_comment %><br>
