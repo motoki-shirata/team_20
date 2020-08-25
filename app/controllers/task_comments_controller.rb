@@ -1,30 +1,20 @@
 class TaskCommentsController < ApplicationController
     def create
-        binding.pry
-        if user_signed_in? && params[:parent_task_id]
-            binding.pry
+        if user_signed_in? && (!ChildTask.find_by(id: params[:id]))
             user_parent_task_comments
+            task_comment_save #parent_taskに対してSave
+        elsif user_signed_in? && ChildTask.find_by(id: params[:id])
+            user_child_task_comments
+            child_comment_save
         end
-        binding.pry
-        
-        task_comment_save #プライベートメソッド
     end
-
     def edit
-        #binding.pry
         @task_comment = TaskComment.find(params[:id])
         @parent_task = @task_comment.parent_task
     end
-
     def update
         @task_comment = TaskComment.find(params[:id])
-        # binding.pry
         parent_task = ParentTask.find(params[:parent_task_id])
-        #binding.pry
-        # @task_comment.user_id = current_user.id
-        # #binding.pry
-        # @task_comment.parent_task_id = params[:parent_task_id]
-        #binding.pry
         if  @task_comment.update(task_comment_params)
             flash[:success] = 'コメントは更新されました'
             redirect_to parent_task_path(parent_task)
@@ -33,9 +23,7 @@ class TaskCommentsController < ApplicationController
             redirect_to edit_parent_task_task_comment
         end
     end
-
     def destroy
-        #binding.pry
         @task_comment = TaskComment.find(params[:id])
         @task_comment.destroy
         flash[:success] = 'コメントを削除しました。'
@@ -44,7 +32,7 @@ class TaskCommentsController < ApplicationController
 
     private
     def task_comment_params
-        params.require(:task_comment).permit(:parent_comment)
+        params.require(:task_comment).permit(:parent_comment, :child_comment)
     end
     def user_parent_task_comments
         @task_comment = TaskComment.new(task_comment_params)
@@ -52,17 +40,22 @@ class TaskCommentsController < ApplicationController
         @task_comment.parent_task_id = params[:parent_task_id]
     end
     def user_child_task_comments
-
-
+        @child_comment = TaskComment.new(task_comment_params)
+        @child_comment.user_id = current_user.id
+        @child_comment.child_task_id = params[:id]
     end
     def task_comment_save
-        binding.pry
         if @task_comment.save
             redirect_back(fallback_location: root_path)
         else
             redirect_back(fallback_location: root_path)
         end
     end
-
-
+    def child_comment_save
+        if @child_comment.save
+            redirect_to parent_task_child_tasks_path
+        else
+            redirect_back(fallback_location: root_path)
+        end
+    end
 end

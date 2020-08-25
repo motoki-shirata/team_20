@@ -24,10 +24,11 @@
 <h4>〜コメント一覧〜</h4>
 
 <% @task_comments.each do |task_comment| %>
-
-  <%= simple_format(task_comment.parent_comment) %>
+<% if task_comment.parent_task_id && task_comment.parent_comment %>
+  <%= task_comment.parent_comment %>
   <br>
-  <%= link_to 'このメッセージを削除する', parent_task_task_comments_path(@parent_task, task_comment), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+  <%= button_to 'このメッセージを削除する', parent_task_task_comments_path(parent_task_id: @parent_task.id, id: params[:id]), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+  <% end %>
 <% end %>
 </div>
 

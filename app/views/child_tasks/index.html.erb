@@ -7,7 +7,7 @@
         <div class="form-check">
             <input class="form-check-input" type="checkbox" id="#" checked>
             <label class="form-check-label" for="#">子タスク名：「<%= child_task.title %>」</label>
-        </div> 
+        </div>
         <%= link_to "子タスク詳細画面へ", parent_task_child_task_path(parent_task_id: child_task.parent_task_id, id: child_task.id) %></br>
         <%= child_task.id %>
     </div>
@@ -27,6 +27,17 @@
                 <% elsif child_task.done == 2 %>
                 <h3>〆切に間に合わなかった</h3>
                 <% end %>
+        <% end %>
+        <%= form_with url: parent_task_task_comments_path(parent_task_id: params[:parent_task_id], id: child_task.id), model: [ParentTask.new, @task_comment], method: :post do |f| %>
+            <%= f.text_area :child_comment %>
+            <br>
+            <%= f.submit 'コメントする' %>
+        <% end %>
+        <% child_task.task_comments.each do |child_task_comment| %>
+            <% if child_task_comment.child_task_id %>
+                <%= simple_format(child_task_comment.child_comment) %>
+            <% end %>
+
         <% end %>
     </ul>
     <% end %>
