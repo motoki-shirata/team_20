@@ -24666,3 +24666,2365 @@ Processing by ParentTasksController#show as HTML
 Completed 200 OK in 132ms (Views: 126.6ms | ActiveRecord: 2.6ms | Allocations: 17380)
 
 
+Started GET "/parent_tasks/14" for 172.19.0.1 at 2020-08-25 11:54:39 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by ParentTasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mParentTask Load (0.8ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 14 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:9:in `show'
+  Rendering parent_tasks/show.html.erb within layouts/application
+  [1m[36mTaskComment Load (0.5ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/show.html.erb:27
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/show.html.erb:35
+  Rendered parent_tasks/show.html.erb within layouts/application (Duration: 12.5ms | Allocations: 5316)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 19.2ms | Allocations: 4620)
+Completed 200 OK in 133ms (Views: 121.9ms | ActiveRecord: 2.5ms | Allocations: 20016)
+
+
+Started GET "/parent_tasks/14" for 172.19.0.1 at 2020-08-25 11:54:40 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 14 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:9:in `show'
+  Rendering parent_tasks/show.html.erb within layouts/application
+  [1m[36mTaskComment Load (0.5ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/show.html.erb:27
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/show.html.erb:35
+  Rendered parent_tasks/show.html.erb within layouts/application (Duration: 9.0ms | Allocations: 4608)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 15.6ms | Allocations: 4075)
+Completed 200 OK in 102ms (Views: 97.4ms | ActiveRecord: 2.2ms | Allocations: 17399)
+
+
+Started POST "/parent_tasks/14/child_tasks/show_result_finish?id=20" for 172.19.0.1 at 2020-08-25 11:54:44 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#show_result_finish as JS
+  Parameters: {"authenticity_token"=>"079T21eLDa1gVjVmHJMegrLPbZCeIm8LsoKYu5eMXUT2UvPO1MQdLyaODm9fMTYmtLLXdaIIzMzjICFm6o9FAA==", "result"=>"0", "id"=>"20", "parent_task_id"=>"14"}
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`id` = 20 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:65:in `resulted'
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 14 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:66:in `resulted'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/child_tasks_controller.rb:43:in `show_result_finish'
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 14 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:43:in `show_result_finish'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/child_tasks_controller.rb:43:in `show_result_finish'
+  [1m[36mCACHE ChildTask Load (0.0ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`id` = 20 LIMIT 1[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/child_tasks_controller.rb:71:in `finished'
+  [1m[36mCACHE ParentTask Load (0.0ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 14 LIMIT 1[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/child_tasks_controller.rb:74:in `finished'
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/child_tasks_controller.rb:74:in `finished'
+  [1m[36mChildTask Update (0.6ms)[0m  [1m[33mUPDATE `child_tasks` SET `child_tasks`.`finish_time` = '2020-08-25 11:54:44', `child_tasks`.`updated_at` = '2020-08-25 11:54:44.930268' WHERE `child_tasks`.`id` = 20[0m
+  ↳ app/controllers/child_tasks_controller.rb:74:in `finished'
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/child_tasks_controller.rb:74:in `finished'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/child_tasks_controller.rb:83:in `finished'
+  [1m[36mChildTask Update (0.5ms)[0m  [1m[33mUPDATE `child_tasks` SET `child_tasks`.`done` = 2, `child_tasks`.`updated_at` = '2020-08-25 11:54:44.942137' WHERE `child_tasks`.`id` = 20[0m
+  ↳ app/controllers/child_tasks_controller.rb:83:in `finished'
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/child_tasks_controller.rb:83:in `finished'
+Redirected to http://localhost:3000/parent_tasks/14
+Completed 200 OK in 39ms (ActiveRecord: 9.2ms | Allocations: 10849)
+
+
+Started GET "/parent_tasks/14" for 172.19.0.1 at 2020-08-25 11:54:44 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mParentTask Load (0.8ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 14 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:9:in `show'
+  Rendering parent_tasks/show.html.erb within layouts/application
+  [1m[36mTaskComment Load (0.6ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/show.html.erb:27
+  [1m[36mChildTask Load (0.6ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/show.html.erb:35
+  Rendered parent_tasks/show.html.erb within layouts/application (Duration: 10.8ms | Allocations: 4747)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 14.5ms | Allocations: 4075)
+Completed 200 OK in 104ms (Views: 97.1ms | ActiveRecord: 2.5ms | Allocations: 17535)
+
+
+Started GET "/parent_tasks.14" for 172.19.0.1 at 2020-08-25 11:54:47 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as 
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 26.3ms | Allocations: 3731)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 13.1ms | Allocations: 2975)
+Completed 200 OK in 123ms (Views: 114.9ms | ActiveRecord: 1.4ms | Allocations: 16224)
+
+
+Started GET "/parent_tasks/14/child_tasks" for 172.19.0.1 at 2020-08-25 11:54:50 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#index as HTML
+  Parameters: {"parent_task_id"=>"14"}
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 14 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:6:in `index'
+  Rendering child_tasks/index.html.erb within layouts/application
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks`[0m
+  ↳ app/views/child_tasks/index.html.erb:3
+  [1m[36mTaskComment Load (1.0ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`child_task_id` = 19[0m
+  ↳ app/views/child_tasks/index.html.erb:79
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/child_tasks/index.html.erb:84
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/child_tasks/index.html.erb:87
+  [1m[36mTaskComment Load (0.6ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`child_task_id` = 20[0m
+  ↳ app/views/child_tasks/index.html.erb:79
+  Rendered child_tasks/index.html.erb within layouts/application (Duration: 30.6ms | Allocations: 10711)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 16.8ms | Allocations: 3159)
+Completed 200 OK in 146ms (Views: 132.2ms | ActiveRecord: 4.2ms | Allocations: 23555)
+
+
+Started POST "/parent_tasks/14/child_tasks/index_canceled?id=20" for 172.19.0.1 at 2020-08-25 11:54:51 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#index_canceled as HTML
+  Parameters: {"authenticity_token"=>"spP/wwXCduvHg2qkG9T0MZy1DcQUPmwZdHegBCkec0eN98thqe4Y/Uuxh25nhUqy9qhoCzKg/7fdVs1PnAzCsQ==", "id"=>"20", "parent_task_id"=>"14"}
+  [1m[36mChildTask Load (0.6ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`id` = 20 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:59:in `canceled'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/child_tasks_controller.rb:62:in `canceled'
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 14 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:62:in `canceled'
+  [1m[36mChildTask Update (0.5ms)[0m  [1m[33mUPDATE `child_tasks` SET `child_tasks`.`done` = NULL, `child_tasks`.`finish_time` = NULL, `child_tasks`.`updated_at` = '2020-08-25 11:54:51.348444' WHERE `child_tasks`.`id` = 20[0m
+  ↳ app/controllers/child_tasks_controller.rb:62:in `canceled'
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/child_tasks_controller.rb:62:in `canceled'
+Redirected to http://localhost:3000/parent_tasks/14/child_tasks
+Completed 302 Found in 18ms (ActiveRecord: 4.7ms | Allocations: 4706)
+
+
+Started GET "/parent_tasks/14/child_tasks" for 172.19.0.1 at 2020-08-25 11:54:51 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#index as HTML
+  Parameters: {"parent_task_id"=>"14"}
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 14 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:6:in `index'
+  Rendering child_tasks/index.html.erb within layouts/application
+  [1m[36mChildTask Load (0.6ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks`[0m
+  ↳ app/views/child_tasks/index.html.erb:3
+  [1m[36mTaskComment Load (0.6ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`child_task_id` = 19[0m
+  ↳ app/views/child_tasks/index.html.erb:79
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/child_tasks/index.html.erb:84
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/child_tasks/index.html.erb:87
+  [1m[36mTaskComment Load (0.6ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`child_task_id` = 20[0m
+  ↳ app/views/child_tasks/index.html.erb:79
+  Rendered child_tasks/index.html.erb within layouts/application (Duration: 21.1ms | Allocations: 7701)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 12.9ms | Allocations: 3163)
+Completed 200 OK in 114ms (Views: 107.6ms | ActiveRecord: 3.7ms | Allocations: 19588)
+
+
+Started POST "/parent_tasks/14/child_tasks/index_result_finish?id=20" for 172.19.0.1 at 2020-08-25 11:54:53 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#index_result_finish as JS
+  Parameters: {"authenticity_token"=>"qUKUH1WsnCrwWDqoIbFXyR6e2oXYNS/J9+VJF6jj7/KMrzQK1uOMqLaAAaFiE39tGONgYOQfjA6mR/DK1eD3tg==", "result"=>"0", "id"=>"20", "parent_task_id"=>"14"}
+  [1m[36mChildTask Load (0.6ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`id` = 20 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:65:in `resulted'
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 14 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:66:in `resulted'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/child_tasks_controller.rb:36:in `index_result_finish'
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 14 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:36:in `index_result_finish'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/child_tasks_controller.rb:36:in `index_result_finish'
+  [1m[36mCACHE ChildTask Load (0.0ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`id` = 20 LIMIT 1[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/child_tasks_controller.rb:71:in `finished'
+  [1m[36mCACHE ParentTask Load (0.0ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 14 LIMIT 1[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/child_tasks_controller.rb:74:in `finished'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/child_tasks_controller.rb:74:in `finished'
+  [1m[36mChildTask Update (0.5ms)[0m  [1m[33mUPDATE `child_tasks` SET `child_tasks`.`finish_time` = '2020-08-25 11:54:53', `child_tasks`.`updated_at` = '2020-08-25 11:54:53.624416' WHERE `child_tasks`.`id` = 20[0m
+  ↳ app/controllers/child_tasks_controller.rb:74:in `finished'
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/child_tasks_controller.rb:74:in `finished'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/child_tasks_controller.rb:83:in `finished'
+  [1m[36mChildTask Update (0.5ms)[0m  [1m[33mUPDATE `child_tasks` SET `child_tasks`.`done` = 2, `child_tasks`.`updated_at` = '2020-08-25 11:54:53.634439' WHERE `child_tasks`.`id` = 20[0m
+  ↳ app/controllers/child_tasks_controller.rb:83:in `finished'
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/child_tasks_controller.rb:83:in `finished'
+Redirected to http://localhost:3000/parent_tasks/14/child_tasks
+Completed 200 OK in 38ms (ActiveRecord: 9.4ms | Allocations: 10851)
+
+
+Started GET "/parent_tasks/14/child_tasks" for 172.19.0.1 at 2020-08-25 11:54:53 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#index as HTML
+  Parameters: {"parent_task_id"=>"14"}
+  [1m[36mParentTask Load (0.7ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 14 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:6:in `index'
+  Rendering child_tasks/index.html.erb within layouts/application
+  [1m[36mChildTask Load (0.7ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks`[0m
+  ↳ app/views/child_tasks/index.html.erb:3
+  [1m[36mTaskComment Load (0.6ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`child_task_id` = 19[0m
+  ↳ app/views/child_tasks/index.html.erb:79
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/child_tasks/index.html.erb:84
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/child_tasks/index.html.erb:87
+  [1m[36mTaskComment Load (0.6ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`child_task_id` = 20[0m
+  ↳ app/views/child_tasks/index.html.erb:79
+  Rendered child_tasks/index.html.erb within layouts/application (Duration: 22.9ms | Allocations: 7858)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 17.8ms | Allocations: 3155)
+Completed 200 OK in 139ms (Views: 130.8ms | ActiveRecord: 4.0ms | Allocations: 19723)
+
+
+Started GET "/parent_tasks/14/child_tasks" for 172.19.0.1 at 2020-08-25 11:55:00 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#index as HTML
+  Parameters: {"parent_task_id"=>"14"}
+  [1m[36mParentTask Load (0.8ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 14 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:6:in `index'
+  Rendering child_tasks/index.html.erb within layouts/application
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks`[0m
+  ↳ app/views/child_tasks/index.html.erb:3
+  [1m[36mTaskComment Load (0.6ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`child_task_id` = 19[0m
+  ↳ app/views/child_tasks/index.html.erb:79
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/child_tasks/index.html.erb:84
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/child_tasks/index.html.erb:87
+  [1m[36mTaskComment Load (0.5ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`child_task_id` = 20[0m
+  ↳ app/views/child_tasks/index.html.erb:79
+  Rendered child_tasks/index.html.erb within layouts/application (Duration: 21.0ms | Allocations: 7857)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 17.7ms | Allocations: 3156)
+Completed 200 OK in 131ms (Views: 123.7ms | ActiveRecord: 3.8ms | Allocations: 19727)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 11:55:04 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 28.2ms | Allocations: 2490)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 11.8ms | Allocations: 2975)
+Completed 200 OK in 115ms (Views: 103.3ms | ActiveRecord: 1.6ms | Allocations: 14442)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 11:55:07 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 27.7ms | Allocations: 2481)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 13.2ms | Allocations: 2964)
+Completed 200 OK in 121ms (Views: 116.7ms | ActiveRecord: 1.4ms | Allocations: 14311)
+
+
+Started GET "/parent_tasks/12/child_tasks" for 172.19.0.1 at 2020-08-25 11:55:13 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#index as HTML
+  Parameters: {"parent_task_id"=>"12"}
+  [1m[36mParentTask Load (0.7ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:6:in `index'
+  Rendering child_tasks/index.html.erb within layouts/application
+  [1m[36mChildTask Load (0.6ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks`[0m
+  ↳ app/views/child_tasks/index.html.erb:3
+  Rendered child_tasks/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1000)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 19.9ms | Allocations: 4075)
+Completed 200 OK in 123ms (Views: 117.5ms | ActiveRecord: 1.9ms | Allocations: 13877)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 11:55:15 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 48.9ms | Allocations: 2482)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 15.7ms | Allocations: 2972)
+Completed 200 OK in 153ms (Views: 146.7ms | ActiveRecord: 1.3ms | Allocations: 14334)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 11:58:27 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 3.5ms | Allocations: 13017)
+
+
+  
+NoMethodError (undefined method `child_tasks' for #<Class:0x00007f61c82aba08>):
+  
+app/controllers/parent_tasks_controller.rb:6:in `index'
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:01:16 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12 LIMIT 11[0m
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 47.8ms | Allocations: 14176)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 8.4ms | Allocations: 24278)
+
+
+  
+ActionView::Template::Error (undefined method `counts' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  count):
+    16:               <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+    17:           </div>
+    18:           <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+    19:           <%= parent_task.child_tasks.counts %>
+    20:         </div>
+    21:         </div>
+    22:       </div>
+  
+app/views/parent_tasks/index.html.erb:19
+app/views/parent_tasks/index.html.erb:9
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:01:23 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 33.3ms | Allocations: 5475)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 24.1ms | Allocations: 7945)
+Completed 200 OK in 137ms (Views: 126.7ms | ActiveRecord: 4.7ms | Allocations: 23655)
+
+
+Started GET "/parent_tasks/13/child_tasks" for 172.19.0.1 at 2020-08-25 12:01:26 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#index as HTML
+  Parameters: {"parent_task_id"=>"13"}
+  [1m[36mParentTask Load (0.8ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:6:in `index'
+  Rendering child_tasks/index.html.erb within layouts/application
+  [1m[36mChildTask Load (0.8ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks`[0m
+  ↳ app/views/child_tasks/index.html.erb:3
+  [1m[36mTaskComment Load (0.7ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`child_task_id` = 18[0m
+  ↳ app/views/child_tasks/index.html.erb:79
+  [1m[36mBoss Load (0.5ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/child_tasks/index.html.erb:82
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/child_tasks/index.html.erb:87
+  [1m[36mCACHE Boss Load (0.0ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/child_tasks/index.html.erb:82
+  Rendered child_tasks/index.html.erb within layouts/application (Duration: 56.3ms | Allocations: 19946)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 16.2ms | Allocations: 3160)
+Completed 200 OK in 186ms (Views: 145.4ms | ActiveRecord: 11.5ms | Allocations: 38464)
+
+
+Started GET "/parent_tasks/13/child_tasks/18" for 172.19.0.1 at 2020-08-25 12:01:32 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#show as HTML
+  Parameters: {"parent_task_id"=>"13", "id"=>"18"}
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`id` = 18 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:11:in `show'
+  Rendering child_tasks/show.html.erb within layouts/application
+  Rendered child_tasks/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 306)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 20.5ms | Allocations: 4081)
+Completed 200 OK in 119ms (Views: 109.8ms | ActiveRecord: 1.3ms | Allocations: 13480)
+
+
+Started GET "/parent_tasks/13/child_tasks" for 172.19.0.1 at 2020-08-25 12:01:34 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#index as HTML
+  Parameters: {"parent_task_id"=>"13"}
+  [1m[36mParentTask Load (1.2ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:6:in `index'
+  Rendering child_tasks/index.html.erb within layouts/application
+  [1m[36mChildTask Load (0.6ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks`[0m
+  ↳ app/views/child_tasks/index.html.erb:3
+  [1m[36mTaskComment Load (0.8ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`child_task_id` = 18[0m
+  ↳ app/views/child_tasks/index.html.erb:79
+  [1m[36mBoss Load (0.7ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/child_tasks/index.html.erb:82
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/child_tasks/index.html.erb:87
+  [1m[36mCACHE Boss Load (0.0ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/child_tasks/index.html.erb:82
+  Rendered child_tasks/index.html.erb within layouts/application (Duration: 28.9ms | Allocations: 6137)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 14.8ms | Allocations: 3166)
+Completed 200 OK in 138ms (Views: 127.3ms | ActiveRecord: 4.5ms | Allocations: 18010)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:01:35 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 41.0ms | Allocations: 4985)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 8.9ms | Allocations: 2971)
+Completed 200 OK in 114ms (Views: 105.3ms | ActiveRecord: 2.7ms | Allocations: 16828)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:03:03 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12 LIMIT 11[0m
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 33.0ms | Allocations: 7086)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 1.5ms | Allocations: 9491)
+
+
+  
+ActionView::Template::Error (undefined method `done' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  dclone):
+    16:               <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+    17:           </div>
+    18:           <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+    19:           <% if (parent_task.child_tasks.done) %>
+    20:           <%= parent_task.child_tasks.done == nil %>
+    21:           <% end %>
+    22:         </div>
+  
+app/views/parent_tasks/index.html.erb:19
+app/views/parent_tasks/index.html.erb:9
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:03:15 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12 LIMIT 11[0m
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 39.1ms | Allocations: 7086)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 1.6ms | Allocations: 9490)
+
+
+  
+ActionView::Template::Error (undefined method `done' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  dclone):
+    16:               <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+    17:           </div>
+    18:           <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+    19:           <% if parent_task.child_tasks.done %>
+    20:           <%= parent_task.child_tasks.done == nil %>
+    21:           <% end %>
+    22:         </div>
+  
+app/views/parent_tasks/index.html.erb:19
+app/views/parent_tasks/index.html.erb:9
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:03:23 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12 LIMIT 11[0m
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 36.7ms | Allocations: 7085)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 1.4ms | Allocations: 9489)
+
+
+  
+ActionView::Template::Error (undefined method `done' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  dclone):
+    16:               <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+    17:           </div>
+    18:           <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+    19:           <% if parent_task.child_tasks.done.count %>
+    20:           <%= parent_task.child_tasks.done == nil %>
+    21:           <% end %>
+    22:         </div>
+  
+app/views/parent_tasks/index.html.erb:19
+app/views/parent_tasks/index.html.erb:9
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:03:36 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1419)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.4ms | Allocations: 3824)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= stylesheet_link_tag "common", :media => "all" %>
+<% if user_signed_in? %>
+    <h2><%= current_user.name%>のタスク一覧</h2>
+<% elsif boss_signed_in? %>
+    <h2><%= current_boss.name%>のタスク一覧表示</h2>
+<% end %>
+<button type="button" class="btn btn-primary parent-task-new " onclick="location.href='/parent_tasks/new'">タスク新規作成</button><br>
+
+<% @parent_tasks.each do |parent_task| %>
+  <div class="card border-secondary mb-5" style="width: 30rem;">
+      <div class="card-header bg-light ">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="#" checked>
+              <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+          </div>
+          <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+          <%= parent_task.child_tasks.done.count %>
+          <%= parent_task.child_tasks.done == nil %>
+          <% end %>
+        </div>
+        </div>
+      </div>
+      <div class="card-body">
+          タスク概要：<%= parent_task.explanation %>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">入力時刻:<%= parent_task.updated_at %></li>
+              <li class="list-group-item">締め切り:<%= parent_task.parent_deadline %></li>
+              <% if parent_task.self_evaluate == 0 %>
+              <li class="list-group-item">自己評価:うまく切り分けられた</li>
+              <% elsif parent_task.self_evaluate == 1 %>
+              <li class="list-group-item">自己評価:普通</li>
+              <% elsif parent_task.self_evaluate == 2 %>
+              <li class="list-group-item">自己評価:上司助けて</li>
+              <% else %>
+              <li class="list-group-item">入力されていません</li>
+              <% end %>
+          </ul>
+          <div class="card-footer">
+          <% if user_signed_in? %>
+            <%= link_to "サブタスク新規作成", new_parent_task_child_task_path(parent_task), class: "btn btn-secondary" %> /
+          <% end %>
+            <%= link_to "サブタスク一覧画面", parent_task_child_tasks_path(parent_task), class: "btn btn-secondary" %>
+          </div>
+      </div>
+  </div>
+<% end %>
+):
+1:    <%= stylesheet_link_tag "common", :media => "all" %>
+2:    <% if user_signed_in? %>
+3:        <h2><%= current_user.name%>のタスク一覧</h2>
+4:    <% elsif boss_signed_in? %>
+5:        <h2><%= current_boss.name%>のタスク一覧表示</h2>
+6:    <% end %>
+7:    <button type="button" class="btn btn-primary parent-task-new " onclick="location.href='/parent_tasks/new'">タスク新規作成</button><br>
+8:    
+9:    <% @parent_tasks.each do |parent_task| %>
+10:      <div class="card border-secondary mb-5" style="width: 30rem;">
+11:          <div class="card-header bg-light ">
+12:          <div class="row">
+13:            <div class="col-6">
+14:              <div class="form-check">
+15:                  <input class="form-check-input" type="checkbox" id="#" checked>
+16:                  <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+17:              </div>
+18:              <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+19:              <%= parent_task.child_tasks.done.count %>
+20:              <%= parent_task.child_tasks.done == nil %>
+21:              <% end %>
+22:            </div>
+23:            </div>
+24:          </div>
+25:          <div class="card-body">
+26:              タスク概要：<%= parent_task.explanation %>
+27:              <ul class="list-group list-group-flush">
+28:                  <li class="list-group-item">入力時刻:<%= parent_task.updated_at %></li>
+29:                  <li class="list-group-item">締め切り:<%= parent_task.parent_deadline %></li>
+30:                  <% if parent_task.self_evaluate == 0 %>
+31:                  <li class="list-group-item">自己評価:うまく切り分けられた</li>
+32:                  <% elsif parent_task.self_evaluate == 1 %>
+33:                  <li class="list-group-item">自己評価:普通</li>
+34:                  <% elsif parent_task.self_evaluate == 2 %>
+35:                  <li class="list-group-item">自己評価:上司助けて</li>
+36:                  <% else %>
+37:                  <li class="list-group-item">入力されていません</li>
+38:                  <% end %>
+39:              </ul>
+40:              <div class="card-footer">
+41:              <% if user_signed_in? %>
+42:                <%= link_to "サブタスク新規作成", new_parent_task_child_task_path(parent_task), class: "btn btn-secondary" %> /
+43:              <% end %>
+44:                <%= link_to "サブタスク一覧画面", parent_task_child_tasks_path(parent_task), class: "btn btn-secondary" %>
+45:              </div>
+46:          </div>
+47:      </div>
+48:    <% end %>
+  
+app/views/parent_tasks/index.html.erb:50: syntax error, unexpected `end', expecting end-of-input
+app/views/parent_tasks/index.html.erb:50: syntax error, unexpected `end', expecting end-of-input
+app/views/parent_tasks/index.html.erb:50: syntax error, unexpected `end', expecting end-of-input
+app/views/parent_tasks/index.html.erb:50: syntax error, unexpected `end', expecting end-of-input
+app/views/parent_tasks/index.html.erb:50: syntax error, unexpected `end', expecting end-of-input
+app/views/parent_tasks/index.html.erb:50: syntax error, unexpected `end', expecting end-of-input
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:03:46 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12 LIMIT 11[0m
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 31.6ms | Allocations: 7069)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 1.7ms | Allocations: 9473)
+
+
+  
+ActionView::Template::Error (undefined method `done' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  dclone):
+    16:               <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+    17:           </div>
+    18:           <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+    19:           <%= parent_task.child_tasks.done.count %>
+    20:           <%= parent_task.child_tasks.done == nil %>
+    21:         </div>
+    22:         </div>
+  
+app/views/parent_tasks/index.html.erb:19
+app/views/parent_tasks/index.html.erb:9
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:04:05 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12 LIMIT 11[0m
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 29.4ms | Allocations: 7053)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 1.5ms | Allocations: 9457)
+
+
+  
+ActionView::Template::Error (undefined method `done' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  dclone):
+    16:               <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+    17:           </div>
+    18:           <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+    19:           <%= parent_task.child_tasks.done.count %>
+    20:         </div>
+    21:         </div>
+    22:       </div>
+  
+app/views/parent_tasks/index.html.erb:19
+app/views/parent_tasks/index.html.erb:9
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:04:06 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12 LIMIT 11[0m
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 35.4ms | Allocations: 6584)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.4ms | Allocations: 7955)
+
+
+  
+ActionView::Template::Error (undefined method `done' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  dclone):
+    16:               <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+    17:           </div>
+    18:           <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+    19:           <%= parent_task.child_tasks.done.count %>
+    20:         </div>
+    21:         </div>
+    22:       </div>
+  
+app/views/parent_tasks/index.html.erb:19
+app/views/parent_tasks/index.html.erb:9
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:04:21 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 38.1ms | Allocations: 5447)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 15.0ms | Allocations: 3500)
+Completed 200 OK in 151ms (Views: 141.4ms | ActiveRecord: 2.6ms | Allocations: 19170)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:05:33 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 38.8ms | Allocations: 6780)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 1.4ms | Allocations: 9201)
+
+
+  
+ActionView::Template::Error (undefined method `child_task' for #<ParentTask:0x000056521c2f8ea0>
+Did you mean?  child_tasks
+               child_tasks=):
+    17:           </div>
+    18:           <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+    19:           <li>子たすくの数<%= parent_task.child_tasks.count %></li>
+    20:           <li>子タスクの完了した数<%= parent_task.child_task.done %></li>
+    21:         </div>
+    22:         </div>
+    23:       </div>
+  
+app/views/parent_tasks/index.html.erb:20
+app/views/parent_tasks/index.html.erb:9
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:07:24 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1430)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.5ms | Allocations: 3859)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= stylesheet_link_tag "common", :media => "all" %>
+<% if user_signed_in? %>
+    <h2><%= current_user.name%>のタスク一覧</h2>
+<% elsif boss_signed_in? %>
+    <h2><%= current_boss.name%>のタスク一覧表示</h2>
+<% end %>
+<button type="button" class="btn btn-primary parent-task-new " onclick="location.href='/parent_tasks/new'">タスク新規作成</button><br>
+
+<% @parent_tasks.each do |parent_task| %>
+  <div class="card border-secondary mb-5" style="width: 30rem;">
+      <div class="card-header bg-light ">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="#" checked>
+              <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+          </div>
+          <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+          <li>子たすくの数<%= parent_task.child_tasks.count %></li>
+          <li>子タスクの完了した数<%= if parent_task.child_task == nil %></li>
+          <%= nil %>
+          <% end %>
+        </div>
+        </div>
+      </div>
+      <div class="card-body">
+          タスク概要：<%= parent_task.explanation %>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">入力時刻:<%= parent_task.updated_at %></li>
+              <li class="list-group-item">締め切り:<%= parent_task.parent_deadline %></li>
+              <% if parent_task.self_evaluate == 0 %>
+              <li class="list-group-item">自己評価:うまく切り分けられた</li>
+              <% elsif parent_task.self_evaluate == 1 %>
+              <li class="list-group-item">自己評価:普通</li>
+              <% elsif parent_task.self_evaluate == 2 %>
+              <li class="list-group-item">自己評価:上司助けて</li>
+              <% else %>
+              <li class="list-group-item">入力されていません</li>
+              <% end %>
+          </ul>
+          <div class="card-footer">
+          <% if user_signed_in? %>
+            <%= link_to "サブタスク新規作成", new_parent_task_child_task_path(parent_task), class: "btn btn-secondary" %> /
+          <% end %>
+            <%= link_to "サブタスク一覧画面", parent_task_child_tasks_path(parent_task), class: "btn btn-secondary" %>
+          </div>
+      </div>
+  </div>
+<% end %>
+):
+1:    <%= stylesheet_link_tag "common", :media => "all" %>
+2:    <% if user_signed_in? %>
+3:        <h2><%= current_user.name%>のタスク一覧</h2>
+4:    <% elsif boss_signed_in? %>
+5:        <h2><%= current_boss.name%>のタスク一覧表示</h2>
+6:    <% end %>
+7:    <button type="button" class="btn btn-primary parent-task-new " onclick="location.href='/parent_tasks/new'">タスク新規作成</button><br>
+8:    
+9:    <% @parent_tasks.each do |parent_task| %>
+10:      <div class="card border-secondary mb-5" style="width: 30rem;">
+11:          <div class="card-header bg-light ">
+12:          <div class="row">
+13:            <div class="col-6">
+14:              <div class="form-check">
+15:                  <input class="form-check-input" type="checkbox" id="#" checked>
+16:                  <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+17:              </div>
+18:              <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+19:              <li>子たすくの数<%= parent_task.child_tasks.count %></li>
+20:              <li>子タスクの完了した数<%= if parent_task.child_task == nil %></li>
+21:              <%= nil %>
+22:              <% end %>
+23:            </div>
+24:            </div>
+25:          </div>
+26:          <div class="card-body">
+27:              タスク概要：<%= parent_task.explanation %>
+28:              <ul class="list-group list-group-flush">
+29:                  <li class="list-group-item">入力時刻:<%= parent_task.updated_at %></li>
+30:                  <li class="list-group-item">締め切り:<%= parent_task.parent_deadline %></li>
+31:                  <% if parent_task.self_evaluate == 0 %>
+32:                  <li class="list-group-item">自己評価:うまく切り分けられた</li>
+33:                  <% elsif parent_task.self_evaluate == 1 %>
+34:                  <li class="list-group-item">自己評価:普通</li>
+35:                  <% elsif parent_task.self_evaluate == 2 %>
+36:                  <li class="list-group-item">自己評価:上司助けて</li>
+37:                  <% else %>
+38:                  <li class="list-group-item">入力されていません</li>
+39:                  <% end %>
+40:              </ul>
+41:              <div class="card-footer">
+42:              <% if user_signed_in? %>
+43:                <%= link_to "サブタスク新規作成", new_parent_task_child_task_path(parent_task), class: "btn btn-secondary" %> /
+44:              <% end %>
+45:                <%= link_to "サブタスク一覧画面", parent_task_child_tasks_path(parent_task), class: "btn btn-secondary" %>
+46:              </div>
+47:          </div>
+48:      </div>
+49:    <% end %>
+  
+app/views/parent_tasks/index.html.erb:20: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/parent_tasks/index.html.erb:22: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:51: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:20: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/parent_tasks/index.html.erb:22: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:51: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:20: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/parent_tasks/index.html.erb:22: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:51: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:20: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/parent_tasks/index.html.erb:22: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:51: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:20: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/parent_tasks/index.html.erb:22: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:51: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:20: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/parent_tasks/index.html.erb:22: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:51: syntax error, unexpected `end', expecting ')'
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:07:47 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1430)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.5ms | Allocations: 3859)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= stylesheet_link_tag "common", :media => "all" %>
+<% if user_signed_in? %>
+    <h2><%= current_user.name%>のタスク一覧</h2>
+<% elsif boss_signed_in? %>
+    <h2><%= current_boss.name%>のタスク一覧表示</h2>
+<% end %>
+<button type="button" class="btn btn-primary parent-task-new " onclick="location.href='/parent_tasks/new'">タスク新規作成</button><br>
+
+<% @parent_tasks.each do |parent_task| %>
+  <div class="card border-secondary mb-5" style="width: 30rem;">
+      <div class="card-header bg-light ">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="#" checked>
+              <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+          </div>
+          <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+          <li>子たすくの数<%= parent_task.child_tasks.count %></li>
+          <li>子タスクの完了した数<%= if (parent_task.child_task == nil) %></li>
+          <%= nil %>
+          <% end %>
+        </div>
+        </div>
+      </div>
+      <div class="card-body">
+          タスク概要：<%= parent_task.explanation %>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">入力時刻:<%= parent_task.updated_at %></li>
+              <li class="list-group-item">締め切り:<%= parent_task.parent_deadline %></li>
+              <% if parent_task.self_evaluate == 0 %>
+              <li class="list-group-item">自己評価:うまく切り分けられた</li>
+              <% elsif parent_task.self_evaluate == 1 %>
+              <li class="list-group-item">自己評価:普通</li>
+              <% elsif parent_task.self_evaluate == 2 %>
+              <li class="list-group-item">自己評価:上司助けて</li>
+              <% else %>
+              <li class="list-group-item">入力されていません</li>
+              <% end %>
+          </ul>
+          <div class="card-footer">
+          <% if user_signed_in? %>
+            <%= link_to "サブタスク新規作成", new_parent_task_child_task_path(parent_task), class: "btn btn-secondary" %> /
+          <% end %>
+            <%= link_to "サブタスク一覧画面", parent_task_child_tasks_path(parent_task), class: "btn btn-secondary" %>
+          </div>
+      </div>
+  </div>
+<% end %>
+):
+1:    <%= stylesheet_link_tag "common", :media => "all" %>
+2:    <% if user_signed_in? %>
+3:        <h2><%= current_user.name%>のタスク一覧</h2>
+4:    <% elsif boss_signed_in? %>
+5:        <h2><%= current_boss.name%>のタスク一覧表示</h2>
+6:    <% end %>
+7:    <button type="button" class="btn btn-primary parent-task-new " onclick="location.href='/parent_tasks/new'">タスク新規作成</button><br>
+8:    
+9:    <% @parent_tasks.each do |parent_task| %>
+10:      <div class="card border-secondary mb-5" style="width: 30rem;">
+11:          <div class="card-header bg-light ">
+12:          <div class="row">
+13:            <div class="col-6">
+14:              <div class="form-check">
+15:                  <input class="form-check-input" type="checkbox" id="#" checked>
+16:                  <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+17:              </div>
+18:              <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+19:              <li>子たすくの数<%= parent_task.child_tasks.count %></li>
+20:              <li>子タスクの完了した数<%= if (parent_task.child_task == nil) %></li>
+21:              <%= nil %>
+22:              <% end %>
+23:            </div>
+24:            </div>
+25:          </div>
+26:          <div class="card-body">
+27:              タスク概要：<%= parent_task.explanation %>
+28:              <ul class="list-group list-group-flush">
+29:                  <li class="list-group-item">入力時刻:<%= parent_task.updated_at %></li>
+30:                  <li class="list-group-item">締め切り:<%= parent_task.parent_deadline %></li>
+31:                  <% if parent_task.self_evaluate == 0 %>
+32:                  <li class="list-group-item">自己評価:うまく切り分けられた</li>
+33:                  <% elsif parent_task.self_evaluate == 1 %>
+34:                  <li class="list-group-item">自己評価:普通</li>
+35:                  <% elsif parent_task.self_evaluate == 2 %>
+36:                  <li class="list-group-item">自己評価:上司助けて</li>
+37:                  <% else %>
+38:                  <li class="list-group-item">入力されていません</li>
+39:                  <% end %>
+40:              </ul>
+41:              <div class="card-footer">
+42:              <% if user_signed_in? %>
+43:                <%= link_to "サブタスク新規作成", new_parent_task_child_task_path(parent_task), class: "btn btn-secondary" %> /
+44:              <% end %>
+45:                <%= link_to "サブタスク一覧画面", parent_task_child_tasks_path(parent_task), class: "btn btn-secondary" %>
+46:              </div>
+47:          </div>
+48:      </div>
+49:    <% end %>
+  
+app/views/parent_tasks/index.html.erb:20: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/parent_tasks/index.html.erb:22: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:51: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:20: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/parent_tasks/index.html.erb:22: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:51: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:20: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/parent_tasks/index.html.erb:22: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:51: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:20: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/parent_tasks/index.html.erb:22: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:51: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:20: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/parent_tasks/index.html.erb:22: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:51: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:20: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/parent_tasks/index.html.erb:22: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:51: syntax error, unexpected `end', expecting ')'
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:08:33 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 36.0ms | Allocations: 5507)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 12.4ms | Allocations: 3500)
+Completed 200 OK in 133ms (Views: 122.7ms | ActiveRecord: 3.6ms | Allocations: 19254)
+
+
+Started GET "/parent_tasks/12/child_tasks/new" for 172.19.0.1 at 2020-08-25 12:08:36 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#new as HTML
+  Parameters: {"parent_task_id"=>"12"}
+  [1m[36mParentTask Load (1.1ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:17:in `new'
+  Rendering child_tasks/new.html.erb within layouts/application
+  Rendered child_tasks/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1263)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 14.4ms | Allocations: 4081)
+Completed 200 OK in 100ms (Views: 88.3ms | ActiveRecord: 1.8ms | Allocations: 15099)
+
+
+Started POST "/parent_tasks/12/child_tasks" for 172.19.0.1 at 2020-08-25 12:08:42 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#create as JS
+  Parameters: {"authenticity_token"=>"LIOeU7yzXQMu9SlIE101CWAbEPEpQHw7hmpbm9YtlXVY3Z+VFaTcZ/I0raC6BKswh02sskaTMOcZaVp5HgQrig==", "child_task"=>{"title"=>"asdfasdf", "explanation"=>"asdfasdf", "child_deadline"=>"2020-08-26T21:08", "possibility"=>"0"}, "commit"=>"タスクを保存！", "parent_task_id"=>"12"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/child_tasks_controller.rb:23:in `create'
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:23:in `create'
+  [1m[36mChildTask Create (0.5ms)[0m  [1m[32mINSERT INTO `child_tasks` (`title`, `child_deadline`, `possibility`, `explanation`, `parent_task_id`, `created_at`, `updated_at`) VALUES ('asdfasdf', '2020-08-26 21:08:00', 0, 'asdfasdf', 12, '2020-08-25 12:08:42.935129', '2020-08-25 12:08:42.935129')[0m
+  ↳ app/controllers/child_tasks_controller.rb:23:in `create'
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/child_tasks_controller.rb:23:in `create'
+Redirected to http://localhost:3000/parent_tasks
+Completed 200 OK in 18ms (ActiveRecord: 3.6ms | Allocations: 5195)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:08:42 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 38.7ms | Allocations: 4977)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 12.0ms | Allocations: 2967)
+Completed 200 OK in 121ms (Views: 113.9ms | ActiveRecord: 3.3ms | Allocations: 16806)
+
+
+Started GET "/parent_tasks/12/child_tasks/new" for 172.19.0.1 at 2020-08-25 12:08:45 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#new as HTML
+  Parameters: {"parent_task_id"=>"12"}
+  [1m[36mParentTask Load (0.7ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:17:in `new'
+  Rendering child_tasks/new.html.erb within layouts/application
+  Rendered child_tasks/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 739)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 20.3ms | Allocations: 4075)
+Completed 200 OK in 135ms (Views: 128.3ms | ActiveRecord: 1.4ms | Allocations: 13605)
+
+
+Started POST "/parent_tasks/12/child_tasks" for 172.19.0.1 at 2020-08-25 12:08:53 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#create as JS
+  Parameters: {"authenticity_token"=>"TwU9qNX4rkb/03lTHrceo1ZnVTF/XIlqR0Cek9vgtWM7WzxufO8vIiMS/bu37oCasTHpchCPxbbYQ59xE8kLnA==", "child_task"=>{"title"=>"asdfasdf", "explanation"=>"asdfasdf", "child_deadline"=>"2020-08-26T21:08", "possibility"=>"0"}, "commit"=>"タスクを保存！", "parent_task_id"=>"12"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/child_tasks_controller.rb:23:in `create'
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:23:in `create'
+  [1m[36mChildTask Create (0.7ms)[0m  [1m[32mINSERT INTO `child_tasks` (`title`, `child_deadline`, `possibility`, `explanation`, `parent_task_id`, `created_at`, `updated_at`) VALUES ('asdfasdf', '2020-08-26 21:08:00', 0, 'asdfasdf', 12, '2020-08-25 12:08:53.321673', '2020-08-25 12:08:53.321673')[0m
+  ↳ app/controllers/child_tasks_controller.rb:23:in `create'
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/child_tasks_controller.rb:23:in `create'
+Redirected to http://localhost:3000/parent_tasks
+Completed 200 OK in 18ms (ActiveRecord: 4.7ms | Allocations: 4329)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:08:53 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 42.4ms | Allocations: 4968)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 13.1ms | Allocations: 2964)
+Completed 200 OK in 139ms (Views: 132.1ms | ActiveRecord: 3.3ms | Allocations: 16776)
+
+
+Started GET "/parent_tasks/12/child_tasks" for 172.19.0.1 at 2020-08-25 12:08:56 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#index as HTML
+  Parameters: {"parent_task_id"=>"12"}
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:6:in `index'
+  Rendering child_tasks/index.html.erb within layouts/application
+  [1m[36mChildTask Load (0.6ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks`[0m
+  ↳ app/views/child_tasks/index.html.erb:3
+  [1m[36mTaskComment Load (0.5ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`child_task_id` = 21[0m
+  ↳ app/views/child_tasks/index.html.erb:79
+  [1m[36mTaskComment Load (0.8ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`child_task_id` = 22[0m
+  ↳ app/views/child_tasks/index.html.erb:79
+  Rendered child_tasks/index.html.erb within layouts/application (Duration: 21.9ms | Allocations: 6495)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 17.2ms | Allocations: 4090)
+Completed 200 OK in 125ms (Views: 114.9ms | ActiveRecord: 3.1ms | Allocations: 19430)
+
+
+Started GET "/parent_tasks/12/child_tasks/21" for 172.19.0.1 at 2020-08-25 12:09:34 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#show as HTML
+  Parameters: {"parent_task_id"=>"12", "id"=>"21"}
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:11:in `show'
+  Rendering child_tasks/show.html.erb within layouts/application
+  Rendered child_tasks/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 306)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 36.8ms | Allocations: 13746)
+Completed 200 OK in 142ms (Views: 100.2ms | ActiveRecord: 8.5ms | Allocations: 37089)
+
+
+Started GET "/parent_tasks/12/child_tasks" for 172.19.0.1 at 2020-08-25 12:09:36 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#index as HTML
+  Parameters: {"parent_task_id"=>"12"}
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:6:in `index'
+  Rendering child_tasks/index.html.erb within layouts/application
+  [1m[36mChildTask Load (1.1ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks`[0m
+  ↳ app/views/child_tasks/index.html.erb:3
+  [1m[36mTaskComment Load (0.6ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`child_task_id` = 21[0m
+  ↳ app/views/child_tasks/index.html.erb:79
+  [1m[36mTaskComment Load (0.6ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`child_task_id` = 22[0m
+  ↳ app/views/child_tasks/index.html.erb:79
+  Rendered child_tasks/index.html.erb within layouts/application (Duration: 17.5ms | Allocations: 5860)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 25.6ms | Allocations: 4075)
+Completed 200 OK in 183ms (Views: 139.1ms | ActiveRecord: 7.7ms | Allocations: 24672)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:09:36 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.8ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 51.6ms | Allocations: 6252)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 12.2ms | Allocations: 2975)
+Completed 200 OK in 152ms (Views: 142.6ms | ActiveRecord: 3.8ms | Allocations: 18654)
+
+
+Started GET "/parent_tasks/12/child_tasks" for 172.19.0.1 at 2020-08-25 12:09:38 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#index as HTML
+  Parameters: {"parent_task_id"=>"12"}
+  [1m[36mParentTask Load (0.8ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:6:in `index'
+  Rendering child_tasks/index.html.erb within layouts/application
+  [1m[36mChildTask Load (0.8ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks`[0m
+  ↳ app/views/child_tasks/index.html.erb:3
+  [1m[36mTaskComment Load (0.7ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`child_task_id` = 21[0m
+  ↳ app/views/child_tasks/index.html.erb:79
+  [1m[36mTaskComment Load (0.8ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`child_task_id` = 22[0m
+  ↳ app/views/child_tasks/index.html.erb:79
+  Rendered child_tasks/index.html.erb within layouts/application (Duration: 24.9ms | Allocations: 5576)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 17.3ms | Allocations: 4075)
+Completed 200 OK in 137ms (Views: 127.3ms | ActiveRecord: 3.8ms | Allocations: 18357)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:09:39 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.9ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 63.5ms | Allocations: 4968)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 14.1ms | Allocations: 2964)
+Completed 200 OK in 195ms (Views: 187.7ms | ActiveRecord: 3.8ms | Allocations: 16782)
+
+
+Started GET "/parent_tasks/12/child_tasks/new" for 172.19.0.1 at 2020-08-25 12:09:40 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#new as HTML
+  Parameters: {"parent_task_id"=>"12"}
+  [1m[36mParentTask Load (0.7ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:17:in `new'
+  Rendering child_tasks/new.html.erb within layouts/application
+  Rendered child_tasks/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 906)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 21.7ms | Allocations: 4079)
+Completed 200 OK in 134ms (Views: 126.1ms | ActiveRecord: 1.6ms | Allocations: 13890)
+
+
+Started POST "/parent_tasks/12/child_tasks" for 172.19.0.1 at 2020-08-25 12:09:46 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#create as JS
+  Parameters: {"authenticity_token"=>"L1eklwknvMrGK+SrbRv8KgPz60x8zE2y+sHbD4MEI25bCaVRoDA9rhrqYEPEQmIT5KVXDxMfAW5lwtrtSy2dkQ==", "child_task"=>{"title"=>"asdfasd", "explanation"=>"asdfasd", "child_deadline"=>"2020-09-02T21:09", "possibility"=>"0"}, "commit"=>"タスクを保存！", "parent_task_id"=>"12"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/child_tasks_controller.rb:23:in `create'
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:23:in `create'
+  [1m[36mChildTask Create (0.5ms)[0m  [1m[32mINSERT INTO `child_tasks` (`title`, `child_deadline`, `possibility`, `explanation`, `parent_task_id`, `created_at`, `updated_at`) VALUES ('asdfasd', '2020-09-02 21:09:00', 0, 'asdfasd', 12, '2020-08-25 12:09:46.161017', '2020-08-25 12:09:46.161017')[0m
+  ↳ app/controllers/child_tasks_controller.rb:23:in `create'
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/child_tasks_controller.rb:23:in `create'
+Redirected to http://localhost:3000/parent_tasks/12/child_tasks
+Completed 200 OK in 19ms (ActiveRecord: 4.1ms | Allocations: 5219)
+
+
+Started GET "/parent_tasks/12/child_tasks" for 172.19.0.1 at 2020-08-25 12:09:46 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ChildTasksController#index as HTML
+  Parameters: {"parent_task_id"=>"12"}
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/child_tasks_controller.rb:6:in `index'
+  Rendering child_tasks/index.html.erb within layouts/application
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks`[0m
+  ↳ app/views/child_tasks/index.html.erb:3
+  [1m[36mTaskComment Load (0.4ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`child_task_id` = 21[0m
+  ↳ app/views/child_tasks/index.html.erb:79
+  [1m[36mTaskComment Load (0.6ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`child_task_id` = 22[0m
+  ↳ app/views/child_tasks/index.html.erb:79
+  [1m[36mTaskComment Load (0.5ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`child_task_id` = 23[0m
+  ↳ app/views/child_tasks/index.html.erb:79
+  Rendered child_tasks/index.html.erb within layouts/application (Duration: 20.3ms | Allocations: 7795)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 20.9ms | Allocations: 4085)
+Completed 200 OK in 146ms (Views: 139.9ms | ActiveRecord: 3.2ms | Allocations: 20576)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:09:58 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 35.9ms | Allocations: 4975)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 11.9ms | Allocations: 2972)
+Completed 200 OK in 123ms (Views: 116.2ms | ActiveRecord: 2.9ms | Allocations: 16827)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:13:53 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1560)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.5ms | Allocations: 3982)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= stylesheet_link_tag "common", :media => "all" %>
+<% if user_signed_in? %>
+    <h2><%= current_user.name%>のタスク一覧</h2>
+<% elsif boss_signed_in? %>
+    <h2><%= current_boss.name%>のタスク一覧表示</h2>
+<% end %>
+<button type="button" class="btn btn-primary parent-task-new " onclick="location.href='/parent_tasks/new'">タスク新規作成</button><br>
+
+<% @parent_tasks.each do |parent_task| %>
+  <div class="card border-secondary mb-5" style="width: 30rem;">
+      <div class="card-header bg-light ">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="#" checked>
+              <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+          </div>
+          <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+          <li>子たすくの数<%= parent_task.child_tasks.count %></li>
+          <% if parent_task.child_tasks.each do |child_task| %>
+            <%= if child_task.done == nil %>
+              <%= kara %>
+            <% else %>
+            <%= haitteru%>
+            <% end %>
+          <% end %>
+          
+          <%
+=begin%>
+ <li>子タスクの完了した数<%=  %></li>
+          <%= nil %>
+          <% end %> 
+<%
+=end%>
+        </div>
+        </div>
+      </div>
+      <div class="card-body">
+          タスク概要：<%= parent_task.explanation %>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">入力時刻:<%= parent_task.updated_at %></li>
+              <li class="list-group-item">締め切り:<%= parent_task.parent_deadline %></li>
+              <% if parent_task.self_evaluate == 0 %>
+              <li class="list-group-item">自己評価:うまく切り分けられた</li>
+              <% elsif parent_task.self_evaluate == 1 %>
+              <li class="list-group-item">自己評価:普通</li>
+              <% elsif parent_task.self_evaluate == 2 %>
+              <li class="list-group-item">自己評価:上司助けて</li>
+              <% else %>
+              <li class="list-group-item">入力されていません</li>
+              <% end %>
+          </ul>
+          <div class="card-footer">
+          <% if user_signed_in? %>
+            <%= link_to "サブタスク新規作成", new_parent_task_child_task_path(parent_task), class: "btn btn-secondary" %> /
+          <% end %>
+            <%= link_to "サブタスク一覧画面", parent_task_child_tasks_path(parent_task), class: "btn btn-secondary" %>
+          </div>
+      </div>
+  </div>
+<% end %>
+):
+1:    <%= stylesheet_link_tag "common", :media => "all" %>
+2:    <% if user_signed_in? %>
+3:        <h2><%= current_user.name%>のタスク一覧</h2>
+4:    <% elsif boss_signed_in? %>
+5:        <h2><%= current_boss.name%>のタスク一覧表示</h2>
+6:    <% end %>
+7:    <button type="button" class="btn btn-primary parent-task-new " onclick="location.href='/parent_tasks/new'">タスク新規作成</button><br>
+8:    
+9:    <% @parent_tasks.each do |parent_task| %>
+10:      <div class="card border-secondary mb-5" style="width: 30rem;">
+11:          <div class="card-header bg-light ">
+12:          <div class="row">
+13:            <div class="col-6">
+14:              <div class="form-check">
+15:                  <input class="form-check-input" type="checkbox" id="#" checked>
+16:                  <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+17:              </div>
+18:              <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+19:              <li>子たすくの数<%= parent_task.child_tasks.count %></li>
+20:              <% if parent_task.child_tasks.each do |child_task| %>
+21:                <%= if child_task.done == nil %>
+22:                  <%= kara %>
+23:                <% else %>
+24:                <%= haitteru%>
+25:                <% end %>
+26:              <% end %>
+27:              
+28:              <%
+29:    =begin%>
+30:     <li>子タスクの完了した数<%=  %></li>
+31:              <%= nil %>
+32:              <% end %> 
+33:    <%
+34:    =end%>
+35:            </div>
+36:            </div>
+37:          </div>
+38:          <div class="card-body">
+39:              タスク概要：<%= parent_task.explanation %>
+40:              <ul class="list-group list-group-flush">
+41:                  <li class="list-group-item">入力時刻:<%= parent_task.updated_at %></li>
+42:                  <li class="list-group-item">締め切り:<%= parent_task.parent_deadline %></li>
+43:                  <% if parent_task.self_evaluate == 0 %>
+44:                  <li class="list-group-item">自己評価:うまく切り分けられた</li>
+45:                  <% elsif parent_task.self_evaluate == 1 %>
+46:                  <li class="list-group-item">自己評価:普通</li>
+47:                  <% elsif parent_task.self_evaluate == 2 %>
+48:                  <li class="list-group-item">自己評価:上司助けて</li>
+49:                  <% else %>
+50:                  <li class="list-group-item">入力されていません</li>
+51:                  <% end %>
+52:              </ul>
+53:              <div class="card-footer">
+54:              <% if user_signed_in? %>
+55:                <%= link_to "サブタスク新規作成", new_parent_task_child_task_path(parent_task), class: "btn btn-secondary" %> /
+56:              <% end %>
+57:                <%= link_to "サブタスク一覧画面", parent_task_child_tasks_path(parent_task), class: "btn btn-secondary" %>
+58:              </div>
+59:          </div>
+60:      </div>
+61:    <% end %>
+  
+app/views/parent_tasks/index.html.erb:21: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/parent_tasks/index.html.erb:23: syntax error, unexpected `else', expecting ')'
+app/views/parent_tasks/index.html.erb:25: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:61: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:63: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:21: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/parent_tasks/index.html.erb:23: syntax error, unexpected `else', expecting ')'
+app/views/parent_tasks/index.html.erb:25: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:61: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:63: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:21: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/parent_tasks/index.html.erb:23: syntax error, unexpected `else', expecting ')'
+app/views/parent_tasks/index.html.erb:25: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:61: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:63: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:21: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/parent_tasks/index.html.erb:23: syntax error, unexpected `else', expecting ')'
+app/views/parent_tasks/index.html.erb:25: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:61: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:63: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:21: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/parent_tasks/index.html.erb:23: syntax error, unexpected `else', expecting ')'
+app/views/parent_tasks/index.html.erb:25: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:61: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:63: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:21: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/parent_tasks/index.html.erb:23: syntax error, unexpected `else', expecting ')'
+app/views/parent_tasks/index.html.erb:25: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:61: syntax error, unexpected `end', expecting ')'
+app/views/parent_tasks/index.html.erb:63: syntax error, unexpected `end', expecting ')'
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:14:06 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1549)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.5ms | Allocations: 3970)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= stylesheet_link_tag "common", :media => "all" %>
+<% if user_signed_in? %>
+    <h2><%= current_user.name%>のタスク一覧</h2>
+<% elsif boss_signed_in? %>
+    <h2><%= current_boss.name%>のタスク一覧表示</h2>
+<% end %>
+<button type="button" class="btn btn-primary parent-task-new " onclick="location.href='/parent_tasks/new'">タスク新規作成</button><br>
+
+<% @parent_tasks.each do |parent_task| %>
+  <div class="card border-secondary mb-5" style="width: 30rem;">
+      <div class="card-header bg-light ">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="#" checked>
+              <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+          </div>
+          <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+          <li>子たすくの数<%= parent_task.child_tasks.count %></li>
+          <% if parent_task.child_tasks.each do |child_task| %>
+            <% if child_task.done == nil %>
+              <%= kara %>
+            <% else %>
+            <%= haitteru%>
+            <% end %>
+          <% end %>
+          
+          <%
+=begin%>
+ <li>子タスクの完了した数<%=  %></li>
+          <%= nil %>
+          <% end %> 
+<%
+=end%>
+        </div>
+        </div>
+      </div>
+      <div class="card-body">
+          タスク概要：<%= parent_task.explanation %>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">入力時刻:<%= parent_task.updated_at %></li>
+              <li class="list-group-item">締め切り:<%= parent_task.parent_deadline %></li>
+              <% if parent_task.self_evaluate == 0 %>
+              <li class="list-group-item">自己評価:うまく切り分けられた</li>
+              <% elsif parent_task.self_evaluate == 1 %>
+              <li class="list-group-item">自己評価:普通</li>
+              <% elsif parent_task.self_evaluate == 2 %>
+              <li class="list-group-item">自己評価:上司助けて</li>
+              <% else %>
+              <li class="list-group-item">入力されていません</li>
+              <% end %>
+          </ul>
+          <div class="card-footer">
+          <% if user_signed_in? %>
+            <%= link_to "サブタスク新規作成", new_parent_task_child_task_path(parent_task), class: "btn btn-secondary" %> /
+          <% end %>
+            <%= link_to "サブタスク一覧画面", parent_task_child_tasks_path(parent_task), class: "btn btn-secondary" %>
+          </div>
+      </div>
+  </div>
+<% end %>
+):
+1:    <%= stylesheet_link_tag "common", :media => "all" %>
+2:    <% if user_signed_in? %>
+3:        <h2><%= current_user.name%>のタスク一覧</h2>
+4:    <% elsif boss_signed_in? %>
+5:        <h2><%= current_boss.name%>のタスク一覧表示</h2>
+6:    <% end %>
+7:    <button type="button" class="btn btn-primary parent-task-new " onclick="location.href='/parent_tasks/new'">タスク新規作成</button><br>
+8:    
+9:    <% @parent_tasks.each do |parent_task| %>
+10:      <div class="card border-secondary mb-5" style="width: 30rem;">
+11:          <div class="card-header bg-light ">
+12:          <div class="row">
+13:            <div class="col-6">
+14:              <div class="form-check">
+15:                  <input class="form-check-input" type="checkbox" id="#" checked>
+16:                  <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+17:              </div>
+18:              <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+19:              <li>子たすくの数<%= parent_task.child_tasks.count %></li>
+20:              <% if parent_task.child_tasks.each do |child_task| %>
+21:                <% if child_task.done == nil %>
+22:                  <%= kara %>
+23:                <% else %>
+24:                <%= haitteru%>
+25:                <% end %>
+26:              <% end %>
+27:              
+28:              <%
+29:    =begin%>
+30:     <li>子タスクの完了した数<%=  %></li>
+31:              <%= nil %>
+32:              <% end %> 
+33:    <%
+34:    =end%>
+35:            </div>
+36:            </div>
+37:          </div>
+38:          <div class="card-body">
+39:              タスク概要：<%= parent_task.explanation %>
+40:              <ul class="list-group list-group-flush">
+41:                  <li class="list-group-item">入力時刻:<%= parent_task.updated_at %></li>
+42:                  <li class="list-group-item">締め切り:<%= parent_task.parent_deadline %></li>
+43:                  <% if parent_task.self_evaluate == 0 %>
+44:                  <li class="list-group-item">自己評価:うまく切り分けられた</li>
+45:                  <% elsif parent_task.self_evaluate == 1 %>
+46:                  <li class="list-group-item">自己評価:普通</li>
+47:                  <% elsif parent_task.self_evaluate == 2 %>
+48:                  <li class="list-group-item">自己評価:上司助けて</li>
+49:                  <% else %>
+50:                  <li class="list-group-item">入力されていません</li>
+51:                  <% end %>
+52:              </ul>
+53:              <div class="card-footer">
+54:              <% if user_signed_in? %>
+55:                <%= link_to "サブタスク新規作成", new_parent_task_child_task_path(parent_task), class: "btn btn-secondary" %> /
+56:              <% end %>
+57:                <%= link_to "サブタスク一覧画面", parent_task_child_tasks_path(parent_task), class: "btn btn-secondary" %>
+58:              </div>
+59:          </div>
+60:      </div>
+61:    <% end %>
+  
+app/views/parent_tasks/index.html.erb:63: syntax error, unexpected end-of-input, expecting `end'
+app/views/parent_tasks/index.html.erb:63: syntax error, unexpected end-of-input, expecting `end'
+app/views/parent_tasks/index.html.erb:63: syntax error, unexpected end-of-input, expecting `end'
+app/views/parent_tasks/index.html.erb:63: syntax error, unexpected end-of-input, expecting `end'
+app/views/parent_tasks/index.html.erb:63: syntax error, unexpected end-of-input, expecting `end'
+app/views/parent_tasks/index.html.erb:63: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:14:32 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1536)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms | Allocations: 2923)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= stylesheet_link_tag "common", :media => "all" %>
+<% if user_signed_in? %>
+    <h2><%= current_user.name%>のタスク一覧</h2>
+<% elsif boss_signed_in? %>
+    <h2><%= current_boss.name%>のタスク一覧表示</h2>
+<% end %>
+<button type="button" class="btn btn-primary parent-task-new " onclick="location.href='/parent_tasks/new'">タスク新規作成</button><br>
+
+<% @parent_tasks.each do |parent_task| %>
+  <div class="card border-secondary mb-5" style="width: 30rem;">
+      <div class="card-header bg-light ">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="#" checked>
+              <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+          </div>
+          <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+          <li>子たすくの数<%= parent_task.child_tasks.count %></li>
+          <% if parent_task.child_tasks.each do |child_task| %>
+            <% if child_task.done == nil %>
+              <%= kara %>
+            <% else %>
+            <%= haitteru%>
+            <% end %>
+          <% end %>
+          
+          <%
+=begin%>
+ <li>子タスクの完了した数<%=  %></li>
+          <%= nil %>
+          <% end %> 
+<%
+=end%>
+        </div>
+        </div>
+      </div>
+      <div class="card-body">
+          タスク概要：<%= parent_task.explanation %>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">入力時刻:<%= parent_task.updated_at %></li>
+              <li class="list-group-item">締め切り:<%= parent_task.parent_deadline %></li>
+              <% if parent_task.self_evaluate == 0 %>
+              <li class="list-group-item">自己評価:うまく切り分けられた</li>
+              <% elsif parent_task.self_evaluate == 1 %>
+              <li class="list-group-item">自己評価:普通</li>
+              <% elsif parent_task.self_evaluate == 2 %>
+              <li class="list-group-item">自己評価:上司助けて</li>
+              <% else %>
+              <li class="list-group-item">入力されていません</li>
+              <% end %>
+          </ul>
+          <div class="card-footer">
+          <% if user_signed_in? %>
+            <%= link_to "サブタスク新規作成", new_parent_task_child_task_path(parent_task), class: "btn btn-secondary" %> /
+          <% end %>
+            <%= link_to "サブタスク一覧画面", parent_task_child_tasks_path(parent_task), class: "btn btn-secondary" %>
+          </div>
+      </div>
+  </div>
+<% end %>
+):
+1:    <%= stylesheet_link_tag "common", :media => "all" %>
+2:    <% if user_signed_in? %>
+3:        <h2><%= current_user.name%>のタスク一覧</h2>
+4:    <% elsif boss_signed_in? %>
+5:        <h2><%= current_boss.name%>のタスク一覧表示</h2>
+6:    <% end %>
+7:    <button type="button" class="btn btn-primary parent-task-new " onclick="location.href='/parent_tasks/new'">タスク新規作成</button><br>
+8:    
+9:    <% @parent_tasks.each do |parent_task| %>
+10:      <div class="card border-secondary mb-5" style="width: 30rem;">
+11:          <div class="card-header bg-light ">
+12:          <div class="row">
+13:            <div class="col-6">
+14:              <div class="form-check">
+15:                  <input class="form-check-input" type="checkbox" id="#" checked>
+16:                  <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+17:              </div>
+18:              <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+19:              <li>子たすくの数<%= parent_task.child_tasks.count %></li>
+20:              <% if parent_task.child_tasks.each do |child_task| %>
+21:                <% if child_task.done == nil %>
+22:                  <%= kara %>
+23:                <% else %>
+24:                <%= haitteru%>
+25:                <% end %>
+26:              <% end %>
+27:              
+28:              <%
+29:    =begin%>
+30:     <li>子タスクの完了した数<%=  %></li>
+31:              <%= nil %>
+32:              <% end %> 
+33:    <%
+34:    =end%>
+35:            </div>
+36:            </div>
+37:          </div>
+38:          <div class="card-body">
+39:              タスク概要：<%= parent_task.explanation %>
+40:              <ul class="list-group list-group-flush">
+41:                  <li class="list-group-item">入力時刻:<%= parent_task.updated_at %></li>
+42:                  <li class="list-group-item">締め切り:<%= parent_task.parent_deadline %></li>
+43:                  <% if parent_task.self_evaluate == 0 %>
+44:                  <li class="list-group-item">自己評価:うまく切り分けられた</li>
+45:                  <% elsif parent_task.self_evaluate == 1 %>
+46:                  <li class="list-group-item">自己評価:普通</li>
+47:                  <% elsif parent_task.self_evaluate == 2 %>
+48:                  <li class="list-group-item">自己評価:上司助けて</li>
+49:                  <% else %>
+50:                  <li class="list-group-item">入力されていません</li>
+51:                  <% end %>
+52:              </ul>
+53:              <div class="card-footer">
+54:              <% if user_signed_in? %>
+55:                <%= link_to "サブタスク新規作成", new_parent_task_child_task_path(parent_task), class: "btn btn-secondary" %> /
+56:              <% end %>
+57:                <%= link_to "サブタスク一覧画面", parent_task_child_tasks_path(parent_task), class: "btn btn-secondary" %>
+58:              </div>
+59:          </div>
+60:      </div>
+61:    <% end %>
+  
+app/views/parent_tasks/index.html.erb:63: syntax error, unexpected end-of-input, expecting `end'
+app/views/parent_tasks/index.html.erb:63: syntax error, unexpected end-of-input, expecting `end'
+app/views/parent_tasks/index.html.erb:63: syntax error, unexpected end-of-input, expecting `end'
+app/views/parent_tasks/index.html.erb:63: syntax error, unexpected end-of-input, expecting `end'
+app/views/parent_tasks/index.html.erb:63: syntax error, unexpected end-of-input, expecting `end'
+app/views/parent_tasks/index.html.erb:63: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:14:47 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 285.8ms | Allocations: 196591)
+Completed 500 Internal Server Error in 299ms (ActiveRecord: 1.9ms | Allocations: 199011)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `kara' for #<#<Class:0x00007f61f45247e0>:0x00007f61f4522d28>):
+    19:           <li>子たすくの数<%= parent_task.child_tasks.count %></li>
+    20:           <% parent_task.child_tasks.each do |child_task| %>
+    21:             <% if child_task.done == nil %>
+    22:               <%= kara %>
+    23:             <% else %>
+    24:             <%= haitteru%>
+    25:             <% end %>
+  
+app/views/parent_tasks/index.html.erb:22
+app/views/parent_tasks/index.html.erb:20
+app/views/parent_tasks/index.html.erb:9
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:15:13 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 37.7ms | Allocations: 7774)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 12.0ms | Allocations: 3500)
+Completed 200 OK in 126ms (Views: 116.0ms | ActiveRecord: 4.1ms | Allocations: 21514)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:16:22 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.8ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 46.8ms | Allocations: 9139)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 3.4ms | Allocations: 11550)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    20:           <% parent_task.child_tasks.each do |child_task| %>
+    21:             <% if child_task.done == nil %>
+    22:             <% else %>
+    23:             <% count += 1 %>
+    24:             <% end %>
+    25:             <%=count%>
+    26:           <% end %>
+  
+app/views/parent_tasks/index.html.erb:23
+app/views/parent_tasks/index.html.erb:20
+app/views/parent_tasks/index.html.erb:9
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:16:47 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 60.4ms | Allocations: 22078)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 10.3ms | Allocations: 31320)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    20:           <% parent_task.child_tasks.each do |child_task| %>
+    21:             <% if child_task.done == nil %>
+    22:             <% else %>
+    23:             <% count += 1 %>
+    24:             <% end %>
+    25:             <%=count%>
+    26:           <% end %>
+  
+app/views/parent_tasks/index.html.erb:23
+app/views/parent_tasks/index.html.erb:20
+app/views/parent_tasks/index.html.erb:9
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:16:50 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.3ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 44.7ms | Allocations: 8513)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 3.0ms | Allocations: 9896)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    20:           <% parent_task.child_tasks.each do |child_task| %>
+    21:             <% if child_task.done == nil %>
+    22:             <% else %>
+    23:             <% count += 1 %>
+    24:             <% end %>
+    25:             <%=count%>
+    26:           <% end %>
+  
+app/views/parent_tasks/index.html.erb:23
+app/views/parent_tasks/index.html.erb:20
+app/views/parent_tasks/index.html.erb:9
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:17:18 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.8ms | Allocations: 11317)
+
+
+  
+NameError (uninitialized constant ParentTasksController::Number
+Did you mean?  Numeric):
+  
+app/controllers/parent_tasks_controller.rb:6:in `index'
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:17:36 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 61.2ms | Allocations: 22699)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 9.5ms | Allocations: 32828)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    20:           <% parent_task.child_tasks.each do |child_task| %>
+    21:             <% if child_task.done == nil %>
+    22:             <% else %>
+    23:             <% count += 1 %>
+    24:             <% end %>
+    25:             <%= count %>
+    26:           <% end %>
+  
+app/views/parent_tasks/index.html.erb:23
+app/views/parent_tasks/index.html.erb:20
+app/views/parent_tasks/index.html.erb:9
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:18:11 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 37.6ms | Allocations: 7813)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 35.4ms | Allocations: 9906)
+Completed 200 OK in 147ms (Views: 136.0ms | ActiveRecord: 5.5ms | Allocations: 27956)
+
+
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:18:31 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 298.2ms | Allocations: 196452)
+Completed 500 Internal Server Error in 310ms (ActiveRecord: 1.9ms | Allocations: 198853)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `count' for #<#<Class:0x00007f61c8030a80>:0x00007f61c802a0e0>
+Did you mean?  concat):
+    25:             <% end %>
+    26:            
+    27:           <% end %>
+    28:            <%= count %>
+    29:           
+    30:           <%
+    31: =begin%>
+  
+app/views/parent_tasks/index.html.erb:28
+app/views/parent_tasks/index.html.erb:9
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:19:18 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 47.8ms | Allocations: 9149)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 4.0ms | Allocations: 11557)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    20:           <% parent_task.child_tasks.each do |child_task| %>
+    21:             <% if child_task.done == nil %>
+    22:             <% else %>
+    23:             <% count += 1 %>
+    24:             <% end %>
+    25:            <%= count %>
+    26:           <% end %>
+  
+app/views/parent_tasks/index.html.erb:23
+app/views/parent_tasks/index.html.erb:20
+app/views/parent_tasks/index.html.erb:9
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:20:22 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.5ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[36mChildTask Load (0.4ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:20
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 40.7ms | Allocations: 9596)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 3.8ms | Allocations: 12004)
+
+
+  
+ActionView::Template::Error (undefined method `count' for 0:Integer):
+    21:             <% if child_task.done == nil %>
+    22: 
+    23:             <% else %>
+    24:             <% child_task.done.count %>
+    25:             <% end %>
+    26:           <% end %>
+    27:            
+  
+app/views/parent_tasks/index.html.erb:24
+app/views/parent_tasks/index.html.erb:20
+app/views/parent_tasks/index.html.erb:9
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:21:38 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1401)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 2.7ms | Allocations: 11508)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= stylesheet_link_tag "common", :media => "all" %>
+<% if user_signed_in? %>
+    <h2><%= current_user.name%>のタスク一覧</h2>
+<% elsif boss_signed_in? %>
+    <h2><%= current_boss.name%>のタスク一覧表示</h2>
+<% end %>
+<button type="button" class="btn btn-primary parent-task-new " onclick="location.href='/parent_tasks/new'">タスク新規作成</button><br>
+
+<% @parent_tasks.each do |parent_task| %>
+  <div class="card border-secondary mb-5" style="width: 30rem;">
+      <div class="card-header bg-light ">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="#" checked>
+              <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+          </div>
+          <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+          <li>子たすくの数<%= parent_task.child_tasks.count %></li>
+          <% parent_task.child_tasks.each do |child_task| %>
+
+          <%
+=begin%>
+ <li>子タスクの完了した数<%=  %></li>
+          <%= nil %>
+          <% end %> 
+<%
+=end%>
+        </div>
+        </div>
+      </div>
+      <div class="card-body">
+          タスク概要：<%= parent_task.explanation %>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">入力時刻:<%= parent_task.updated_at %></li>
+              <li class="list-group-item">締め切り:<%= parent_task.parent_deadline %></li>
+              <% if parent_task.self_evaluate == 0 %>
+              <li class="list-group-item">自己評価:うまく切り分けられた</li>
+              <% elsif parent_task.self_evaluate == 1 %>
+              <li class="list-group-item">自己評価:普通</li>
+              <% elsif parent_task.self_evaluate == 2 %>
+              <li class="list-group-item">自己評価:上司助けて</li>
+              <% else %>
+              <li class="list-group-item">入力されていません</li>
+              <% end %>
+          </ul>
+          <div class="card-footer">
+          <% if user_signed_in? %>
+            <%= link_to "サブタスク新規作成", new_parent_task_child_task_path(parent_task), class: "btn btn-secondary" %> /
+          <% end %>
+            <%= link_to "サブタスク一覧画面", parent_task_child_tasks_path(parent_task), class: "btn btn-secondary" %>
+          </div>
+      </div>
+  </div>
+<% end %>
+):
+1:    <%= stylesheet_link_tag "common", :media => "all" %>
+2:    <% if user_signed_in? %>
+3:        <h2><%= current_user.name%>のタスク一覧</h2>
+4:    <% elsif boss_signed_in? %>
+5:        <h2><%= current_boss.name%>のタスク一覧表示</h2>
+6:    <% end %>
+7:    <button type="button" class="btn btn-primary parent-task-new " onclick="location.href='/parent_tasks/new'">タスク新規作成</button><br>
+8:    
+9:    <% @parent_tasks.each do |parent_task| %>
+10:      <div class="card border-secondary mb-5" style="width: 30rem;">
+11:          <div class="card-header bg-light ">
+12:          <div class="row">
+13:            <div class="col-6">
+14:              <div class="form-check">
+15:                  <input class="form-check-input" type="checkbox" id="#" checked>
+16:                  <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+17:              </div>
+18:              <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+19:              <li>子たすくの数<%= parent_task.child_tasks.count %></li>
+20:              <% parent_task.child_tasks.each do |child_task| %>
+21:    
+22:              <%
+23:    =begin%>
+24:     <li>子タスクの完了した数<%=  %></li>
+25:              <%= nil %>
+26:              <% end %> 
+27:    <%
+28:    =end%>
+29:            </div>
+30:            </div>
+31:          </div>
+32:          <div class="card-body">
+33:              タスク概要：<%= parent_task.explanation %>
+34:              <ul class="list-group list-group-flush">
+35:                  <li class="list-group-item">入力時刻:<%= parent_task.updated_at %></li>
+36:                  <li class="list-group-item">締め切り:<%= parent_task.parent_deadline %></li>
+37:                  <% if parent_task.self_evaluate == 0 %>
+38:                  <li class="list-group-item">自己評価:うまく切り分けられた</li>
+39:                  <% elsif parent_task.self_evaluate == 1 %>
+40:                  <li class="list-group-item">自己評価:普通</li>
+41:                  <% elsif parent_task.self_evaluate == 2 %>
+42:                  <li class="list-group-item">自己評価:上司助けて</li>
+43:                  <% else %>
+44:                  <li class="list-group-item">入力されていません</li>
+45:                  <% end %>
+46:              </ul>
+47:              <div class="card-footer">
+48:              <% if user_signed_in? %>
+49:                <%= link_to "サブタスク新規作成", new_parent_task_child_task_path(parent_task), class: "btn btn-secondary" %> /
+50:              <% end %>
+51:                <%= link_to "サブタスク一覧画面", parent_task_child_tasks_path(parent_task), class: "btn btn-secondary" %>
+52:              </div>
+53:          </div>
+54:      </div>
+55:    <% end %>
+  
+app/views/parent_tasks/index.html.erb:57: syntax error, unexpected end-of-input, expecting `end'
+app/views/parent_tasks/index.html.erb:57: syntax error, unexpected end-of-input, expecting `end'
+app/views/parent_tasks/index.html.erb:57: syntax error, unexpected end-of-input, expecting `end'
+app/views/parent_tasks/index.html.erb:57: syntax error, unexpected end-of-input, expecting `end'
+app/views/parent_tasks/index.html.erb:57: syntax error, unexpected end-of-input, expecting `end'
+app/views/parent_tasks/index.html.erb:57: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/parent_tasks" for 172.19.0.1 at 2020-08-25 12:22:27 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:5:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.3ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 12[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 13[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 14[0m
+  ↳ app/views/parent_tasks/index.html.erb:19
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 72.0ms | Allocations: 14796)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 24.0ms | Allocations: 7935)
+Completed 200 OK in 182ms (Views: 167.8ms | ActiveRecord: 7.2ms | Allocations: 32866)
+
+

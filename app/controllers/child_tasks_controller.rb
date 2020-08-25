@@ -22,7 +22,7 @@ class ChildTasksController < ApplicationController
         @child_task.parent_task_id = params[:parent_task_id].to_i
         if @child_task.save
             flash[:success] = 'タスクを作成しました'
-            redirect_to parent_tasks_path
+            redirect_to parent_task_child_tasks_path
         end
     end
     def destroy
