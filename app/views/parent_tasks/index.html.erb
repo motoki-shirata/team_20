@@ -11,19 +11,11 @@
       <div class="card-header bg-light ">
       <div class="row">
         <div class="col-6">
-          <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="#" checked>
-              <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
+          <div class="font-weight-bold">
+              「<%= parent_task.title %>」
           </div>
           <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
           <li>子たすくの数<%= parent_task.child_tasks.count %></li>
-          <%
-=begin%>
- <li>子タスクの完了した数<%=  %></li>
-          <%= nil %>
-          <% end %> 
-<%
-=end%>
         </div>
         </div>
       </div>
