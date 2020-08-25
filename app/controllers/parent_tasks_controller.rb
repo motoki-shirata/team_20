@@ -1,13 +1,16 @@
 class ParentTasksController < ApplicationController
     before_action { :authenticate_user! || :authenticate_boss!}
+    before_action :authenticate_boss!, only: [:show, :index]
 
     def index
-        @parent_tasks = ParentTask.all
+        @parent_tasks = current_user.parent_tasks
+        #@manager_tasks = manager.teams.users.parent_tasks
     end
     def show
         @parent_task = ParentTask.find(params[:id])
         @task_comments = @parent_task.task_comments
         @task_comment = TaskComment.new
+        # binding.pry
     end
     def new
         @parent_task = ParentTask.new

@@ -35,7 +35,9 @@
               <% end %>
           </ul>
           <div class="card-footer">
+          <% if user_signed_in? %>
             <%= link_to "サブタスク新規作成", new_parent_task_child_task_path(parent_task), class: "btn btn-secondary" %> /
+          <% end %>
             <%= link_to "サブタスク一覧画面", parent_task_child_tasks_path(parent_task), class: "btn btn-secondary" %>
           </div>
       </div>
