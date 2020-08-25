@@ -13,6 +13,19 @@ class ParentTasksController < ApplicationController
         @task_comment = TaskComment.new
         
     end
+    def done
+        @parent_task = ParentTask.find(params[:id])
+        @parent_task.parent_done = 0
+        @parent_task.save
+        redirect_to parent_tasks_path
+
+    end
+    def cansel
+        @parent_task = ParentTask.find(params[:id])
+        @parent_task.parent_done = nil
+        @parent_task.save
+        redirect_to parent_tasks_path
+    end
     def new
         @parent_task = ParentTask.new
     end

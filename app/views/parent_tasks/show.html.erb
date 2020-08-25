@@ -18,7 +18,7 @@
 
     <%= form_with(model: [@parent_task, @task_comment]) do |f| %>
       <%= f.text_area :parent_comment %><br>
-        <%= f.submit 'コメントする' %>
+        <%= f.submit 'コメントする', class: 'btn btn-primary' %>
       <% end %>
   </div>
 
@@ -28,7 +28,7 @@
     <div class="border border-black">
     <% if task_comment.parent_task_id && task_comment.parent_comment %>
       <%= task_comment.parent_comment %> 
-      <%= button_to 'Delete', parent_task_task_comment_path(parent_task_id: @parent_task.id, id: task_comment.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %> 
+      <%= button_to 'Delete', parent_task_task_comment_path(parent_task_id: @parent_task.id, id: task_comment.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger' %> 
     <% end %>
     </div>
     </ul>

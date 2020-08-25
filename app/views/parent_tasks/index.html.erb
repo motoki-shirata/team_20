@@ -15,6 +15,11 @@
               「<%= parent_task.title %>」
           </div>
           <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+          <% if parent_task.parent_done %>
+                <%= button_to '完了済み', cansel_parent_task_path(id: parent_task.id), class: 'btn btn-success' %> 
+            <% else %>
+                <%= button_to '完了にする', done_parent_task_path(id: parent_task.id), class: 'btn btn-primary' %>
+            <% end %>
         </div>
         </div>
       </div>
