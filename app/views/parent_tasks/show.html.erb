@@ -1,5 +1,10 @@
 <div class='container'>
-  <%= link_to "タスク一覧へ", parent_tasks_path(@parent_task) %>
+  <% if user_signed_in? %>
+    <%= link_to "タスク一覧へ", parent_tasks_path(@parent_task) %>
+  <% elsif boss_signed_in? %> 
+  
+    <%= link_to "このメンバーが所属しているチーム一覧へ", team_path(id: @parent_task.user.team_id) %>
+  <% end %>
 <div class="text-center">
   <h1>「<%= @parent_task.title %>」　の親タスク詳細ページ</h1>
   <h3>タスクタイトル：<%= @parent_task.title %></h3>

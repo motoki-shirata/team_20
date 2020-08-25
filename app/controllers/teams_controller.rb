@@ -6,6 +6,7 @@ class TeamsController < ApplicationController
   # end
 
   def show
+    # binding.pry
     @team=Team.find(params[:id])
     # binding.pry
   end
