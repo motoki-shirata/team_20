@@ -196,3 +196,1392 @@ Processing by ParentTasksController#show as HTML
 Completed 200 OK in 140ms (Views: 108.9ms | ActiveRecord: 7.4ms | Allocations: 36318)
 
 
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddParentDoneToParentTasks (20200825103559)
+  [1m[35m (37.1ms)[0m  [1m[35mALTER TABLE `parent_tasks` ADD `parent_done` int[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200825103559')[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddParentDone (20200825105212)
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE `parent_tasks` ADD `parent_done` int[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddParentDone (20200825105212)
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE `parent_tasks` ADD `parent_done` int[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (92.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS `myapp_development`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (5.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS `myapp_test`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE DATABASE `myapp_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE DATABASE `myapp_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (17.7ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (16.6ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DeviseCreateUsers (20200820022929)
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (14.0ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820022929')[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToUser (20200820024506)
+  [1m[35m (18.0ms)[0m  [1m[35mALTER TABLE `users` ADD `name` varchar(255) DEFAULT '' NOT NULL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820024506')[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateParentTasks (20200820053515)
+  [1m[35m (19.7ms)[0m  [1m[35mCREATE TABLE `parent_tasks` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `parent_deadline` datetime, `self_evaluate` int, `explanation` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820053515')[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateChildTasks (20200820065400)
+  [1m[35m (24.6ms)[0m  [1m[35mCREATE TABLE `child_tasks` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `child_deadline` datetime, `possibility` int, `done` int, `result` int, `self_motivation` int, `explanation` varchar(255), `parent_task_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_child_tasks_on_parent_task_id`  (`parent_task_id`), CONSTRAINT `fk_rails_6827edfba9`
+FOREIGN KEY (`parent_task_id`)
+  REFERENCES `parent_tasks` (`id`)
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820065400')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTeams (20200820075342)
+  [1m[35m (16.2ms)[0m  [1m[35mCREATE TABLE `teams` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820075342')[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrganizations (20200820080709)
+  [1m[35m (18.9ms)[0m  [1m[35mCREATE TABLE `organizations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820080709')[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddColumnToUser (20200820094239)
+  [1m[35m (17.5ms)[0m  [1m[35mALTER TABLE `users` ADD `team_id` bigint[0m
+  [1m[35m (18.3ms)[0m  [1m[35mCREATE  INDEX `index_users_on_team_id`  ON `users` (`team_id`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820094239')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateBosses (20200820234850)
+  [1m[35m (15.7ms)[0m  [1m[35mCREATE TABLE `bosses` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (16.1ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_bosses_on_email`  ON `bosses` (`email`) [0m
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_bosses_on_reset_password_token`  ON `bosses` (`reset_password_token`) [0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820234850')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToBoss (20200820234941)
+  [1m[35m (16.1ms)[0m  [1m[35mALTER TABLE `bosses` ADD `name` varchar(255)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820234941')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddReferencesToOrganizations (20200821003016)
+  [1m[35m (14.8ms)[0m  [1m[35mALTER TABLE `organizations` ADD `team_id` bigint NOT NULL[0m
+  [1m[35m (11.9ms)[0m  [1m[35mCREATE  INDEX `index_organizations_on_team_id`  ON `organizations` (`team_id`) [0m
+  [1m[35m (35.1ms)[0m  [1m[35mALTER TABLE `organizations` ADD CONSTRAINT `fk_rails_10fd3bd914`
+FOREIGN KEY (`team_id`)
+  REFERENCES `teams` (`id`)
+[0m
+  [1m[35m (12.2ms)[0m  [1m[35mALTER TABLE `organizations` ADD `boss_id` bigint NOT NULL[0m
+  [1m[35m (11.6ms)[0m  [1m[35mCREATE  INDEX `index_organizations_on_boss_id`  ON `organizations` (`boss_id`) [0m
+  [1m[35m (35.9ms)[0m  [1m[35mALTER TABLE `organizations` ADD CONSTRAINT `fk_rails_fc1ee8a595`
+FOREIGN KEY (`boss_id`)
+  REFERENCES `bosses` (`id`)
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200821003016')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddReferencesToParentTask (20200821124201)
+  [1m[35m (16.5ms)[0m  [1m[35mALTER TABLE `parent_tasks` ADD `user_id` bigint[0m
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE  INDEX `index_parent_tasks_on_user_id`  ON `parent_tasks` (`user_id`) [0m
+  [1m[35m (33.6ms)[0m  [1m[35mALTER TABLE `parent_tasks` ADD CONSTRAINT `fk_rails_59a65abd47`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200821124201')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddChildTaskToFinishtime (20200822094105)
+  [1m[35m (14.3ms)[0m  [1m[35mALTER TABLE `child_tasks` ADD `finish_time` datetime[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200822094105')[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTaskComments (20200822105046)
+  [1m[35m (30.3ms)[0m  [1m[35mCREATE TABLE `task_comments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `parent_comment` varchar(255), `user_id` bigint, `parent_task_id` bigint, `child_task_id` bigint, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_task_comments_on_user_id`  (`user_id`),  INDEX `index_task_comments_on_parent_task_id`  (`parent_task_id`),  INDEX `index_task_comments_on_child_task_id`  (`child_task_id`), CONSTRAINT `fk_rails_ee51dc8b8a`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_d08f4a50f5`
+FOREIGN KEY (`parent_task_id`)
+  REFERENCES `parent_tasks` (`id`)
+, CONSTRAINT `fk_rails_95895b6ffb`
+FOREIGN KEY (`child_task_id`)
+  REFERENCES `child_tasks` (`id`)
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200822105046')[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddReferencesToTaskcomments (20200825023115)
+  [1m[35m (16.9ms)[0m  [1m[35mALTER TABLE `task_comments` ADD `boss_id` bigint[0m
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE  INDEX `index_task_comments_on_boss_id`  ON `task_comments` (`boss_id`) [0m
+  [1m[35m (44.2ms)[0m  [1m[35mALTER TABLE `task_comments` ADD CONSTRAINT `fk_rails_65825b92a1`
+FOREIGN KEY (`boss_id`)
+  REFERENCES `bosses` (`id`)
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE `task_comments` ADD `child_task_id` bigint[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2020-08-25 12:34:57.089141', '2020-08-25 12:34:57.089141')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (56.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS `myapp_development`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (6.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS `myapp_test`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE DATABASE `myapp_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE DATABASE `myapp_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (24.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (16.2ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DeviseCreateUsers (20200820022929)
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820022929')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToUser (20200820024506)
+  [1m[35m (16.9ms)[0m  [1m[35mALTER TABLE `users` ADD `name` varchar(255) DEFAULT '' NOT NULL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820024506')[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateParentTasks (20200820053515)
+  [1m[35m (19.2ms)[0m  [1m[35mCREATE TABLE `parent_tasks` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `parent_deadline` datetime, `self_evaluate` int, `explanation` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820053515')[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateChildTasks (20200820065400)
+  [1m[35m (23.0ms)[0m  [1m[35mCREATE TABLE `child_tasks` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `child_deadline` datetime, `possibility` int, `done` int, `result` int, `self_motivation` int, `explanation` varchar(255), `parent_task_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_child_tasks_on_parent_task_id`  (`parent_task_id`), CONSTRAINT `fk_rails_6827edfba9`
+FOREIGN KEY (`parent_task_id`)
+  REFERENCES `parent_tasks` (`id`)
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820065400')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTeams (20200820075342)
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE TABLE `teams` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820075342')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrganizations (20200820080709)
+  [1m[35m (19.4ms)[0m  [1m[35mCREATE TABLE `organizations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820080709')[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddColumnToUser (20200820094239)
+  [1m[35m (14.8ms)[0m  [1m[35mALTER TABLE `users` ADD `team_id` bigint[0m
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE  INDEX `index_users_on_team_id`  ON `users` (`team_id`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820094239')[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateBosses (20200820234850)
+  [1m[35m (14.8ms)[0m  [1m[35mCREATE TABLE `bosses` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_bosses_on_email`  ON `bosses` (`email`) [0m
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_bosses_on_reset_password_token`  ON `bosses` (`reset_password_token`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820234850')[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToBoss (20200820234941)
+  [1m[35m (16.2ms)[0m  [1m[35mALTER TABLE `bosses` ADD `name` varchar(255)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200820234941')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddReferencesToOrganizations (20200821003016)
+  [1m[35m (13.9ms)[0m  [1m[35mALTER TABLE `organizations` ADD `team_id` bigint NOT NULL[0m
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE  INDEX `index_organizations_on_team_id`  ON `organizations` (`team_id`) [0m
+  [1m[35m (34.0ms)[0m  [1m[35mALTER TABLE `organizations` ADD CONSTRAINT `fk_rails_10fd3bd914`
+FOREIGN KEY (`team_id`)
+  REFERENCES `teams` (`id`)
+[0m
+  [1m[35m (12.8ms)[0m  [1m[35mALTER TABLE `organizations` ADD `boss_id` bigint NOT NULL[0m
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE  INDEX `index_organizations_on_boss_id`  ON `organizations` (`boss_id`) [0m
+  [1m[35m (34.9ms)[0m  [1m[35mALTER TABLE `organizations` ADD CONSTRAINT `fk_rails_fc1ee8a595`
+FOREIGN KEY (`boss_id`)
+  REFERENCES `bosses` (`id`)
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200821003016')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddReferencesToParentTask (20200821124201)
+  [1m[35m (16.9ms)[0m  [1m[35mALTER TABLE `parent_tasks` ADD `user_id` bigint[0m
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE  INDEX `index_parent_tasks_on_user_id`  ON `parent_tasks` (`user_id`) [0m
+  [1m[35m (37.7ms)[0m  [1m[35mALTER TABLE `parent_tasks` ADD CONSTRAINT `fk_rails_59a65abd47`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200821124201')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddChildTaskToFinishtime (20200822094105)
+  [1m[35m (13.3ms)[0m  [1m[35mALTER TABLE `child_tasks` ADD `finish_time` datetime[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200822094105')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTaskComments (20200822105046)
+  [1m[35m (30.1ms)[0m  [1m[35mCREATE TABLE `task_comments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `parent_comment` varchar(255), `user_id` bigint, `parent_task_id` bigint, `child_task_id` bigint, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_task_comments_on_user_id`  (`user_id`),  INDEX `index_task_comments_on_parent_task_id`  (`parent_task_id`),  INDEX `index_task_comments_on_child_task_id`  (`child_task_id`), CONSTRAINT `fk_rails_ee51dc8b8a`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_d08f4a50f5`
+FOREIGN KEY (`parent_task_id`)
+  REFERENCES `parent_tasks` (`id`)
+, CONSTRAINT `fk_rails_95895b6ffb`
+FOREIGN KEY (`child_task_id`)
+  REFERENCES `child_tasks` (`id`)
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200822105046')[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddReferencesToTaskcomments (20200825023115)
+  [1m[35m (15.1ms)[0m  [1m[35mALTER TABLE `task_comments` ADD `boss_id` bigint[0m
+  [1m[35m (12.5ms)[0m  [1m[35mCREATE  INDEX `index_task_comments_on_boss_id`  ON `task_comments` (`boss_id`) [0m
+  [1m[35m (41.8ms)[0m  [1m[35mALTER TABLE `task_comments` ADD CONSTRAINT `fk_rails_65825b92a1`
+FOREIGN KEY (`boss_id`)
+  REFERENCES `bosses` (`id`)
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE `task_comments` ADD `child_task_id` bigint[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddReferencesToTaskcomments (20200825023115)
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200825023115')[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddColumnUserParentTask (20200825024135)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200825024135')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddChildTaskToTaskComment (20200825025630)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200825025630')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddParentDoneToParentTasks (20200825103559)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200825103559')[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddParentDone (20200825105212)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200825105212')[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2020-08-25 12:36:55.526775', '2020-08-25 12:36:55.526775')[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO `teams` (`id`, `name`, `created_at`, `updated_at`) VALUES (0, 'U付', '2020-08-25 12:39:29.529870', '2020-08-25 12:39:29.529870')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO `teams` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'CXG', '2020-08-25 12:39:29.535529', '2020-08-25 12:39:29.535529')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Create (1.8ms)[0m  [1m[32mINSERT INTO `teams` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'PDG', '2020-08-25 12:39:29.541823', '2020-08-25 12:39:29.541823')[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO `teams` (`id`, `name`, `created_at`, `updated_at`) VALUES (3, 'ENG1', '2020-08-25 12:39:29.548196', '2020-08-25 12:39:29.548196')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO `teams` (`id`, `name`, `created_at`, `updated_at`) VALUES (4, 'ENG2', '2020-08-25 12:39:29.552891', '2020-08-25 12:39:29.552891')[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO `teams` (`id`, `name`, `created_at`, `updated_at`) VALUES (5, 'TSG', '2020-08-25 12:39:29.557799', '2020-08-25 12:39:29.557799')[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO `teams` (`id`, `name`, `created_at`, `updated_at`) VALUES (6, 'PMG', '2020-08-25 12:39:29.563616', '2020-08-25 12:39:29.563616')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO `teams` (`id`, `name`, `created_at`, `updated_at`) VALUES (7, 'DG', '2020-08-25 12:39:29.568575', '2020-08-25 12:39:29.568575')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 172.20.0.1 at 2020-08-25 23:03:43 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 597.6ms | Allocations: 15290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 25.0ms | Allocations: 2995)
+Completed 200 OK in 741ms (Views: 723.0ms | ActiveRecord: 0.0ms | Allocations: 29822)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-25 23:03:50 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 643)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 158.9ms | Allocations: 40185)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 7.6ms | Allocations: 2262)
+Completed 200 OK in 247ms (Views: 227.0ms | ActiveRecord: 6.7ms | Allocations: 58538)
+
+
+Started POST "/users/sign_in" for 172.20.0.1 at 2020-08-25 23:04:02 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"xWcSzrI5K0pu3zFXsOkk/2pZewAu5gE4IV6+PaDTZcVB8+db3IYWOF1hX/yrcVcok1UmI+usrW+78S4EDAlxgg==", "user"=>{"email"=>"negishi@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'negishi@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:13:in `create'
+Completed 401 Unauthorized in 19ms (ActiveRecord: 8.5ms | Allocations: 1829)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"xWcSzrI5K0pu3zFXsOkk/2pZewAu5gE4IV6+PaDTZcVB8+db3IYWOF1hX/yrcVcok1UmI+usrW+78S4EDAlxgg==", "user"=>{"email"=>"negishi@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 170)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 20.4ms | Allocations: 2182)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 8.5ms | Allocations: 2203)
+Completed 200 OK in 307ms (Views: 91.0ms | ActiveRecord: 0.0ms | Allocations: 12967)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-25 23:04:05 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 200)
+  [1m[36mTeam Load (2.7ms)[0m  [1m[34mSELECT `teams`.* FROM `teams`[0m
+  ↳ app/views/users/registrations/new.html.erb:42
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 58.1ms | Allocations: 7676)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 8.9ms | Allocations: 2266)
+Completed 200 OK in 142ms (Views: 135.0ms | ActiveRecord: 5.6ms | Allocations: 19435)
+
+
+Started POST "/users" for 172.20.0.1 at 2020-08-25 23:04:37 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"Ug1yfReMJcw1gJIeB35WJO1OtkzpXJnG7CztR9aro7ZpeLN/WImVi/49p8vcu6WO/bimi3XailEfCcOxrvQipQ==", "user"=>{"name"=>"Okada Daisuke", "email"=>"okada.daisuke@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "team_id"=>"7"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'okada.daisuke@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `name`, `team_id`) VALUES ('okada.daisuke@gmail.com', '$2a$12$AaPhkQowmMTJJudIAKaYwu46x1the5LaTMTGRhhTKRlkRqC07dkCe', '2020-08-25 23:04:37.269633', '2020-08-25 23:04:37.269633', 'Okada Daisuke', 7)[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+Redirected to http://localhost:3000/parent_tasks.2
+Completed 302 Found in 260ms (ActiveRecord: 5.0ms | Allocations: 12760)
+
+
+Started GET "/parent_tasks.2" for 172.20.0.1 at 2020-08-25 23:04:37 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as 
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:7:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (1.1ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2 ORDER BY `parent_tasks`.`parent_deadline` ASC[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 2474)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 13.2ms | Allocations: 2985)
+Completed 200 OK in 129ms (Views: 106.3ms | ActiveRecord: 3.8ms | Allocations: 18313)
+
+
+Started GET "/users" for 172.20.0.1 at 2020-08-25 23:04:51 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:5
+  Rendered users/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 898)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 19.9ms | Allocations: 4083)
+Completed 200 OK in 118ms (Views: 111.6ms | ActiveRecord: 1.4ms | Allocations: 14055)
+
+
+Started GET "/users" for 172.20.0.1 at 2020-08-25 23:06:07 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:5
+  Rendered users/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 891)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 21.4ms | Allocations: 4612)
+Completed 200 OK in 135ms (Views: 128.4ms | ActiveRecord: 1.6ms | Allocations: 15045)
+
+
+Started GET "/users" for 172.20.0.1 at 2020-08-25 23:06:23 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:5
+  Rendered users/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 715)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 19.8ms | Allocations: 4075)
+Completed 200 OK in 110ms (Views: 107.3ms | ActiveRecord: 1.5ms | Allocations: 12955)
+
+
+Started DELETE "/users/sign_out" for 172.20.0.1 at 2020-08-25 23:06:41 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GSMaaEOAGAsvAEvhJrH5l8uw8CFZyr+0rN/ZGonQplS8rTa3N6FZXHm/qf+tciJqzG0Q7GuJiii1egQ5IWct1A=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 36ms (ActiveRecord: 0.7ms | Allocations: 4518)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 23:06:41 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 21.4ms | Allocations: 1735)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 9.9ms | Allocations: 2303)
+Completed 200 OK in 106ms (Views: 101.5ms | ActiveRecord: 0.0ms | Allocations: 12806)
+
+
+Started GET "/bosses/sign_in" for 172.20.0.1 at 2020-08-25 23:07:14 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::SessionsController#new as HTML
+  Rendering bosses/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 611)
+  Rendered bosses/sessions/new.html.erb within layouts/application (Duration: 36.1ms | Allocations: 3265)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 11.7ms | Allocations: 2266)
+Completed 200 OK in 155ms (Views: 137.9ms | ActiveRecord: 3.6ms | Allocations: 20244)
+
+
+Started GET "/bosses/sign_up" for 172.20.0.1 at 2020-08-25 23:07:21 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::RegistrationsController#new as HTML
+  Rendering bosses/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 189)
+  Rendered bosses/registrations/new.html.erb within layouts/application (Duration: 29.3ms | Allocations: 2536)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 10.4ms | Allocations: 2262)
+Completed 200 OK in 117ms (Views: 116.4ms | ActiveRecord: 0.0ms | Allocations: 14160)
+
+
+Started POST "/bosses" for 172.20.0.1 at 2020-08-25 23:08:22 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"F3ngH02QAkklPQYga+MQfBC+96tVZVZM0SZmUc4BtVeE5tdq7YAZrfwxjXhihB5RpC8rSvX8nBdxHiyWH0NxFw==", "boss"=>{"name"=>"miusan", "email"=>"miusan@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bosses/registrations_controller.rb:14:in `create'
+  [1m[36mBoss Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM `bosses` WHERE `bosses`.`email` = BINARY 'miusan@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/bosses/registrations_controller.rb:14:in `create'
+  [1m[36mBoss Create (0.5ms)[0m  [1m[32mINSERT INTO `bosses` (`email`, `encrypted_password`, `created_at`, `updated_at`, `name`) VALUES ('miusan@gmail.com', '$2a$12$ZwVn/M/VOixF8jbV2x.Zxe2s5xbwQfYki4noQj7JmCLU3yQ7UUK1m', '2020-08-25 23:08:23.000203', '2020-08-25 23:08:23.000203', 'miusan')[0m
+  ↳ app/controllers/bosses/registrations_controller.rb:14:in `create'
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bosses/registrations_controller.rb:14:in `create'
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2 ORDER BY `teams`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:17:in `after_sign_in_path_for'
+Redirected to http://localhost:3000/bosses/2
+Completed 302 Found in 270ms (ActiveRecord: 8.3ms | Allocations: 13629)
+
+
+Started GET "/bosses/2" for 172.20.0.1 at 2020-08-25 23:08:23 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BossesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/bosses_controller.rb:8:in `show'
+  Rendering bosses/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/bosses/show.html.erb:8
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/bosses/show.html.erb:18
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams`[0m
+  ↳ app/views/bosses/show.html.erb:21
+  Rendered bosses/show.html.erb within layouts/application (Duration: 17.3ms | Allocations: 5633)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m  [["boss_id", 2]]
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 12.6ms | Allocations: 3433)
+Completed 200 OK in 99ms (Views: 90.9ms | ActiveRecord: 1.7ms | Allocations: 18842)
+
+
+Started PATCH "/bosses/2" for 172.20.0.1 at 2020-08-25 23:08:27 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BossesController#update as HTML
+  Parameters: {"authenticity_token"=>"uG8539C/lhs6RJpIYPbRA+yHmJb/ARGDzv1zeDodb9L0Sjzv0FRtMDx/aF/eNI5E2QQk8LBvYNuSuHFfojj6Ng==", "boss"=>{"team_ids"=>["", "4"]}, "commit"=>"Update Teams", "id"=>"2"}
+  [1m[36mBoss Load (0.7ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/bosses_controller.rb:14:in `update'
+  [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT `organizations`.* FROM `organizations` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/controllers/bosses_controller.rb:17:in `update'
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT `organizations`.* FROM `organizations` WHERE `organizations`.`boss_id` = 2 AND `organizations`.`team_id` = NULL LIMIT 1[0m
+  ↳ app/controllers/bosses_controller.rb:23:in `block in update'
+  [1m[36mOrganization Load (2.0ms)[0m  [1m[34mSELECT `organizations`.* FROM `organizations` WHERE `organizations`.`boss_id` = 2 AND `organizations`.`team_id` = 4 LIMIT 1[0m
+  ↳ app/controllers/bosses_controller.rb:23:in `block in update'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bosses_controller.rb:26:in `block in update'
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/bosses_controller.rb:26:in `block in update'
+  [1m[36mOrganization Create (0.6ms)[0m  [1m[32mINSERT INTO `organizations` (`created_at`, `updated_at`, `team_id`, `boss_id`) VALUES ('2020-08-25 23:08:27.108534', '2020-08-25 23:08:27.108534', 4, 2)[0m
+  ↳ app/controllers/bosses_controller.rb:26:in `block in update'
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bosses_controller.rb:26:in `block in update'
+Redirected to http://localhost:3000/bosses/2
+Completed 302 Found in 38ms (ActiveRecord: 10.2ms | Allocations: 12756)
+
+
+Started GET "/bosses/2" for 172.20.0.1 at 2020-08-25 23:08:27 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BossesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBoss Load (0.5ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/bosses_controller.rb:8:in `show'
+  Rendering bosses/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/bosses/show.html.erb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/bosses/show.html.erb:10
+  [1m[36mBoss Load (0.4ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/bosses/show.html.erb:18
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams`[0m
+  ↳ app/views/bosses/show.html.erb:21
+  Rendered bosses/show.html.erb within layouts/application (Duration: 10.8ms | Allocations: 4648)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m  [["boss_id", 2]]
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 16.5ms | Allocations: 3484)
+Completed 200 OK in 105ms (Views: 100.9ms | ActiveRecord: 2.3ms | Allocations: 16899)
+
+
+Started GET "/bosses" for 172.20.0.1 at 2020-08-25 23:08:30 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BossesController#index as HTML
+  Rendering bosses/index.html.erb within layouts/application
+  [1m[36mBoss Load (0.7ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses`[0m
+  ↳ app/views/bosses/index.html.erb:5
+  Rendered bosses/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 893)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.5ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 19.7ms | Allocations: 4489)
+Completed 200 OK in 114ms (Views: 106.5ms | ActiveRecord: 1.7ms | Allocations: 13686)
+
+
+Started GET "/bosses" for 172.20.0.1 at 2020-08-25 23:08:57 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BossesController#index as HTML
+  Rendering bosses/index.html.erb within layouts/application
+  [1m[36mBoss Load (0.6ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses`[0m
+  ↳ app/views/bosses/index.html.erb:5
+  Rendered bosses/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 890)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.5ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 25.4ms | Allocations: 5035)
+Completed 200 OK in 156ms (Views: 149.2ms | ActiveRecord: 1.6ms | Allocations: 15439)
+
+
+Started DELETE "/bosses/sign_out" for 172.20.0.1 at 2020-08-25 23:09:28 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Ui4Uil7v+dpinglR0fIApsA5ho1PyxWQvaGNUMjdb0ceCxG6XgQC8WSl+0ZvMF/h9bo66wClZMjh5I93UPj6ow=="}
+  [1m[36mBoss Load (0.6ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms | Allocations: 2395)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 23:09:28 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 22.9ms | Allocations: 1740)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 10.0ms | Allocations: 2306)
+Completed 200 OK in 110ms (Views: 106.4ms | ActiveRecord: 0.0ms | Allocations: 12819)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-25 23:09:29 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 551)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 38.3ms | Allocations: 3057)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 14.0ms | Allocations: 2262)
+Completed 200 OK in 223ms (Views: 221.5ms | ActiveRecord: 0.0ms | Allocations: 15356)
+
+
+Started POST "/users/sign_in" for 172.20.0.1 at 2020-08-25 23:09:47 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Y8bhHH7dyKrzYTQELcjTjfvvzWD1xa8+3lsz/sNj6ARUpfHKedfmH7KFUglWSyZ9zsOtp78QndsJImY8guprTw==", "user"=>{"email"=>"okamoto.shion@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'okamoto.shion@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:13:in `create'
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.7ms | Allocations: 1319)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"Y8bhHH7dyKrzYTQELcjTjfvvzWD1xa8+3lsz/sNj6ARUpfHKedfmH7KFUglWSyZ9zsOtp78QndsJImY8guprTw==", "user"=>{"email"=>"okamoto.shion@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 170)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 21.5ms | Allocations: 2180)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 9.3ms | Allocations: 2203)
+Completed 200 OK in 304ms (Views: 96.0ms | ActiveRecord: 0.0ms | Allocations: 12452)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-25 23:09:51 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 189)
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams`[0m
+  ↳ app/views/users/registrations/new.html.erb:42
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 34.8ms | Allocations: 3688)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 9.5ms | Allocations: 2262)
+Completed 200 OK in 121ms (Views: 119.5ms | ActiveRecord: 0.5ms | Allocations: 15346)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-25 23:09:56 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 170)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 34.9ms | Allocations: 2190)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 17.8ms | Allocations: 2264)
+Completed 200 OK in 144ms (Views: 143.3ms | ActiveRecord: 0.0ms | Allocations: 12552)
+
+
+Started POST "/users/sign_in" for 172.20.0.1 at 2020-08-25 23:10:10 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"WzK29TWw5s8RmOJ8/jp87LmIe/wVhgG91wBHLO73mNDknyR2ukoDrYZaHeeKxcMXrXvy5SGinh26A/P/+ZujNw==", "user"=>{"email"=>"okada.daisuke@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'okada.daisuke@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:13:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users/sessions_controller.rb:13:in `create'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE `users` SET `users`.`remember_created_at` = '2020-08-25 23:10:10', `users`.`updated_at` = '2020-08-25 23:10:10.995920' WHERE `users`.`id` = 2[0m
+  ↳ app/controllers/users/sessions_controller.rb:13:in `create'
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users/sessions_controller.rb:13:in `create'
+Redirected to http://localhost:3000/parent_tasks.2
+Completed 302 Found in 227ms (ActiveRecord: 4.2ms | Allocations: 7310)
+
+
+Started GET "/parent_tasks.2" for 172.20.0.1 at 2020-08-25 23:10:11 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as 
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:7:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2 ORDER BY `parent_tasks`.`parent_deadline` ASC[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 23.6ms | Allocations: 2449)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 12.8ms | Allocations: 2985)
+Completed 200 OK in 119ms (Views: 111.5ms | ActiveRecord: 1.6ms | Allocations: 15449)
+
+
+Started GET "/parent_tasks/new" for 172.20.0.1 at 2020-08-25 23:10:13 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 37.8ms | Allocations: 3597)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 15.3ms | Allocations: 4092)
+Completed 200 OK in 133ms (Views: 118.4ms | ActiveRecord: 2.7ms | Allocations: 19884)
+
+
+Started POST "/parent_tasks" for 172.20.0.1 at 2020-08-25 23:11:31 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#create as JS
+  Parameters: {"authenticity_token"=>"sjKf65qOp2auV0qdk28LJHPJH5ZnxJdNGdM9eBS08nXmoKQpC6qYJ6+EHTP4ZDGSCKaOiH7HmgRCxdSHLzjiTw==", "parent_task"=>{"title"=>"you know", "explanation"=>"you know", "parent_deadline"=>"2020-08-26T11:14", "self_evaluate"=>"1"}, "button"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:21:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/parent_tasks_controller.rb:22:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:22:in `create'
+  [1m[36mParentTask Create (0.7ms)[0m  [1m[32mINSERT INTO `parent_tasks` (`title`, `parent_deadline`, `self_evaluate`, `explanation`, `created_at`, `updated_at`, `user_id`) VALUES ('you know', '2020-08-26 11:14:00', 1, 'you know', '2020-08-25 23:11:31.670405', '2020-08-25 23:11:31.670405', 2)[0m
+  ↳ app/controllers/parent_tasks_controller.rb:22:in `create'
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/parent_tasks_controller.rb:22:in `create'
+Redirected to http://localhost:3000/parent_tasks
+Completed 200 OK in 20ms (ActiveRecord: 5.7ms | Allocations: 6062)
+
+
+Started GET "/parent_tasks" for 172.20.0.1 at 2020-08-25 23:11:31 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:7:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.7ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2 ORDER BY `parent_tasks`.`parent_deadline` ASC[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:18
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 46.9ms | Allocations: 6907)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 11.7ms | Allocations: 2967)
+Completed 200 OK in 123ms (Views: 110.8ms | ActiveRecord: 5.7ms | Allocations: 18876)
+
+
+Started GET "/parent_tasks/new" for 172.20.0.1 at 2020-08-25 23:12:17 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#new as HTML
+  Rendering parent_tasks/new.html.erb within layouts/application
+  Rendered parent_tasks/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1063)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 25.4ms | Allocations: 4608)
+Completed 200 OK in 142ms (Views: 136.1ms | ActiveRecord: 1.0ms | Allocations: 15209)
+
+
+Started GET "/parent_tasks" for 172.20.0.1 at 2020-08-25 23:12:27 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:7:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2 ORDER BY `parent_tasks`.`parent_deadline` ASC[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:18
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 30.8ms | Allocations: 3421)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 12.5ms | Allocations: 2970)
+Completed 200 OK in 125ms (Views: 113.5ms | ActiveRecord: 2.3ms | Allocations: 15501)
+
+
+Started GET "/parent_tasks" for 172.20.0.1 at 2020-08-25 23:13:35 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:7:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2 ORDER BY `parent_tasks`.`parent_deadline` ASC[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:18
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 26.7ms | Allocations: 3400)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 15.1ms | Allocations: 3496)
+Completed 200 OK in 135ms (Views: 125.6ms | ActiveRecord: 2.1ms | Allocations: 17224)
+
+
+Started GET "/parent_tasks/2" for 172.20.0.1 at 2020-08-25 23:13:48 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:11:in `show'
+  Rendering parent_tasks/show.html.erb within layouts/application
+  [1m[36mTaskComment Load (1.1ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/show.html.erb:27
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/show.html.erb:38
+  Rendered parent_tasks/show.html.erb within layouts/application (Duration: 10.7ms | Allocations: 3114)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 25.7ms | Allocations: 4088)
+Completed 200 OK in 183ms (Views: 126.5ms | ActiveRecord: 6.5ms | Allocations: 23737)
+
+
+Started POST "/parent_tasks/2/task_comments" for 172.20.0.1 at 2020-08-25 23:14:25 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TaskCommentsController#create as JS
+  Parameters: {"authenticity_token"=>"W75AlOdJ9xfgdGOLBp2w5y7w8g53HTTY1J0I5BSOii91OIi5ycu+C8PD/hxBLmzJs2JQswrnMkDt5iozwRSxiw==", "task_comment"=>{"parent_comment"=>"がg"}, "commit"=>"コメントする", "parent_task_id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/task_comments_controller.rb:3:in `create'
+  [1m[36mChildTask Load (0.6ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/task_comments_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.2ms | Allocations: 5692)
+
+
+  
+NoMethodError (undefined method `child_comment' for #<TaskComment:0x00007fca480c6380>):
+  
+app/controllers/task_comments_controller.rb:64:in `task_comment_save'
+app/controllers/task_comments_controller.rb:5:in `create'
+Started POST "/parent_tasks/2/task_comments" for 172.20.0.1 at 2020-08-25 23:14:27 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TaskCommentsController#create as JS
+  Parameters: {"authenticity_token"=>"W75AlOdJ9xfgdGOLBp2w5y7w8g53HTTY1J0I5BSOii91OIi5ycu+C8PD/hxBLmzJs2JQswrnMkDt5iozwRSxiw==", "task_comment"=>{"parent_comment"=>"がg"}, "commit"=>"コメントする", "parent_task_id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/task_comments_controller.rb:3:in `create'
+  [1m[36mChildTask Load (0.6ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/task_comments_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.2ms | Allocations: 5623)
+
+
+  
+NoMethodError (undefined method `child_comment' for #<TaskComment:0x00007fca480f56a8>):
+  
+app/controllers/task_comments_controller.rb:64:in `task_comment_save'
+app/controllers/task_comments_controller.rb:5:in `create'
+Started POST "/parent_tasks/2/task_comments" for 172.20.0.1 at 2020-08-25 23:14:27 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TaskCommentsController#create as JS
+  Parameters: {"authenticity_token"=>"W75AlOdJ9xfgdGOLBp2w5y7w8g53HTTY1J0I5BSOii91OIi5ycu+C8PD/hxBLmzJs2JQswrnMkDt5iozwRSxiw==", "task_comment"=>{"parent_comment"=>"がg"}, "commit"=>"コメントする", "parent_task_id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/task_comments_controller.rb:3:in `create'
+  [1m[36mChildTask Load (0.6ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/task_comments_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.2ms | Allocations: 5625)
+
+
+  
+NoMethodError (undefined method `child_comment' for #<TaskComment:0x00007fca480bd6b8>):
+  
+app/controllers/task_comments_controller.rb:64:in `task_comment_save'
+app/controllers/task_comments_controller.rb:5:in `create'
+Started GET "/parent_tasks/2" for 172.20.0.1 at 2020-08-25 23:15:08 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:11:in `show'
+  Rendering parent_tasks/show.html.erb within layouts/application
+  [1m[36mTaskComment Load (0.6ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/show.html.erb:27
+  [1m[36mChildTask Load (0.6ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/show.html.erb:38
+  Rendered parent_tasks/show.html.erb within layouts/application (Duration: 11.2ms | Allocations: 2625)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 27.7ms | Allocations: 4616)
+Completed 200 OK in 161ms (Views: 151.2ms | ActiveRecord: 3.0ms | Allocations: 17429)
+
+
+Started GET "/parent_tasks/2" for 172.20.0.1 at 2020-08-25 23:15:29 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:11:in `show'
+  Rendering parent_tasks/show.html.erb within layouts/application
+  [1m[36mTaskComment Load (0.6ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/show.html.erb:27
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/show.html.erb:38
+  Rendered parent_tasks/show.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2618)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 21.1ms | Allocations: 4608)
+Completed 200 OK in 126ms (Views: 117.0ms | ActiveRecord: 2.6ms | Allocations: 17399)
+
+
+Started POST "/parent_tasks/2/task_comments" for 172.20.0.1 at 2020-08-25 23:16:10 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TaskCommentsController#create as JS
+  Parameters: {"authenticity_token"=>"Ktyu1w/MVsaa42AtafG9koH0A553KQi67iaoPMMSfIN+TpUVnuhph5swN4MC+ock+puSgG4qBfO1MEHD+J5suQ==", "task_comment"=>{"parent_comment"=>""}, "commit"=>"コメントする", "parent_task_id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/task_comments_controller.rb:3:in `create'
+  [1m[36mChildTask Load (0.8ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/task_comments_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.5ms | Allocations: 5949)
+
+
+  
+NoMethodError (undefined method `child_comment' for #<TaskComment:0x00007fca50667a70>):
+  
+app/controllers/task_comments_controller.rb:64:in `task_comment_save'
+app/controllers/task_comments_controller.rb:5:in `create'
+Started GET "/parent_tasks.2" for 172.20.0.1 at 2020-08-25 23:16:34 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as 
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:7:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.7ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2 ORDER BY `parent_tasks`.`parent_deadline` ASC[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:18
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 29.8ms | Allocations: 3410)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 13.2ms | Allocations: 2971)
+Completed 200 OK in 129ms (Views: 117.1ms | ActiveRecord: 2.4ms | Allocations: 15699)
+
+
+Started GET "/parent_tasks.2" for 172.20.0.1 at 2020-08-25 23:16:37 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as 
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:7:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2 ORDER BY `parent_tasks`.`parent_deadline` ASC[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:18
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 33.4ms | Allocations: 2943)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 16.3ms | Allocations: 2964)
+Completed 200 OK in 140ms (Views: 134.7ms | ActiveRecord: 2.2ms | Allocations: 14876)
+
+
+Started GET "/parent_tasks.2" for 172.20.0.1 at 2020-08-25 23:21:44 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as 
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:7:in `index'
+  Rendering parent_tasks/index.html.erb within layouts/application
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2 ORDER BY `parent_tasks`.`parent_deadline` ASC[0m
+  ↳ app/views/parent_tasks/index.html.erb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 2[0m
+  ↳ app/views/parent_tasks/index.html.erb:18
+  Rendered parent_tasks/index.html.erb within layouts/application (Duration: 29.6ms | Allocations: 2943)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 12.2ms | Allocations: 2964)
+Completed 200 OK in 120ms (Views: 113.8ms | ActiveRecord: 2.1ms | Allocations: 14887)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 23:22:24 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/toppages/index.html.erb:7
+  Rendered toppages/index.html.erb within layouts/application (Duration: 27.4ms | Allocations: 2437)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 11.6ms | Allocations: 2988)
+Completed 200 OK in 121ms (Views: 114.7ms | ActiveRecord: 1.1ms | Allocations: 14244)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 23:22:25 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/toppages/index.html.erb:7
+  Rendered toppages/index.html.erb within layouts/application (Duration: 27.1ms | Allocations: 2218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 12.6ms | Allocations: 2976)
+Completed 200 OK in 111ms (Views: 108.8ms | ActiveRecord: 1.1ms | Allocations: 13121)
+
+
+Started GET "/users" for 172.20.0.1 at 2020-08-25 23:24:27 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:5
+  Rendered users/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 891)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 19.8ms | Allocations: 4081)
+Completed 200 OK in 126ms (Views: 120.2ms | ActiveRecord: 1.7ms | Allocations: 13977)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 23:24:43 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/toppages/index.html.erb:7
+  Rendered toppages/index.html.erb within layouts/application (Duration: 28.2ms | Allocations: 2220)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 14.4ms | Allocations: 2984)
+Completed 200 OK in 131ms (Views: 129.0ms | ActiveRecord: 1.1ms | Allocations: 13132)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 23:25:58 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/toppages/index.html.erb:7
+  Rendered toppages/index.html.erb within layouts/application (Duration: 22.8ms | Allocations: 2225)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 11.8ms | Allocations: 2980)
+Completed 200 OK in 109ms (Views: 107.0ms | ActiveRecord: 1.0ms | Allocations: 13158)
+
+
+Started GET "/users" for 172.20.0.1 at 2020-08-25 23:26:01 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:5
+  Rendered users/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 715)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:9
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 16.8ms | Allocations: 4076)
+Completed 200 OK in 97ms (Views: 94.4ms | ActiveRecord: 1.5ms | Allocations: 12941)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 23:27:16 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/toppages/index.html.erb:7
+  Rendered toppages/index.html.erb within layouts/application (Duration: 24.1ms | Allocations: 2218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 9.9ms | Allocations: 2976)
+Completed 200 OK in 99ms (Views: 96.8ms | ActiveRecord: 1.2ms | Allocations: 13128)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 23:27:17 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/toppages/index.html.erb:7
+  Rendered toppages/index.html.erb within layouts/application (Duration: 29.8ms | Allocations: 2218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 11.2ms | Allocations: 2990)
+Completed 200 OK in 112ms (Views: 109.8ms | ActiveRecord: 1.1ms | Allocations: 13165)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 23:27:23 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/toppages/index.html.erb:7
+  Rendered toppages/index.html.erb within layouts/application (Duration: 22.9ms | Allocations: 2219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 9.8ms | Allocations: 2980)
+Completed 200 OK in 92ms (Views: 90.5ms | ActiveRecord: 1.1ms | Allocations: 13150)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 23:27:30 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/toppages/index.html.erb:7
+  Rendered toppages/index.html.erb within layouts/application (Duration: 23.5ms | Allocations: 2218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:10
+  Rendered layouts/_navbar.html.erb (Duration: 12.8ms | Allocations: 2976)
+Completed 200 OK in 106ms (Views: 104.3ms | ActiveRecord: 1.1ms | Allocations: 13128)
+
+
+Started DELETE "/users/sign_out" for 172.20.0.1 at 2020-08-25 23:27:34 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VDGKHci4yJapzE2ds3WJ2sFQFsp7aTpx+1pxR9i/rHgAo7HfWZz316gfGjPYfrNsuj+H1GJqNzigTJi44zO8Qg=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE `users` SET `users`.`remember_created_at` = NULL, `users`.`updated_at` = '2020-08-25 23:27:34.238542' WHERE `users`.`id` = 2[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 5.5ms | Allocations: 6523)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 23:27:34 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 24.7ms | Allocations: 1521)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 12.0ms | Allocations: 2303)
+Completed 200 OK in 120ms (Views: 119.0ms | ActiveRecord: 0.0ms | Allocations: 11725)
+
+
+Started GET "/bosses/sign_in" for 172.20.0.1 at 2020-08-25 23:27:36 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::SessionsController#new as HTML
+  Rendering bosses/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 551)
+  Rendered bosses/sessions/new.html.erb within layouts/application (Duration: 39.6ms | Allocations: 3087)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 11.9ms | Allocations: 2270)
+Completed 200 OK in 150ms (Views: 148.8ms | ActiveRecord: 0.0ms | Allocations: 15404)
+
+
+Started POST "/bosses/sign_in" for 172.20.0.1 at 2020-08-25 23:27:50 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"9DLREBWWYhoMiGxpQKXT3kO8UtW2LJ6rkBQ44dU6yI6veMdrkkWquG0KY10oExF3IjVD6Gv5HWQi7nyN703+vA==", "boss"=>{"email"=>"miusan@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mBoss Load (0.8ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`email` = 'miusan@gmail.com' ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2 ORDER BY `teams`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:17:in `after_sign_in_path_for'
+Redirected to http://localhost:3000/teams/4
+Completed 302 Found in 234ms (ActiveRecord: 1.4ms | Allocations: 6152)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 23:27:50 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:10:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  Rendered teams/show.html.erb within layouts/application (Duration: 25.0ms | Allocations: 3217)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.5ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 19.5ms | Allocations: 4309)
+Completed 200 OK in 136ms (Views: 127.9ms | ActiveRecord: 2.0ms | Allocations: 16976)
+
+
+Started GET "/bosses/2" for 172.20.0.1 at 2020-08-25 23:27:56 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BossesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBoss Load (0.7ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/bosses_controller.rb:8:in `show'
+  Rendering bosses/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/bosses/show.html.erb:8
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/bosses/show.html.erb:10
+  [1m[36mBoss Load (0.5ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/bosses/show.html.erb:18
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams`[0m
+  ↳ app/views/bosses/show.html.erb:21
+  Rendered bosses/show.html.erb within layouts/application (Duration: 16.1ms | Allocations: 5029)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m  [["boss_id", 2]]
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 17.2ms | Allocations: 3493)
+Completed 200 OK in 127ms (Views: 116.8ms | ActiveRecord: 2.9ms | Allocations: 18108)
+
+
+Started GET "/bosses/2" for 172.20.0.1 at 2020-08-25 23:28:03 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BossesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBoss Load (0.6ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/bosses_controller.rb:8:in `show'
+  Rendering bosses/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/bosses/show.html.erb:8
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/bosses/show.html.erb:10
+  [1m[36mBoss Load (0.5ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/bosses/show.html.erb:18
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams`[0m
+  ↳ app/views/bosses/show.html.erb:21
+  Rendered bosses/show.html.erb within layouts/application (Duration: 13.7ms | Allocations: 4648)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m  [["boss_id", 2]]
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 21.3ms | Allocations: 3482)
+Completed 200 OK in 137ms (Views: 131.0ms | ActiveRecord: 3.0ms | Allocations: 16858)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 23:28:09 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:10:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  Rendered teams/show.html.erb within layouts/application (Duration: 29.7ms | Allocations: 2086)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.5ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 16.3ms | Allocations: 4308)
+Completed 200 OK in 129ms (Views: 123.2ms | ActiveRecord: 2.2ms | Allocations: 14898)
+
+
+Started GET "/teams/4" for 172.20.0.1 at 2020-08-25 23:28:30 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:10:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 4[0m
+  ↳ app/views/teams/show.html.erb:4
+  Rendered teams/show.html.erb within layouts/application (Duration: 27.1ms | Allocations: 2086)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.5ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 2[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 17.0ms | Allocations: 4305)
+Completed 200 OK in 127ms (Views: 122.7ms | ActiveRecord: 2.2ms | Allocations: 14891)
+
+
+Started DELETE "/bosses/sign_out" for 172.20.0.1 at 2020-08-25 23:33:02 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"713fPWEeWKXkTKq5+b5a3dLMEkR0sW/0bz81RhTHHVm65vheVzGcXKBuyUM2Ue0gD+oAj1m5i1cZlbrzCc/3zg=="}
+  [1m[36mBoss Load (0.9ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 2 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 0.9ms | Allocations: 2215)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 23:33:02 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 23.7ms | Allocations: 1531)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 14.3ms | Allocations: 2307)
+Completed 200 OK in 123ms (Views: 122.1ms | ActiveRecord: 0.0ms | Allocations: 11753)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 23:33:33 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from _app_views_toppages_index_html_erb__2573917818464863373_79060 at /myapp/app/views/toppages/index.html.erb:1)
+  Rendered toppages/index.html.erb within layouts/application (Duration: 4725.4ms | Allocations: 20388)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 13.1ms | Allocations: 2307)
+Completed 200 OK in 6277ms (Views: 6276.2ms | ActiveRecord: 0.0ms | Allocations: 109444)
+
+
+Started GET "/" for 172.20.0.1 at 2020-08-25 23:33:42 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 23.3ms | Allocations: 1518)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 11.4ms | Allocations: 2317)
+Completed 200 OK in 125ms (Views: 123.5ms | ActiveRecord: 0.0ms | Allocations: 11762)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2020-08-25 23:34:28 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 170)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 30.5ms | Allocations: 2449)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 12.2ms | Allocations: 2263)
+Completed 200 OK in 139ms (Views: 137.5ms | ActiveRecord: 0.0ms | Allocations: 13659)
+
+
+Started GET "/users/sign_up" for 172.20.0.1 at 2020-08-25 23:34:37 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-1.9.2/app/views/devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 189)
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT `teams`.* FROM `teams`[0m
+  ↳ app/views/users/registrations/new.html.erb:42
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 50.9ms | Allocations: 3686)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 19.8ms | Allocations: 2271)
+Completed 200 OK in 160ms (Views: 157.3ms | ActiveRecord: 0.8ms | Allocations: 15385)
+
+

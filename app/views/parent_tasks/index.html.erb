@@ -27,7 +27,6 @@
       <div class="card-body">
           タスク概要：<%= parent_task.explanation %>
           <ul class="list-group list-group-flush">
-              <li class="list-group-item">入力時刻:<%= parent_task.updated_at %></li>
               <li class="list-group-item">締め切り:<%= parent_task.parent_deadline %></li>
               <% if parent_task.self_evaluate == 0 %>
               <li class="list-group-item">自己評価:うまく切り分けられた</li>
