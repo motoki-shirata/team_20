@@ -19247,3 +19247,68 @@ Processing by BossesController#show as HTML
 Completed 200 OK in 154ms (Views: 148.8ms | ActiveRecord: 2.6ms | Allocations: 17773)
 
 
+Started GET "/teams/0" for 172.21.0.1 at 2020-08-25 07:34:13 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` WHERE `teams`.`id` = 0 LIMIT 1[0m
+  ↳ app/controllers/teams_controller.rb:9:in `show'
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`team_id` = 0[0m
+  ↳ app/views/teams/show.html.erb:4
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 1[0m
+  ↳ app/views/teams/show.html.erb:10
+  [1m[36mParentTask Load (0.4ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`user_id` = 2[0m
+  ↳ app/views/teams/show.html.erb:10
+  Rendered teams/show.html.erb within layouts/application (Duration: 12.2ms | Allocations: 3368)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.5ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 1 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 18.1ms | Allocations: 4511)
+Completed 200 OK in 109ms (Views: 99.0ms | ActiveRecord: 3.8ms | Allocations: 17386)
+
+
+Started GET "/parent_tasks/1" for 172.21.0.1 at 2020-08-25 07:34:17 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParentTask Load (0.6ms)[0m  [1m[34mSELECT `parent_tasks`.* FROM `parent_tasks` WHERE `parent_tasks`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/parent_tasks_controller.rb:8:in `show'
+  Rendering parent_tasks/show.html.erb within layouts/application
+  [1m[36mTaskComment Load (0.6ms)[0m  [1m[34mSELECT `task_comments`.* FROM `task_comments` WHERE `task_comments`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/show.html.erb:27
+  [1m[36mChildTask Load (0.5ms)[0m  [1m[34mSELECT `child_tasks`.* FROM `child_tasks` WHERE `child_tasks`.`parent_task_id` = 1[0m
+  ↳ app/views/parent_tasks/show.html.erb:35
+  Rendered parent_tasks/show.html.erb within layouts/application (Duration: 12.0ms | Allocations: 7420)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mBoss Load (0.5ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 1 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:11
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 1[0m
+  ↳ app/views/layouts/_navbar.html.erb:12
+  Rendered layouts/_navbar.html.erb (Duration: 20.0ms | Allocations: 4520)
+Completed 200 OK in 153ms (Views: 105.2ms | ActiveRecord: 6.0ms | Allocations: 27758)
+
+
+Started GET "/parent_tasks.1" for 172.21.0.1 at 2020-08-25 07:34:24 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as 
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1256)
+
+
+  
+NoMethodError (undefined method `parent_tasks' for nil:NilClass):
+  
+app/controllers/parent_tasks_controller.rb:5:in `index'
+Started GET "/parent_tasks.1" for 172.21.0.1 at 2020-08-25 07:35:14 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParentTasksController#index as 
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1255)
+
+
+  
+NoMethodError (undefined method `parent_tasks' for nil:NilClass):
+  
+app/controllers/parent_tasks_controller.rb:5:in `index'
