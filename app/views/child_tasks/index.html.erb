@@ -19,19 +19,19 @@
             <%= link_to "サブタスク詳細画面", parent_task_child_task_path(parent_task_id: child_task.parent_task_id, id: child_task.id) %></br>
         </div>
         <div class="col-5">
-        <% if child_task.done %>
+          <% if child_task.done %>
             <% if user_signed_in?%>
                 <%= button_to '完了済み', index_canceled_parent_task_child_tasks_path(@parent_task, id: child_task.id) %> 
             <% else %>
                 <p>完了済み</p>
             <% end%>
-        <% else %>
+         <% else %>
             <% if user_signed_in?%>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%= child_task.id %>">完了にする</button>  
             <% else %>
                 <h3 style="color:red">未完了</h3>
             <% end %>
-        <% end %>
+          <% end %>
         
             <div class="modal fade" id="exampleModal<%= child_task.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
