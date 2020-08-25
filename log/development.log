@@ -12222,3 +12222,52 @@ Completed 200 OK in 130ms (Views: 127.9ms | ActiveRecord: 0.5ms | Allocations: 1
 >>>>>>> develop
 
 
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddReferencesToTaskcomments (20200825023115)
+  [1m[35m (28.6ms)[0m  [1m[35mALTER TABLE `task_comments` ADD `boss_id` bigint[0m
+  [1m[35m (22.0ms)[0m  [1m[35mCREATE  INDEX `index_task_comments_on_boss_id`  ON `task_comments` (`boss_id`) [0m
+  [1m[35m (39.7ms)[0m  [1m[35mALTER TABLE `task_comments` ADD CONSTRAINT `fk_rails_65825b92a1`
+FOREIGN KEY (`boss_id`)
+  REFERENCES `bosses` (`id`)
+[0m
+  [1m[35m (12.6ms)[0m  [1m[35mALTER TABLE `task_comments` ADD `child_task_id` bigint[0m
+  [1m[35m (17.2ms)[0m  [1m[35mCREATE  INDEX `index_task_comments_on_child_task_id`  ON `task_comments` (`child_task_id`) [0m
+  [1m[35m (41.9ms)[0m  [1m[35mALTER TABLE `task_comments` ADD CONSTRAINT `fk_rails_95895b6ffb`
+FOREIGN KEY (`child_task_id`)
+  REFERENCES `child_tasks` (`id`)
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200825023115')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddColumnUserParentTask (20200825024135)
+  [1m[35m (13.9ms)[0m  [1m[35mALTER TABLE `task_comments` DROP FOREIGN KEY fk_rails_ee51dc8b8a[0m
+  [1m[35m (48.2ms)[0m  [1m[35mALTER TABLE `task_comments` DROP COLUMN `user_id`[0m
+  [1m[35m (12.2ms)[0m  [1m[35mALTER TABLE `task_comments` DROP FOREIGN KEY fk_rails_d08f4a50f5[0m
+  [1m[35m (40.4ms)[0m  [1m[35mALTER TABLE `task_comments` DROP COLUMN `parent_task_id`[0m
+  [1m[35m (12.1ms)[0m  [1m[35mALTER TABLE `task_comments` ADD `user_id` bigint[0m
+  [1m[35m (16.5ms)[0m  [1m[35mCREATE  INDEX `index_task_comments_on_user_id`  ON `task_comments` (`user_id`) [0m
+  [1m[35m (45.2ms)[0m  [1m[35mALTER TABLE `task_comments` ADD CONSTRAINT `fk_rails_ee51dc8b8a`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+[0m
+  [1m[35m (13.0ms)[0m  [1m[35mALTER TABLE `task_comments` ADD `parent_task_id` bigint[0m
+  [1m[35m (22.0ms)[0m  [1m[35mCREATE  INDEX `index_task_comments_on_parent_task_id`  ON `task_comments` (`parent_task_id`) [0m
+  [1m[35m (55.0ms)[0m  [1m[35mALTER TABLE `task_comments` ADD CONSTRAINT `fk_rails_d08f4a50f5`
+FOREIGN KEY (`parent_task_id`)
+  REFERENCES `parent_tasks` (`id`)
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200825024135')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddChildTaskToTaskComment (20200825025630)
+  [1m[35m (16.5ms)[0m  [1m[35mALTER TABLE `task_comments` ADD `child_comment` varchar(255)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200825025630')[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
