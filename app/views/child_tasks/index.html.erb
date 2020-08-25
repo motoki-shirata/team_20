@@ -1,67 +1,72 @@
-<h2>親タスクと紐づいている子タスクの一覧表示</h2>
-    <%= link_to "親タスク一覧画面へ", parent_tasks_path %>
+<h2>タスクと紐づいている子タスクの一覧表示</h2>
+    <%= link_to "タスク一覧画面へ", parent_tasks_path %>
 <% @child_tasks.each do |child_task| %>
 <div class="card border-secondary mb-5" style="width: 30rem;">
     <% if params[:parent_task_id].to_i == child_task.parent_task_id %>
     <div class="card-header bg-light ">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="#" checked>
-            <label class="form-check-label" for="#">子タスク名：「<%= child_task.title %>」</label>
+    <div class="row">
+        <div class="col-7">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="#" checked>
+                <label class="form-check-label" for="#">サブタスク名：「<%= child_task.title %>」</label>
+            </div>
+            <%= link_to "サブタスク詳細画面へ", parent_task_child_task_path(parent_task_id: child_task.parent_task_id, id: child_task.id) %></br>
         </div>
-        <%= link_to "子タスク詳細画面へ", parent_task_child_task_path(parent_task_id: child_task.parent_task_id, id: child_task.id) %></br>
-        <%= child_task.id %>
-        <div class="col-6">
-        <% if child_task.done %>
-        <%= button_to '完了済み', index_canceled_parent_task_child_tasks_path(@parent_task, id: child_task.id) %> 
-        <% else %>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%= child_task.id %>">完了にする</button>  
-        <% end %>
-        <div class="modal fade" id="exampleModal<%= child_task.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">お疲れ様でした</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    あなたはタスクを完了しました
-                    その気持ちの入力をしてください
-                    <li>子タスクid<%= child_task.id %></li>
-                    <%= @parent_task.id %>
-                    <%= form_with url: index_result_finish_parent_task_child_tasks_path(parent_task_id: @parent_task.id, id: child_task.id) do |f| %>
-                    <%= f.label :result, '上手にできたかどうか'%>
-                    <%= f.select :result, [['しっかりやり切れた', 0], ['まあまあやり切れた', 1], ['壁にぶつかった', 2]] , class: 'form-control'%>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <%= f.submit '保存' %>
-                    <% end %>
-                </div>
+        <div class="col-5">
+            <% if child_task.done %>
+                <%= button_to '完了済み', index_canceled_parent_task_child_tasks_path(@parent_task, id: child_task.id) %> 
+            <% else %>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%= child_task.id %>">完了にする</button>  
+            <% end %>
+            <div class="modal fade" id="exampleModal<%= child_task.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">お疲れ様でした</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            あなたはタスクを完了しました
+                            その気持ちの入力をしてください
+                            <li>子タスクid<%= child_task.id %></li>
+                            <%= @parent_task.id %>
+                            <%= form_with url: index_result_finish_parent_task_child_tasks_path(parent_task_id: @parent_task.id, id: child_task.id) do |f| %>
+                            <%= f.label :result, '上手にできたかどうか'%>
+                            <%= f.select :result, [['しっかりやり切れた', 0], ['まあまあやり切れた', 1], ['壁にぶつかった', 2]] , class: 'form-control'%>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <%= f.submit '保存' %>
+                            <% end %>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
+    </div>
     </div>
     <div class="card-body">
         タスク概要：<%= child_task.explanation %>
-    <ul>
-        <li>締め切り：<%= child_task.child_deadline %></li>
-        <li>達成可能性：<%= child_task.possibility%></li>
-        <li>終了時刻<%= child_task.finish_time %></li>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">締め切り：<%= child_task.child_deadline %></li>
+        <li class="list-group-item">達成可能性：<%= child_task.possibility%></li>
+        <li class="list-group-item">終了時刻<%= child_task.finish_time %></li>
         <% if child_task.finish_time %>
-            <h5>完了ボタンが押された</h5>
+            <p>完了ボタンが押された</p>
             <%= child_task.child_deadline.class %><br>
                 <% if child_task.done == 0 %>
-                <h1>間に合った。</h1>
+                    <li class="list-group-item">間に合った。</li>
                 <% elsif child_task.done == 1 %>
-                <h2>〆切後3h以内で間に合った</h2>
+                    <li class="list-group-item">〆切後3h以内で間に合った</li>
                 <% elsif child_task.done == 2 %>
-                <h3>〆切に間に合わなかった</h3>
+                    <li class="list-group-item">〆切に間に合わなかった</li>
                 <% end %>
         <% end %>
+    </ul>
         
+    <div class="card-footer">
         <%= form_with url: parent_task_task_comments_path(parent_task_id: params[:parent_task_id], id: child_task.id), model: [ParentTask.new, @task_comment], method: :post do |f| %>
             <%= f.text_area :child_comment %>
             <br>
@@ -81,8 +86,8 @@
             <% end %>
 
         <% end %>
-    </ul>
     <% end %>
+    </div>
     </div>
 </div>
 
