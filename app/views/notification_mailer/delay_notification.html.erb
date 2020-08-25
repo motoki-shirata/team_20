@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Boss:<%= @boss.name %>さん</h1>
+    <p>
+    チームメンバーの仕事が遅れ、ヘルプを求めています。
+    </p>
+    <p>
+    <%= @delay_pts.each do |pt| %>
+        <ul>Team_name: <%= Team.find(User.find(id: pt.user_id).team_id) %>
+            <li><%= User.find(pt.user_id).name %></li>
+            <li><%= pt.title %></li>
+        </ul>
+    </p>
+  </body>
+</html>
+
