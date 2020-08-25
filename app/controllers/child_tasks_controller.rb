@@ -25,7 +25,7 @@ class ChildTasksController < ApplicationController
             redirect_to parent_tasks_path
         end
     end
-    def delete
+    def destroy
     end
     def edit
     end
@@ -35,23 +35,23 @@ class ChildTasksController < ApplicationController
         resulted
         if @child_task.save
             finished
-            redirect_to parent_tasks_path
+            redirect_to parent_task_child_tasks_path
         end
     end
     def show_result_finish
         resulted
         if @child_task.save
             finished
-            redirect_to parent_task_path(id: params[:parent_task_id])
+            redirect_to parent_task_path(id: @child_task.parent_task.id)
         end
     end
     def index_canceled
         canceled
-        redirect_to parent_tasks_path
+        redirect_to parent_task_child_tasks_path
     end
     def show_canceled
         canceled
-        redirect_to parent_task_path(id: params[:parent_task_id])
+        redirect_to parent_task_path(id: @child_task.parent_task.id)
     end
 
     private
