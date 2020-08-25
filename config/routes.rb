@@ -8,7 +8,6 @@ Rails.application.routes.draw do
 
   get '/bosses/new_team', to: 'bosses#new_team'
   patch '/bosses/new_team', to: 'bosses#post_team'
-    
 
   devise_for :bosses, controllers: {
     registrations: 'bosses/registrations',
@@ -17,7 +16,7 @@ Rails.application.routes.draw do
 
   resources :bosses, only:[:index, :show, :edit, :update]
   resources :users, only:[:index, :show]
-
+  resources :teams, only:[:show] #ボスがチームメンバーの親タスクをまとめて見る用のroutes
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   # root to: 'tasks'
@@ -25,7 +24,10 @@ Rails.application.routes.draw do
     resources :child_tasks do
       collection do
         post :finished
-        post :canceled
+        post :index_canceled
+        post :show_canceled
+        post :index_result_finish
+        post :show_result_finish
       end
     end
 
