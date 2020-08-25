@@ -1,9 +1,10 @@
 class ParentTasksController < ApplicationController
     before_action { :authenticate_user! || :authenticate_boss!}
-    before_action :authenticate_boss!, only: [:show, :index]
+    # before_action :authenticate_boss!, only: [:show, :index]
 
     def index
-        @parent_tasks = current_user.parent_tasks
+        # @parent_tasks = current_user.parent_tasks
+        @parent_tasks = current_user.parent_tasks.order(parent_deadline: "ASC")
         #@manager_tasks = manager.teams.users.parent_tasks
     end
     def show
