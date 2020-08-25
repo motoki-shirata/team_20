@@ -10,7 +10,7 @@
           <h2 class="nav-link text-white"><%= current_user.team.name %></h2>
         <% elsif boss_signed_in?%>
           <% current_boss.teams.each do |team|%>
-            <%= link_to team.name, team_path(team), class: "text-white" %>
+            <%= link_to team.name, team_path(id: team.id), class: "text-white" %>
           <% end%>
         <% end %>
       </li>
