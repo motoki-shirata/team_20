@@ -5,25 +5,29 @@ class BossesController < ApplicationController
   end
 
   def show
-    @boss=Boss.find(current_boss.id)
+    @boss=Boss.find(params[:id])
   end
 
 
   def update
     # binding.pry
-    current_boss.organizations.each do |organization|
-      organization.destroy
-    end
-
-    # binding.pry
-    params["boss"]["team_ids"].each do |t|
-      if Organization.find_by(boss_id: current_boss.id, team_id: t)
-        next
-      else
-        current_boss.organizations.create(team_id: t).save
+    if current_boss.id != params[:id].to_i
+      redirect_to boss_path
+    else
+      current_boss.organizations.each do |organization|
+        organization.destroy
       end
+
+      # binding.pry
+      params["boss"]["team_ids"].each do |t|
+        if Organization.find_by(boss_id: current_boss.id, team_id: t)
+          next
+        else
+          current_boss.organizations.create(team_id: t).save
+        end
+      end
+      redirect_to "/bosses/#{params[:id]}"
     end
-    redirect_to :root
   end
 
   def new_team
