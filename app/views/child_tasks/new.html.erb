@@ -1,6 +1,6 @@
 <div class="container text-center">
 <%= link_to "タスク一覧へ", parent_tasks_path(@parent_task) %>
-<h3>子タスク作成ページ</h3>
+<h3>サブタスク作成ページ</h3>
 <%= form_with model: [@parent_task, @child_task] do |f| %>
     <div class= 'form-group'>
         <%= f.label :title, 'タイトル', class: "col-2" %>
@@ -18,7 +18,7 @@
         <%= f.label :possibility, '間に合うかどうか', class: "col-2" %>
         <%= f.select :possibility, [["自信がある", "0"], ["まあまあ", "1"], ["自信がないです助けて！", "2"]], class: "col-4" %>
     </div>
-        <%= f.submit 'タスクを保存！'%>
+        <%= f.submit 'Save', :class => 'btn btn-primary'%>
 <% end %>
 
 </div>
