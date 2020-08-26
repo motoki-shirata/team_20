@@ -88,11 +88,12 @@
         <%= form_with url: parent_task_task_comments_path(parent_task_id: params[:parent_task_id], id: child_task.id), model: [ParentTask.new, @task_comment], method: :post do |f| %>
             <%= f.text_area :child_comment %>
             <br>
-            <%= f.submit 'コメントする' %>
+            <%= f.submit 'コメントする', class: 'btn btn-primary' %>
         <% end %>
         
         <% child_task.task_comments.each do |child_task_comment| %>
-            <div class="border-black border">
+            <div class="border-black border row">
+            <div class='col-6'>
             <% if child_task_comment.child_task_id && child_task_comment.child_comment %>
                 <% if child_task_comment.boss_id %>
                     投稿者：<%= child_task_comment.boss.name %>
@@ -100,9 +101,12 @@
                     投稿者：<%= child_task_comment.user.name %>
                 <% end %>
                 <%= simple_format(child_task_comment.child_comment) %>
+            </div>
+            <div class='col-5'>
                 <% if current_user == child_task_comment.user || current_boss == child_task_comment.boss %>
-                <%= button_to 'このメッセージを削除する', parent_task_task_comment_path(parent_task_id: @parent_task.id, id: child_task_comment.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+                <%= button_to '削除する', parent_task_task_comment_path(parent_task_id: @parent_task.id, id: child_task_comment.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger' %>
                 <% end %>
+            </div>
             <% end %>
             </div>
         <% end %>
