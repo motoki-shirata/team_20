@@ -16,6 +16,7 @@
                 <label class="form-check-label font-weight-bold" for="#">「<%= parent_task.title %>」</label>
             </div>
             <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
+            <li>サブタスク数： <%= parent_task.child_tasks.count %></li>
           </div>
           </div>
         </div>
