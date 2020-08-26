@@ -16,10 +16,11 @@
           </div>
           <%= link_to "タスク詳細", parent_task_path(parent_task) %></br>
           <% if parent_task.parent_done %>
-                <%= button_to '完了済み', cansel_parent_task_path(id: parent_task.id), class: 'btn btn-success' %> 
+                <%= button_to '完了済み', cansel_parent_task_path(id: parent_task.id), class: 'btn btn-success' %>
             <% else %>
                 <%= button_to '完了にする', done_parent_task_path(id: parent_task.id), class: 'btn btn-primary' %>
             <% end %>
+            <%= button_to 'Delete', parent_task_path(id: parent_task.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger' %>
           <li>子たすくの数<%= parent_task.child_tasks.count %></li>
         </div>
         </div>
