@@ -7,6 +7,6 @@ class User < ApplicationRecord
   validates :name, presence: true, length: { maximum: 50 }
 
   belongs_to :team
-  has_many :parent_tasks
-  has_many :task_comments
+  has_many :parent_tasks, dependent: :destroy
+  has_many :task_comments, dependent: :destroy
 end

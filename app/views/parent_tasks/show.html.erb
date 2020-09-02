@@ -1,5 +1,7 @@
 <div class='container'>
+<% if user_signed_in? %>
   <%= link_to "タスク一覧へ", parent_tasks_path(@parent_task), class: 'btn btn-light' %>
+<%end%>
 <div class="card text-center ">
   <h2 class="card-header">「<%= @parent_task.title %>」の詳細ページ</h2>
   <div class="card-body">

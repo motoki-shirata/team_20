@@ -6,6 +6,6 @@ class Boss < ApplicationRecord
   
   has_many :organizations, dependent: :destroy
   has_many :teams, through: :organizations, dependent: :destroy
-  has_many :task_comments
+  has_many :task_comments, dependent: :destroy
   # boss.supervise_teamsでチーム引っ張れる
 end
