@@ -1,0 +1,35 @@
+Started GET "/" for 172.19.0.1 at 2020-09-02 11:52:52 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (4.0ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (8.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mBoss Load (6.3ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 5 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+  ↳ app/views/toppages/index.html.erb:9
+  Rendered toppages/index.html.erb within layouts/application (Duration: 2756.6ms | Allocations: 41004)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTeam Load (6.5ms)[0m  [1m[34mSELECT `teams`.* FROM `teams` INNER JOIN `organizations` ON `teams`.`id` = `organizations`.`team_id` WHERE `organizations`.`boss_id` = 5[0m
+  ↳ app/views/layouts/_navbar.html.erb:13
+  Rendered layouts/_navbar.html.erb (Duration: 171.9ms | Allocations: 16995)
+Completed 200 OK in 3193ms (Views: 3109.5ms | ActiveRecord: 24.4ms | Allocations: 70746)
+
+
+Started DELETE "/bosses/sign_out" for 172.19.0.1 at 2020-09-02 11:53:02 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Bosses::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XzdBUKWgNRzj5vFD6BrsjaWbfVZ6MPr/Qbory/v8t85IpAaFtB6AAvvlMi26DlVU0sCUFJu3pZA/gSYUVzkUeg=="}
+  [1m[36mBoss Load (0.6ms)[0m  [1m[34mSELECT `bosses`.* FROM `bosses` WHERE `bosses`.`id` = 5 ORDER BY `bosses`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 805ms (ActiveRecord: 0.6ms | Allocations: 93198)
+
+
+Started GET "/" for 172.19.0.1 at 2020-09-02 11:53:03 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (Duration: 26.5ms | Allocations: 1534)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 16.0ms | Allocations: 2163)
+Completed 200 OK in 136ms (Views: 135.6ms | ActiveRecord: 0.0ms | Allocations: 11676)
+
+
